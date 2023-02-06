@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2FDE15D02990D13C00154A78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE15CF2990D13C00154A78 /* AppDelegate.swift */; };
 		2FDE15D22990D13C00154A78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE15D12990D13C00154A78 /* SceneDelegate.swift */; };
-		2FDE15D72990D13C00154A78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FDE15D52990D13C00154A78 /* Main.storyboard */; };
 		2FDE15D92990D13D00154A78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FDE15D82990D13D00154A78 /* Assets.xcassets */; };
 		2FDE15DC2990D13D00154A78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FDE15DA2990D13D00154A78 /* LaunchScreen.storyboard */; };
 		2FDE15EA2990D2EC00154A78 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE15E92990D2EC00154A78 /* NetworkMonitor.swift */; };
@@ -17,13 +16,17 @@
 		2FDE15EF2990D34800154A78 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE15EE2990D34800154A78 /* APIKey.swift */; };
 		2FDE15F12990D35200154A78 /* URLConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE15F02990D35200154A78 /* URLConstant.swift */; };
 		2FDE15F32990D36F00154A78 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE15F22990D36F00154A78 /* EndPoint.swift */; };
+		2FDE15F82990DB0E00154A78 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE15F72990DB0E00154A78 /* RealmModel.swift */; };
+		2FDE15FA2990DB1B00154A78 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE15F92990DB1B00154A78 /* Repository.swift */; };
+		2FDE16002990DB6400154A78 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE15FF2990DB6400154A78 /* ViewModelType.swift */; };
+		2FDE16072990DDBF00154A78 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE16062990DDBF00154A78 /* BaseView.swift */; };
+		2FDE16092990DDCA00154A78 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE16082990DDCA00154A78 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2FDE15CC2990D13C00154A78 /* PetsCommando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetsCommando.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FDE15CF2990D13C00154A78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FDE15D12990D13C00154A78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2FDE15D62990D13C00154A78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2FDE15D82990D13D00154A78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FDE15DB2990D13D00154A78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2FDE15DD2990D13D00154A78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,6 +35,11 @@
 		2FDE15EE2990D34800154A78 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		2FDE15F02990D35200154A78 /* URLConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstant.swift; sourceTree = "<group>"; };
 		2FDE15F22990D36F00154A78 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		2FDE15F72990DB0E00154A78 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		2FDE15F92990DB1B00154A78 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		2FDE15FF2990DB6400154A78 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		2FDE16062990DDBF00154A78 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		2FDE16082990DDCA00154A78 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +75,6 @@
 				2FDE15E52990D26600154A78 /* Supportings */,
 				2FDE15E42990D22700154A78 /* Resources */,
 				2FDE15E32990D21500154A78 /* Sources */,
-				2FDE15D52990D13C00154A78 /* Main.storyboard */,
-				2FDE15DD2990D13D00154A78 /* Info.plist */,
 			);
 			path = PetsCommando;
 			sourceTree = "<group>";
@@ -76,8 +82,13 @@
 		2FDE15E32990D21500154A78 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				2FDE15E72990D2B300154A78 /* Network */,
+				2FDE16022990DD8800154A78 /* Base */,
+				2FDE16012990DD8200154A78 /* Utils */,
+				2FDE15FC2990DB3800154A78 /* Presents */,
+				2FDE15FB2990DB3300154A78 /* Cell */,
+				2FDE15F52990DAFF00154A78 /* Model */,
 				2FDE15E62990D28100154A78 /* Application */,
+				2FDE15E72990D2B300154A78 /* Network */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -94,6 +105,7 @@
 		2FDE15E52990D26600154A78 /* Supportings */ = {
 			isa = PBXGroup;
 			children = (
+				2FDE15DD2990D13D00154A78 /* Info.plist */,
 			);
 			path = Supportings;
 			sourceTree = "<group>";
@@ -110,6 +122,7 @@
 		2FDE15E72990D2B300154A78 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				2FDE15F42990DAD300154A78 /* API */,
 				2FDE15EB2990D31D00154A78 /* Service */,
 				2FDE15E82990D2D900154A78 /* Monitor */,
 			);
@@ -133,6 +146,101 @@
 				2FDE15F22990D36F00154A78 /* EndPoint.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		2FDE15F42990DAD300154A78 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		2FDE15F52990DAFF00154A78 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2FDE15F62990DB0500154A78 /* Realm */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2FDE15F62990DB0500154A78 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				2FDE15F72990DB0E00154A78 /* RealmModel.swift */,
+				2FDE15F92990DB1B00154A78 /* Repository.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		2FDE15FB2990DB3300154A78 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2FDE15FC2990DB3800154A78 /* Presents */ = {
+			isa = PBXGroup;
+			children = (
+				2FDE15FD2990DB5500154A78 /* Protocol */,
+			);
+			path = Presents;
+			sourceTree = "<group>";
+		};
+		2FDE15FD2990DB5500154A78 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				2FDE15FE2990DB5900154A78 /* ViewModel */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		2FDE15FE2990DB5900154A78 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2FDE15FF2990DB6400154A78 /* ViewModelType.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2FDE16012990DD8200154A78 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2FDE16052990DDA400154A78 /* Extension */,
+				2FDE16042990DD9800154A78 /* ReusableProtocol */,
+				2FDE16032990DD9300154A78 /* Protocol */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2FDE16022990DD8800154A78 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2FDE16062990DDBF00154A78 /* BaseView.swift */,
+				2FDE16082990DDCA00154A78 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2FDE16032990DD9300154A78 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		2FDE16042990DD9800154A78 /* ReusableProtocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReusableProtocol;
+			sourceTree = "<group>";
+		};
+		2FDE16052990DDA400154A78 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,7 +303,6 @@
 			files = (
 				2FDE15DC2990D13D00154A78 /* LaunchScreen.storyboard in Resources */,
 				2FDE15D92990D13D00154A78 /* Assets.xcassets in Resources */,
-				2FDE15D72990D13C00154A78 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,22 +318,19 @@
 				2FDE15EA2990D2EC00154A78 /* NetworkMonitor.swift in Sources */,
 				2FDE15D22990D13C00154A78 /* SceneDelegate.swift in Sources */,
 				2FDE15EF2990D34800154A78 /* APIKey.swift in Sources */,
+				2FDE16092990DDCA00154A78 /* BaseViewController.swift in Sources */,
+				2FDE15F82990DB0E00154A78 /* RealmModel.swift in Sources */,
 				2FDE15F32990D36F00154A78 /* EndPoint.swift in Sources */,
 				2FDE15F12990D35200154A78 /* URLConstant.swift in Sources */,
+				2FDE16002990DB6400154A78 /* ViewModelType.swift in Sources */,
+				2FDE16072990DDBF00154A78 /* BaseView.swift in Sources */,
+				2FDE15FA2990DB1B00154A78 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2FDE15D52990D13C00154A78 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2FDE15D62990D13C00154A78 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2FDE15DA2990D13D00154A78 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -361,12 +465,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LL4R66V6Y3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PetsCommando/Info.plist;
+				INFOPLIST_FILE = PetsCommando/Supportings/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -389,12 +494,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LL4R66V6Y3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PetsCommando/Info.plist;
+				INFOPLIST_FILE = PetsCommando/Supportings/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
