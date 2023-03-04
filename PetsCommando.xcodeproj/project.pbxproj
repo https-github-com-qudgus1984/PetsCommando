@@ -18,6 +18,9 @@
 		2F64A90D29B3359600BC11B9 /* 강원교육모두 Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F64A90B29B3359600BC11B9 /* 강원교육모두 Bold.otf */; };
 		2F64A91029B33A2C00BC11B9 /* LineTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A90F29B33A2C00BC11B9 /* LineTextFieldView.swift */; };
 		2F64A91229B33A5F00BC11B9 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A91129B33A5F00BC11B9 /* UITextField+Extension.swift */; };
+		2F64A91429B3452B00BC11B9 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A91329B3452B00BC11B9 /* LoginCoordinator.swift */; };
+		2F64A91629B346A600BC11B9 /* LoginCoordinatorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A91529B346A600BC11B9 /* LoginCoordinatorContext.swift */; };
+		2F64A91829B34AE900BC11B9 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A91729B34AE900BC11B9 /* TextView.swift */; };
 		2FAB65AA29B30E6C0022B609 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAB65A929B30E6C0022B609 /* LoginViewController.swift */; };
 		2FAB65AD29B310570022B609 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2FAB65AC29B310570022B609 /* RxCocoa */; };
 		2FAB65AF29B310570022B609 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2FAB65AE29B310570022B609 /* RxSwift */; };
@@ -49,6 +52,9 @@
 		2F64A90B29B3359600BC11B9 /* 강원교육모두 Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "강원교육모두 Bold.otf"; sourceTree = "<group>"; };
 		2F64A90F29B33A2C00BC11B9 /* LineTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextFieldView.swift; sourceTree = "<group>"; };
 		2F64A91129B33A5F00BC11B9 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		2F64A91329B3452B00BC11B9 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		2F64A91529B346A600BC11B9 /* LoginCoordinatorContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorContext.swift; sourceTree = "<group>"; };
+		2F64A91729B34AE900BC11B9 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		2FAB65A929B30E6C0022B609 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2FAB65B129B3127D0022B609 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2FDE15CC2990D13C00154A78 /* PetsCommando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetsCommando.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +119,8 @@
 		2F64A90229B325DD00BC11B9 /* LoginCoordinator */ = {
 			isa = PBXGroup;
 			children = (
+				2F64A91329B3452B00BC11B9 /* LoginCoordinator.swift */,
+				2F64A91529B346A600BC11B9 /* LoginCoordinatorContext.swift */,
 			);
 			path = LoginCoordinator;
 			sourceTree = "<group>";
@@ -163,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				2FAB65A929B30E6C0022B609 /* LoginViewController.swift */,
+				2F64A91729B34AE900BC11B9 /* TextView.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -456,6 +465,7 @@
 			files = (
 				2F64A8F529B319F800BC11B9 /* Coordinator.swift in Sources */,
 				2FDE15ED2990D32C00154A78 /* Router.swift in Sources */,
+				2F64A91629B346A600BC11B9 /* LoginCoordinatorContext.swift in Sources */,
 				2FDE15D02990D13C00154A78 /* AppDelegate.swift in Sources */,
 				2F64A8F129B3171800BC11B9 /* Font.swift in Sources */,
 				2FDE15EA2990D2EC00154A78 /* NetworkMonitor.swift in Sources */,
@@ -467,10 +477,12 @@
 				2FDE15F82990DB0E00154A78 /* RealmModel.swift in Sources */,
 				2F64A8FA29B31AD800BC11B9 /* AppCoordinatorContext.swift in Sources */,
 				2FDE15F32990D36F00154A78 /* EndPoint.swift in Sources */,
+				2F64A91829B34AE900BC11B9 /* TextView.swift in Sources */,
 				2FDE15F12990D35200154A78 /* URLConstant.swift in Sources */,
 				2FAB65B229B3127D0022B609 /* Color.swift in Sources */,
 				2FDE16002990DB6400154A78 /* ViewModelType.swift in Sources */,
 				2F64A8FC29B31AED00BC11B9 /* AppCoordinator.swift in Sources */,
+				2F64A91429B3452B00BC11B9 /* LoginCoordinator.swift in Sources */,
 				2F64A91229B33A5F00BC11B9 /* UITextField+Extension.swift in Sources */,
 				2FDE16072990DDBF00154A78 /* BaseView.swift in Sources */,
 				2FAB65AA29B30E6C0022B609 /* LoginViewController.swift in Sources */,

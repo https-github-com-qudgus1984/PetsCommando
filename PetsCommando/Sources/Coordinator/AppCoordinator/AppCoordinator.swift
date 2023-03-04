@@ -11,7 +11,6 @@ final class AppCoordinator: Coordinator {
     
     enum InitalViewType {
         case login
-
     }
     
     var delegate: CoordinatorDidFinishDelegate?
@@ -37,7 +36,7 @@ final class AppCoordinator: Coordinator {
         
         switch type {
         case .login:
-            print("gd")
+            showLogin(window: window)
         }
         
         self.window.makeKeyAndVisible()
@@ -49,3 +48,5 @@ final class AppCoordinator: Coordinator {
                           completion: nil)
     }
 }
+
+extension AppCoordinator: LoginCoordinatorContext { }
