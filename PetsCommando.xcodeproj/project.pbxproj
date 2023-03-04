@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F64A8F129B3171800BC11B9 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A8F029B3171800BC11B9 /* Font.swift */; };
+		2F64A8F529B319F800BC11B9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A8F429B319F800BC11B9 /* Coordinator.swift */; };
+		2F64A8F829B31AC300BC11B9 /* BaseCoordinatorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A8F729B31AC300BC11B9 /* BaseCoordinatorContext.swift */; };
+		2F64A8FA29B31AD800BC11B9 /* AppCoordinatorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A8F929B31AD800BC11B9 /* AppCoordinatorContext.swift */; };
+		2F64A8FC29B31AED00BC11B9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A8FB29B31AED00BC11B9 /* AppCoordinator.swift */; };
 		2FAB65AA29B30E6C0022B609 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAB65A929B30E6C0022B609 /* LoginViewController.swift */; };
 		2FAB65AD29B310570022B609 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2FAB65AC29B310570022B609 /* RxCocoa */; };
 		2FAB65AF29B310570022B609 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2FAB65AE29B310570022B609 /* RxSwift */; };
@@ -28,6 +33,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F64A8F029B3171800BC11B9 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		2F64A8F429B319F800BC11B9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		2F64A8F729B31AC300BC11B9 /* BaseCoordinatorContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinatorContext.swift; sourceTree = "<group>"; };
+		2F64A8F929B31AD800BC11B9 /* AppCoordinatorContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorContext.swift; sourceTree = "<group>"; };
+		2F64A8FB29B31AED00BC11B9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		2FAB65A929B30E6C0022B609 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2FAB65B129B3127D0022B609 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2FDE15CC2990D13C00154A78 /* PetsCommando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetsCommando.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +71,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F64A8F229B3198300BC11B9 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2F64A8F329B319D800BC11B9 /* AppCoordinator */,
+				2F64A8F429B319F800BC11B9 /* Coordinator.swift */,
+				2F64A8F729B31AC300BC11B9 /* BaseCoordinatorContext.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2F64A8F329B319D800BC11B9 /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2F64A8F929B31AD800BC11B9 /* AppCoordinatorContext.swift */,
+				2F64A8FB29B31AED00BC11B9 /* AppCoordinator.swift */,
+			);
+			path = AppCoordinator;
+			sourceTree = "<group>";
+		};
 		2FAB65A529B30E090022B609 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				2FAB65B129B3127D0022B609 /* Color.swift */,
+				2F64A8F029B3171800BC11B9 /* Font.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -130,6 +160,7 @@
 		2FDE15E32990D21500154A78 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2F64A8F229B3198300BC11B9 /* Coordinator */,
 				2FDE16022990DD8800154A78 /* Base */,
 				2FDE16012990DD8200154A78 /* Utils */,
 				2FDE15FC2990DB3800154A78 /* Presents */,
@@ -370,17 +401,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F64A8F529B319F800BC11B9 /* Coordinator.swift in Sources */,
 				2FDE15ED2990D32C00154A78 /* Router.swift in Sources */,
 				2FDE15D02990D13C00154A78 /* AppDelegate.swift in Sources */,
+				2F64A8F129B3171800BC11B9 /* Font.swift in Sources */,
 				2FDE15EA2990D2EC00154A78 /* NetworkMonitor.swift in Sources */,
+				2F64A8F829B31AC300BC11B9 /* BaseCoordinatorContext.swift in Sources */,
 				2FDE15D22990D13C00154A78 /* SceneDelegate.swift in Sources */,
 				2FDE15EF2990D34800154A78 /* APIKey.swift in Sources */,
 				2FDE16092990DDCA00154A78 /* BaseViewController.swift in Sources */,
 				2FDE15F82990DB0E00154A78 /* RealmModel.swift in Sources */,
+				2F64A8FA29B31AD800BC11B9 /* AppCoordinatorContext.swift in Sources */,
 				2FDE15F32990D36F00154A78 /* EndPoint.swift in Sources */,
 				2FDE15F12990D35200154A78 /* URLConstant.swift in Sources */,
 				2FAB65B229B3127D0022B609 /* Color.swift in Sources */,
 				2FDE16002990DB6400154A78 /* ViewModelType.swift in Sources */,
+				2F64A8FC29B31AED00BC11B9 /* AppCoordinator.swift in Sources */,
 				2FDE16072990DDBF00154A78 /* BaseView.swift in Sources */,
 				2FAB65AA29B30E6C0022B609 /* LoginViewController.swift in Sources */,
 				2FDE15FA2990DB1B00154A78 /* Repository.swift in Sources */,
