@@ -8,6 +8,9 @@
 import UIKit
 import SnapKit
 
+//protocol LoginControllerDelegate {
+//    func checkNickname()
+//}
 final class LoginViewController: BaseViewController {
     
     //MARK: UI
@@ -15,6 +18,12 @@ final class LoginViewController: BaseViewController {
     private var contentView = UIView()
     private lazy var idTextField = LineTextFieldView()
     private lazy var passwordTextField = LineTextFieldView()
+    
+    //MARK: Delegate
+    weak var coordinator: LoginCoordinator?
+//    var delegate: LoginControllerDelegate?
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
