@@ -80,14 +80,14 @@ class BaseViewController: UIViewController {
     func setupConstraints() {
         // Override Constraints
     }
-    /*
+    
     func setupAttributes() {
         // Override Attributes
         view.backgroundColor = Color.BaseColor.white
         navigation()
 //        view.backgroundColor = Color.mainContainerBackgroundColor
     }
-    */
+    
     func setupLocalization() {
         // Override Localization
     }
@@ -106,22 +106,22 @@ class BaseViewController: UIViewController {
     
     
     // MARK: Custom Func
-    /*
+    
     func navigation() {
         let navigationBarAppearance = UINavigationBarAppearance()
         navigationBarAppearance.backgroundColor = Color.BaseColor.white
         
-        let attributes = [NSAttributedString.Key.foregroundColor: Color.BaseColor.black,
-                          NSAttributedString.Key.font: UIFont(name: Font.Title3_M14.fontType,
-                                                              size: Font.Title3_M14.fontSize)! ]
+//        let attributes = [NSAttributedString.Key.foregroundColor: Color.BaseColor.black,
+//                          NSAttributedString.Key.font: UIFont(name: Font.Title3_M14.fontType,
+//                                                              size: Font.Title3_M14.fontSize)! ]
         
-        navigationBarAppearance.titleTextAttributes = attributes
-        navigationBarAppearance.buttonAppearance.normal.titleTextAttributes = attributes
-        navigationBarAppearance.doneButtonAppearance.normal.titleTextAttributes = attributes
-        
-        let backImage = UIImage(named: "arrow")?.withAlignmentRectInsets(UIEdgeInsets(top: 0.0, left: -6.0, bottom: 0.0, right: 0.0))
-        
-        navigationBarAppearance.setBackIndicatorImage(backImage, transitionMaskImage: backImage)
+//        navigationBarAppearance.titleTextAttributes = attributes
+//        navigationBarAppearance.buttonAppearance.normal.titleTextAttributes = attributes
+//        navigationBarAppearance.doneButtonAppearance.normal.titleTextAttributes = attributes
+//
+//        let backImage = UIImage(named: "arrow")?.withAlignmentRectInsets(UIEdgeInsets(top: 0.0, left: -6.0, bottom: 0.0, right: 0.0))
+//
+//        navigationBarAppearance.setBackIndicatorImage(backImage, transitionMaskImage: backImage)
         
         UINavigationBar.appearance().standardAppearance = navigationBarAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
@@ -130,7 +130,7 @@ class BaseViewController: UIViewController {
         navigationController?.navigationBar.tintColor = Color.BaseColor.black
         navigationController?.view.backgroundColor = Color.BaseColor.white              /// Navagation 배경 색상을 지정
     }
-    */
+    
     private func configureNavigationBar() {
         navigationController?.isNavigationBarHidden = true
         navigationController?.interactivePopGestureRecognizer?.delegate = nil   /// navigation bar를 hidden 처리 하더라도 swipe Gesture는 작동하도록!!
