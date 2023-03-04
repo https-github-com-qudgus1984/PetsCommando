@@ -27,5 +27,6 @@
 | [Refactor] | 코드 리팩토링                       |
 | [Comment]  | 주석 추가 및 변경                   |
 | [Remove]   | 파일을 삭제하는 작업만 수행 한 경우 |
+| [Setting]  | 기본 구성요소들을 작업한 경우|
 | [Docs]   | Readme 수정작업                     |
 
