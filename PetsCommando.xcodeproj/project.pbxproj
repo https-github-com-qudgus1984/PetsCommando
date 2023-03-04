@@ -20,6 +20,7 @@
 		2F64A91229B33A5F00BC11B9 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A91129B33A5F00BC11B9 /* UITextField+Extension.swift */; };
 		2F64A91429B3452B00BC11B9 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A91329B3452B00BC11B9 /* LoginCoordinator.swift */; };
 		2F64A91629B346A600BC11B9 /* LoginCoordinatorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A91529B346A600BC11B9 /* LoginCoordinatorContext.swift */; };
+		2F64A91829B34AE900BC11B9 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A91729B34AE900BC11B9 /* TextView.swift */; };
 		2FAB65AA29B30E6C0022B609 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAB65A929B30E6C0022B609 /* LoginViewController.swift */; };
 		2FAB65AD29B310570022B609 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2FAB65AC29B310570022B609 /* RxCocoa */; };
 		2FAB65AF29B310570022B609 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2FAB65AE29B310570022B609 /* RxSwift */; };
@@ -53,6 +54,7 @@
 		2F64A91129B33A5F00BC11B9 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		2F64A91329B3452B00BC11B9 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		2F64A91529B346A600BC11B9 /* LoginCoordinatorContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorContext.swift; sourceTree = "<group>"; };
+		2F64A91729B34AE900BC11B9 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		2FAB65A929B30E6C0022B609 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2FAB65B129B3127D0022B609 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2FDE15CC2990D13C00154A78 /* PetsCommando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetsCommando.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				2FAB65A929B30E6C0022B609 /* LoginViewController.swift */,
+				2F64A91729B34AE900BC11B9 /* TextView.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				2FDE15F82990DB0E00154A78 /* RealmModel.swift in Sources */,
 				2F64A8FA29B31AD800BC11B9 /* AppCoordinatorContext.swift in Sources */,
 				2FDE15F32990D36F00154A78 /* EndPoint.swift in Sources */,
+				2F64A91829B34AE900BC11B9 /* TextView.swift in Sources */,
 				2FDE15F12990D35200154A78 /* URLConstant.swift in Sources */,
 				2FAB65B229B3127D0022B609 /* Color.swift in Sources */,
 				2FDE16002990DB6400154A78 /* ViewModelType.swift in Sources */,
