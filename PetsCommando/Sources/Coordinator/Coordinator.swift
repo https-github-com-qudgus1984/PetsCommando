@@ -18,7 +18,6 @@ protocol CoordinatorDidFinishDelegate: AnyObject {
     func removeChild(coordinator: Coordinator)
 }
 
-
 protocol Coordinator: CoordinatorDidFinishDelegate {
     
     var delegate: CoordinatorDidFinishDelegate? { get set }

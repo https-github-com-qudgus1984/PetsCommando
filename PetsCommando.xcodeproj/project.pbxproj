@@ -12,6 +12,12 @@
 		2F64A8F829B31AC300BC11B9 /* BaseCoordinatorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A8F729B31AC300BC11B9 /* BaseCoordinatorContext.swift */; };
 		2F64A8FA29B31AD800BC11B9 /* AppCoordinatorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A8F929B31AD800BC11B9 /* AppCoordinatorContext.swift */; };
 		2F64A8FC29B31AED00BC11B9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A8FB29B31AED00BC11B9 /* AppCoordinator.swift */; };
+		2F64A90129B31CFE00BC11B9 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A90029B31CFE00BC11B9 /* LaunchScreenViewController.swift */; };
+		2F64A90829B3281C00BC11B9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2F64A90729B3281C00BC11B9 /* SnapKit */; };
+		2F64A90C29B3359600BC11B9 /* 강원교육모두 Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F64A90A29B3359600BC11B9 /* 강원교육모두 Light.otf */; };
+		2F64A90D29B3359600BC11B9 /* 강원교육모두 Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F64A90B29B3359600BC11B9 /* 강원교육모두 Bold.otf */; };
+		2F64A91029B33A2C00BC11B9 /* LineTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A90F29B33A2C00BC11B9 /* LineTextFieldView.swift */; };
+		2F64A91229B33A5F00BC11B9 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A91129B33A5F00BC11B9 /* UITextField+Extension.swift */; };
 		2FAB65AA29B30E6C0022B609 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAB65A929B30E6C0022B609 /* LoginViewController.swift */; };
 		2FAB65AD29B310570022B609 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2FAB65AC29B310570022B609 /* RxCocoa */; };
 		2FAB65AF29B310570022B609 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2FAB65AE29B310570022B609 /* RxSwift */; };
@@ -38,6 +44,11 @@
 		2F64A8F729B31AC300BC11B9 /* BaseCoordinatorContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinatorContext.swift; sourceTree = "<group>"; };
 		2F64A8F929B31AD800BC11B9 /* AppCoordinatorContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorContext.swift; sourceTree = "<group>"; };
 		2F64A8FB29B31AED00BC11B9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		2F64A90029B31CFE00BC11B9 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		2F64A90A29B3359600BC11B9 /* 강원교육모두 Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "강원교육모두 Light.otf"; sourceTree = "<group>"; };
+		2F64A90B29B3359600BC11B9 /* 강원교육모두 Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "강원교육모두 Bold.otf"; sourceTree = "<group>"; };
+		2F64A90F29B33A2C00BC11B9 /* LineTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextFieldView.swift; sourceTree = "<group>"; };
+		2F64A91129B33A5F00BC11B9 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		2FAB65A929B30E6C0022B609 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2FAB65B129B3127D0022B609 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2FDE15CC2990D13C00154A78 /* PetsCommando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetsCommando.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F64A90829B3281C00BC11B9 /* SnapKit in Frameworks */,
 				2FAB65AF29B310570022B609 /* RxSwift in Frameworks */,
 				2FAB65AD29B310570022B609 /* RxCocoa in Frameworks */,
 			);
@@ -90,6 +102,38 @@
 			path = AppCoordinator;
 			sourceTree = "<group>";
 		};
+		2F64A8FD29B31CC800BC11B9 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2F64A90029B31CFE00BC11B9 /* LaunchScreenViewController.swift */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		2F64A90229B325DD00BC11B9 /* LoginCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginCoordinator;
+			sourceTree = "<group>";
+		};
+		2F64A90929B3352500BC11B9 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				2F64A90B29B3359600BC11B9 /* 강원교육모두 Bold.otf */,
+				2F64A90A29B3359600BC11B9 /* 강원교육모두 Light.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		2F64A90E29B33A1900BC11B9 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				2F64A90F29B33A2C00BC11B9 /* LineTextFieldView.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		2FAB65A529B30E090022B609 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +153,7 @@
 		2FAB65A729B30E570022B609 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				2F64A90229B325DD00BC11B9 /* LoginCoordinator */,
 				2FAB65A829B30E630022B609 /* LoginView */,
 			);
 			path = Login;
@@ -162,7 +207,7 @@
 			children = (
 				2F64A8F229B3198300BC11B9 /* Coordinator */,
 				2FDE16022990DD8800154A78 /* Base */,
-				2FDE16012990DD8200154A78 /* Utils */,
+				2FDE16012990DD8200154A78 /* Utills */,
 				2FDE15FC2990DB3800154A78 /* Presents */,
 				2FDE15FB2990DB3300154A78 /* Cell */,
 				2FDE15F52990DAFF00154A78 /* Model */,
@@ -175,6 +220,7 @@
 		2FDE15E42990D22700154A78 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2F64A90929B3352500BC11B9 /* Font */,
 				2FDE15DA2990D13D00154A78 /* LaunchScreen.storyboard */,
 				2FDE15D82990D13D00154A78 /* Assets.xcassets */,
 			);
@@ -261,6 +307,7 @@
 		2FDE15FC2990DB3800154A78 /* Presents */ = {
 			isa = PBXGroup;
 			children = (
+				2F64A8FD29B31CC800BC11B9 /* LaunchScreen */,
 				2FAB65A529B30E090022B609 /* Auth */,
 				2FDE15FD2990DB5500154A78 /* Protocol */,
 			);
@@ -283,15 +330,16 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		2FDE16012990DD8200154A78 /* Utils */ = {
+		2FDE16012990DD8200154A78 /* Utills */ = {
 			isa = PBXGroup;
 			children = (
+				2F64A90E29B33A1900BC11B9 /* Custom */,
 				2FAB65B029B312720022B609 /* Constants */,
 				2FDE16052990DDA400154A78 /* Extension */,
 				2FDE16042990DD9800154A78 /* ReusableProtocol */,
 				2FDE16032990DD9300154A78 /* Protocol */,
 			);
-			path = Utils;
+			path = Utills;
 			sourceTree = "<group>";
 		};
 		2FDE16022990DD8800154A78 /* Base */ = {
@@ -320,6 +368,7 @@
 		2FDE16052990DDA400154A78 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2F64A91129B33A5F00BC11B9 /* UITextField+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -343,6 +392,7 @@
 			packageProductDependencies = (
 				2FAB65AC29B310570022B609 /* RxCocoa */,
 				2FAB65AE29B310570022B609 /* RxSwift */,
+				2F64A90729B3281C00BC11B9 /* SnapKit */,
 			);
 			productName = PetsCommando;
 			productReference = 2FDE15CC2990D13C00154A78 /* PetsCommando.app */;
@@ -374,6 +424,7 @@
 			mainGroup = 2FDE15C32990D13C00154A78;
 			packageReferences = (
 				2FAB65AB29B310570022B609 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				2F64A90629B3281C00BC11B9 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 2FDE15CD2990D13C00154A78 /* Products */;
 			projectDirPath = "";
@@ -389,8 +440,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F64A90D29B3359600BC11B9 /* 강원교육모두 Bold.otf in Resources */,
 				2FDE15DC2990D13D00154A78 /* LaunchScreen.storyboard in Resources */,
 				2FDE15D92990D13D00154A78 /* Assets.xcassets in Resources */,
+				2F64A90C29B3359600BC11B9 /* 강원교육모두 Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +463,7 @@
 				2FDE15D22990D13C00154A78 /* SceneDelegate.swift in Sources */,
 				2FDE15EF2990D34800154A78 /* APIKey.swift in Sources */,
 				2FDE16092990DDCA00154A78 /* BaseViewController.swift in Sources */,
+				2F64A91029B33A2C00BC11B9 /* LineTextFieldView.swift in Sources */,
 				2FDE15F82990DB0E00154A78 /* RealmModel.swift in Sources */,
 				2F64A8FA29B31AD800BC11B9 /* AppCoordinatorContext.swift in Sources */,
 				2FDE15F32990D36F00154A78 /* EndPoint.swift in Sources */,
@@ -417,8 +471,10 @@
 				2FAB65B229B3127D0022B609 /* Color.swift in Sources */,
 				2FDE16002990DB6400154A78 /* ViewModelType.swift in Sources */,
 				2F64A8FC29B31AED00BC11B9 /* AppCoordinator.swift in Sources */,
+				2F64A91229B33A5F00BC11B9 /* UITextField+Extension.swift in Sources */,
 				2FDE16072990DDBF00154A78 /* BaseView.swift in Sources */,
 				2FAB65AA29B30E6C0022B609 /* LoginViewController.swift in Sources */,
+				2F64A90129B31CFE00BC11B9 /* LaunchScreenViewController.swift in Sources */,
 				2FDE15FA2990DB1B00154A78 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -633,6 +689,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2F64A90629B3281C00BC11B9 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
 		2FAB65AB29B310570022B609 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
@@ -644,6 +708,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2F64A90729B3281C00BC11B9 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F64A90629B3281C00BC11B9 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
 		2FAB65AC29B310570022B609 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2FAB65AB29B310570022B609 /* XCRemoteSwiftPackageReference "RxSwift" */;
