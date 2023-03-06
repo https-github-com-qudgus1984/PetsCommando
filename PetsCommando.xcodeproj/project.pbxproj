@@ -12,7 +12,7 @@
 		2F64A8F829B31AC300BC11B9 /* BaseCoordinatorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A8F729B31AC300BC11B9 /* BaseCoordinatorContext.swift */; };
 		2F64A8FA29B31AD800BC11B9 /* AppCoordinatorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A8F929B31AD800BC11B9 /* AppCoordinatorContext.swift */; };
 		2F64A8FC29B31AED00BC11B9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A8FB29B31AED00BC11B9 /* AppCoordinator.swift */; };
-		2F64A90129B31CFE00BC11B9 /* CertificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A90029B31CFE00BC11B9 /* CertificationViewController.swift */; };
+		2F64A90129B31CFE00BC11B9 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A90029B31CFE00BC11B9 /* OnBoardingViewController.swift */; };
 		2F64A90829B3281C00BC11B9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2F64A90729B3281C00BC11B9 /* SnapKit */; };
 		2F64A90C29B3359600BC11B9 /* 강원교육모두 Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F64A90A29B3359600BC11B9 /* 강원교육모두 Light.otf */; };
 		2F64A90D29B3359600BC11B9 /* 강원교육모두 Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F64A90B29B3359600BC11B9 /* 강원교육모두 Bold.otf */; };
@@ -32,9 +32,13 @@
 		2FB2D7AC29B5C20200EA35F4 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7AB29B5C20200EA35F4 /* SignUpView.swift */; };
 		2FB2D7AE29B5C20D00EA35F4 /* SignUpCoordinatorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7AD29B5C20D00EA35F4 /* SignUpCoordinatorContext.swift */; };
 		2FB2D7B229B5C69200EA35F4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7B129B5C69200EA35F4 /* LoginViewModel.swift */; };
-		2FB2D7B629B5C9DD00EA35F4 /* CertificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7B529B5C9DD00EA35F4 /* CertificationCoordinator.swift */; };
-		2FB2D7B829B5C9E600EA35F4 /* CertificationCoordinatorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7B729B5C9E600EA35F4 /* CertificationCoordinatorContext.swift */; };
-		2FB2D7BC29B5CA3500EA35F4 /* CertificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7BB29B5CA3500EA35F4 /* CertificationView.swift */; };
+		2FB2D7B629B5C9DD00EA35F4 /* OnBoardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7B529B5C9DD00EA35F4 /* OnBoardingCoordinator.swift */; };
+		2FB2D7B829B5C9E600EA35F4 /* OnBoardingCoordinatorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7B729B5C9E600EA35F4 /* OnBoardingCoordinatorContext.swift */; };
+		2FB2D7BC29B5CA3500EA35F4 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7BB29B5CA3500EA35F4 /* OnBoardingView.swift */; };
+		2FB2D7C329B5E36200EA35F4 /* InitialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7C229B5E36200EA35F4 /* InitialCoordinator.swift */; };
+		2FB2D7C529B5E3C200EA35F4 /* InitialCoordinatorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7C429B5E3C200EA35F4 /* InitialCoordinatorContext.swift */; };
+		2FB2D7C729B5E49400EA35F4 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7C629B5E49400EA35F4 /* InitialViewController.swift */; };
+		2FB2D7C929B5F7E900EA35F4 /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7C829B5F7E900EA35F4 /* InitialView.swift */; };
 		2FDE15D02990D13C00154A78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE15CF2990D13C00154A78 /* AppDelegate.swift */; };
 		2FDE15D22990D13C00154A78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE15D12990D13C00154A78 /* SceneDelegate.swift */; };
 		2FDE15D92990D13D00154A78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FDE15D82990D13D00154A78 /* Assets.xcassets */; };
@@ -57,7 +61,7 @@
 		2F64A8F729B31AC300BC11B9 /* BaseCoordinatorContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinatorContext.swift; sourceTree = "<group>"; };
 		2F64A8F929B31AD800BC11B9 /* AppCoordinatorContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorContext.swift; sourceTree = "<group>"; };
 		2F64A8FB29B31AED00BC11B9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		2F64A90029B31CFE00BC11B9 /* CertificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationViewController.swift; sourceTree = "<group>"; };
+		2F64A90029B31CFE00BC11B9 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		2F64A90A29B3359600BC11B9 /* 강원교육모두 Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "강원교육모두 Light.otf"; sourceTree = "<group>"; };
 		2F64A90B29B3359600BC11B9 /* 강원교육모두 Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "강원교육모두 Bold.otf"; sourceTree = "<group>"; };
 		2F64A90F29B33A2C00BC11B9 /* LineTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextFieldView.swift; sourceTree = "<group>"; };
@@ -74,9 +78,13 @@
 		2FB2D7AB29B5C20200EA35F4 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		2FB2D7AD29B5C20D00EA35F4 /* SignUpCoordinatorContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinatorContext.swift; sourceTree = "<group>"; };
 		2FB2D7B129B5C69200EA35F4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		2FB2D7B529B5C9DD00EA35F4 /* CertificationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationCoordinator.swift; sourceTree = "<group>"; };
-		2FB2D7B729B5C9E600EA35F4 /* CertificationCoordinatorContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationCoordinatorContext.swift; sourceTree = "<group>"; };
-		2FB2D7BB29B5CA3500EA35F4 /* CertificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationView.swift; sourceTree = "<group>"; };
+		2FB2D7B529B5C9DD00EA35F4 /* OnBoardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCoordinator.swift; sourceTree = "<group>"; };
+		2FB2D7B729B5C9E600EA35F4 /* OnBoardingCoordinatorContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCoordinatorContext.swift; sourceTree = "<group>"; };
+		2FB2D7BB29B5CA3500EA35F4 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		2FB2D7C229B5E36200EA35F4 /* InitialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialCoordinator.swift; sourceTree = "<group>"; };
+		2FB2D7C429B5E3C200EA35F4 /* InitialCoordinatorContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialCoordinatorContext.swift; sourceTree = "<group>"; };
+		2FB2D7C629B5E49400EA35F4 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		2FB2D7C829B5F7E900EA35F4 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		2FDE15CC2990D13C00154A78 /* PetsCommando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetsCommando.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FDE15CF2990D13C00154A78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FDE15D12990D13C00154A78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,13 +136,13 @@
 			path = AppCoordinator;
 			sourceTree = "<group>";
 		};
-		2F64A8FD29B31CC800BC11B9 /* Certification */ = {
+		2F64A8FD29B31CC800BC11B9 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
 				2FB2D7B929B5C9F300EA35F4 /* View */,
 				2FB2D7B429B5C9B100EA35F4 /* Coordinator */,
 			);
-			path = Certification;
+			path = OnBoarding;
 			sourceTree = "<group>";
 		};
 		2F64A90229B325DD00BC11B9 /* Coordinator */ = {
@@ -271,8 +279,8 @@
 		2FB2D7B429B5C9B100EA35F4 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				2FB2D7B529B5C9DD00EA35F4 /* CertificationCoordinator.swift */,
-				2FB2D7B729B5C9E600EA35F4 /* CertificationCoordinatorContext.swift */,
+				2FB2D7B529B5C9DD00EA35F4 /* OnBoardingCoordinator.swift */,
+				2FB2D7B729B5C9E600EA35F4 /* OnBoardingCoordinatorContext.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -280,10 +288,37 @@
 		2FB2D7B929B5C9F300EA35F4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2F64A90029B31CFE00BC11B9 /* CertificationViewController.swift */,
-				2FB2D7BB29B5CA3500EA35F4 /* CertificationView.swift */,
+				2F64A90029B31CFE00BC11B9 /* OnBoardingViewController.swift */,
+				2FB2D7BB29B5CA3500EA35F4 /* OnBoardingView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2FB2D7BD29B5E21800EA35F4 /* Initial */ = {
+			isa = PBXGroup;
+			children = (
+				2FB2D7C029B5E23D00EA35F4 /* Coordinator */,
+				2FB2D7BF29B5E23A00EA35F4 /* View */,
+			);
+			path = Initial;
+			sourceTree = "<group>";
+		};
+		2FB2D7BF29B5E23A00EA35F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2FB2D7C629B5E49400EA35F4 /* InitialViewController.swift */,
+				2FB2D7C829B5F7E900EA35F4 /* InitialView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2FB2D7C029B5E23D00EA35F4 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2FB2D7C229B5E36200EA35F4 /* InitialCoordinator.swift */,
+				2FB2D7C429B5E3C200EA35F4 /* InitialCoordinatorContext.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		2FDE15C32990D13C00154A78 = {
@@ -417,7 +452,8 @@
 		2FDE15FC2990DB3800154A78 /* Presents */ = {
 			isa = PBXGroup;
 			children = (
-				2F64A8FD29B31CC800BC11B9 /* Certification */,
+				2FB2D7BD29B5E21800EA35F4 /* Initial */,
+				2F64A8FD29B31CC800BC11B9 /* OnBoarding */,
 				2FAB65A529B30E090022B609 /* Auth */,
 				2FDE15FD2990DB5500154A78 /* Protocol */,
 			);
@@ -566,7 +602,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F64A8F529B319F800BC11B9 /* Coordinator.swift in Sources */,
-				2FB2D7B629B5C9DD00EA35F4 /* CertificationCoordinator.swift in Sources */,
+				2FB2D7C329B5E36200EA35F4 /* InitialCoordinator.swift in Sources */,
+				2FB2D7B629B5C9DD00EA35F4 /* OnBoardingCoordinator.swift in Sources */,
 				2FDE15ED2990D32C00154A78 /* Router.swift in Sources */,
 				2F64A91629B346A600BC11B9 /* LoginCoordinatorContext.swift in Sources */,
 				2FB2D7A029B5AF1900EA35F4 /* AuthString.swift in Sources */,
@@ -579,17 +616,20 @@
 				2FDE15EF2990D34800154A78 /* APIKey.swift in Sources */,
 				2FDE16092990DDCA00154A78 /* BaseViewController.swift in Sources */,
 				2F64A91029B33A2C00BC11B9 /* LineTextFieldView.swift in Sources */,
+				2FB2D7C729B5E49400EA35F4 /* InitialViewController.swift in Sources */,
 				2FDE15F82990DB0E00154A78 /* RealmModel.swift in Sources */,
 				2F64A8FA29B31AD800BC11B9 /* AppCoordinatorContext.swift in Sources */,
 				2FB2D7AE29B5C20D00EA35F4 /* SignUpCoordinatorContext.swift in Sources */,
-				2FB2D7BC29B5CA3500EA35F4 /* CertificationView.swift in Sources */,
+				2FB2D7BC29B5CA3500EA35F4 /* OnBoardingView.swift in Sources */,
 				2FDE15F32990D36F00154A78 /* EndPoint.swift in Sources */,
+				2FB2D7C929B5F7E900EA35F4 /* InitialView.swift in Sources */,
 				2FB2D7AC29B5C20200EA35F4 /* SignUpView.swift in Sources */,
 				2FB2D7AA29B5C1FC00EA35F4 /* SignUpViewController.swift in Sources */,
 				2FB2D79B29B59FAB00EA35F4 /* Font+Enum.swift in Sources */,
 				2FB2D7B229B5C69200EA35F4 /* LoginViewModel.swift in Sources */,
-				2FB2D7B829B5C9E600EA35F4 /* CertificationCoordinatorContext.swift in Sources */,
+				2FB2D7B829B5C9E600EA35F4 /* OnBoardingCoordinatorContext.swift in Sources */,
 				2F64A91829B34AE900BC11B9 /* LoginView.swift in Sources */,
+				2FB2D7C529B5E3C200EA35F4 /* InitialCoordinatorContext.swift in Sources */,
 				2FDE15F12990D35200154A78 /* URLConstant.swift in Sources */,
 				2FAB65B229B3127D0022B609 /* Color.swift in Sources */,
 				2FDE16002990DB6400154A78 /* ViewModelType.swift in Sources */,
@@ -598,7 +638,7 @@
 				2F64A91229B33A5F00BC11B9 /* UITextField+Extension.swift in Sources */,
 				2FDE16072990DDBF00154A78 /* BaseView.swift in Sources */,
 				2FAB65AA29B30E6C0022B609 /* LoginViewController.swift in Sources */,
-				2F64A90129B31CFE00BC11B9 /* CertificationViewController.swift in Sources */,
+				2F64A90129B31CFE00BC11B9 /* OnBoardingViewController.swift in Sources */,
 				2FDE15FA2990DB1B00154A78 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

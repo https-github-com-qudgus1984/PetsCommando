@@ -5,6 +5,7 @@
 //  Created by 이병현 on 2023/03/04.
 //
 
+/*
 import UIKit
 
 final class AppCoordinator: Coordinator {
@@ -49,4 +50,5 @@ final class AppCoordinator: Coordinator {
     }
 }
 
-extension AppCoordinator: CertificationCoordinatorContext { }
+extension AppCoordinator: OnBoardingCoordinator { }
+*/
