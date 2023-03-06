@@ -10,7 +10,6 @@ import SnapKit
 
 
 final class LoginViewController: BaseViewController {
-    
     //MARK: UI
     private lazy var scrollView = UIScrollView()
     private var contentView = UIView()
@@ -21,7 +20,7 @@ final class LoginViewController: BaseViewController {
     weak var coordinator: LoginCoordinator?
     
     override func loadView() {
-        self.view = CheckNicknameView()
+        self.view = LoginView()
     }
     
     override func viewDidLoad() {

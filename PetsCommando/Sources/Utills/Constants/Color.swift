@@ -9,7 +9,6 @@ import UIKit
 
 
 struct Color {
-        
     struct BaseColor {
         static let white = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         static let black = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
@@ -35,5 +34,4 @@ struct Color {
         static let error =  #colorLiteral(red: 0.9137254902, green: 0.4, blue: 0.4196078431, alpha: 1)
         static let focus =  #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
     }
-    
 }
