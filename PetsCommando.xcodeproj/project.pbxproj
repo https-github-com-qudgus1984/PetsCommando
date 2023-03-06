@@ -12,7 +12,7 @@
 		2F64A8F829B31AC300BC11B9 /* BaseCoordinatorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A8F729B31AC300BC11B9 /* BaseCoordinatorContext.swift */; };
 		2F64A8FA29B31AD800BC11B9 /* AppCoordinatorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A8F929B31AD800BC11B9 /* AppCoordinatorContext.swift */; };
 		2F64A8FC29B31AED00BC11B9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A8FB29B31AED00BC11B9 /* AppCoordinator.swift */; };
-		2F64A90129B31CFE00BC11B9 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A90029B31CFE00BC11B9 /* LaunchScreenViewController.swift */; };
+		2F64A90129B31CFE00BC11B9 /* CertificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A90029B31CFE00BC11B9 /* CertificationViewController.swift */; };
 		2F64A90829B3281C00BC11B9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2F64A90729B3281C00BC11B9 /* SnapKit */; };
 		2F64A90C29B3359600BC11B9 /* 강원교육모두 Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F64A90A29B3359600BC11B9 /* 강원교육모두 Light.otf */; };
 		2F64A90D29B3359600BC11B9 /* 강원교육모두 Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F64A90B29B3359600BC11B9 /* 강원교육모두 Bold.otf */; };
@@ -20,12 +20,21 @@
 		2F64A91229B33A5F00BC11B9 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A91129B33A5F00BC11B9 /* UITextField+Extension.swift */; };
 		2F64A91429B3452B00BC11B9 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A91329B3452B00BC11B9 /* LoginCoordinator.swift */; };
 		2F64A91629B346A600BC11B9 /* LoginCoordinatorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A91529B346A600BC11B9 /* LoginCoordinatorContext.swift */; };
-		2F64A91829B34AE900BC11B9 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A91729B34AE900BC11B9 /* TextView.swift */; };
+		2F64A91829B34AE900BC11B9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A91729B34AE900BC11B9 /* LoginView.swift */; };
 		2FAB65AA29B30E6C0022B609 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAB65A929B30E6C0022B609 /* LoginViewController.swift */; };
 		2FAB65AD29B310570022B609 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2FAB65AC29B310570022B609 /* RxCocoa */; };
 		2FAB65AF29B310570022B609 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2FAB65AE29B310570022B609 /* RxSwift */; };
 		2FAB65B229B3127D0022B609 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAB65B129B3127D0022B609 /* Color.swift */; };
-		2FB2D79B29B59FAB00EA35F4 /* String+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D79A29B59FAB00EA35F4 /* String+Enum.swift */; };
+		2FB2D79B29B59FAB00EA35F4 /* Font+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D79A29B59FAB00EA35F4 /* Font+Enum.swift */; };
+		2FB2D7A029B5AF1900EA35F4 /* AuthString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D79F29B5AF1900EA35F4 /* AuthString.swift */; };
+		2FB2D7A829B5C1F200EA35F4 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7A729B5C1F200EA35F4 /* SignUpCoordinator.swift */; };
+		2FB2D7AA29B5C1FC00EA35F4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7A929B5C1FC00EA35F4 /* SignUpViewController.swift */; };
+		2FB2D7AC29B5C20200EA35F4 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7AB29B5C20200EA35F4 /* SignUpView.swift */; };
+		2FB2D7AE29B5C20D00EA35F4 /* SignUpCoordinatorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7AD29B5C20D00EA35F4 /* SignUpCoordinatorContext.swift */; };
+		2FB2D7B229B5C69200EA35F4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7B129B5C69200EA35F4 /* LoginViewModel.swift */; };
+		2FB2D7B629B5C9DD00EA35F4 /* CertificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7B529B5C9DD00EA35F4 /* CertificationCoordinator.swift */; };
+		2FB2D7B829B5C9E600EA35F4 /* CertificationCoordinatorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7B729B5C9E600EA35F4 /* CertificationCoordinatorContext.swift */; };
+		2FB2D7BC29B5CA3500EA35F4 /* CertificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7BB29B5CA3500EA35F4 /* CertificationView.swift */; };
 		2FDE15D02990D13C00154A78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE15CF2990D13C00154A78 /* AppDelegate.swift */; };
 		2FDE15D22990D13C00154A78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE15D12990D13C00154A78 /* SceneDelegate.swift */; };
 		2FDE15D92990D13D00154A78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FDE15D82990D13D00154A78 /* Assets.xcassets */; };
@@ -48,17 +57,26 @@
 		2F64A8F729B31AC300BC11B9 /* BaseCoordinatorContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinatorContext.swift; sourceTree = "<group>"; };
 		2F64A8F929B31AD800BC11B9 /* AppCoordinatorContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorContext.swift; sourceTree = "<group>"; };
 		2F64A8FB29B31AED00BC11B9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		2F64A90029B31CFE00BC11B9 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		2F64A90029B31CFE00BC11B9 /* CertificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationViewController.swift; sourceTree = "<group>"; };
 		2F64A90A29B3359600BC11B9 /* 강원교육모두 Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "강원교육모두 Light.otf"; sourceTree = "<group>"; };
 		2F64A90B29B3359600BC11B9 /* 강원교육모두 Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "강원교육모두 Bold.otf"; sourceTree = "<group>"; };
 		2F64A90F29B33A2C00BC11B9 /* LineTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextFieldView.swift; sourceTree = "<group>"; };
 		2F64A91129B33A5F00BC11B9 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		2F64A91329B3452B00BC11B9 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		2F64A91529B346A600BC11B9 /* LoginCoordinatorContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorContext.swift; sourceTree = "<group>"; };
-		2F64A91729B34AE900BC11B9 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		2F64A91729B34AE900BC11B9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2FAB65A929B30E6C0022B609 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2FAB65B129B3127D0022B609 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		2FB2D79A29B59FAB00EA35F4 /* String+Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Enum.swift"; sourceTree = "<group>"; };
+		2FB2D79A29B59FAB00EA35F4 /* Font+Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Enum.swift"; sourceTree = "<group>"; };
+		2FB2D79F29B5AF1900EA35F4 /* AuthString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthString.swift; sourceTree = "<group>"; };
+		2FB2D7A729B5C1F200EA35F4 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
+		2FB2D7A929B5C1FC00EA35F4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		2FB2D7AB29B5C20200EA35F4 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		2FB2D7AD29B5C20D00EA35F4 /* SignUpCoordinatorContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinatorContext.swift; sourceTree = "<group>"; };
+		2FB2D7B129B5C69200EA35F4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		2FB2D7B529B5C9DD00EA35F4 /* CertificationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationCoordinator.swift; sourceTree = "<group>"; };
+		2FB2D7B729B5C9E600EA35F4 /* CertificationCoordinatorContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationCoordinatorContext.swift; sourceTree = "<group>"; };
+		2FB2D7BB29B5CA3500EA35F4 /* CertificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationView.swift; sourceTree = "<group>"; };
 		2FDE15CC2990D13C00154A78 /* PetsCommando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetsCommando.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FDE15CF2990D13C00154A78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FDE15D12990D13C00154A78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,21 +128,22 @@
 			path = AppCoordinator;
 			sourceTree = "<group>";
 		};
-		2F64A8FD29B31CC800BC11B9 /* LaunchScreen */ = {
+		2F64A8FD29B31CC800BC11B9 /* Certification */ = {
 			isa = PBXGroup;
 			children = (
-				2F64A90029B31CFE00BC11B9 /* LaunchScreenViewController.swift */,
+				2FB2D7B929B5C9F300EA35F4 /* View */,
+				2FB2D7B429B5C9B100EA35F4 /* Coordinator */,
 			);
-			path = LaunchScreen;
+			path = Certification;
 			sourceTree = "<group>";
 		};
-		2F64A90229B325DD00BC11B9 /* LoginCoordinator */ = {
+		2F64A90229B325DD00BC11B9 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
 				2F64A91329B3452B00BC11B9 /* LoginCoordinator.swift */,
 				2F64A91529B346A600BC11B9 /* LoginCoordinatorContext.swift */,
 			);
-			path = LoginCoordinator;
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		2F64A90929B3352500BC11B9 /* Font */ = {
@@ -156,6 +175,8 @@
 		2FAB65A629B30E280022B609 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				2FB2D7A629B5C1E000EA35F4 /* SignUpCoordinator */,
+				2FB2D7A529B5C1D500EA35F4 /* SignUpView */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -163,19 +184,20 @@
 		2FAB65A729B30E570022B609 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				2F64A90229B325DD00BC11B9 /* LoginCoordinator */,
-				2FAB65A829B30E630022B609 /* LoginView */,
+				2FB2D7AF29B5C67100EA35F4 /* ViewModel */,
+				2F64A90229B325DD00BC11B9 /* Coordinator */,
+				2FAB65A829B30E630022B609 /* View */,
 			);
 			path = Login;
 			sourceTree = "<group>";
 		};
-		2FAB65A829B30E630022B609 /* LoginView */ = {
+		2FAB65A829B30E630022B609 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				2FAB65A929B30E6C0022B609 /* LoginViewController.swift */,
-				2F64A91729B34AE900BC11B9 /* TextView.swift */,
+				2F64A91729B34AE900BC11B9 /* LoginView.swift */,
 			);
-			path = LoginView;
+			path = View;
 			sourceTree = "<group>";
 		};
 		2FAB65B029B312720022B609 /* Constants */ = {
@@ -190,9 +212,78 @@
 		2FB2D79929B59F9F00EA35F4 /* Enum */ = {
 			isa = PBXGroup;
 			children = (
-				2FB2D79A29B59FAB00EA35F4 /* String+Enum.swift */,
+				2FB2D79C29B5AE3A00EA35F4 /* String+Enum */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		2FB2D79C29B5AE3A00EA35F4 /* String+Enum */ = {
+			isa = PBXGroup;
+			children = (
+				2FB2D7A129B5C14B00EA35F4 /* Font */,
+				2FB2D79D29B5AE4600EA35F4 /* Auth */,
+			);
+			path = "String+Enum";
+			sourceTree = "<group>";
+		};
+		2FB2D79D29B5AE4600EA35F4 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2FB2D79F29B5AF1900EA35F4 /* AuthString.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		2FB2D7A129B5C14B00EA35F4 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				2FB2D79A29B59FAB00EA35F4 /* Font+Enum.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		2FB2D7A529B5C1D500EA35F4 /* SignUpView */ = {
+			isa = PBXGroup;
+			children = (
+				2FB2D7A929B5C1FC00EA35F4 /* SignUpViewController.swift */,
+				2FB2D7AB29B5C20200EA35F4 /* SignUpView.swift */,
+			);
+			path = SignUpView;
+			sourceTree = "<group>";
+		};
+		2FB2D7A629B5C1E000EA35F4 /* SignUpCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2FB2D7A729B5C1F200EA35F4 /* SignUpCoordinator.swift */,
+				2FB2D7AD29B5C20D00EA35F4 /* SignUpCoordinatorContext.swift */,
+			);
+			path = SignUpCoordinator;
+			sourceTree = "<group>";
+		};
+		2FB2D7AF29B5C67100EA35F4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2FB2D7B129B5C69200EA35F4 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2FB2D7B429B5C9B100EA35F4 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2FB2D7B529B5C9DD00EA35F4 /* CertificationCoordinator.swift */,
+				2FB2D7B729B5C9E600EA35F4 /* CertificationCoordinatorContext.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2FB2D7B929B5C9F300EA35F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F64A90029B31CFE00BC11B9 /* CertificationViewController.swift */,
+				2FB2D7BB29B5CA3500EA35F4 /* CertificationView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		2FDE15C32990D13C00154A78 = {
@@ -326,7 +417,7 @@
 		2FDE15FC2990DB3800154A78 /* Presents */ = {
 			isa = PBXGroup;
 			children = (
-				2F64A8FD29B31CC800BC11B9 /* LaunchScreen */,
+				2F64A8FD29B31CC800BC11B9 /* Certification */,
 				2FAB65A529B30E090022B609 /* Auth */,
 				2FDE15FD2990DB5500154A78 /* Protocol */,
 			);
@@ -475,21 +566,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F64A8F529B319F800BC11B9 /* Coordinator.swift in Sources */,
+				2FB2D7B629B5C9DD00EA35F4 /* CertificationCoordinator.swift in Sources */,
 				2FDE15ED2990D32C00154A78 /* Router.swift in Sources */,
 				2F64A91629B346A600BC11B9 /* LoginCoordinatorContext.swift in Sources */,
+				2FB2D7A029B5AF1900EA35F4 /* AuthString.swift in Sources */,
 				2FDE15D02990D13C00154A78 /* AppDelegate.swift in Sources */,
 				2F64A8F129B3171800BC11B9 /* Font.swift in Sources */,
 				2FDE15EA2990D2EC00154A78 /* NetworkMonitor.swift in Sources */,
 				2F64A8F829B31AC300BC11B9 /* BaseCoordinatorContext.swift in Sources */,
+				2FB2D7A829B5C1F200EA35F4 /* SignUpCoordinator.swift in Sources */,
 				2FDE15D22990D13C00154A78 /* SceneDelegate.swift in Sources */,
 				2FDE15EF2990D34800154A78 /* APIKey.swift in Sources */,
 				2FDE16092990DDCA00154A78 /* BaseViewController.swift in Sources */,
 				2F64A91029B33A2C00BC11B9 /* LineTextFieldView.swift in Sources */,
 				2FDE15F82990DB0E00154A78 /* RealmModel.swift in Sources */,
 				2F64A8FA29B31AD800BC11B9 /* AppCoordinatorContext.swift in Sources */,
+				2FB2D7AE29B5C20D00EA35F4 /* SignUpCoordinatorContext.swift in Sources */,
+				2FB2D7BC29B5CA3500EA35F4 /* CertificationView.swift in Sources */,
 				2FDE15F32990D36F00154A78 /* EndPoint.swift in Sources */,
-				2FB2D79B29B59FAB00EA35F4 /* String+Enum.swift in Sources */,
-				2F64A91829B34AE900BC11B9 /* TextView.swift in Sources */,
+				2FB2D7AC29B5C20200EA35F4 /* SignUpView.swift in Sources */,
+				2FB2D7AA29B5C1FC00EA35F4 /* SignUpViewController.swift in Sources */,
+				2FB2D79B29B59FAB00EA35F4 /* Font+Enum.swift in Sources */,
+				2FB2D7B229B5C69200EA35F4 /* LoginViewModel.swift in Sources */,
+				2FB2D7B829B5C9E600EA35F4 /* CertificationCoordinatorContext.swift in Sources */,
+				2F64A91829B34AE900BC11B9 /* LoginView.swift in Sources */,
 				2FDE15F12990D35200154A78 /* URLConstant.swift in Sources */,
 				2FAB65B229B3127D0022B609 /* Color.swift in Sources */,
 				2FDE16002990DB6400154A78 /* ViewModelType.swift in Sources */,
@@ -498,7 +598,7 @@
 				2F64A91229B33A5F00BC11B9 /* UITextField+Extension.swift in Sources */,
 				2FDE16072990DDBF00154A78 /* BaseView.swift in Sources */,
 				2FAB65AA29B30E6C0022B609 /* LoginViewController.swift in Sources */,
-				2F64A90129B31CFE00BC11B9 /* LaunchScreenViewController.swift in Sources */,
+				2F64A90129B31CFE00BC11B9 /* CertificationViewController.swift in Sources */,
 				2FDE15FA2990DB1B00154A78 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
