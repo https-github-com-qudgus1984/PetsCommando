@@ -11,13 +11,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-    lazy var appCoordinator: AppCoordinator = AppCoordinator(window: self.window!)
+    lazy var initialCoordinator: InitialCoordinator = InitialCoordinator(window: self.window!)
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        appCoordinator.start()
+        initialCoordinator.start()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

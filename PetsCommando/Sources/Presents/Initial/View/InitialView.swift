@@ -1,5 +1,5 @@
 //
-//  CertificationView.swift
+//  InitialView.swift
 //  PetsCommando
 //
 //  Created by 이병현 on 2023/03/06.
@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-final class CertificationView: BaseView {
+final class InitialView: BaseView {
     
     private var bgView: UIView = {
         let view = UIView()
@@ -20,8 +20,11 @@ final class CertificationView: BaseView {
         let label = UILabel()
         label.font = Font.Title1_B20
         label.textColor = Color.BaseColor.hunt1
+        label.text = "PetsCommando"
+        label.textAlignment = .center
         return label
     }()
+    
     
     override func setupAttributes() {
         [bgView, titleLabel].forEach {
@@ -37,5 +40,7 @@ final class CertificationView: BaseView {
             make.top.equalToSuperview().offset(200)
             make.horizontalEdges.equalToSuperview()
         }
+        
+
     }
 }

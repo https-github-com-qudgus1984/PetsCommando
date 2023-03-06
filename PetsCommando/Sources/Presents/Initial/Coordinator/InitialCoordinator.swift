@@ -1,5 +1,5 @@
 //
-//  CertificationCoordinator.swift
+//  InitialCoordinator.swift
 //  PetsCommando
 //
 //  Created by 이병현 on 2023/03/06.
@@ -7,33 +7,34 @@
 
 import UIKit
 
-class CertificationCoordinator: Coordinator {
+final class InitialCoordinator: Coordinator {
+
+    /// variable
     private var window: UIWindow
-
+    
     var delegate: CoordinatorDidFinishDelegate?
-
+    
     var presenter: UINavigationController
-
-    var childCoordinators: [Coordinator] = []
-
+    
+    var childCoordinators: [Coordinator]
+    
     private var navigationController: UINavigationController!
-
+    
     /// initialziation
     init(window: UIWindow) {
         self.window = window
         self.childCoordinators = []
         self.presenter = UINavigationController()
-    }
 
+    }
+    
     func start(animated: Bool = true) {
-        let viewcontroller = CertificationViewController()
+        let viewcontroller = InitialViewController()
         viewcontroller.coordinator = self
         viewcontroller.coordinatorDelegate = self
         window.rootViewController = viewcontroller
+        window.makeKeyAndVisible()
+
     }
 }
-
-// MARK: App
-extension CertificationCoordinator : AppCoordinatorContext { }
-
-extension CertificationCoordinator : CertificationCoordinatorContext { }
+extension InitialCoordinator: InitialCoordinatorContext { }
