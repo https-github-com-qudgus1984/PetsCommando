@@ -35,3 +35,5 @@ class LoginCoordinator: Coordinator {
 
 // MARK: App
 extension LoginCoordinator : AppCoordinatorContext { }
+
+extension LoginCoordinator : SignUpCoordinatorContext { }

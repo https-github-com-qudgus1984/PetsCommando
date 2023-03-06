@@ -18,7 +18,7 @@ class LineTextFieldView: BaseView {
     
     /// Life Cycle
     override func setupAttributes() {
-        lineView.backgroundColor = Color.BaseColor.gray3
+        lineView.backgroundColor = Color.BaseColor.black
         textField.setupFont(type: Font.Title2_B16!)
     }
     
@@ -29,7 +29,7 @@ class LineTextFieldView: BaseView {
         
         textField.snp.makeConstraints { make in
             make.top.equalToSuperview()
-            make.horizontalEdges.equalToSuperview().inset(12)
+            make.horizontalEdges.equalToSuperview()
         }
         
         lineView.snp.makeConstraints { make in

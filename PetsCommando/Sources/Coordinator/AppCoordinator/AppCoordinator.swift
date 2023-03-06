@@ -10,7 +10,7 @@ import UIKit
 final class AppCoordinator: Coordinator {
     
     enum InitalViewType {
-        case login
+        case certification
     }
     
     var delegate: CoordinatorDidFinishDelegate?
@@ -28,15 +28,15 @@ final class AppCoordinator: Coordinator {
     }
     
     func start(animated: Bool = true) {
-        showInitialView(with: .login)
+        showInitialView(with: .certification)
     }
     
     func showInitialView(with type: InitalViewType) {
         presenter = UINavigationController()
         
         switch type {
-        case .login:
-            showLogin(window: window)
+        case .certification:
+            showCertification(window: window)
         }
         
         self.window.makeKeyAndVisible()
@@ -49,4 +49,4 @@ final class AppCoordinator: Coordinator {
     }
 }
 
-extension AppCoordinator: LoginCoordinatorContext { }
+extension AppCoordinator: CertificationCoordinatorContext { }
