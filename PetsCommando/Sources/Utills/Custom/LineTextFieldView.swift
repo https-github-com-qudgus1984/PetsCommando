@@ -19,7 +19,7 @@ class LineTextFieldView: BaseView {
     /// Life Cycle
     override func setupAttributes() {
         lineView.backgroundColor = Color.BaseColor.gray3
-        textField.setupFont(type: .Title4_R14)
+        textField.setupFont(type: Font.Title2_B16!)
     }
     
     override func setupLayout() {

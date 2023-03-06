@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class CheckNicknameView: BaseView {
+class LoginView: BaseView {
     
     private var bgView: UIView = {
         let view = UIView()
@@ -16,12 +16,12 @@ class CheckNicknameView: BaseView {
         return view
     }()
     
-    private var lolLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 20)
-        label.textColor = Color.BaseColor.hunt2
-        label.text = "LOL기장, LOL에 진심인 사람들을 위하여"
-        label.textAlignment = .center
+    private var lolLabel: LineTextFieldView = {
+        let label = LineTextFieldView()
+        label.textField.font = Font.Title1_B20
+        label.textField.textColor = Color.BaseColor.black
+        label.textField.text = "LOL기장, LOL에 진심인 사람들을 위하여"
+        label.textField.textAlignment = .center
         return label
     }()
     
@@ -65,7 +65,6 @@ class CheckNicknameView: BaseView {
         }
         
         lolLabel.snp.makeConstraints {
-            $0.height.equalTo(120)
             $0.leading.equalToSuperview().offset(20)
             $0.trailing.equalToSuperview().offset(-20)
             $0.top.equalTo(bgView.snp.top).offset(80)

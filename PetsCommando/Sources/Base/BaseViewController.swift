@@ -112,8 +112,7 @@ class BaseViewController: UIViewController {
         navigationBarAppearance.backgroundColor = Color.BaseColor.white
         
         let attributes = [NSAttributedString.Key.foregroundColor: Color.BaseColor.black,
-                          NSAttributedString.Key.font: UIFont(name: Font.Title3_M14.fontType,
-                                                              size: Font.Title3_M14.fontSize)! ]
+                          NSAttributedString.Key.font: Font.Title2_B16! ]
         
         navigationBarAppearance.titleTextAttributes = attributes
         navigationBarAppearance.buttonAppearance.normal.titleTextAttributes = attributes

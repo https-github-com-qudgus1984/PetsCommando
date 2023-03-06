@@ -21,9 +21,7 @@ extension UITextField {
     }
     
     /// Custom Func
-    func setupFont(type: Font) {
-        font = UIFont(name: type.fontType, size: type.fontSize)
-        let lineSpacing = type.fontSize * type.lineHeightRate/100
-        addLineSpacing(spacing: lineSpacing)
+    func setupFont(type: UIFont) {
+        addLineSpacing(spacing: 16 * 1.7)
     }
 }
