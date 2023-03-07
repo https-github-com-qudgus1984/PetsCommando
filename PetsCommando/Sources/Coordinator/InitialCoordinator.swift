@@ -1,32 +1,28 @@
 //
-//  InitialCoordinator.swift
+//  AppCoordinator.swift
 //  PetsCommando
 //
-//  Created by 이병현 on 2023/03/07.
+//  Created by 이병현 on 2023/03/04.
 //
 
 import UIKit
 
 final class InitialCoordinator: Coordinator {
-    
-    var childCoordinators = [Coordinator]()
+    var childCoordinators: [Coordinator]
     var navigationController: UINavigationController
+    let window: UIWindow
     
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
+    init(window: UIWindow) {
+        self.childCoordinators = []
+        self.navigationController = UINavigationController()
+        self.window = window
     }
     
     func start() {
-        let vc = InitialViewController()
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: false)
-        
-        selectedController()
-    }
-    
-    func selectedController() {
-        let child = OnBoardingCoordinator(navigationController: navigationController)
-        childCoordinators.append(child)
-        child.start()
+        let OnBoardingCoordinator = OnBoardingCoordinator(window: window)
+        OnBoardingCoordinator.start()
+        window.rootViewController = OnBoardingCoordinator.navigationController
+        childCoordinators.append(OnBoardingCoordinator)
+        window.makeKeyAndVisible()
     }
 }
