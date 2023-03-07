@@ -40,7 +40,7 @@ final class SignUpViewController: BaseViewController {
                 let textColor: UIColor = valid ? .systemBlue : .systemRed
                 vc.mainView.idValidLabel.textColor = textColor
                 let str: String = valid ?
-                "인증이 완료되었습니다." : "ID 중복 검사가 필요합니다."
+                ValidationString.successAuth.text : ValidationString.duplicateInspection.text
                 vc.mainView.idValidLabel.text = str
             }
             .disposed(by: disposeBag)
@@ -49,8 +49,11 @@ final class SignUpViewController: BaseViewController {
             .withUnretained(self)
             .bind { vc, valid in
                 let str: String = valid ?
-                " " : "비밀번호가 일치하지 않습니다."
+                ValidationString.samePW.text : ValidationString.notSamePW.text
                 vc.mainView.pwValidLabel.text = str
+                let textColor: UIColor = valid ? .systemBlue : .systemRed
+                vc.mainView.pwValidLabel.textColor = textColor
+
             }
             .disposed(by: disposeBag)
         
@@ -59,6 +62,7 @@ final class SignUpViewController: BaseViewController {
             .bind { vc, valid in
                 let buttonColor: UIColor = valid ? Color.BaseColor.hunt2 : Color.BaseColor.gray6
                 vc.mainView.signupButton.backgroundColor = buttonColor
+                
             }
             .disposed(by: disposeBag)
     }

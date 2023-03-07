@@ -41,7 +41,7 @@ final class SignUpView: BaseView {
         button.backgroundColor = Color.BaseColor.gray5
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
-        button.setTitle("인증", for: .normal)
+        button.setTitle(AuthString.auth.text, for: .normal)
         return button
     }()
     
@@ -83,8 +83,9 @@ final class SignUpView: BaseView {
     internal var signupIncludeView: UIView = {
         let view = UIView()
         view.backgroundColor = Color.BaseColor.hunt2
-         view.clipsToBounds = true
-         view.layer.cornerRadius = 8
+        view.clipsToBounds = true
+        view.layer.cornerRadius = 8
+        view.layer.masksToBounds = true
          return view
     }()
     
@@ -92,6 +93,9 @@ final class SignUpView: BaseView {
         let button = UIButton()
         button.setTitle(AuthString.signup.text, for: .normal)
         button.setTitleColor(Color.BaseColor.white, for: .normal)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 8
+        button.layer.masksToBounds = true
         return button
     }()
     
