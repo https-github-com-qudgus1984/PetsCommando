@@ -14,7 +14,7 @@ final class LoginViewController: BaseViewController {
     let loginView = LoginView()
     
     //MARK: Delegate
-    weak var coordinator: LoginCoordinator?
+//    weak var coordinator: LoginCoordinator?
     
     override func loadView() {
         super.view = loginView
@@ -32,7 +32,7 @@ final class LoginViewController: BaseViewController {
     @objc
     func signupButtonClicked() {
         print("클릭클릭")
-        self.coordinator?.startSignUp()
+//        self.coordinator?.startSignUp()
     }
 }
 

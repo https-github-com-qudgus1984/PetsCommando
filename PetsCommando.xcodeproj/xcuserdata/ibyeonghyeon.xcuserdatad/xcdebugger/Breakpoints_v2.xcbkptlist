@@ -3,4 +3,115 @@
    uuid = "2E5A8F9E-3C34-4EF9-9257-A5442657B5D3"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "92D1DE01-8562-4932-AFC7-2490D31FE38B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PetsCommando/Sources/Presents/OnBoarding/View/OnBoardingViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "OnBoardingViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "92D1DE01-8562-4932-AFC7-2490D31FE38B - be5a585164de8289"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PetsCommando.OnBoardingViewController.__allocating_init() -&gt; PetsCommando.OnBoardingViewController"
+                  moduleName = "PetsCommando"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ibyeonghyeon/Desktop/PetsCommando/PetsCommando/Sources/Presents/OnBoarding/View/OnBoardingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "92D1DE01-8562-4932-AFC7-2490D31FE38B - 5081ba3675b32a8b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PetsCommando.OnBoardingViewController.init() -&gt; PetsCommando.OnBoardingViewController"
+                  moduleName = "PetsCommando"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ibyeonghyeon/Desktop/PetsCommando/PetsCommando/Sources/Presents/OnBoarding/View/OnBoardingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "92D1DE01-8562-4932-AFC7-2490D31FE38B - 68a3432e84a69dfc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PetsCommando.OnBoardingViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; PetsCommando.OnBoardingViewController"
+                  moduleName = "PetsCommando"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ibyeonghyeon/Desktop/PetsCommando/PetsCommando/Sources/Presents/OnBoarding/View/OnBoardingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "92D1DE01-8562-4932-AFC7-2490D31FE38B - d38c7b65c9d495ba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PetsCommando.OnBoardingViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; PetsCommando.OnBoardingViewController"
+                  moduleName = "PetsCommando"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ibyeonghyeon/Desktop/PetsCommando/PetsCommando/Sources/Presents/OnBoarding/View/OnBoardingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "92D1DE01-8562-4932-AFC7-2490D31FE38B - 90b1d11bba202dfc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PetsCommando.OnBoardingViewController.__deallocating_deinit"
+                  moduleName = "PetsCommando"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ibyeonghyeon/Desktop/PetsCommando/PetsCommando/Sources/Presents/OnBoarding/View/OnBoardingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "216C917F-A2DA-49C9-9A50-5B58097A38A7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PetsCommando/Sources/Presents/OnBoarding/Coordinator/OnBoardingCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "start(animated:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

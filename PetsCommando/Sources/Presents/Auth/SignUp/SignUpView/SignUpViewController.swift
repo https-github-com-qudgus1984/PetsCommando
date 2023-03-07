@@ -12,7 +12,7 @@ import SnapKit
 final class SignUpViewController: BaseViewController {
     
     //MARK: Delegate
-    weak var coordinator: SignUpCoordinator?
+//    weak var coordinator: SignUpCoordinator?
     
     override func loadView() {
         super.view = SignUpView()
