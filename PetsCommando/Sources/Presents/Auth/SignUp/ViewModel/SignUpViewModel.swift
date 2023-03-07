@@ -1,15 +1,15 @@
 //
-//  LoginViewModel.swift
+//  SignUpViewModel.swift
 //  PetsCommando
 //
-//  Created by 이병현 on 2023/03/06.
+//  Created by 이병현 on 2023/03/07.
 //
 
 import Foundation
 import RxSwift
 
 
-final class LoginViewModel: ViewModelType {
+final class SignUpViewModel: ViewModelType {
     struct Input {
     }
 
@@ -24,3 +24,4 @@ final class LoginViewModel: ViewModelType {
         self.output = output
     }
 }
+

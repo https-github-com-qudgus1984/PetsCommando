@@ -11,9 +11,11 @@ final class OnBoardingCoordinator: Coordinator {
     
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
+    var window: UIWindow
     
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
+    init(window: UIWindow) {
+        self.navigationController = UINavigationController()
+        self.window = window
     }
     
     func start() {
@@ -21,4 +23,19 @@ final class OnBoardingCoordinator: Coordinator {
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
     }
+    
+    func rootViewControllerChangedLoginViewController() {
+        let LoginCoordinator = LoginCoordinator(window: window)
+        LoginCoordinator.start()
+        window.rootViewController = LoginCoordinator.navigationController
+        childCoordinators.append(LoginCoordinator)
+        window.makeKeyAndVisible()
+        UIView.transition(with: self.window,
+                          duration: 0.5,
+                          options: .transitionCrossDissolve,
+                          animations: nil,
+                          completion: nil)
+
+    }
 }
+

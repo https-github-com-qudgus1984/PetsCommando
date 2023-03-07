@@ -11,15 +11,17 @@ import SnapKit
 
 final class SignUpViewController: BaseViewController {
     
+    let mainView = SignUpView()
     //MARK: Delegate
-//    weak var coordinator: SignUpCoordinator?
+    weak var coordinator: SignUpCoordinator?
+    
     
     override func loadView() {
-        super.view = SignUpView()
+        self.view = mainView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("3")
     }
 }

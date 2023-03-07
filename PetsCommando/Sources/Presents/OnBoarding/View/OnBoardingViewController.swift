@@ -28,6 +28,6 @@ class OnBoardingViewController: BaseViewController {
     
     @objc
     func startButtonClicked() {
-        print("클릭클릭")
+        self.coordinator?.rootViewControllerChangedLoginViewController()
     }
 }

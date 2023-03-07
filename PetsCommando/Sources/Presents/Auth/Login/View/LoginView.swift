@@ -39,6 +39,7 @@ final class LoginView: BaseView {
     private var pwLineTextField: LineTextFieldView = {
         let text = LineTextFieldView()
         text.textField.placeholder = AuthPlaceHolder.inputPW.text
+        text.textField.isSecureTextEntry = true
         return text
     }()
     
