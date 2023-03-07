@@ -1,8 +1,8 @@
 //
-//  TextView.swift
+//  SignUpView.swift
 //  PetsCommando
 //
-//  Created by 이병현 on 2023/03/04.
+//  Created by 이병현 on 2023/03/06.
 //
 
 import UIKit
@@ -23,7 +23,7 @@ final class LoginView: BaseView {
         return label
     }()
     
-    private var idLineTextField: LineTextFieldView = {
+    internal var idLineTextField: LineTextFieldView = {
         let text = LineTextFieldView()
         text.textField.placeholder = AuthPlaceHolder.inputID.text
         return text
@@ -36,7 +36,7 @@ final class LoginView: BaseView {
         return label
     }()
     
-    private var pwLineTextField: LineTextFieldView = {
+    internal var pwLineTextField: LineTextFieldView = {
         let text = LineTextFieldView()
         text.textField.placeholder = AuthPlaceHolder.inputPW.text
         text.textField.isSecureTextEntry = true
@@ -46,30 +46,39 @@ final class LoginView: BaseView {
     internal var loginIncludeView: UIView = {
         let view = UIView()
         view.backgroundColor = Color.BaseColor.gray5
-         view.clipsToBounds = true
-         view.layer.cornerRadius = 8
+        view.clipsToBounds = true
+        view.layer.cornerRadius = 8
+        view.layer.masksToBounds = true
          return view
     }()
     
     internal var loginButton: UIButton = {
         let button = UIButton()
         button.setTitle(AuthString.login.text, for: .normal)
-        button.setTitleColor(Color.BaseColor.black, for: .normal)
+        button.setTitleColor(Color.BaseColor.white, for: .normal)
+        button.setTitleColor(Color.BaseColor.white, for: .normal)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 8
+        button.layer.masksToBounds = true
         return button
     }()
     
     internal var signupIncludeView: UIView = {
         let view = UIView()
         view.backgroundColor = Color.BaseColor.hunt2
-         view.clipsToBounds = true
-         view.layer.cornerRadius = 8
+        view.clipsToBounds = true
+        view.layer.cornerRadius = 8
+        view.layer.masksToBounds = true
          return view
     }()
     
     internal var signupButton: UIButton = {
         let button = UIButton()
         button.setTitle(AuthString.signup.text, for: .normal)
-        button.setTitleColor(Color.BaseColor.black, for: .normal)
+        button.setTitleColor(Color.BaseColor.white, for: .normal)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 8
+        button.layer.masksToBounds = true
         return button
     }()
     
@@ -117,7 +126,7 @@ final class LoginView: BaseView {
         
         signupIncludeView.snp.makeConstraints { make in
             make.horizontalEdges.equalToSuperview().inset(20)
-            make.top.equalTo(loginButton.snp.bottom).offset(8)
+            make.top.equalTo(loginButton.snp.bottom).offset(12)
             make.height.equalTo(40)
         }
         
