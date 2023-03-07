@@ -16,7 +16,7 @@
 		2F64A90D29B3359600BC11B9 /* 강원교육모두 Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F64A90B29B3359600BC11B9 /* 강원교육모두 Bold.otf */; };
 		2F64A91029B33A2C00BC11B9 /* LineTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A90F29B33A2C00BC11B9 /* LineTextFieldView.swift */; };
 		2F64A91229B33A5F00BC11B9 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A91129B33A5F00BC11B9 /* UITextField+Extension.swift */; };
-		2F64A91829B34AE900BC11B9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A91729B34AE900BC11B9 /* LoginView.swift */; };
+		2F64A91829B34AE900BC11B9 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A91729B34AE900BC11B9 /* SignUpView.swift */; };
 		2FAB65AA29B30E6C0022B609 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAB65A929B30E6C0022B609 /* LoginViewController.swift */; };
 		2FAB65AD29B310570022B609 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2FAB65AC29B310570022B609 /* RxCocoa */; };
 		2FAB65AF29B310570022B609 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2FAB65AE29B310570022B609 /* RxSwift */; };
@@ -24,7 +24,7 @@
 		2FB2D79B29B59FAB00EA35F4 /* Font+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D79A29B59FAB00EA35F4 /* Font+Enum.swift */; };
 		2FB2D7A029B5AF1900EA35F4 /* AuthString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D79F29B5AF1900EA35F4 /* AuthString.swift */; };
 		2FB2D7AA29B5C1FC00EA35F4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7A929B5C1FC00EA35F4 /* SignUpViewController.swift */; };
-		2FB2D7AC29B5C20200EA35F4 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7AB29B5C20200EA35F4 /* SignUpView.swift */; };
+		2FB2D7AC29B5C20200EA35F4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7AB29B5C20200EA35F4 /* LoginView.swift */; };
 		2FB2D7B229B5C69200EA35F4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7B129B5C69200EA35F4 /* LoginViewModel.swift */; };
 		2FB2D7BC29B5CA3500EA35F4 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7BB29B5CA3500EA35F4 /* OnBoardingView.swift */; };
 		2FB2D7C729B5E49400EA35F4 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7C629B5E49400EA35F4 /* InitialViewController.swift */; };
@@ -58,13 +58,13 @@
 		2F64A90B29B3359600BC11B9 /* 강원교육모두 Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "강원교육모두 Bold.otf"; sourceTree = "<group>"; };
 		2F64A90F29B33A2C00BC11B9 /* LineTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextFieldView.swift; sourceTree = "<group>"; };
 		2F64A91129B33A5F00BC11B9 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
-		2F64A91729B34AE900BC11B9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		2F64A91729B34AE900BC11B9 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		2FAB65A929B30E6C0022B609 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2FAB65B129B3127D0022B609 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2FB2D79A29B59FAB00EA35F4 /* Font+Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Enum.swift"; sourceTree = "<group>"; };
 		2FB2D79F29B5AF1900EA35F4 /* AuthString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthString.swift; sourceTree = "<group>"; };
 		2FB2D7A929B5C1FC00EA35F4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		2FB2D7AB29B5C20200EA35F4 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		2FB2D7AB29B5C20200EA35F4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2FB2D7B129B5C69200EA35F4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		2FB2D7BB29B5CA3500EA35F4 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		2FB2D7C629B5E49400EA35F4 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				2FAB65A929B30E6C0022B609 /* LoginViewController.swift */,
-				2F64A91729B34AE900BC11B9 /* LoginView.swift */,
+				2FB2D7AB29B5C20200EA35F4 /* LoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -224,7 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				2FB2D7A929B5C1FC00EA35F4 /* SignUpViewController.swift */,
-				2FB2D7AB29B5C20200EA35F4 /* SignUpView.swift */,
+				2F64A91729B34AE900BC11B9 /* SignUpView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -568,11 +568,11 @@
 				2FDE15F32990D36F00154A78 /* EndPoint.swift in Sources */,
 				2FB2D7C929B5F7E900EA35F4 /* InitialView.swift in Sources */,
 				2FC9CA0E29B6ED62008C502F /* LoginCoordinator.swift in Sources */,
-				2FB2D7AC29B5C20200EA35F4 /* SignUpView.swift in Sources */,
+				2FB2D7AC29B5C20200EA35F4 /* LoginView.swift in Sources */,
 				2FB2D7AA29B5C1FC00EA35F4 /* SignUpViewController.swift in Sources */,
 				2FB2D79B29B59FAB00EA35F4 /* Font+Enum.swift in Sources */,
 				2FB2D7B229B5C69200EA35F4 /* LoginViewModel.swift in Sources */,
-				2F64A91829B34AE900BC11B9 /* LoginView.swift in Sources */,
+				2F64A91829B34AE900BC11B9 /* SignUpView.swift in Sources */,
 				2FDE15F12990D35200154A78 /* URLConstant.swift in Sources */,
 				2FAB65B229B3127D0022B609 /* Color.swift in Sources */,
 				2FDE16002990DB6400154A78 /* ViewModelType.swift in Sources */,

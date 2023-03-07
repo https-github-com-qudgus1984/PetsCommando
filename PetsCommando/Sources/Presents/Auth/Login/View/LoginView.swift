@@ -12,7 +12,7 @@ final class LoginView: BaseView {
     
     private var bgView: UIView = {
         let view = UIView()
-        view.backgroundColor = Color.BaseColor.black
+        view.backgroundColor = Color.BaseColor.hunt4
         return view
     }()
     
@@ -39,6 +39,7 @@ final class LoginView: BaseView {
     private var pwLineTextField: LineTextFieldView = {
         let text = LineTextFieldView()
         text.textField.placeholder = AuthPlaceHolder.inputPW.text
+        text.textField.isSecureTextEntry = true
         return text
     }()
     
@@ -53,7 +54,7 @@ final class LoginView: BaseView {
     internal var loginButton: UIButton = {
         let button = UIButton()
         button.setTitle(AuthString.login.text, for: .normal)
-        button.setTitleColor(Color.BaseColor.black, for: .normal)
+        button.setTitleColor(Color.BaseColor.white, for: .normal)
         return button
     }()
     
@@ -68,7 +69,7 @@ final class LoginView: BaseView {
     internal var signupButton: UIButton = {
         let button = UIButton()
         button.setTitle(AuthString.signup.text, for: .normal)
-        button.setTitleColor(Color.BaseColor.black, for: .normal)
+        button.setTitleColor(Color.BaseColor.white, for: .normal)
         return button
     }()
     

@@ -12,7 +12,7 @@ final class SignUpView: BaseView {
     
     private var bgView: UIView = {
         let view = UIView()
-        view.backgroundColor = Color.BaseColor.hunt1
+        view.backgroundColor = Color.BaseColor.hunt4
         return view
     }()
     
@@ -23,15 +23,21 @@ final class SignUpView: BaseView {
         return label
     }()
     
-    private var idLineTextField: LineTextFieldView = {
+    internal var idLineTextField: LineTextFieldView = {
         let text = LineTextFieldView()
         text.textField.placeholder = AuthPlaceHolder.inputID.text
         return text
     }()
     
-    private var idCertificationButton: UIButton = {
+    internal var idValidLabel: UILabel = {
+        let label = UILabel()
+        label.font = Font.Title2_B16
+        label.textColor = .systemRed
+        return label
+    }()
+    
+    internal var idCertificationButton: UIButton = {
         let button = UIButton()
-        button.setTitleColor(Color.BaseColor.gray3, for: .normal)
         button.backgroundColor = Color.BaseColor.gray5
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
@@ -46,7 +52,7 @@ final class SignUpView: BaseView {
         return label
     }()
     
-    private var pwLineTextField: LineTextFieldView = {
+    internal var pwLineTextField: LineTextFieldView = {
         let text = LineTextFieldView()
         text.textField.placeholder = AuthPlaceHolder.inputPW.text
         text.textField.isSecureTextEntry = true
@@ -60,11 +66,18 @@ final class SignUpView: BaseView {
         return label
     }()
     
-    private var checkpwLineTextField: LineTextFieldView = {
+    internal var checkpwLineTextField: LineTextFieldView = {
         let text = LineTextFieldView()
         text.textField.placeholder = AuthPlaceHolder.inputPW.text
         text.textField.isSecureTextEntry = true
         return text
+    }()
+    
+    internal var pwValidLabel: UILabel = {
+        let label = UILabel()
+        label.font = Font.Title2_B16
+        label.textColor = .systemRed
+        return label
     }()
     
     internal var signupIncludeView: UIView = {
@@ -78,12 +91,12 @@ final class SignUpView: BaseView {
     internal var signupButton: UIButton = {
         let button = UIButton()
         button.setTitle(AuthString.signup.text, for: .normal)
-        button.setTitleColor(Color.BaseColor.black, for: .normal)
+        button.setTitleColor(Color.BaseColor.white, for: .normal)
         return button
     }()
     
     override func setupAttributes() {
-        [bgView, idLabel, idLineTextField, idCertificationButton, pwLabel, pwLineTextField, checkpwLabel, checkpwLineTextField, signupIncludeView, signupButton].forEach {
+        [bgView, idLabel, idLineTextField, idCertificationButton, idValidLabel, pwLabel, pwLineTextField, checkpwLabel, checkpwLineTextField, pwValidLabel, signupIncludeView, signupButton].forEach {
             addSubview($0)
         }
     }
@@ -110,6 +123,12 @@ final class SignUpView: BaseView {
             make.bottom.equalTo(idLineTextField.snp.bottom).inset(4)
         }
         
+        idValidLabel.snp.makeConstraints { make in
+            make.top.equalTo(idLineTextField.snp.bottom).offset(8)
+            make.height.equalTo(20)
+            make.horizontalEdges.equalToSuperview().inset(20)
+        }
+        
         pwLabel.snp.makeConstraints { make in
             make.horizontalEdges.equalToSuperview().inset(20)
             make.top.equalTo(idLineTextField.snp.bottom).offset(40)
@@ -130,6 +149,12 @@ final class SignUpView: BaseView {
         checkpwLineTextField.snp.makeConstraints { make in
             make.horizontalEdges.equalToSuperview().inset(20)
             make.top.equalTo(checkpwLabel.snp.bottom).offset(20)
+        }
+        
+        pwValidLabel.snp.makeConstraints { make in
+            make.top.equalTo(checkpwLineTextField.snp.bottom).offset(8)
+            make.height.equalTo(20)
+            make.horizontalEdges.equalToSuperview().inset(20)
         }
         
         signupIncludeView.snp.makeConstraints { make in

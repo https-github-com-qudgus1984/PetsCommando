@@ -9,18 +9,22 @@ import Foundation
 import RxSwift
 
 
-final class LoginViewModel: ViewModelType {
-    struct Input {
-    }
-
-    struct Output {
-    }
-    
-    var input: Input
-    var output: Output
-    
-    init(input: Input, output: Output) {
-        self.input = input
-        self.output = output
-    }
-}
+//final class LoginViewModel: ViewModelType {
+//    func transform(_ input: Input) -> Output {
+//        <#code#>
+//    }
+//    
+//    struct Input {
+//    }
+//
+//    struct Output {
+//    }
+//    
+//    var input: Input
+//    var output: Output
+//    
+//    init(input: Input, output: Output) {
+//        self.input = input
+//        self.output = output
+//    }
+//}
