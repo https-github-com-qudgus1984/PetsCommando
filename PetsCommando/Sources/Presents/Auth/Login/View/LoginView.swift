@@ -1,8 +1,8 @@
 //
-//  TextView.swift
+//  SignUpView.swift
 //  PetsCommando
 //
-//  Created by 이병현 on 2023/03/04.
+//  Created by 이병현 on 2023/03/06.
 //
 
 import UIKit
@@ -12,7 +12,7 @@ final class LoginView: BaseView {
     
     private var bgView: UIView = {
         let view = UIView()
-        view.backgroundColor = Color.BaseColor.hunt4
+        view.backgroundColor = Color.BaseColor.black
         return view
     }()
     
@@ -39,7 +39,6 @@ final class LoginView: BaseView {
     private var pwLineTextField: LineTextFieldView = {
         let text = LineTextFieldView()
         text.textField.placeholder = AuthPlaceHolder.inputPW.text
-        text.textField.isSecureTextEntry = true
         return text
     }()
     
