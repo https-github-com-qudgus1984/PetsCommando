@@ -15,7 +15,7 @@ class OnBoardingViewController: BaseViewController {
     weak var coordinator: OnBoardingCoordinator?
     
     override func loadView() {
-        super.view = mainView
+        view = mainView
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,6 @@ class OnBoardingViewController: BaseViewController {
     
     @objc
     func startButtonClicked() {
-        print("클릭클릭")
-//        self.coordinator?.showLogin()
+        self.coordinator?.rootViewControllerChangedLoginViewController()
     }
 }

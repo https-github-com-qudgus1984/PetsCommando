@@ -16,7 +16,7 @@ class BaseViewController: UIViewController {
         return type(of: self).description().components(separatedBy: ".").last ?? ""
     }()
     
-    weak var coordinatorDelegate: CoordinatorDidFinishDelegate?
+//    weak var coordinatorDelegate: CoordinatorDidFinishDelegate?
     
     var disposeBag = DisposeBag()
     

@@ -6,18 +6,18 @@
 //
 
 import UIKit
-import SnapKit
-
+import RxSwift
+import RxCocoa
 
 final class LoginViewController: BaseViewController {
     
-    let loginView = LoginView()
+    let mainView = LoginView()
     
     //MARK: Delegate
     weak var coordinator: LoginCoordinator?
     
     override func loadView() {
-        super.view = loginView
+        self.view = mainView
     }
     
     override func viewDidLoad() {
@@ -26,13 +26,12 @@ final class LoginViewController: BaseViewController {
     }
     
     override func setupBinding() {
-        loginView.signupButton.addTarget(self, action: #selector(signupButtonClicked), for: .touchUpInside)
-    }
-    
-    @objc
-    func signupButtonClicked() {
-        print("클릭클릭")
-        self.coordinator?.startSignUp()
+        mainView.signupButton.rx.tap
+            .bind { [weak self] in
+                guard let self = self else { return }
+                self.coordinator?.pushSignUpViewController()
+            }
+            .disposed(by: disposeBag)
     }
 }
 

@@ -12,7 +12,7 @@ final class SignUpView: BaseView {
     
     private var bgView: UIView = {
         let view = UIView()
-        view.backgroundColor = Color.BaseColor.hunt2
+        view.backgroundColor = Color.BaseColor.black
         return view
     }()
     
