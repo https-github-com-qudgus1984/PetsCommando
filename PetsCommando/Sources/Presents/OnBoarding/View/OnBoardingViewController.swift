@@ -6,16 +6,18 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class OnBoardingViewController: BaseViewController {
     
-    let mainView = OnBoardingView()
+    let onBoardingView = OnBoardingView()
 
     //MARK: Delegate
     weak var coordinator: OnBoardingCoordinator?
     
     override func loadView() {
-        view = mainView
+        view = onBoardingView
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +25,12 @@ class OnBoardingViewController: BaseViewController {
     }
     
     override func setupBinding() {
-        mainView.startButton.addTarget(self, action: #selector(startButtonClicked), for: .touchUpInside)
-    }
-    
-    @objc
-    func startButtonClicked() {
-        self.coordinator?.rootViewControllerChangedLoginViewController()
+
+        onBoardingView.startButton.rx.tap
+            .bind { [weak self] in
+                guard let self = self else { return }
+                self.coordinator?.rootViewControllerChangedLoginViewController()
+            }
+            .disposed(by: disposeBag)
     }
 }
