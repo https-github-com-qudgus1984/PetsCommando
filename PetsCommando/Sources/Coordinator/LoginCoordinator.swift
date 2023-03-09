@@ -30,4 +30,19 @@ class LoginCoordinator: Coordinator {
         childCoordinators.append(child)
         child.start()
     }
+    
+    func rootViewControllerChangedTabBarViewController() {
+        let TabBarCoordinator = TabBarCoordinator(window: window)
+        TabBarCoordinator.start()
+        window.rootViewController = TabBarCoordinator.navigationController
+        childCoordinators.append(TabBarCoordinator)
+        window.makeKeyAndVisible()
+        UIView.transition(with: self.window,
+                          duration: 0.5,
+                          options: .transitionCrossDissolve,
+                          animations: nil,
+                          completion: nil)
+
+    }
+
 }

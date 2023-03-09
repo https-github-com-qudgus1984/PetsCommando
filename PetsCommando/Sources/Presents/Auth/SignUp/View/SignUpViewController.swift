@@ -11,14 +11,14 @@ import SnapKit
 
 final class SignUpViewController: BaseViewController {
     
-    private let mainView = SignUpView()
+    private let signUpView = SignUpView()
     private let viewModel = SignUpViewModel()
     //MARK: Delegate
     weak var coordinator: SignUpCoordinator?
     
     
     override func loadView() {
-        self.view = mainView
+        self.view = signUpView
     }
     
     override func viewDidLoad() {
@@ -28,7 +28,7 @@ final class SignUpViewController: BaseViewController {
     
     //MARK: ViewModel Binding
     override func setupBinding() {
-        let input = SignUpViewModel.Input(idText: mainView.idLineTextField.textField.rx.text, pwText: mainView.pwLineTextField.textField.rx.text, checkpwText: mainView.checkpwLineTextField.textField.rx.text)
+        let input = SignUpViewModel.Input(idText: signUpView.idLineTextField.textField.rx.text, pwText: signUpView.pwLineTextField.textField.rx.text, checkpwText: signUpView.checkpwLineTextField.textField.rx.text)
         
         let output = viewModel.transform(input)
         
@@ -36,12 +36,12 @@ final class SignUpViewController: BaseViewController {
             .withUnretained(self)
             .bind { vc, valid in
                 let buttonColor: UIColor = valid ? Color.BaseColor.hunt2 : Color.BaseColor.gray6
-                vc.mainView.idCertificationButton.backgroundColor = buttonColor
+                vc.signUpView.idCertificationButton.backgroundColor = buttonColor
                 let textColor: UIColor = valid ? .systemBlue : .systemRed
-                vc.mainView.idValidLabel.textColor = textColor
+                vc.signUpView.idValidLabel.textColor = textColor
                 let str: String = valid ?
                 ValidationString.successAuth.text : ValidationString.duplicateInspection.text
-                vc.mainView.idValidLabel.text = str
+                vc.signUpView.idValidLabel.text = str
             }
             .disposed(by: disposeBag)
         
@@ -50,9 +50,9 @@ final class SignUpViewController: BaseViewController {
             .bind { vc, valid in
                 let str: String = valid ?
                 ValidationString.samePW.text : ValidationString.notSamePW.text
-                vc.mainView.pwValidLabel.text = str
+                vc.signUpView.pwValidLabel.text = str
                 let textColor: UIColor = valid ? .systemBlue : .systemRed
-                vc.mainView.pwValidLabel.textColor = textColor
+                vc.signUpView.pwValidLabel.textColor = textColor
 
             }
             .disposed(by: disposeBag)
@@ -61,7 +61,7 @@ final class SignUpViewController: BaseViewController {
             .withUnretained(self)
             .bind { vc, valid in
                 let buttonColor: UIColor = valid ? Color.BaseColor.hunt2 : Color.BaseColor.gray6
-                vc.mainView.signupButton.backgroundColor = buttonColor
+                vc.signUpView.signupButton.backgroundColor = buttonColor
                 
             }
             .disposed(by: disposeBag)
