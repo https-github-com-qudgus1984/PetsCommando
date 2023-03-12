@@ -22,6 +22,8 @@ class TabBarCoordinator: Coordinator {
         let vc = TabBarViewController()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
+        print(childCoordinators)
+
     }
 }
 

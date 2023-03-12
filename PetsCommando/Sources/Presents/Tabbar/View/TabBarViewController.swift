@@ -14,7 +14,6 @@ final class TabBarViewController: UITabBarController {
     private let test2VC = Test2ViewController()
     
     weak var coordinator: TabBarCoordinator?
-
     
     override func viewDidLoad() {
         super.viewDidLoad()

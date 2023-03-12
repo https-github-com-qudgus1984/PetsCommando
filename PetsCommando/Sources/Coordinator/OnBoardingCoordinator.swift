@@ -22,13 +22,14 @@ final class OnBoardingCoordinator: Coordinator {
         let vc = OnBoardingViewController()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
+        print(childCoordinators)
     }
     
     func rootViewControllerChangedLoginViewController() {
-        let LoginCoordinator = LoginCoordinator(window: window)
-        LoginCoordinator.start()
-        window.rootViewController = LoginCoordinator.navigationController
-        childCoordinators.append(LoginCoordinator)
+        let loginCoordinator = LoginCoordinator(window: window)
+        loginCoordinator.start()
+        window.rootViewController = loginCoordinator.navigationController
+        childCoordinators.append(loginCoordinator)
         window.makeKeyAndVisible()
         UIView.transition(with: self.window,
                           duration: 0.5,

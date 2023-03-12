@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F5FA8C929BDA63300123AAC /* PetCommandoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F5FA8C829BDA63300123AAC /* PetCommandoIcon.png */; };
+		2F5FA8CC29BDA89800123AAC /* Image + Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5FA8CB29BDA89800123AAC /* Image + Enum.swift */; };
 		2F64A8F129B3171800BC11B9 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A8F029B3171800BC11B9 /* Font.swift */; };
 		2F64A8F529B319F800BC11B9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A8F429B319F800BC11B9 /* Coordinator.swift */; };
 		2F64A8FC29B31AED00BC11B9 /* InitialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A8FB29B31AED00BC11B9 /* InitialCoordinator.swift */; };
@@ -57,6 +59,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F5FA8C829BDA63300123AAC /* PetCommandoIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PetCommandoIcon.png; sourceTree = "<group>"; };
+		2F5FA8CB29BDA89800123AAC /* Image + Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image + Enum.swift"; sourceTree = "<group>"; };
 		2F64A8F029B3171800BC11B9 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		2F64A8F429B319F800BC11B9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		2F64A8FB29B31AED00BC11B9 /* InitialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialCoordinator.swift; sourceTree = "<group>"; };
@@ -119,6 +123,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F5FA8C729BDA62300123AAC /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				2F5FA8C829BDA63300123AAC /* PetCommandoIcon.png */,
+				2FDE15D82990D13D00154A78 /* Assets.xcassets */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
+		2F5FA8CA29BDA88F00123AAC /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				2F5FA8CB29BDA89800123AAC /* Image + Enum.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		2F64A8F229B3198300BC11B9 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +234,7 @@
 		2FB2D79C29B5AE3A00EA35F4 /* String+Enum */ = {
 			isa = PBXGroup;
 			children = (
+				2F5FA8CA29BDA88F00123AAC /* Image */,
 				2FB2D7A129B5C14B00EA35F4 /* Font */,
 				2FB2D79D29B5AE4600EA35F4 /* Auth */,
 			);
@@ -388,9 +410,9 @@
 		2FDE15E42990D22700154A78 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2F5FA8C729BDA62300123AAC /* Asset */,
 				2F64A90929B3352500BC11B9 /* Font */,
 				2FDE15DA2990D13D00154A78 /* LaunchScreen.storyboard */,
-				2FDE15D82990D13D00154A78 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -594,6 +616,7 @@
 				2FDE15DC2990D13D00154A78 /* LaunchScreen.storyboard in Resources */,
 				2FDE15D92990D13D00154A78 /* Assets.xcassets in Resources */,
 				2F64A90C29B3359600BC11B9 /* 강원교육모두 Light.otf in Resources */,
+				2F5FA8C929BDA63300123AAC /* PetCommandoIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +630,7 @@
 				2F64A8F529B319F800BC11B9 /* Coordinator.swift in Sources */,
 				2FDE15ED2990D32C00154A78 /* Router.swift in Sources */,
 				2FB2D7A029B5AF1900EA35F4 /* AuthString.swift in Sources */,
+				2F5FA8CC29BDA89800123AAC /* Image + Enum.swift in Sources */,
 				2FDE15D02990D13C00154A78 /* AppDelegate.swift in Sources */,
 				2F64A8F129B3171800BC11B9 /* Font.swift in Sources */,
 				2FC572DC29B8402600D21EBA /* HomeViewController.swift in Sources */,

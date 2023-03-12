@@ -16,7 +16,7 @@ extension AuthPlaceHolder {
     var text: String {
         switch self {
         case .inputID:
-            return "id를 입력해주세요."
+            return "이메일을 입력해주세요."
         case .inputPW:
             return "비밀번호를 입력해주세요."
         }
@@ -35,7 +35,7 @@ extension AuthString {
     var text: String {
         switch self {
         case .id:
-            return "아이디"
+            return "이메일"
         case .pw:
             return "비밀번호"
         case .login:
@@ -58,11 +58,10 @@ enum ValidationString {
 extension ValidationString {
     var text: String {
         switch self {
-            
         case .successAuth:
             return "인증이 완료되었습니다."
         case .duplicateInspection:
-            return "ID 중복 검사가 필요합니다."
+            return "이메일 중복 검사가 필요합니다."
         case .samePW:
             return "비밀번호가 일치합니다."
         case .notSamePW:

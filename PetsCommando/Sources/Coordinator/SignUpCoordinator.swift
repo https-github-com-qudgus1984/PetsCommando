@@ -20,6 +20,7 @@ class SignUpCoordinator: Coordinator {
     func start() {
         let vc = SignUpViewController()
         navigationController.pushViewController(vc, animated: true)
+        print(childCoordinators)
     }
     
     func startSignUp() {

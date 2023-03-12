@@ -22,6 +22,8 @@ class LoginCoordinator: Coordinator {
         let vc = LoginViewController()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
+        print(childCoordinators)
+
     }
     
     func pushSignUpViewController() {
@@ -31,18 +33,17 @@ class LoginCoordinator: Coordinator {
         child.start()
     }
     
-    func rootViewControllerChangedTabBarViewController() {
-        let TabBarCoordinator = TabBarCoordinator(window: window)
-        TabBarCoordinator.start()
-        window.rootViewController = TabBarCoordinator.navigationController
-        childCoordinators.append(TabBarCoordinator)
+    func rootViewControllerChangedToLoginViewController() {
+        let tabBarCoordinator = TabBarCoordinator(window: window)
+        tabBarCoordinator.start()
+        window.rootViewController = tabBarCoordinator.navigationController
+        childCoordinators.append(tabBarCoordinator)
         window.makeKeyAndVisible()
         UIView.transition(with: self.window,
                           duration: 0.5,
                           options: .transitionCrossDissolve,
                           animations: nil,
                           completion: nil)
-
     }
 
 }

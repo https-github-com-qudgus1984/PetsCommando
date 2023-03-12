@@ -25,6 +25,12 @@ final class OnBoardingView: BaseView {
         return label
     }()
     
+    private var imageView: UIImageView = {
+        let image = UIImageView()
+        image.image = Image.iconImg
+        return image
+    }()
+    
     internal var startIncludeView: UIView = {
         let view = UIView()
         view.backgroundColor = Color.BaseColor.hunt1
@@ -41,7 +47,7 @@ final class OnBoardingView: BaseView {
     }()
     
     override func setupAttributes() {
-        [bgView, titleLabel, startIncludeView, startButton].forEach {
+        [bgView, titleLabel, startIncludeView, imageView, startButton].forEach {
             addSubview($0)
         }
     }
@@ -55,8 +61,15 @@ final class OnBoardingView: BaseView {
             make.horizontalEdges.equalToSuperview()
         }
         
+        imageView.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(60)
+            make.centerX.equalToSuperview()
+            make.horizontalEdges.equalToSuperview().inset(60)
+            make.height.equalTo(imageView.snp.width)
+        }
+        
         startIncludeView.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().inset(250)
+            make.top.equalTo(imageView.snp.bottom).offset(40)
             make.height.equalTo(52)
             make.horizontalEdges.equalToSuperview().inset(60)
         }
