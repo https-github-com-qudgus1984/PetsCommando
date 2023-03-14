@@ -10,7 +10,7 @@ import UIKit
 final class HomeView: BaseView {
     private var bgView: UIView = {
         let view = UIView()
-        view.backgroundColor = Color.BaseColor.hunt4
+        view.backgroundColor = Color.BaseColor.white
         return view
     }()
     
@@ -23,23 +23,25 @@ final class HomeView: BaseView {
         return label
     }()
     
-    internal var startIncludeView: UIView = {
-        let view = UIView()
-        view.backgroundColor = Color.BaseColor.hunt1
-         view.clipsToBounds = true
-         view.layer.cornerRadius = 16
-         return view
+    private var imageView: UIImageView = {
+        let image = UIImageView()
+        image.image = Image.dogAndCat
+        return image
     }()
     
-    internal var startButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("시작하기", for: .normal)
-        button.setTitleColor(Color.BaseColor.white, for: .normal)
-        return button
+    internal var communityLabel: UILabel = {
+        let label = UILabel()
+        label.text = HomeString.community.text
+        label.font = Font.Body2_L16
+        label.textColor = Color.BaseColor.gray7
+        label.numberOfLines = 0
+        label.textAlignment = .center
+         return label
     }()
+    
     
     override func setupAttributes() {
-        [bgView, titleLabel, startIncludeView, startButton].forEach {
+        [bgView, titleLabel, imageView, communityLabel].forEach {
             addSubview($0)
         }
     }
@@ -53,15 +55,17 @@ final class HomeView: BaseView {
             make.horizontalEdges.equalToSuperview()
         }
         
-        startIncludeView.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().inset(250)
-            make.height.equalTo(52)
+        imageView.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(60)
+            make.centerX.equalToSuperview()
             make.horizontalEdges.equalToSuperview().inset(60)
+            make.height.equalTo(imageView.snp.width)
         }
         
-        startButton.snp.makeConstraints { make in
-            make.edges.equalTo(startIncludeView)
+        communityLabel.snp.makeConstraints { make in
+            make.top.equalTo(imageView.snp.bottom)
+            make.height.equalTo(80)
+            make.horizontalEdges.equalToSuperview().inset(20)
         }
     }
-
 }

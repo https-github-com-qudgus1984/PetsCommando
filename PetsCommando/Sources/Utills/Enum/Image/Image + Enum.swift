@@ -9,5 +9,6 @@ import UIKit
 
 struct Image {
     static let iconImg = UIImage(named: "Icon-1024")!
+    static let dogAndCat = UIImage(named: "dogAndCat")
 }
 
