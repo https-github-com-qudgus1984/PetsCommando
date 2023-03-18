@@ -19,12 +19,11 @@ final class InitialCoordinator: Coordinator {
     }
     
     func start() {
-        let onBoardingCoordinator = OnBoardingCoordinator(window: window)
-        onBoardingCoordinator.start()
-        window.rootViewController = onBoardingCoordinator.navigationController
-        childCoordinators.append(onBoardingCoordinator)
+        let child = OnBoardingCoordinator(window: window)
+        child.parentCoordinator = self
+        childCoordinators.append(child)
+        child.start()
+        window.rootViewController = child.navigationController
         window.makeKeyAndVisible()
-        print(childCoordinators)
-
     }
 }

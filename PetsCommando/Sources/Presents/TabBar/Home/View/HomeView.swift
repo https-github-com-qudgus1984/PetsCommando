@@ -18,7 +18,6 @@ final class HomeView: BaseView {
         let label = UILabel()
         label.font = Font.Title1_B20
         label.textColor = Color.BaseColor.hunt1
-        label.text = "PetsCommando"
         label.textAlignment = .center
         return label
     }()
@@ -51,8 +50,9 @@ final class HomeView: BaseView {
         }
         
         titleLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(200)
+            make.top.equalTo(safeAreaInsets)
             make.horizontalEdges.equalToSuperview()
+            make.height.equalTo(60)
         }
         
         imageView.snp.makeConstraints { make in

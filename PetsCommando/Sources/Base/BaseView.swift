@@ -15,12 +15,18 @@ class BaseView: UIView {
         setupLayout()
         setupData()
         setupBinding()
+        configureUI()
+        setupConstraints()
     }
     
     
     required init?(coder: NSCoder) {
         fatalError()
     }
+    
+    func configureUI() { }
+    
+    func setupConstraints() { }
     
     func setupData() { }
     

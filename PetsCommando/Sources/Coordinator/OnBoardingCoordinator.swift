@@ -9,6 +9,7 @@ import UIKit
 
 final class OnBoardingCoordinator: Coordinator {
     
+    weak var parentCoordinator: InitialCoordinator?
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     var window: UIWindow
@@ -26,10 +27,11 @@ final class OnBoardingCoordinator: Coordinator {
     }
     
     func rootViewControllerChangedLoginViewController() {
-        let loginCoordinator = LoginCoordinator(window: window)
-        loginCoordinator.start()
-        window.rootViewController = loginCoordinator.navigationController
-        childCoordinators.append(loginCoordinator)
+        let child = LoginCoordinator(window: window)
+        child.parentCoordinator = self
+        childCoordinators.append(child)
+        child.start()
+        window.rootViewController = child.navigationController
         window.makeKeyAndVisible()
         UIView.transition(with: self.window,
                           duration: 0.5,

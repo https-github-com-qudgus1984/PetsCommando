@@ -50,7 +50,7 @@ final class LoginViewController: BaseViewController {
         loginView.loginButton.rx.tap
             .bind { [weak self] in
                 guard let self = self else { return }
-                self.coordinator?.rootViewControllerChangedToLoginViewController()
+                self.coordinator?.rootViewControllerChangedToTabBarController()
             }
             .disposed(by: disposeBag)
     }

@@ -9,10 +9,12 @@ import UIKit
 
 class LoginCoordinator: Coordinator {
     
+    weak var parentCoordinator: OnBoardingCoordinator?
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     var window: UIWindow
 
+    
     init(window: UIWindow) {
         self.navigationController = UINavigationController()
         self.window = window
@@ -22,7 +24,6 @@ class LoginCoordinator: Coordinator {
         let vc = LoginViewController()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
-        print(childCoordinators)
 
     }
     
@@ -33,11 +34,12 @@ class LoginCoordinator: Coordinator {
         child.start()
     }
     
-    func rootViewControllerChangedToLoginViewController() {
-        let tabBarCoordinator = TabBarCoordinator(window: window)
-        tabBarCoordinator.start()
-        window.rootViewController = tabBarCoordinator.navigationController
-        childCoordinators.append(tabBarCoordinator)
+    func rootViewControllerChangedToTabBarController() {
+        let child = TabBarCoordinator(window: window)
+        child.parentCoordinator = self
+        childCoordinators.append(child)
+        child.start()
+        window.rootViewController = child.navigationController
         window.makeKeyAndVisible()
         UIView.transition(with: self.window,
                           duration: 0.5,
@@ -45,5 +47,13 @@ class LoginCoordinator: Coordinator {
                           animations: nil,
                           completion: nil)
     }
-
+    
+    func childDidFinish(_ child: Coordinator?) {
+        for (index, coordinator) in childCoordinators.enumerated() {
+            if coordinator === child {
+                childCoordinators.remove(at: index)
+                break
+            }
+        }
+    }
 }

@@ -9,10 +9,13 @@ import UIKit
 
 class TabBarCoordinator: Coordinator {
     
+
+    
+    weak var parentCoordinator: LoginCoordinator?
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     var window: UIWindow
-
+    
     init(window: UIWindow) {
         self.navigationController = UINavigationController()
         self.window = window
@@ -23,7 +26,11 @@ class TabBarCoordinator: Coordinator {
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
         print(childCoordinators)
-
+        
+    }
+    
+    func didFinishBuying() {
+        parentCoordinator?.childDidFinish(self)
     }
 }
 

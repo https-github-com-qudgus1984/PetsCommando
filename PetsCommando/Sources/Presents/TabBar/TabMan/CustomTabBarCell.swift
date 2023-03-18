@@ -7,27 +7,22 @@
 
 import UIKit
 
-class CustomCell: UICollectionViewCell {
-    
-    var label: UILabel = {
-        let label = UILabel()
-        label.text = "Tab"
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-        label.textColor = .lightGray
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    override var isSelected: Bool {
-        didSet{
-            print("Changed")
-            self.label.textColor = isSelected ? .black : .lightGray
+class CustomTabBarCell: UICollectionViewCell {
+
+    var item: CustomTabBarItem? {
+        didSet {
+            titleLabel.text = item?.title
+            titleLabel.textColor = isSelected ? .red : .gray
         }
     }
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.addSubview(label)
-        label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        label.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-    }
-}
+
+    let titleLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 14)
+        return label
+    }()
+
+    override var isSelected: Bool {
+        didSet {
+            titleLabel
