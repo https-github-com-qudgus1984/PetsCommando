@@ -6,3 +6,13 @@
 //
 
 import Foundation
+import RxCocoa
+import RxSwift
+
+final class HomeViewModel {
+    private weak var coordinator: HomeCoordinator?
+    init(coordinator: HomeCoordinator?) {
+        self.coordinator = coordinator
+    }
+
+}

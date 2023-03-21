@@ -12,10 +12,16 @@ import SnapKit
 final class SignUpViewController: BaseViewController {
     
     private let signUpView = SignUpView()
-    private let viewModel = SignUpViewModel()
+    private let viewModel: SignUpViewModel
     //MARK: Delegate
-    weak var coordinator: SignUpCoordinator?
+    init(viewModel: SignUpViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("GenderViewController: fatal error")
+    }
     
     override func loadView() {
         self.view = signUpView

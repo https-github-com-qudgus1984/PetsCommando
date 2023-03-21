@@ -15,8 +15,18 @@ final class HomeViewController: BaseViewController, TopicViewControllerEvent {
         return topicViewController
     }()
     
-    var topicDataStore = Community.allCases.map { $0 } 
+    var topicDataStore = Community.allCases.map { $0 }
+    
+    private let viewModel: HomeViewModel
 
+    init(viewModel: HomeViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("GenderViewController: fatal error")
+    }
     
     let homeView = HomeView()
     

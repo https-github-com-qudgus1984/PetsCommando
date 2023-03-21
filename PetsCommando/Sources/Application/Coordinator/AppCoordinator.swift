@@ -7,29 +7,6 @@
 
 import UIKit
 
-final class InitialCoordinator: Coordinator {
-    var childCoordinators: [Coordinator]
-    var navigationController: UINavigationController
-    let window: UIWindow
-    
-    init(window: UIWindow) {
-        self.childCoordinators = []
-        self.navigationController = UINavigationController()
-        self.window = window
-    }
-    
-    func start() {
-        let child = OnBoardingCoordinator(window: window)
-        child.parentCoordinator = self
-        childCoordinators.append(child)
-        child.start()
-        window.rootViewController = child.navigationController
-        window.makeKeyAndVisible()
-    }
-}
-/*
-import UIKit
-
 final class AppCoordinator: Coordinator {
 
     weak var delegate: CoordinatorDelegate?
@@ -42,16 +19,11 @@ final class AppCoordinator: Coordinator {
     init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
         navigationController.setNavigationBarHidden(true, animated: false)
-        userDefaults.set(false, forKey: UserDefaultKeyCase.isNotFirstUser)
-        userDefaults.set(false, forKey: UserDefaultKeyCase.isLoggedIn)
+//        userDefaults.set(false, forKey: UserDefaultKeyCase.isNotFirstUser)
+//        userDefaults.set(false, forKey: UserDefaultKeyCase.isLoggedIn)
     }
 
     func start() {
-//        if userDefaults.bool(forKey: UserDefaultKeyCase.isLoggedIn) {
-//            connectTabBarCoordinator()
-//        } else {
-//            connectAuthCoordinator()
-//        }
         connectAuthFlow()
     }
 
@@ -88,4 +60,3 @@ extension AppCoordinator: CoordinatorDelegate {
         }
     }
 }
-*/

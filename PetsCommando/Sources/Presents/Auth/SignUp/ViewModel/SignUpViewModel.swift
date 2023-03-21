@@ -11,6 +11,12 @@ import RxCocoa
 
 final class SignUpViewModel: ViewModelType {
     
+    private weak var coordinator: AuthCoordinator?
+
+    init(coordinator: AuthCoordinator?) {
+        self.coordinator = coordinator
+    }
+    
     struct Input {
         let idText: ControlProperty<String?>
         let pwText: ControlProperty<String?>

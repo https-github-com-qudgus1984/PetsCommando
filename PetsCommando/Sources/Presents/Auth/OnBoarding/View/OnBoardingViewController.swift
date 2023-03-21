@@ -14,7 +14,16 @@ class OnBoardingViewController: BaseViewController {
     let onBoardingView = OnBoardingView()
 
     //MARK: Delegate
-    weak var coordinator: OnBoardingCoordinator?
+    private var viewModel: OnBoardingViewModel
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("GenderViewController: fatal error")
+    }
+    
+    init(viewModel: OnBoardingViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
     
     override func loadView() {
         view = onBoardingView
@@ -29,7 +38,8 @@ class OnBoardingViewController: BaseViewController {
         onBoardingView.startButton.rx.tap
             .bind { [weak self] in
                 guard let self = self else { return }
-                self.coordinator?.rootViewControllerChangedLoginViewController()
+//                self.coordinator?.rootViewControllerChangedLoginViewController()
+                self.viewModel.showLoginController()
             }
             .disposed(by: disposeBag)
     }

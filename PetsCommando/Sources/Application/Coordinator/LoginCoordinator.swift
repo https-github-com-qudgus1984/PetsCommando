@@ -8,6 +8,10 @@
 import UIKit
 
 class LoginCoordinator: Coordinator {
+    var delegate: CoordinatorDelegate?
+    
+    var type: CoordinatorStyleCase
+    
     
     weak var parentCoordinator: OnBoardingCoordinator?
     var childCoordinators = [Coordinator]()
