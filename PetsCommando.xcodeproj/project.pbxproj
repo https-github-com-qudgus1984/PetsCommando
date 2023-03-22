@@ -44,6 +44,7 @@
 		2FC572DC29B8402600D21EBA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC572DB29B8402600D21EBA /* HomeViewController.swift */; };
 		2FC572DE29B8403300D21EBA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC572DD29B8403300D21EBA /* HomeViewModel.swift */; };
 		2FC572E129B8404E00D21EBA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC572E029B8404E00D21EBA /* HomeView.swift */; };
+		2FC5B27D29CAD3320032B55C /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B27C29CAD3320032B55C /* APIKey.swift */; };
 		2FC94ED529C083230097E696 /* HomeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC94ED429C083230097E696 /* HomeString.swift */; };
 		2FC94ED729C085750097E696 /* Test3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC94ED629C085750097E696 /* Test3ViewController.swift */; };
 		2FC9CA1329B70307008C502F /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC9CA1229B70307008C502F /* SignUpViewModel.swift */; };
@@ -69,7 +70,6 @@
 		2FDE15DC2990D13D00154A78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FDE15DA2990D13D00154A78 /* LaunchScreen.storyboard */; };
 		2FDE15EA2990D2EC00154A78 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE15E92990D2EC00154A78 /* NetworkMonitor.swift */; };
 		2FDE15ED2990D32C00154A78 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE15EC2990D32C00154A78 /* Router.swift */; };
-		2FDE15EF2990D34800154A78 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE15EE2990D34800154A78 /* APIKey.swift */; };
 		2FDE15F82990DB0E00154A78 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE15F72990DB0E00154A78 /* RealmModel.swift */; };
 		2FDE15FA2990DB1B00154A78 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE15F92990DB1B00154A78 /* Repository.swift */; };
 		2FDE16002990DB6400154A78 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE15FF2990DB6400154A78 /* ViewModelType.swift */; };
@@ -112,6 +112,7 @@
 		2FC572DB29B8402600D21EBA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FC572DD29B8403300D21EBA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2FC572E029B8404E00D21EBA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2FC5B27C29CAD3320032B55C /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		2FC94ED429C083230097E696 /* HomeString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeString.swift; sourceTree = "<group>"; };
 		2FC94ED629C085750097E696 /* Test3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test3ViewController.swift; sourceTree = "<group>"; };
 		2FC9CA1229B70307008C502F /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
@@ -139,7 +140,6 @@
 		2FDE15DD2990D13D00154A78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FDE15E92990D2EC00154A78 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		2FDE15EC2990D32C00154A78 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		2FDE15EE2990D34800154A78 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		2FDE15F72990DB0E00154A78 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		2FDE15F92990DB1B00154A78 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		2FDE15FF2990DB6400154A78 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
@@ -631,11 +631,11 @@
 			children = (
 				2F863F2D29CAB47D00755FFC /* DTO */,
 				2FDE15EC2990D32C00154A78 /* Router.swift */,
-				2FDE15EE2990D34800154A78 /* APIKey.swift */,
 				2F863F2729CAB22900755FFC /* HTTPMethod.swift */,
 				2F863F2929CAB26A00755FFC /* TargetType.swift */,
 				2F863F2B29CAB3F800755FFC /* NetworkError.swift */,
 				2F863F3229CAB77100755FFC /* Service.swift */,
+				2FC5B27C29CAD3320032B55C /* APIKey.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -818,7 +818,6 @@
 				2FC572DC29B8402600D21EBA /* HomeViewController.swift in Sources */,
 				2FDE15EA2990D2EC00154A78 /* NetworkMonitor.swift in Sources */,
 				2FDE15D22990D13C00154A78 /* SceneDelegate.swift in Sources */,
-				2FDE15EF2990D34800154A78 /* APIKey.swift in Sources */,
 				2FDE16092990DDCA00154A78 /* BaseViewController.swift in Sources */,
 				2F64A91029B33A2C00BC11B9 /* LineTextFieldView.swift in Sources */,
 				2FB2D7C729B5E49400EA35F4 /* InitialViewController.swift in Sources */,
@@ -839,6 +838,7 @@
 				2FC572DE29B8403300D21EBA /* HomeViewModel.swift in Sources */,
 				2FD3BFF729B99A1300096669 /* TestViewController.swift in Sources */,
 				2FD9068429C9521900CC4225 /* HomeCoordinator.swift in Sources */,
+				2FC5B27D29CAD3320032B55C /* APIKey.swift in Sources */,
 				2FD40B1529C58D0C00BED327 /* TopicViewController.swift in Sources */,
 				2FB2D7AA29B5C1FC00EA35F4 /* SignUpViewController.swift in Sources */,
 				2FB2D79B29B59FAB00EA35F4 /* Font+Enum.swift in Sources */,
