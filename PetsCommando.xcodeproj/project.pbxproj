@@ -27,7 +27,6 @@
 		2F863F3329CAB77100755FFC /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F863F3229CAB77100755FFC /* Service.swift */; };
 		2F863F3529CAB82900755FFC /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F863F3429CAB82900755FFC /* AuthUseCase.swift */; };
 		2F863F3729CAB97600755FFC /* AuthRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F863F3629CAB97600755FFC /* AuthRepositoryType.swift */; };
-		2F863F3B29CABA9500755FFC /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2F863F3A29CABA9500755FFC /* .gitignore */; };
 		2FAB65AA29B30E6C0022B609 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAB65A929B30E6C0022B609 /* LoginViewController.swift */; };
 		2FAB65AD29B310570022B609 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2FAB65AC29B310570022B609 /* RxCocoa */; };
 		2FAB65AF29B310570022B609 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2FAB65AE29B310570022B609 /* RxSwift */; };
@@ -44,7 +43,8 @@
 		2FC572DC29B8402600D21EBA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC572DB29B8402600D21EBA /* HomeViewController.swift */; };
 		2FC572DE29B8403300D21EBA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC572DD29B8403300D21EBA /* HomeViewModel.swift */; };
 		2FC572E129B8404E00D21EBA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC572E029B8404E00D21EBA /* HomeView.swift */; };
-		2FC5B27D29CAD3320032B55C /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B27C29CAD3320032B55C /* APIKey.swift */; };
+		2FC5B27F29CAD43A0032B55C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2FC5B27E29CAD43A0032B55C /* .gitignore */; };
+		2FC5B28129CAD4700032B55C /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B28029CAD4700032B55C /* APIKey.swift */; };
 		2FC94ED529C083230097E696 /* HomeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC94ED429C083230097E696 /* HomeString.swift */; };
 		2FC94ED729C085750097E696 /* Test3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC94ED629C085750097E696 /* Test3ViewController.swift */; };
 		2FC9CA1329B70307008C502F /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC9CA1229B70307008C502F /* SignUpViewModel.swift */; };
@@ -97,7 +97,6 @@
 		2F863F3229CAB77100755FFC /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		2F863F3429CAB82900755FFC /* AuthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCase.swift; sourceTree = "<group>"; };
 		2F863F3629CAB97600755FFC /* AuthRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryType.swift; sourceTree = "<group>"; };
-		2F863F3A29CABA9500755FFC /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2FAB65A929B30E6C0022B609 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2FAB65B129B3127D0022B609 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2FB2D79A29B59FAB00EA35F4 /* Font+Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Enum.swift"; sourceTree = "<group>"; };
@@ -112,7 +111,8 @@
 		2FC572DB29B8402600D21EBA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FC572DD29B8403300D21EBA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2FC572E029B8404E00D21EBA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		2FC5B27C29CAD3320032B55C /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		2FC5B27E29CAD43A0032B55C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		2FC5B28029CAD4700032B55C /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		2FC94ED429C083230097E696 /* HomeString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeString.swift; sourceTree = "<group>"; };
 		2FC94ED629C085750097E696 /* Test3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test3ViewController.swift; sourceTree = "<group>"; };
 		2FC9CA1229B70307008C502F /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
@@ -544,7 +544,7 @@
 		2FDE15C32990D13C00154A78 = {
 			isa = PBXGroup;
 			children = (
-				2F863F3A29CABA9500755FFC /* .gitignore */,
+				2FC5B27E29CAD43A0032B55C /* .gitignore */,
 				2FDE15CE2990D13C00154A78 /* PetsCommando */,
 				2FDE15CD2990D13C00154A78 /* Products */,
 			);
@@ -635,7 +635,7 @@
 				2F863F2929CAB26A00755FFC /* TargetType.swift */,
 				2F863F2B29CAB3F800755FFC /* NetworkError.swift */,
 				2F863F3229CAB77100755FFC /* Service.swift */,
-				2FC5B27C29CAD3320032B55C /* APIKey.swift */,
+				2FC5B28029CAD4700032B55C /* APIKey.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -789,7 +789,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F863F3B29CABA9500755FFC /* .gitignore in Resources */,
+				2FC5B27F29CAD43A0032B55C /* .gitignore in Resources */,
 				2F64A90D29B3359600BC11B9 /* 강원교육모두 Bold.otf in Resources */,
 				2FDE15DC2990D13D00154A78 /* LaunchScreen.storyboard in Resources */,
 				2FDE15D92990D13D00154A78 /* Assets.xcassets in Resources */,
@@ -838,7 +838,7 @@
 				2FC572DE29B8403300D21EBA /* HomeViewModel.swift in Sources */,
 				2FD3BFF729B99A1300096669 /* TestViewController.swift in Sources */,
 				2FD9068429C9521900CC4225 /* HomeCoordinator.swift in Sources */,
-				2FC5B27D29CAD3320032B55C /* APIKey.swift in Sources */,
+				2FC5B28129CAD4700032B55C /* APIKey.swift in Sources */,
 				2FD40B1529C58D0C00BED327 /* TopicViewController.swift in Sources */,
 				2FB2D7AA29B5C1FC00EA35F4 /* SignUpViewController.swift in Sources */,
 				2FB2D79B29B59FAB00EA35F4 /* Font+Enum.swift in Sources */,

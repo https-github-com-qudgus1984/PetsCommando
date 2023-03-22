@@ -6,8 +6,3 @@
 //
 
 import Foundation
-
-enum APIKey {
-    static let ipAdress = "13.125.239.168"
-    static let portNumber = "9090"
-}
