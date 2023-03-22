@@ -12,8 +12,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        //MARK: TabBar AppDelegate Setting
+        let appearance = UITabBarAppearance()
+        let tabBar = UITabBar()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = Color.BaseColor.hunt4
+        tabBar.standardAppearance = appearance;
+        UITabBar.appearance().scrollEdgeAppearance = appearance
+        
+        //MARK: NetworkMonitoring
         NetworkMonitor.shared.startMonitoring()
-
         return true
     }
     

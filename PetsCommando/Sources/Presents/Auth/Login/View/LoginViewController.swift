@@ -12,10 +12,16 @@ import RxCocoa
 final class LoginViewController: BaseViewController {
     
     private let loginView = LoginView()
-    private let viewModel = LoginViewModel()
+    private let viewModel: LoginViewModel
     
-    //MARK: Delegate
-    weak var coordinator: LoginCoordinator?
+    init(viewModel: LoginViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("GenderViewController: fatal error")
+    }
     
     override func loadView() {
         self.view = loginView
@@ -35,7 +41,7 @@ final class LoginViewController: BaseViewController {
         loginView.signupButton.rx.tap
             .bind { [weak self] in
                 guard let self = self else { return }
-                self.coordinator?.pushSignUpViewController()
+                self.viewModel.showSignUpViewController()
             }
             .disposed(by: disposeBag)
         
@@ -50,7 +56,7 @@ final class LoginViewController: BaseViewController {
         loginView.loginButton.rx.tap
             .bind { [weak self] in
                 guard let self = self else { return }
-                self.coordinator?.rootViewControllerChangedTabBarViewController()
+                self.viewModel.showTabBarController()
             }
             .disposed(by: disposeBag)
     }

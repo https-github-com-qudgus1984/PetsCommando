@@ -11,6 +11,12 @@ import RxCocoa
 
 final class LoginViewModel: ViewModelType {
     
+    private weak var coordinator: AuthCoordinator?
+    
+    init(coordinator: AuthCoordinator?) {
+        self.coordinator = coordinator
+    }
+
     struct Input {
         let idText: ControlProperty<String?>
         let pwText: ControlProperty<String?>
@@ -21,6 +27,7 @@ final class LoginViewModel: ViewModelType {
         let pwValidation: Observable<Bool>
         let signUpValidation: Observable<Bool>
     }
+    
     
     func transform(_ input: Input) -> Output {
         let idValid = input.idText
@@ -38,4 +45,14 @@ final class LoginViewModel: ViewModelType {
         
         return Output(idValidation: idValid, pwValidation: pwValid, signUpValidation: signUpValid)
     }
+    
+    func showTabBarController() {
+        coordinator?.connectTabBarCoordinator()
+    }
+    
+    func showSignUpViewController() {
+        coordinator?.showSignUpViewController()
+    }
 }
+
+
