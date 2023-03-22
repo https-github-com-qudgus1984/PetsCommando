@@ -32,13 +32,15 @@ final class AuthCoordinator: Coordinator {
     func showLoginViewController() {
         let viewModel = LoginViewModel(coordinator: self)
         let vc = LoginViewController(viewModel: viewModel)
+        changeAnimation()
         navigationController.viewControllers = [vc]
     }
     
     func showSignUpViewController() {
         let viewModel = SignUpViewModel(coordinator: self)
         let vc = SignUpViewController(viewModel: viewModel)
-        navigationController.viewControllers = [vc]
+        navigationController.setNavigationBarHidden(false, animated: false)
+        navigationController.pushViewController(vc, animated: true)
     }
     
     func connectTabBarCoordinator() {
