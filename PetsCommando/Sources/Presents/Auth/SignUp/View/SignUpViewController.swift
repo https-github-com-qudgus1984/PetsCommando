@@ -34,7 +34,7 @@ final class SignUpViewController: BaseViewController {
     
     //MARK: ViewModel Binding
     override func setupBinding() {
-        let input = SignUpViewModel.Input(idText: signUpView.idLineTextField.textField.rx.text, pwText: signUpView.pwLineTextField.textField.rx.text, checkpwText: signUpView.checkpwLineTextField.textField.rx.text)
+        let input = SignUpViewModel.Input(idText: signUpView.idLineTextField.textField.rx.text, pwText: signUpView.pwLineTextField.textField.rx.text, nicknameText: signUpView.nicknameLineTextField.textField.rx.text, checkpwText: signUpView.checkpwLineTextField.textField.rx.text)
         
         let output = viewModel.transform(input)
         
@@ -46,8 +46,21 @@ final class SignUpViewController: BaseViewController {
                 let textColor: UIColor = valid ? .systemBlue : .systemRed
                 vc.signUpView.idValidLabel.textColor = textColor
                 let str: String = valid ?
-                ValidationString.successAuth.text : ValidationString.duplicateInspection.text
+                ValidationString.successAuth.text : ValidationString.duplicateInspectionEmail.text
                 vc.signUpView.idValidLabel.text = str
+            }
+            .disposed(by: disposeBag)
+        
+        output.nicknameValidation
+            .withUnretained(self)
+            .bind { vc, valid in
+                let buttonColor: UIColor = valid ? Color.BaseColor.hunt2 : Color.BaseColor.gray6
+                vc.signUpView.nicknameCertificationButton.backgroundColor = buttonColor
+                let textColor: UIColor = valid ? .systemBlue : .systemRed
+                vc.signUpView.nicknameValidLabel.textColor = textColor
+                let str: String = valid ?
+                ValidationString.successAuth.text : ValidationString.duplicateInspectionNickname.text
+                vc.signUpView.nicknameValidLabel.text = str
             }
             .disposed(by: disposeBag)
         

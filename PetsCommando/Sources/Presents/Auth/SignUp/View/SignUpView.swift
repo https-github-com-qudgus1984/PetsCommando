@@ -45,6 +45,35 @@ final class SignUpView: BaseView {
         return button
     }()
     
+    private var nicknameLabel: UILabel = {
+        let label = UILabel()
+        label.font = Font.Title2_B16
+        label.text = AuthString.nickname.text
+        return label
+    }()
+    
+    internal var nicknameLineTextField: LineTextFieldView = {
+        let text = LineTextFieldView()
+        text.textField.placeholder = AuthPlaceHolder.inputNickname.text
+        return text
+    }()
+    
+    internal var nicknameValidLabel: UILabel = {
+        let label = UILabel()
+        label.font = Font.Title2_B16
+        label.textColor = .systemRed
+        return label
+    }()
+    
+    internal var nicknameCertificationButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = Color.BaseColor.gray5
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 8
+        button.setTitle(AuthString.auth.text, for: .normal)
+        return button
+    }()
+    
     private var pwLabel: UILabel = {
         let label = UILabel()
         label.font = Font.Title2_B16
@@ -100,7 +129,7 @@ final class SignUpView: BaseView {
     }()
     
     override func setupAttributes() {
-        [bgView, idLabel, idLineTextField, idCertificationButton, idValidLabel, pwLabel, pwLineTextField, checkpwLabel, checkpwLineTextField, pwValidLabel, signupIncludeView, signupButton].forEach {
+        [bgView, idLabel, idLineTextField, idCertificationButton, idValidLabel, nicknameLabel, nicknameLineTextField, nicknameCertificationButton, nicknameValidLabel, pwLabel, pwLineTextField, checkpwLabel, checkpwLineTextField, pwValidLabel, signupIncludeView, signupButton].forEach {
             addSubview($0)
         }
     }
@@ -133,9 +162,33 @@ final class SignUpView: BaseView {
             make.horizontalEdges.equalToSuperview().inset(20)
         }
         
-        pwLabel.snp.makeConstraints { make in
+        nicknameLabel.snp.makeConstraints { make in
             make.horizontalEdges.equalToSuperview().inset(20)
             make.top.equalTo(idLineTextField.snp.bottom).offset(40)
+            make.height.equalTo(20)
+        }
+        
+        nicknameLineTextField.snp.makeConstraints { make in
+            make.horizontalEdges.equalToSuperview().inset(20)
+            make.top.equalTo(nicknameLabel.snp.bottom).offset(20)
+        }
+        
+        nicknameCertificationButton.snp.makeConstraints { make in
+            make.trailing.equalTo(nicknameLineTextField.snp.trailing)
+            make.height.equalTo(nicknameLineTextField.snp.height)
+            make.width.equalTo(60)
+            make.bottom.equalTo(nicknameLineTextField.snp.bottom).inset(4)
+        }
+        
+        nicknameValidLabel.snp.makeConstraints { make in
+            make.top.equalTo(nicknameLineTextField.snp.bottom).offset(8)
+            make.height.equalTo(20)
+            make.horizontalEdges.equalToSuperview().inset(20)
+        }
+        
+        pwLabel.snp.makeConstraints { make in
+            make.horizontalEdges.equalToSuperview().inset(20)
+            make.top.equalTo(nicknameLineTextField.snp.bottom).offset(40)
             make.height.equalTo(20)
         }
         

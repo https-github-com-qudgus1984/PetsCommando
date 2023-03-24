@@ -7,44 +7,52 @@
 
 import Foundation
 
-enum UnsplashRouter {
-    case auth
+enum Router {
+    case email
+    case register
+    case nickname
+    case login
 }
 
-extension UnsplashRouter: TargetType {
+extension Router: TargetType {
+    
     var scheme: String {
         return "https"
     }
 
     var host: String {
-        return "api.unsplash.com"
+        return APIKey.ipAdress + ":" + APIKey.portNumber
     }
 
     var path: String {
         switch self {
-        case .auth: return "/noauth"
+        case .email: return EndPoint.email.url
+        case .register: return EndPoint.register.url
+        case .nickname: return EndPoint.nickname.url
+        case .login: return EndPoint.login.url
         }
     }
 
+    
     var queryItems: [URLQueryItem] {
         switch self {
-        case .auth:
+        default:
             return [URLQueryItem(name: "order_by", value: "featured")]
         }
     }
-
+     
     var httpMethod: HTTPMethod {
         switch self {
-        default:
+        case .email, .login, .nickname, .register:
             return .post
+
         }
     }
 
     var header: [String: String] {
         switch self {
         default:
-            return ["Accept-Version": "v1",
-                    "Authorization": "Client-ID \(APIKey.ipAdress)"]
+            return ["Authorization": "Client-ID \(APIKey.ipAdress)"]
         }
     }
 
