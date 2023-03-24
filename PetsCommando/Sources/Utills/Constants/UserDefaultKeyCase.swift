@@ -5,10 +5,12 @@
 //  Created by 이병현 on 2023/03/21.
 //
 
+import Foundation
+
 enum UserDefaultKeyCase {
     static let isNotFirstUser = "isNotFirstUser"
     static let isLoggedIn = "isLoggedIn"
-    static let fcmToken = "fcmToken"
-    static let phoneNumber = "phoneNumber"
-    static let idToken = "idToken"
+    static let accessToken = "idToken"
+    static let nickname = "nickname"
+    static let email = "email"
 }

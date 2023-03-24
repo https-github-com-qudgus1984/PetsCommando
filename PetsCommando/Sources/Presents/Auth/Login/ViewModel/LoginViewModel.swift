@@ -32,7 +32,7 @@ final class LoginViewModel: ViewModelType {
     func transform(_ input: Input) -> Output {
         let idValid = input.idText
             .orEmpty
-            .map { $0.count >= 8 && $0.count <= 12 }
+            .map { $0.count >= 8 && $0.count <= 20 && $0.range(of: "@") != nil && $0.range(of: ".") != nil }
             .share()
         
         let pwValid = input.pwText

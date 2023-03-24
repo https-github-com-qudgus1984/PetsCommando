@@ -25,9 +25,8 @@
 		2F863F2C29CAB3F800755FFC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F863F2B29CAB3F800755FFC /* NetworkError.swift */; };
 		2F863F3129CAB49700755FFC /* AuthDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F863F3029CAB49700755FFC /* AuthDTO.swift */; };
 		2F863F3329CAB77100755FFC /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F863F3229CAB77100755FFC /* Service.swift */; };
-		2F863F3529CAB82900755FFC /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F863F3429CAB82900755FFC /* AuthUseCase.swift */; };
-		2F863F3729CAB97600755FFC /* AuthRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F863F3629CAB97600755FFC /* AuthRepositoryType.swift */; };
-		2F863F3B29CABA9500755FFC /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2F863F3A29CABA9500755FFC /* .gitignore */; };
+		2F863F3529CAB82900755FFC /* CertificationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F863F3429CAB82900755FFC /* CertificationUseCase.swift */; };
+		2F863F3729CAB97600755FFC /* UserRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F863F3629CAB97600755FFC /* UserRepositoryType.swift */; };
 		2FAB65AA29B30E6C0022B609 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAB65A929B30E6C0022B609 /* LoginViewController.swift */; };
 		2FAB65AD29B310570022B609 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2FAB65AC29B310570022B609 /* RxCocoa */; };
 		2FAB65AF29B310570022B609 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2FAB65AE29B310570022B609 /* RxSwift */; };
@@ -44,7 +43,10 @@
 		2FC572DC29B8402600D21EBA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC572DB29B8402600D21EBA /* HomeViewController.swift */; };
 		2FC572DE29B8403300D21EBA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC572DD29B8403300D21EBA /* HomeViewModel.swift */; };
 		2FC572E129B8404E00D21EBA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC572E029B8404E00D21EBA /* HomeView.swift */; };
-		2FC5B27D29CAD3320032B55C /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B27C29CAD3320032B55C /* APIKey.swift */; };
+		2FC5B27F29CAD43A0032B55C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2FC5B27E29CAD43A0032B55C /* .gitignore */; };
+		2FC5B28129CAD4700032B55C /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B28029CAD4700032B55C /* APIKey.swift */; };
+		2FC5B28329CAD7990032B55C /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B28229CAD7990032B55C /* EndPoint.swift */; };
+		2FC5B28629CAE16A0032B55C /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B28529CAE16A0032B55C /* UserRepository.swift */; };
 		2FC94ED529C083230097E696 /* HomeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC94ED429C083230097E696 /* HomeString.swift */; };
 		2FC94ED729C085750097E696 /* Test3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC94ED629C085750097E696 /* Test3ViewController.swift */; };
 		2FC9CA1329B70307008C502F /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC9CA1229B70307008C502F /* SignUpViewModel.swift */; };
@@ -95,9 +97,8 @@
 		2F863F2B29CAB3F800755FFC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		2F863F3029CAB49700755FFC /* AuthDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDTO.swift; sourceTree = "<group>"; };
 		2F863F3229CAB77100755FFC /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		2F863F3429CAB82900755FFC /* AuthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCase.swift; sourceTree = "<group>"; };
-		2F863F3629CAB97600755FFC /* AuthRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryType.swift; sourceTree = "<group>"; };
-		2F863F3A29CABA9500755FFC /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		2F863F3429CAB82900755FFC /* CertificationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationUseCase.swift; sourceTree = "<group>"; };
+		2F863F3629CAB97600755FFC /* UserRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryType.swift; sourceTree = "<group>"; };
 		2FAB65A929B30E6C0022B609 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2FAB65B129B3127D0022B609 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2FB2D79A29B59FAB00EA35F4 /* Font+Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Enum.swift"; sourceTree = "<group>"; };
@@ -112,7 +113,10 @@
 		2FC572DB29B8402600D21EBA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FC572DD29B8403300D21EBA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2FC572E029B8404E00D21EBA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		2FC5B27C29CAD3320032B55C /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		2FC5B27E29CAD43A0032B55C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		2FC5B28029CAD4700032B55C /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		2FC5B28229CAD7990032B55C /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		2FC5B28529CAE16A0032B55C /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		2FC94ED429C083230097E696 /* HomeString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeString.swift; sourceTree = "<group>"; };
 		2FC94ED629C085750097E696 /* Test3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test3ViewController.swift; sourceTree = "<group>"; };
 		2FC9CA1229B70307008C502F /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
@@ -472,6 +476,7 @@
 		2FD85FC729C8303600BE0BCC /* RepositoryImpl */ = {
 			isa = PBXGroup;
 			children = (
+				2FC5B28529CAE16A0032B55C /* UserRepository.swift */,
 			);
 			path = RepositoryImpl;
 			sourceTree = "<group>";
@@ -489,7 +494,7 @@
 		2FD85FC929C8308800BE0BCC /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
-				2F863F3629CAB97600755FFC /* AuthRepositoryType.swift */,
+				2F863F3629CAB97600755FFC /* UserRepositoryType.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -497,7 +502,7 @@
 		2FD85FCA29C8309000BE0BCC /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				2F863F3429CAB82900755FFC /* AuthUseCase.swift */,
+				2F863F3429CAB82900755FFC /* CertificationUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -544,7 +549,7 @@
 		2FDE15C32990D13C00154A78 = {
 			isa = PBXGroup;
 			children = (
-				2F863F3A29CABA9500755FFC /* .gitignore */,
+				2FC5B27E29CAD43A0032B55C /* .gitignore */,
 				2FDE15CE2990D13C00154A78 /* PetsCommando */,
 				2FDE15CD2990D13C00154A78 /* Products */,
 			);
@@ -635,7 +640,8 @@
 				2F863F2929CAB26A00755FFC /* TargetType.swift */,
 				2F863F2B29CAB3F800755FFC /* NetworkError.swift */,
 				2F863F3229CAB77100755FFC /* Service.swift */,
-				2FC5B27C29CAD3320032B55C /* APIKey.swift */,
+				2FC5B28029CAD4700032B55C /* APIKey.swift */,
+				2FC5B28229CAD7990032B55C /* EndPoint.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -789,7 +795,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F863F3B29CABA9500755FFC /* .gitignore in Resources */,
+				2FC5B27F29CAD43A0032B55C /* .gitignore in Resources */,
 				2F64A90D29B3359600BC11B9 /* 강원교육모두 Bold.otf in Resources */,
 				2FDE15DC2990D13D00154A78 /* LaunchScreen.storyboard in Resources */,
 				2FDE15D92990D13D00154A78 /* Assets.xcassets in Resources */,
@@ -807,12 +813,13 @@
 				2F64A8F529B319F800BC11B9 /* Coordinator.swift in Sources */,
 				2F863F2C29CAB3F800755FFC /* NetworkError.swift in Sources */,
 				2FDE15ED2990D32C00154A78 /* Router.swift in Sources */,
-				2F863F3729CAB97600755FFC /* AuthRepositoryType.swift in Sources */,
+				2F863F3729CAB97600755FFC /* UserRepositoryType.swift in Sources */,
 				2F4B1CDE29C191A500B999AB /* TabCell.swift in Sources */,
 				2FD40B1729C58DAA00BED327 /* SectionHeaderView.swift in Sources */,
 				2FB2D7A029B5AF1900EA35F4 /* AuthString.swift in Sources */,
 				2F5FA8CC29BDA89800123AAC /* Image + Enum.swift in Sources */,
 				2FDE15D02990D13C00154A78 /* AppDelegate.swift in Sources */,
+				2FC5B28329CAD7990032B55C /* EndPoint.swift in Sources */,
 				2FD9067D29C94A0800CC4225 /* OnBoardingViewModel.swift in Sources */,
 				2F64A8F129B3171800BC11B9 /* Font.swift in Sources */,
 				2FC572DC29B8402600D21EBA /* HomeViewController.swift in Sources */,
@@ -825,7 +832,7 @@
 				2FDE15F82990DB0E00154A78 /* RealmModel.swift in Sources */,
 				2FD9067929C947A100CC4225 /* AuthCoordinator.swift in Sources */,
 				2FD3BFF929B99A1E00096669 /* Test2ViewController.swift in Sources */,
-				2F863F3529CAB82900755FFC /* AuthUseCase.swift in Sources */,
+				2F863F3529CAB82900755FFC /* CertificationUseCase.swift in Sources */,
 				2FB2D7BC29B5CA3500EA35F4 /* OnBoardingView.swift in Sources */,
 				2FD85FC529C825A200BE0BCC /* CoordinatorStyleCase.swift in Sources */,
 				2FB2D7C929B5F7E900EA35F4 /* InitialView.swift in Sources */,
@@ -838,7 +845,7 @@
 				2FC572DE29B8403300D21EBA /* HomeViewModel.swift in Sources */,
 				2FD3BFF729B99A1300096669 /* TestViewController.swift in Sources */,
 				2FD9068429C9521900CC4225 /* HomeCoordinator.swift in Sources */,
-				2FC5B27D29CAD3320032B55C /* APIKey.swift in Sources */,
+				2FC5B28129CAD4700032B55C /* APIKey.swift in Sources */,
 				2FD40B1529C58D0C00BED327 /* TopicViewController.swift in Sources */,
 				2FB2D7AA29B5C1FC00EA35F4 /* SignUpViewController.swift in Sources */,
 				2FB2D79B29B59FAB00EA35F4 /* Font+Enum.swift in Sources */,
@@ -859,6 +866,7 @@
 				2FDE16072990DDBF00154A78 /* BaseView.swift in Sources */,
 				2FAB65AA29B30E6C0022B609 /* LoginViewController.swift in Sources */,
 				2FD40B1F29C593B200BED327 /* TopicCell.swift in Sources */,
+				2FC5B28629CAE16A0032B55C /* UserRepository.swift in Sources */,
 				2F64A90129B31CFE00BC11B9 /* OnBoardingViewController.swift in Sources */,
 				2FC94ED529C083230097E696 /* HomeString.swift in Sources */,
 				2FC9CA1329B70307008C502F /* SignUpViewModel.swift in Sources */,

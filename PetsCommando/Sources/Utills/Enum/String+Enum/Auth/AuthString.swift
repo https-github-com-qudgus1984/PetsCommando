@@ -10,6 +10,7 @@ import Foundation
 enum AuthPlaceHolder {
     case inputID
     case inputPW
+    case inputNickname
 }
 
 extension AuthPlaceHolder {
@@ -19,6 +20,8 @@ extension AuthPlaceHolder {
             return "이메일을 입력해주세요."
         case .inputPW:
             return "비밀번호를 입력해주세요."
+        case .inputNickname:
+            return "닉네임을 입력해주세요."
         }
     }
 }
@@ -29,6 +32,7 @@ enum AuthString {
     case login
     case signup
     case auth
+    case nickname
 }
 
 extension AuthString {
@@ -44,15 +48,18 @@ extension AuthString {
             return "회원가입"
         case .auth:
             return "인증"
+        case .nickname:
+            return "닉네임"
         }
     }
 }
 
 enum ValidationString {
     case successAuth
-    case duplicateInspection
+    case duplicateInspectionEmail
     case samePW
     case notSamePW
+    case duplicateInspectionNickname
 }
 
 extension ValidationString {
@@ -60,12 +67,14 @@ extension ValidationString {
         switch self {
         case .successAuth:
             return "인증이 완료되었습니다."
-        case .duplicateInspection:
+        case .duplicateInspectionEmail:
             return "이메일 중복 검사가 필요합니다."
         case .samePW:
             return "비밀번호가 일치합니다."
         case .notSamePW:
             return "비밀번호가 일치하지 않습니다."
+        case .duplicateInspectionNickname:
+            return "닉네임 중복 검사가 필요합니다."
         }
     }
 }
