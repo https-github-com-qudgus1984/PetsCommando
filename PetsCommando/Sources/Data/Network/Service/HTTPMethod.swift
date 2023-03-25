@@ -13,7 +13,11 @@ enum HTTPMethod: String {
 }
 
 
-// haha1haka making... to git
+// haha1haka testing git...
+
+
+
+
 
 protocol HTTP {
     var path: String { get set }
@@ -44,9 +48,6 @@ func shortestName() -> String {
         .name
 }
 
-print(longestName())
-print(shortestName())
-
 
 extension Collection where Element == String {
     func sortedByLength() -> [Element] {
@@ -60,8 +61,6 @@ func gLongestName() -> String {
         .sortedByLength()
         .last!
 }
-
-print(gLongestName())
 
 // 해당 작업은 develop에서 작업 중입니다
 // closed 된 PR 수정(기능 때문에) 해서 다시 올립니다 

@@ -8,17 +8,17 @@
 import Foundation
 import Combine
 
-protocol Service {
+protocol PetsCommandoService {
     func request<T: Decodable>(target: TargetType, type: T.Type) -> AnyPublisher<T, NetworkError>
 }
 
-final class ServiceImpl: Service {
+final class PetsCommandoServiceImpl: PetsCommandoService {
     
-    static let shared = ServiceImpl()
+    static let shared = PetsCommandoServiceImpl()
     
     private let session: URLSession
     
-    private init(session: URLSession = .shared) {
+    init(session: URLSession = .shared) {
         self.session = session
     }
     

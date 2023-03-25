@@ -8,7 +8,6 @@
 import Foundation
 
 protocol TargetType {
-    var scheme: String { get }
     var host: String { get }
     var path: String { get }
     var header: [String: String] { get }
@@ -22,7 +21,6 @@ extension TargetType {
         var components = URLComponents()
         components.host = host
         components.path = path
-        components.scheme = scheme
         components.queryItems = queryItems
         return components
     }
