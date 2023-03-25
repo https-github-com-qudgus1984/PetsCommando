@@ -43,6 +43,13 @@ final class AuthCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
+    func showEmailViewController() {
+        let viewModel = EmailViewModel(coordinator: self)
+        let vc = EmailViewController(viewModel: viewModel)
+        navigationController.setNavigationBarHidden(false, animated: false)
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
     func connectTabBarCoordinator() {
         let tabBarCoordinator = TabBarCoordinator(self.navigationController)
         tabBarCoordinator.start()

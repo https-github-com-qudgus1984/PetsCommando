@@ -33,6 +33,7 @@ enum AuthString {
     case signup
     case auth
     case nickname
+    case next
 }
 
 extension AuthString {
@@ -50,6 +51,8 @@ extension AuthString {
             return "인증"
         case .nickname:
             return "닉네임"
+        case .next:
+            return "다음"
         }
     }
 }
