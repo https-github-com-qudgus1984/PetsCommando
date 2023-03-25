@@ -64,3 +64,4 @@ func gLongestName() -> String {
 print(gLongestName())
 
 // 해당 작업은 develop에서 작업 중입니다
+// closed 된 PR 수정(기능 때문에) 해서 다시 올립니다 
