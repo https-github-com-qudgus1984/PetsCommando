@@ -11,3 +11,9 @@ enum HTTPMethod: String {
     case get
     case post
 }
+
+
+
+protocol HTTP {
+    var path: String { get set }
+}
