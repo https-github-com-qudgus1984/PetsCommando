@@ -25,15 +25,19 @@ extension authDTO {
 
 struct emailDTO: Codable {
     let email: String
+    let message: String
+    let timestamp: String
     
     enum CodingKeys: String, CodingKey {
         case email
+        case message
+        case timestamp
     }
 }
 
 extension emailDTO {
     var toDomain: emailDTO {
-        return .init(email: email)
+        return .init(email: email, message: message, timestamp: timestamp)
     }
 }
 

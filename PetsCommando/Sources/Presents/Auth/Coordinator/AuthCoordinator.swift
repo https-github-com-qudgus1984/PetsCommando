@@ -44,7 +44,11 @@ final class AuthCoordinator: Coordinator {
     }
     
     func showEmailViewController() {
-        let viewModel = EmailViewModel(coordinator: self)
+        let viewModel = EmailViewModel(coordinator: self,
+                                       certificationUseCase: CertificationUseCase(
+                                        userRepository: UserRepository(),
+                                        petCommandoRepository: PetsCommandoRepository(session: PetsCommandoServiceImpl())
+                                       ))
         let vc = EmailViewController(viewModel: viewModel)
         navigationController.setNavigationBarHidden(false, animated: false)
         navigationController.pushViewController(vc, animated: true)

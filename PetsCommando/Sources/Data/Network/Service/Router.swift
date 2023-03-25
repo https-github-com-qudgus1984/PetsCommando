@@ -7,6 +7,8 @@
 
 import Foundation
 
+//13.125.239.168:9090/noauth/users/email-duplication
+
 enum Router {
     case email
     case register
@@ -15,13 +17,9 @@ enum Router {
 }
 
 extension Router: TargetType {
-    
-    var scheme: String {
-        return "https"
-    }
 
     var host: String {
-        return APIKey.ipAdress + ":" + APIKey.portNumber
+        return APIKey.portNumber
     }
 
     var path: String {
@@ -45,14 +43,13 @@ extension Router: TargetType {
         switch self {
         case .email, .login, .nickname, .register:
             return .post
-
         }
     }
 
     var header: [String: String] {
         switch self {
         default:
-            return ["Authorization": "Client-ID \(APIKey.ipAdress)"]
+            return ["Authorization": "Client-ID \(UserDefaults.standard.string(forKey: UserDefaultKeyCase.accessToken))"]
         }
     }
 
