@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F0677A029CEA55600687848 /* EmailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F06779F29CEA55600687848 /* EmailCoordinator.swift */; };
+		2F0677A329CEA56000687848 /* EmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0677A229CEA56000687848 /* EmailViewModel.swift */; };
+		2F0677A529CEA56900687848 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0677A429CEA56900687848 /* EmailViewController.swift */; };
+		2F0677A829CEA57800687848 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0677A729CEA57800687848 /* EmailView.swift */; };
 		2F4B1CDE29C191A500B999AB /* TabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4B1CDD29C191A500B999AB /* TabCell.swift */; };
 		2F4B1CE029C191BA00B999AB /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4B1CDF29C191BA00B999AB /* CustomTabBarViewController.swift */; };
 		2F5FA8CC29BDA89800123AAC /* Image + Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5FA8CB29BDA89800123AAC /* Image + Enum.swift */; };
@@ -80,6 +84,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F06779F29CEA55600687848 /* EmailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCoordinator.swift; sourceTree = "<group>"; };
+		2F0677A229CEA56000687848 /* EmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewModel.swift; sourceTree = "<group>"; };
+		2F0677A429CEA56900687848 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		2F0677A729CEA57800687848 /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
 		2F4B1CDD29C191A500B999AB /* TabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCell.swift; sourceTree = "<group>"; };
 		2F4B1CDF29C191BA00B999AB /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
 		2F5FA8CB29BDA89800123AAC /* Image + Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image + Enum.swift"; sourceTree = "<group>"; };
@@ -165,6 +173,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F06779929CEA51400687848 /* Email */ = {
+			isa = PBXGroup;
+			children = (
+				2F06779E29CEA54C00687848 /* Coordinator */,
+				2F06779D29CEA54900687848 /* ViewModel */,
+				2F06779C29CEA54600687848 /* View */,
+			);
+			path = Email;
+			sourceTree = "<group>";
+		};
+		2F06779A29CEA52000687848 /* Nickname */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Nickname;
+			sourceTree = "<group>";
+		};
+		2F06779B29CEA52A00687848 /* Password */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Password;
+			sourceTree = "<group>";
+		};
+		2F06779C29CEA54600687848 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F0677A429CEA56900687848 /* EmailViewController.swift */,
+				2F0677A729CEA57800687848 /* EmailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F06779D29CEA54900687848 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2F0677A229CEA56000687848 /* EmailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2F06779E29CEA54C00687848 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2F06779F29CEA55600687848 /* EmailCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		2F5FA8C729BDA62300123AAC /* Asset */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +297,9 @@
 		2FAB65A629B30E280022B609 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				2F06779929CEA51400687848 /* Email */,
+				2F06779A29CEA52000687848 /* Nickname */,
+				2F06779B29CEA52A00687848 /* Password */,
 				2FC9CA1129B702F4008C502F /* ViewModel */,
 				2FB2D7A529B5C1D500EA35F4 /* View */,
 			);
@@ -829,6 +889,7 @@
 				2F64A91029B33A2C00BC11B9 /* LineTextFieldView.swift in Sources */,
 				2FB2D7C729B5E49400EA35F4 /* InitialViewController.swift in Sources */,
 				2FD9067F29C94F0900CC4225 /* TabBarPageCases.swift in Sources */,
+				2F0677A529CEA56900687848 /* EmailViewController.swift in Sources */,
 				2FDE15F82990DB0E00154A78 /* RealmModel.swift in Sources */,
 				2FD9067929C947A100CC4225 /* AuthCoordinator.swift in Sources */,
 				2FD3BFF929B99A1E00096669 /* Test2ViewController.swift in Sources */,
@@ -843,7 +904,9 @@
 				2FD40B1B29C58E0F00BED327 /* BaseCollectionViewCell.swift in Sources */,
 				2FB2D7AC29B5C20200EA35F4 /* LoginView.swift in Sources */,
 				2FC572DE29B8403300D21EBA /* HomeViewModel.swift in Sources */,
+				2F0677A029CEA55600687848 /* EmailCoordinator.swift in Sources */,
 				2FD3BFF729B99A1300096669 /* TestViewController.swift in Sources */,
+				2F0677A329CEA56000687848 /* EmailViewModel.swift in Sources */,
 				2FD9068429C9521900CC4225 /* HomeCoordinator.swift in Sources */,
 				2FC5B28129CAD4700032B55C /* APIKey.swift in Sources */,
 				2FD40B1529C58D0C00BED327 /* TopicViewController.swift in Sources */,
@@ -854,6 +917,7 @@
 				2F4B1CE029C191BA00B999AB /* CustomTabBarViewController.swift in Sources */,
 				2FC94ED729C085750097E696 /* Test3ViewController.swift in Sources */,
 				2F64A91829B34AE900BC11B9 /* SignUpView.swift in Sources */,
+				2F0677A829CEA57800687848 /* EmailView.swift in Sources */,
 				2F863F3329CAB77100755FFC /* Service.swift in Sources */,
 				2FAB65B229B3127D0022B609 /* Color.swift in Sources */,
 				2F863F3129CAB49700755FFC /* AuthDTO.swift in Sources */,

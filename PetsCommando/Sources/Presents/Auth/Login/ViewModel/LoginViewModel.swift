@@ -51,7 +51,7 @@ final class LoginViewModel: ViewModelType {
     }
     
     func showSignUpViewController() {
-        coordinator?.showSignUpViewController()
+        coordinator?.showEmailViewController()
     }
 }
 
