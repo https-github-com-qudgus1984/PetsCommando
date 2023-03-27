@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F0677A029CEA55600687848 /* EmailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F06779F29CEA55600687848 /* EmailCoordinator.swift */; };
 		2F0677A329CEA56000687848 /* EmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0677A229CEA56000687848 /* EmailViewModel.swift */; };
 		2F0677A529CEA56900687848 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0677A429CEA56900687848 /* EmailViewController.swift */; };
 		2F0677A829CEA57800687848 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0677A729CEA57800687848 /* EmailView.swift */; };
 		2F0677AD29CEBE6300687848 /* NicknameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0677AC29CEBE6300687848 /* NicknameView.swift */; };
 		2F0677AF29CEBE6C00687848 /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0677AE29CEBE6C00687848 /* NicknameViewController.swift */; };
 		2F0677B129CEBE7500687848 /* NicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0677B029CEBE7500687848 /* NicknameViewModel.swift */; };
+		2F0677B529CF0BD500687848 /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0677B429CF0BD500687848 /* PasswordViewModel.swift */; };
+		2F0677B729CF0BDD00687848 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0677B629CF0BDD00687848 /* PasswordViewController.swift */; };
+		2F0677B929CF0BE300687848 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0677B829CF0BE300687848 /* PasswordView.swift */; };
+		2F0677BB29CF159500687848 /* PetsCommandoRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0677BA29CF159500687848 /* PetsCommandoRepositoryType.swift */; };
+		2F0677BE29CF1DE200687848 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 2F0677BD29CF1DE200687848 /* Toast */; };
+		2F0677C029CF1E1600687848 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0677BF29CF1E1600687848 /* UIViewController+Extension.swift */; };
+		2F0677C229CF1FDE00687848 /* PetsCommandoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0677C129CF1FDE00687848 /* PetsCommandoRepository.swift */; };
 		2F4B1CDE29C191A500B999AB /* TabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4B1CDD29C191A500B999AB /* TabCell.swift */; };
 		2F4B1CE029C191BA00B999AB /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4B1CDF29C191BA00B999AB /* CustomTabBarViewController.swift */; };
 		2F5FA8CC29BDA89800123AAC /* Image + Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5FA8CB29BDA89800123AAC /* Image + Enum.swift */; };
@@ -31,7 +37,7 @@
 		2F863F2A29CAB26A00755FFC /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F863F2929CAB26A00755FFC /* TargetType.swift */; };
 		2F863F2C29CAB3F800755FFC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F863F2B29CAB3F800755FFC /* NetworkError.swift */; };
 		2F863F3129CAB49700755FFC /* AuthDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F863F3029CAB49700755FFC /* AuthDTO.swift */; };
-		2F863F3329CAB77100755FFC /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F863F3229CAB77100755FFC /* Service.swift */; };
+		2F863F3329CAB77100755FFC /* PetsCommandoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F863F3229CAB77100755FFC /* PetsCommandoService.swift */; };
 		2F863F3529CAB82900755FFC /* CertificationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F863F3429CAB82900755FFC /* CertificationUseCase.swift */; };
 		2F863F3729CAB97600755FFC /* UserRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F863F3629CAB97600755FFC /* UserRepositoryType.swift */; };
 		2FAB65AA29B30E6C0022B609 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAB65A929B30E6C0022B609 /* LoginViewController.swift */; };
@@ -46,6 +52,8 @@
 		2FB2D7BC29B5CA3500EA35F4 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7BB29B5CA3500EA35F4 /* OnBoardingView.swift */; };
 		2FB2D7C729B5E49400EA35F4 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7C629B5E49400EA35F4 /* InitialViewController.swift */; };
 		2FB2D7C929B5F7E900EA35F4 /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7C829B5F7E900EA35F4 /* InitialView.swift */; };
+		2FC246DB29D1945100349AEF /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 2FC246DA29D1945100349AEF /* Moya */; };
+		2FC246DE29D194C700349AEF /* ToastCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC246DD29D194C700349AEF /* ToastCase.swift */; };
 		2FC572D829B83C4600D21EBA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC572D729B83C4600D21EBA /* TabBarViewController.swift */; };
 		2FC572DC29B8402600D21EBA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC572DB29B8402600D21EBA /* HomeViewController.swift */; };
 		2FC572DE29B8403300D21EBA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC572DD29B8403300D21EBA /* HomeViewModel.swift */; };
@@ -87,13 +95,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2F06779F29CEA55600687848 /* EmailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCoordinator.swift; sourceTree = "<group>"; };
 		2F0677A229CEA56000687848 /* EmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewModel.swift; sourceTree = "<group>"; };
 		2F0677A429CEA56900687848 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		2F0677A729CEA57800687848 /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
 		2F0677AC29CEBE6300687848 /* NicknameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameView.swift; sourceTree = "<group>"; };
 		2F0677AE29CEBE6C00687848 /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
 		2F0677B029CEBE7500687848 /* NicknameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewModel.swift; sourceTree = "<group>"; };
+		2F0677B429CF0BD500687848 /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
+		2F0677B629CF0BDD00687848 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		2F0677B829CF0BE300687848 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
+		2F0677BA29CF159500687848 /* PetsCommandoRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsCommandoRepositoryType.swift; sourceTree = "<group>"; };
+		2F0677BF29CF1E1600687848 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		2F0677C129CF1FDE00687848 /* PetsCommandoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsCommandoRepository.swift; sourceTree = "<group>"; };
 		2F4B1CDD29C191A500B999AB /* TabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCell.swift; sourceTree = "<group>"; };
 		2F4B1CDF29C191BA00B999AB /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
 		2F5FA8CB29BDA89800123AAC /* Image + Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image + Enum.swift"; sourceTree = "<group>"; };
@@ -110,7 +123,7 @@
 		2F863F2929CAB26A00755FFC /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
 		2F863F2B29CAB3F800755FFC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		2F863F3029CAB49700755FFC /* AuthDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDTO.swift; sourceTree = "<group>"; };
-		2F863F3229CAB77100755FFC /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		2F863F3229CAB77100755FFC /* PetsCommandoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsCommandoService.swift; sourceTree = "<group>"; };
 		2F863F3429CAB82900755FFC /* CertificationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationUseCase.swift; sourceTree = "<group>"; };
 		2F863F3629CAB97600755FFC /* UserRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryType.swift; sourceTree = "<group>"; };
 		2FAB65A929B30E6C0022B609 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +136,7 @@
 		2FB2D7BB29B5CA3500EA35F4 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		2FB2D7C629B5E49400EA35F4 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		2FB2D7C829B5F7E900EA35F4 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
+		2FC246DD29D194C700349AEF /* ToastCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastCase.swift; sourceTree = "<group>"; };
 		2FC572D729B83C4600D21EBA /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		2FC572DB29B8402600D21EBA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FC572DD29B8403300D21EBA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -170,8 +184,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F0677BE29CF1DE200687848 /* Toast in Frameworks */,
 				2F64A90829B3281C00BC11B9 /* SnapKit in Frameworks */,
 				2FAB65AF29B310570022B609 /* RxSwift in Frameworks */,
+				2FC246DB29D1945100349AEF /* Moya in Frameworks */,
 				2FAB65AD29B310570022B609 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,7 +198,6 @@
 		2F06779929CEA51400687848 /* Email */ = {
 			isa = PBXGroup;
 			children = (
-				2F06779E29CEA54C00687848 /* Coordinator */,
 				2F06779D29CEA54900687848 /* ViewModel */,
 				2F06779C29CEA54600687848 /* View */,
 			);
@@ -201,6 +216,8 @@
 		2F06779B29CEA52A00687848 /* Password */ = {
 			isa = PBXGroup;
 			children = (
+				2F0677B229CF0BB500687848 /* ViewModel */,
+				2F0677B329CF0BC600687848 /* View */,
 			);
 			path = Password;
 			sourceTree = "<group>";
@@ -222,14 +239,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		2F06779E29CEA54C00687848 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				2F06779F29CEA55600687848 /* EmailCoordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
 		2F0677AA29CEBE5700687848 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +254,23 @@
 				2F0677B029CEBE7500687848 /* NicknameViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2F0677B229CF0BB500687848 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2F0677B429CF0BD500687848 /* PasswordViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2F0677B329CF0BC600687848 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F0677B629CF0BDD00687848 /* PasswordViewController.swift */,
+				2F0677B829CF0BE300687848 /* PasswordView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		2F5FA8C729BDA62300123AAC /* Asset */ = {
@@ -439,6 +465,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2FC246DC29D194BC00349AEF /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				2FC246DD29D194C700349AEF /* ToastCase.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		2FC572D329B83C0800D21EBA /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -562,6 +596,7 @@
 			isa = PBXGroup;
 			children = (
 				2FC5B28529CAE16A0032B55C /* UserRepository.swift */,
+				2F0677C129CF1FDE00687848 /* PetsCommandoRepository.swift */,
 			);
 			path = RepositoryImpl;
 			sourceTree = "<group>";
@@ -580,6 +615,7 @@
 			isa = PBXGroup;
 			children = (
 				2F863F3629CAB97600755FFC /* UserRepositoryType.swift */,
+				2F0677BA29CF159500687848 /* PetsCommandoRepositoryType.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -724,7 +760,7 @@
 				2F863F2729CAB22900755FFC /* HTTPMethod.swift */,
 				2F863F2929CAB26A00755FFC /* TargetType.swift */,
 				2F863F2B29CAB3F800755FFC /* NetworkError.swift */,
-				2F863F3229CAB77100755FFC /* Service.swift */,
+				2F863F3229CAB77100755FFC /* PetsCommandoService.swift */,
 				2FC5B28029CAD4700032B55C /* APIKey.swift */,
 				2FC5B28229CAD7990032B55C /* EndPoint.swift */,
 			);
@@ -791,6 +827,7 @@
 				2F64A90E29B33A1900BC11B9 /* Custom */,
 				2FAB65B029B312720022B609 /* Constants */,
 				2FDE16052990DDA400154A78 /* Extension */,
+				2FC246DC29D194BC00349AEF /* Error */,
 			);
 			path = Utills;
 			sourceTree = "<group>";
@@ -809,6 +846,7 @@
 			isa = PBXGroup;
 			children = (
 				2F64A91129B33A5F00BC11B9 /* UITextField+Extension.swift */,
+				2F0677BF29CF1E1600687848 /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -833,6 +871,8 @@
 				2FAB65AC29B310570022B609 /* RxCocoa */,
 				2FAB65AE29B310570022B609 /* RxSwift */,
 				2F64A90729B3281C00BC11B9 /* SnapKit */,
+				2F0677BD29CF1DE200687848 /* Toast */,
+				2FC246DA29D1945100349AEF /* Moya */,
 			);
 			productName = PetsCommando;
 			productReference = 2FDE15CC2990D13C00154A78 /* PetsCommando.app */;
@@ -865,6 +905,8 @@
 			packageReferences = (
 				2FAB65AB29B310570022B609 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				2F64A90629B3281C00BC11B9 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				2F0677BC29CF1DE200687848 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				2FC246D929D1945100349AEF /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 2FDE15CD2990D13C00154A78 /* Products */;
 			projectDirPath = "";
@@ -897,6 +939,7 @@
 			files = (
 				2F64A8F529B319F800BC11B9 /* Coordinator.swift in Sources */,
 				2F863F2C29CAB3F800755FFC /* NetworkError.swift in Sources */,
+				2F0677C029CF1E1600687848 /* UIViewController+Extension.swift in Sources */,
 				2FDE15ED2990D32C00154A78 /* Router.swift in Sources */,
 				2F863F3729CAB97600755FFC /* UserRepositoryType.swift in Sources */,
 				2F0677AF29CEBE6C00687848 /* NicknameViewController.swift in Sources */,
@@ -911,6 +954,7 @@
 				2FC572DC29B8402600D21EBA /* HomeViewController.swift in Sources */,
 				2FDE15EA2990D2EC00154A78 /* NetworkMonitor.swift in Sources */,
 				2FDE15D22990D13C00154A78 /* SceneDelegate.swift in Sources */,
+				2FC246DE29D194C700349AEF /* ToastCase.swift in Sources */,
 				2FDE16092990DDCA00154A78 /* BaseViewController.swift in Sources */,
 				2F64A91029B33A2C00BC11B9 /* LineTextFieldView.swift in Sources */,
 				2FB2D7C729B5E49400EA35F4 /* InitialViewController.swift in Sources */,
@@ -926,12 +970,13 @@
 				2FB2D7C929B5F7E900EA35F4 /* InitialView.swift in Sources */,
 				2FD40B1D29C58EBE00BED327 /* Cummunity.swift in Sources */,
 				2FD3BFFB29B99C0E00096669 /* TabBarCoordinator.swift in Sources */,
+				2F0677B729CF0BDD00687848 /* PasswordViewController.swift in Sources */,
 				2FD85FC329C8252400BE0BCC /* CoordinatorDelegate.swift in Sources */,
 				2F863F2A29CAB26A00755FFC /* TargetType.swift in Sources */,
 				2FD40B1B29C58E0F00BED327 /* BaseCollectionViewCell.swift in Sources */,
 				2FB2D7AC29B5C20200EA35F4 /* LoginView.swift in Sources */,
+				2F0677C229CF1FDE00687848 /* PetsCommandoRepository.swift in Sources */,
 				2FC572DE29B8403300D21EBA /* HomeViewModel.swift in Sources */,
-				2F0677A029CEA55600687848 /* EmailCoordinator.swift in Sources */,
 				2FD3BFF729B99A1300096669 /* TestViewController.swift in Sources */,
 				2F0677A329CEA56000687848 /* EmailViewModel.swift in Sources */,
 				2FD9068429C9521900CC4225 /* HomeCoordinator.swift in Sources */,
@@ -939,14 +984,16 @@
 				2FC5B28129CAD4700032B55C /* APIKey.swift in Sources */,
 				2FD40B1529C58D0C00BED327 /* TopicViewController.swift in Sources */,
 				2FB2D7AA29B5C1FC00EA35F4 /* SignUpViewController.swift in Sources */,
+				2F0677B529CF0BD500687848 /* PasswordViewModel.swift in Sources */,
 				2FB2D79B29B59FAB00EA35F4 /* Font+Enum.swift in Sources */,
+				2F0677BB29CF159500687848 /* PetsCommandoRepositoryType.swift in Sources */,
 				2FB2D7B229B5C69200EA35F4 /* LoginViewModel.swift in Sources */,
 				2FC572E129B8404E00D21EBA /* HomeView.swift in Sources */,
 				2F4B1CE029C191BA00B999AB /* CustomTabBarViewController.swift in Sources */,
 				2FC94ED729C085750097E696 /* Test3ViewController.swift in Sources */,
 				2F64A91829B34AE900BC11B9 /* SignUpView.swift in Sources */,
 				2F0677A829CEA57800687848 /* EmailView.swift in Sources */,
-				2F863F3329CAB77100755FFC /* Service.swift in Sources */,
+				2F863F3329CAB77100755FFC /* PetsCommandoService.swift in Sources */,
 				2FAB65B229B3127D0022B609 /* Color.swift in Sources */,
 				2F863F3129CAB49700755FFC /* AuthDTO.swift in Sources */,
 				2FDE16002990DB6400154A78 /* ViewModelType.swift in Sources */,
@@ -955,6 +1002,7 @@
 				2FD40B1929C58DDA00BED327 /* TopicView.swift in Sources */,
 				2FC572D829B83C4600D21EBA /* TabBarViewController.swift in Sources */,
 				2F64A91229B33A5F00BC11B9 /* UITextField+Extension.swift in Sources */,
+				2F0677B929CF0BE300687848 /* PasswordView.swift in Sources */,
 				2FDE16072990DDBF00154A78 /* BaseView.swift in Sources */,
 				2FAB65AA29B30E6C0022B609 /* LoginViewController.swift in Sources */,
 				2FD40B1F29C593B200BED327 /* TopicCell.swift in Sources */,
@@ -1177,6 +1225,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2F0677BC29CF1DE200687848 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		2F64A90629B3281C00BC11B9 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -1193,9 +1249,22 @@
 				minimumVersion = 6.5.0;
 			};
 		};
+		2FC246D929D1945100349AEF /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = exactVersion;
+				version = 15.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2F0677BD29CF1DE200687848 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F0677BC29CF1DE200687848 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
 		2F64A90729B3281C00BC11B9 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2F64A90629B3281C00BC11B9 /* XCRemoteSwiftPackageReference "SnapKit" */;
@@ -1210,6 +1279,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2FAB65AB29B310570022B609 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		2FC246DA29D1945100349AEF /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FC246D929D1945100349AEF /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

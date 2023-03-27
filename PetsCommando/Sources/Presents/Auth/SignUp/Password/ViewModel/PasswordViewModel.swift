@@ -1,5 +1,5 @@
 //
-//  NicknameViewModel.swift
+//  PasswordViewModel.swift
 //  PetsCommando
 //
 //  Created by 이병현 on 2023/03/25.
@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-final class NicknameViewModel: ViewModelType {
+final class PasswordViewModel: ViewModelType {
     
     private weak var coordinator: AuthCoordinator?
 
