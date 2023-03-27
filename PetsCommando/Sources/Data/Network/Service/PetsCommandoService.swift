@@ -51,5 +51,4 @@ final class PetsCommandoServiceImpl: PetsCommandoService {
             .mapError { $0 as! NetworkError }
             .eraseToAnyPublisher()
     }
-    
 }

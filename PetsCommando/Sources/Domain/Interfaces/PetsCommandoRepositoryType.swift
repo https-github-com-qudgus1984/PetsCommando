@@ -9,10 +9,8 @@ import Foundation
 
 protocol PetsCommandoRepositoryType: AnyObject {
     
-    func requestDuplicationEmail(email: String, completion: @escaping (Result <String, NetworkError>) -> Void
-    )
+    func requestDuplicationEmail(email: String) async throws -> Bool
     
     func requestDuplicationNickname(nickname: String, completion: @escaping (Result <String, NetworkError>) -> Void
     )
-    
 }

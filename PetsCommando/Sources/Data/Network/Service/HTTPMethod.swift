@@ -17,8 +17,6 @@ enum HTTPMethod: String {
 
 
 
-
-
 protocol HTTP {
     var path: String { get set }
 }

@@ -22,23 +22,25 @@ final class CertificationUseCase {
         self.petCommandoRepository = petCommandoRepository
     }
     
-    func excuteEmail(email: String) {
-        self.petCommandoRepository.requestDuplicationEmail(email: email) { [weak self] response in
+    func excuteEmail(email: String) async {
+        do {
+            let result = try await self.petCommandoRepository.requestDuplicationEmail(email: email)
+        } catch {
+            print(error)
+        }
+    }
+    
+    func excuteNickname(nickname: String) {
+        self.petCommandoRepository.requestDuplicationNickname(nickname: nickname) { [weak self] response in
             guard let self = self else { return }
             switch response {
-            case .success(let email):
-                self.userDefaults.set(email, forKey: UserDefaultKeyCase.email)
+            case .success(let nickname):
+                self.userDefaults.set(nickname, forKey: UserDefaultKeyCase.nickname)
             case .failure(let error):
                 print(error)
             }
         }
     }
-    
-//    func excuteNickname(nickname: String) {
-//        self.petCommandoRepository.requestDuplicationNickname(nickname: nickname) { <#Result<String, NetworkError>#> in
-//            <#code#>
-//        }
-//    }
     
     
 }
