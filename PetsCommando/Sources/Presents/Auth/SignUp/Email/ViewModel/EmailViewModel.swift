@@ -41,6 +41,16 @@ final class EmailViewModel: ViewModelType {
             .map { $0.count >= 8 && $0.count <= 20 && $0.range(of: "@") != nil && $0.range(of: ".") != nil }
             .share()
         
+//        let emailduplicationValid = input.certificaionButtonTap
+//            .emit { [weak self] certificationEmail in
+//                guard let self = self else { return }
+//                self.certificationUserCase.excuteEmail(email: self.userDefaults.string(forKey: UserDefaultKeyCase.email) ?? "")
+//            }.disposed(by: disposeBag)
+                
         return Output(emailValidation: emailValid, emailduplicationValidation: emailduplicationValid)
+    }
+    
+    func startDuplicationEmail(email: DuplicationEmailQuery) {
+        certificationUserCase.excuteEmail(email: email)
     }
 }
