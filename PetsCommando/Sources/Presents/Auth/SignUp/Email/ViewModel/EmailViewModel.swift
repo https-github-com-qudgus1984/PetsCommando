@@ -49,4 +49,8 @@ final class EmailViewModel: ViewModelType {
                 
         return Output(emailValidation: emailValid, emailduplicationValidation: emailduplicationValid)
     }
+    
+    func startDuplicationEmail(email: DuplicationEmailQuery) {
+        certificationUserCase.excuteEmail(email: email)
+    }
 }

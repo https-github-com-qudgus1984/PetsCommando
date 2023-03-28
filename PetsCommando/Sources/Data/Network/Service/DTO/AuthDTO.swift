@@ -23,21 +23,19 @@ extension authDTO {
     }
 }
 
-struct emailDTO: Codable {
-    let email: String
-    let message: String
-    let timestamp: String
+struct DuplicationEmailRequestDTO: Codable {
     
-    enum CodingKeys: String, CodingKey {
-        case email
-        case message
-        case timestamp
+    var toDictionary: [String: Any] {
+        let dict: [String: Any] = [
+            "email": email
+        ]
+        return dict
     }
-}
-
-extension emailDTO {
-    var toDomain: emailDTO {
-        return .init(email: email, message: message, timestamp: timestamp)
+    
+    let email: String
+    
+    init(duplicationEmail: DuplicationEmailQuery) {
+        self.email = duplicationEmail.email
     }
 }
 

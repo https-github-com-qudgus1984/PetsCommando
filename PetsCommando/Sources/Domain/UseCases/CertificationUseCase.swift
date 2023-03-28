@@ -14,6 +14,8 @@ final class CertificationUseCase {
     
     private let userDefaults = UserDefaults.standard
     
+    var successDuplicationEmail = PublishSubject<DuplicationEmail>()
+    
     init(
         userRepository: UserRepositoryType,
         petCommandoRepository: PetsCommandoRepositoryType
@@ -22,11 +24,16 @@ final class CertificationUseCase {
         self.petCommandoRepository = petCommandoRepository
     }
     
-    func excuteEmail(email: String) async {
-        do {
-            let result = try await self.petCommandoRepository.requestDuplicationEmail(email: email)
-        } catch {
-            print(error)
+    func excuteEmail(email: DuplicationEmailQuery) {
+        self.petCommandoRepository.requestDuplicationEmail(email: email) { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(let duplicationEmail):
+                print(duplicationEmail)
+                self.successDuplicationEmail.onNext(duplicationEmail)
+            case .failure(let error):
+                print(error.errorDescription)
+            }
         }
     }
     

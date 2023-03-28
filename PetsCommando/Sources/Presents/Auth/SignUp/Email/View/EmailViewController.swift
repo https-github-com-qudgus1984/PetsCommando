@@ -55,5 +55,12 @@ final class EmailViewController: BaseViewController {
 
             }
             .disposed(by: disposeBag)
+        
+        emailView.emailCertificationButton.rx.tap
+            .withUnretained(self)
+            .bind { vc, tapped in
+                self.viewModel.startDuplicationEmail(email: DuplicationEmailQuery(email: self.emailView.emailLineTextField.textField.text!))
+            }
+        
     }
 }

@@ -47,7 +47,7 @@ final class AuthCoordinator: Coordinator {
         let viewModel = EmailViewModel(coordinator: self,
                                        certificationUseCase: CertificationUseCase(
                                         userRepository: UserRepository(),
-                                        petCommandoRepository: PetsCommandoRepository(session: PetsCommandoServiceImpl())
+                                        petCommandoRepository: PetsCommandoRepository()
                                        ))
         let vc = EmailViewController(viewModel: viewModel)
         navigationController.setNavigationBarHidden(false, animated: false)

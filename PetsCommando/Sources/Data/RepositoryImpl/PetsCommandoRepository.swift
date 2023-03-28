@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import Moya
 import RxSwift
 
-enum PetsCommandoServiceError: Int, Error {
+enum PetsCommandoNetworkServiceError: Int, Error {
 
     case duplicatedError = 201
     case inValidInputBodyError = 202
@@ -22,7 +23,7 @@ enum PetsCommandoServiceError: Int, Error {
     var description: String { self.errorDescription }
 }
 
-extension PetsCommandoServiceError {
+extension PetsCommandoNetworkServiceError {
 
     var errorDescription: String {
         switch self {
@@ -41,38 +42,51 @@ extension PetsCommandoServiceError {
 final class PetsCommandoRepository: PetsCommandoRepositoryType {
 
     
-    private let session: PetsCommandoService
 
-    init(session: PetsCommandoService) {
-        self.session = session
-    }
-
-    func requestDuplicationEmail(email: String) async throws -> Bool {
-        let url = URL(string: "http://13.125.239.168:9090/noauth/users/email-duplication")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        let encoder = JSONEncoder()
-        let requestData = try encoder.encode(email)
-        request.httpBody = requestData
-        
-        let (data, response) = try await URLSession.shared.data(for: request)
-        
-        print(data)
-        
-        guard let httpResponse = response as? HTTPURLResponse else {
-            throw PetsCommandoServiceError.inValidURL
-        }
-        
-        if httpResponse.statusCode == 200 {
-            return true
-        } else {
-            throw PetsCommandoServiceError.unknown
-        }
-    }
     
+    let provider: MoyaProvider<PetsCommandoTarget>
+
+    init() { provider = MoyaProvider<PetsCommandoTarget>() }
+
+}
+
+//MARK: 이메일 중복 체크
+extension PetsCommandoRepository {
+    func requestDuplicationEmail(email: DuplicationEmailQuery, completion: @escaping (Result<DuplicationEmail, PetsCommandoNetworkServiceError>) -> Void ) {
+        let requestDTO = DuplicationEmailRequestDTO(duplicationEmail: email)
+        provider.request(.duplicationEmail(parameters: requestDTO.toDictionary)) { result in
+            switch result {
+            case .success(let response):
+                let data = try? JSONDecoder().decode(DuplicationEmailResponseDTO.self, from: response.data)
+                print("@@@", requestDTO)
+                completion(.success(data!.toDomain()))
+            case .failure(let error):
+                completion(.failure(PetsCommandoNetworkServiceError(rawValue: error.response!.statusCode) ?? .unknown))
+            }
+        }
+
+    }
+}
+
+extension PetsCommandoRepository {
     func requestDuplicationNickname(nickname: String, completion: @escaping (Result<String, NetworkError>) -> Void) {
         print("1")
     }
+}
+
+//MARK: Process 정의
+extension PetsCommandoRepository {
+    private func process(
+        result: Result<Response, MoyaError>,
+        completion: @escaping (Result<Int, PetsCommandoNetworkServiceError>) -> Void
+    ) {
+        switch result {
+        case .success(let response):
+            completion(.success(response.statusCode))
+        case .failure(let error):
+            print(error)
+            completion(.failure(PetsCommandoNetworkServiceError(rawValue: error.response!.statusCode) ?? .unknown))
+        }
+    }
+
 }
