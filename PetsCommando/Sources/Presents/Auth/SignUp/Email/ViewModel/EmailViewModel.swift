@@ -22,13 +22,15 @@ final class EmailViewModel: ViewModelType {
     struct Input {
         let emailText: ControlProperty<String?>
 //        let certificaionButtonTap: Signal<Void>
-//        let nextButtonTap: Signal<Void>
+        let didNextButtonTap: Signal<String>
     }
 
     struct Output {
         let emailValidation: Observable<Bool>
         let emailduplicationValidation: Observable<Bool>
     }
+    
+    var disposeBag = DisposeBag()
     
     func transform(_ input: Input) -> Output {
         let emailValid = input.emailText
@@ -46,11 +48,25 @@ final class EmailViewModel: ViewModelType {
 //                guard let self = self else { return }
 //                self.certificationUserCase.excuteEmail(email: self.userDefaults.string(forKey: UserDefaultKeyCase.email) ?? "")
 //            }.disposed(by: disposeBag)
+        input.didNextButtonTap
+            .emit { [weak self] text in
+                guard let self = self else { return }
+                self.saveEmailInfo(email: text)
+                self.coordinator?.showNicknameViewController()
+            }
+            .disposed(by: disposeBag)
                 
         return Output(emailValidation: emailValid, emailduplicationValidation: emailduplicationValid)
     }
     
     func startDuplicationEmail(email: DuplicationEmailQuery) {
         certificationUserCase.excuteEmail(email: email)
+    }
+}
+
+extension EmailViewModel {
+
+    private func saveEmailInfo(email: String) {
+        UserDefaults.standard.set(email, forKey: UserDefaultKeyCase.email)
     }
 }
