@@ -12,6 +12,13 @@ import RxCocoa
 final class NicknameViewController: BaseViewController {
     private let nicknameView = NicknameView()
     private let viewModel: NicknameViewModel
+    
+    //MARK: Input
+    private lazy var input = NicknameViewModel.Input(nicknameText: self.nicknameView.nicknameLineTextField.textField.rx.text, didNextButtonTap: self.nicknameView.nextButton.rx.tap.withLatestFrom(self.nicknameView.nicknameLineTextField.textField.rx.text.orEmpty)
+        .asSignal(onErrorJustReturn: ""))
+    //MARK: Output
+
+    
     //MARK: Delegate
     init(viewModel: NicknameViewModel) {
         self.viewModel = viewModel
@@ -19,7 +26,7 @@ final class NicknameViewController: BaseViewController {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("GenderViewController: fatal error")
+        fatalError("NicknameViewController: fatal error")
     }
     
     override func loadView() {
@@ -32,7 +39,6 @@ final class NicknameViewController: BaseViewController {
     }
     
     override func setupBinding() {
-        let input = NicknameViewModel.Input(nicknameText: nicknameView.nicknameLineTextField.textField.rx.text)
         
         let output = viewModel.transform(input)
         

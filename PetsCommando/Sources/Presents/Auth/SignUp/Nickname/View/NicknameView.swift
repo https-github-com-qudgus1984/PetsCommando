@@ -18,14 +18,14 @@ final class NicknameView: BaseView {
     private var nicknameLabel: UILabel = {
         let label = UILabel()
         label.font = Font.Title2_B16
-        label.text = AuthString.id.text
+        label.text = AuthString.nickname.text
         label.textAlignment = .center
         return label
     }()
     
     internal var nicknameLineTextField: LineTextFieldView = {
         let text = LineTextFieldView()
-        text.textField.placeholder = AuthPlaceHolder.inputID.text
+        text.textField.placeholder = AuthPlaceHolder.inputNickname.text
         return text
     }()
     
@@ -33,7 +33,7 @@ final class NicknameView: BaseView {
         let label = UILabel()
         label.font = Font.Title2_B16
         label.textColor = .systemRed
-        label.text = ValidationString.duplicateInspectionEmail.text
+        label.text = ValidationString.duplicateInspectionNickname.text
         label.textAlignment = .right
         return label
     }()

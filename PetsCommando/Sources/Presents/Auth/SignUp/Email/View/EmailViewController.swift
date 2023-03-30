@@ -12,6 +12,16 @@ import RxCocoa
 final class EmailViewController: BaseViewController {
     private let emailView = EmailView()
     private let viewModel: EmailViewModel
+    
+    //MARK: Input
+    private lazy var input = EmailViewModel.Input(
+        emailText: self.emailView.emailLineTextField.textField.rx.text, didNextButtonTap:  self.emailView.nextButton.rx.tap.withLatestFrom(self.emailView.emailLineTextField.textField.rx.text.orEmpty)
+            .asSignal(onErrorJustReturn: "")
+)
+    
+    //MARK: Output
+    private lazy var output = self.viewModel.transform(input)
+
     //MARK: Delegate
     init(viewModel: EmailViewModel) {
         self.viewModel = viewModel
@@ -19,7 +29,7 @@ final class EmailViewController: BaseViewController {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("GenderViewController: fatal error")
+        fatalError("EmailViewController: fatal error")
     }
     
     override func loadView() {
@@ -32,10 +42,7 @@ final class EmailViewController: BaseViewController {
     }
     
     override func setupBinding() {
-        let input = EmailViewModel.Input(emailText: emailView.emailLineTextField.textField.rx.text)
-        
-        let output = viewModel.transform(input)
-        
+                
         output.emailValidation
             .withUnretained(self)
             .bind { vc, valid in

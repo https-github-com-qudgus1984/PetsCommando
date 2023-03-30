@@ -54,6 +54,20 @@ final class AuthCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
+    func showNicknameViewController() {
+        let viewModel = NicknameViewModel(coordinator: self)
+        let vc = NicknameViewController(viewModel: viewModel)
+        navigationController.setNavigationBarHidden(false, animated: false)
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func showPasswordViewController() {
+        let viewModel = PasswordViewModel(coordinator: self)
+        let vc = PasswordViewController(viewModel: viewModel)
+        navigationController.setNavigationBarHidden(false, animated: false)
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
     func connectTabBarCoordinator() {
         let tabBarCoordinator = TabBarCoordinator(self.navigationController)
         tabBarCoordinator.start()
