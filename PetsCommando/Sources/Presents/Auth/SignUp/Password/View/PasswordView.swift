@@ -30,6 +30,15 @@ final class PasswordView: BaseView {
         return text
     }()
     
+    internal var passwordValidLabel: UILabel = {
+        let label = UILabel()
+        label.font = Font.Title2_B16
+        label.textColor = .systemRed
+        label.text = ValidationString.passwordFormat.text
+        label.textAlignment = .right
+        return label
+    }()
+    
     private var checkPasswordLabel: UILabel = {
         let label = UILabel()
         label.font = Font.Title2_B16
@@ -44,22 +53,13 @@ final class PasswordView: BaseView {
         return text
     }()
     
-    internal var passwordValidLabel: UILabel = {
+    internal var checkPasswordValidLabel: UILabel = {
         let label = UILabel()
         label.font = Font.Title2_B16
         label.textColor = .systemRed
-        label.text = ValidationString.duplicateInspectionEmail.text
+        label.text = ValidationString.notSamePW.text
         label.textAlignment = .right
         return label
-    }()
-    
-    internal var passwordCertificationButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = Color.BaseColor.gray5
-        button.clipsToBounds = true
-        button.layer.cornerRadius = 8
-        button.setTitle(AuthString.auth.text, for: .normal)
-        return button
     }()
     
     internal var nextIncludeView: UIView = {
@@ -82,7 +82,7 @@ final class PasswordView: BaseView {
     }()
     
     override func setupAttributes() {
-        [bgView, passwordLabel, passwordLineTextField,passwordCertificationButton, passwordValidLabel, nextIncludeView, nextButton]
+        [bgView, passwordLabel, passwordLineTextField, passwordValidLabel, checkPasswordLineTextField, checkPasswordLabel, checkPasswordValidLabel, nextIncludeView, nextButton]
             .forEach { addSubview($0) }
     }
     
@@ -102,11 +102,10 @@ final class PasswordView: BaseView {
             make.top.equalTo(passwordLabel.snp.bottom).offset(40)
         }
         
-        passwordCertificationButton.snp.makeConstraints { make in
-            make.trailing.equalTo(passwordLineTextField.snp.trailing)
-            make.height.equalTo(passwordLineTextField.snp.height)
-            make.width.equalTo(60)
-            make.bottom.equalTo(passwordLineTextField.snp.bottom).inset(4)
+        passwordValidLabel.snp.makeConstraints { make in
+            make.top.equalTo(passwordLineTextField.snp.bottom).offset(8)
+            make.height.equalTo(20)
+            make.horizontalEdges.equalToSuperview().inset(20)
         }
         
         checkPasswordLabel.snp.makeConstraints { make in
@@ -120,7 +119,7 @@ final class PasswordView: BaseView {
             make.top.equalTo(checkPasswordLabel.snp.bottom).offset(20)
         }
         
-        passwordValidLabel.snp.makeConstraints { make in
+        checkPasswordValidLabel.snp.makeConstraints { make in
             make.top.equalTo(checkPasswordLineTextField.snp.bottom).offset(8)
             make.height.equalTo(20)
             make.horizontalEdges.equalToSuperview().inset(20)
@@ -128,7 +127,7 @@ final class PasswordView: BaseView {
         
         nextIncludeView.snp.makeConstraints { make in
             make.horizontalEdges.equalToSuperview().inset(20)
-            make.top.equalTo(passwordValidLabel.snp.bottom).offset(40)
+            make.top.equalTo(checkPasswordValidLabel.snp.bottom).offset(40)
             make.height.equalTo(48)
         }
         

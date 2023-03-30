@@ -18,25 +18,39 @@ final class PasswordViewModel: ViewModelType {
     }
     
     struct Input {
-        let nicknameText: ControlProperty<String?>
+        let passwordText: ControlProperty<String?>
+        let checkpwText: ControlProperty<String?>
+        let didNextButtonTap: Signal<String>
     }
 
     struct Output {
-        let nicknameValidation: Observable<Bool>
-        let nicknameduplicationValidation: Observable<Bool>
+        let pwValidation: Observable<Bool>
+        let signUpValidation: Observable<Bool>
     }
     
+    var disposeBag = DisposeBag()
+    
     func transform(_ input: Input) -> Output {
-        let nicknameValid = input.nicknameText
-            .orEmpty
-            .map { $0.count >= 2 && $0.count <= 10 }
-            .share()
         
-        let nicknameduplicationValid = input.nicknameText
+        let regex = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[!@#$])[A-Za-z\\d!@#$]{8,16}$"
+
+        let pwValid = input.passwordText
             .orEmpty
-            .map { $0.count >= 2 && $0.count <= 10 }
+            .map {  NSPredicate(format: "SELF MATCHES %@", regex).evaluate(with: $0) }
             .share()
+
         
-        return Output(nicknameValidation: nicknameValid, nicknameduplicationValidation: nicknameduplicationValid)
+        input.didNextButtonTap
+            .emit { [weak self] text in
+                guard let self = self else { return }
+                print(text)
+                self.coordinator?.showLoginViewController()
+            }
+            .disposed(by: disposeBag)
+        
+        let signUpValid = Observable.combineLatest(input.passwordText.orEmpty, input.checkpwText.orEmpty).map { $0 == $1 && $0.count >= 8 && $0.count <= 16 }
+        
+        return Output(pwValidation: pwValid, signUpValidation: signUpValid)
     }
 }
+
