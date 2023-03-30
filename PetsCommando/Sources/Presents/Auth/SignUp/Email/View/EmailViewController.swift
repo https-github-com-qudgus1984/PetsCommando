@@ -67,7 +67,7 @@ final class EmailViewController: BaseViewController {
             .withUnretained(self)
             .bind { vc, tapped in
                 self.viewModel.startDuplicationEmail(email: DuplicationEmailQuery(email: self.emailView.emailLineTextField.textField.text!))
-            }
+            }.disposed(by: disposeBag)
         
     }
 }

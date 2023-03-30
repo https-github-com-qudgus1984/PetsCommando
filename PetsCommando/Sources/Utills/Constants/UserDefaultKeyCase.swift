@@ -13,4 +13,5 @@ enum UserDefaultKeyCase {
     static let accessToken = "idToken"
     static let nickname = "nickname"
     static let email = "email"
+    static let password = "password"
 }
