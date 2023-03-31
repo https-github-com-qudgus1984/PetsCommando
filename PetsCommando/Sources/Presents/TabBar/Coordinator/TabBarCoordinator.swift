@@ -58,7 +58,7 @@ final class TabBarCoordinator: Coordinator {
     private func configureTabBarItem(of page: TabBarPageCase) -> UITabBarItem {
         return UITabBarItem(
             title: page.pageTitle,
-            image: UIImage(named: page.tabIconName()),
+            image: UIImage(systemName: page.tabIconName()),
             tag: page.pageOrderNumber
         )
     }
@@ -78,18 +78,20 @@ final class TabBarCoordinator: Coordinator {
             homeCoordinator.delegate = self
             self.childCoordinators.append(homeCoordinator)
             homeCoordinator.start()
-        case .sesacshop:
+        case .search:
 //            let sesacShopCoordinator = SesacShopCoordinator(tabNavigationController)
 //            sesacShopCoordinator.delegate = self
 //            self.childCoordinators.append(sesacShopCoordinator)
 //            sesacShopCoordinator.start()
             print("추후")
 
-        case .mypage:
+        case .book:
 //            let myPageCoordinator = MyPageCoordinator(tabNavigationController)
 //            myPageCoordinator.delegate = self
 //            self.childCoordinators.append(myPageCoordinator)
 //            myPageCoordinator.start()
+            print("추후")
+        case .community:
             print("추후")
         }
     }

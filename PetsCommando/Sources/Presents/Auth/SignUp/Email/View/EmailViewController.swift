@@ -57,6 +57,7 @@ final class EmailViewController: BaseViewController {
                 let str: String = valid ?
                 ValidationString.successAuth.text : ValidationString.duplicateInspectionEmail.text
                 vc.emailView.emailValidLabel.text = str
+                
                 let textColor: UIColor = valid ? .systemBlue : .systemRed
                 vc.emailView.emailValidLabel.textColor = textColor
 
@@ -67,7 +68,8 @@ final class EmailViewController: BaseViewController {
             .withUnretained(self)
             .bind { vc, tapped in
                 self.viewModel.startDuplicationEmail(email: DuplicationEmailQuery(email: self.emailView.emailLineTextField.textField.text!))
-            }.disposed(by: disposeBag)
+            }
+            .disposed(by: disposeBag)
         
     }
 }

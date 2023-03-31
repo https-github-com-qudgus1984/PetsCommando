@@ -50,15 +50,12 @@
 		2FB2D7AC29B5C20200EA35F4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7AB29B5C20200EA35F4 /* LoginView.swift */; };
 		2FB2D7B229B5C69200EA35F4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7B129B5C69200EA35F4 /* LoginViewModel.swift */; };
 		2FB2D7BC29B5CA3500EA35F4 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7BB29B5CA3500EA35F4 /* OnBoardingView.swift */; };
-		2FB2D7C729B5E49400EA35F4 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7C629B5E49400EA35F4 /* InitialViewController.swift */; };
-		2FB2D7C929B5F7E900EA35F4 /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2D7C829B5F7E900EA35F4 /* InitialView.swift */; };
 		2FB33F0F29D1CC12003B8B2A /* PetsCommandoTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB33F0E29D1CC12003B8B2A /* PetsCommandoTarget.swift */; };
 		2FB33F1629D1D5B1003B8B2A /* EmailDuplicationQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB33F1529D1D5B1003B8B2A /* EmailDuplicationQuery.swift */; };
 		2FB33F1929D1D5F0003B8B2A /* EmailDuplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB33F1829D1D5F0003B8B2A /* EmailDuplication.swift */; };
 		2FB33F1C29D2874C003B8B2A /* DuplicationEmailResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB33F1B29D2874C003B8B2A /* DuplicationEmailResponseDTO.swift */; };
 		2FC246DB29D1945100349AEF /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 2FC246DA29D1945100349AEF /* Moya */; };
 		2FC246DE29D194C700349AEF /* ToastCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC246DD29D194C700349AEF /* ToastCase.swift */; };
-		2FC572D829B83C4600D21EBA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC572D729B83C4600D21EBA /* TabBarViewController.swift */; };
 		2FC572DC29B8402600D21EBA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC572DB29B8402600D21EBA /* HomeViewController.swift */; };
 		2FC572DE29B8403300D21EBA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC572DD29B8403300D21EBA /* HomeViewModel.swift */; };
 		2FC572E129B8404E00D21EBA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC572E029B8404E00D21EBA /* HomeView.swift */; };
@@ -138,14 +135,11 @@
 		2FB2D7AB29B5C20200EA35F4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2FB2D7B129B5C69200EA35F4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		2FB2D7BB29B5CA3500EA35F4 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
-		2FB2D7C629B5E49400EA35F4 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
-		2FB2D7C829B5F7E900EA35F4 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		2FB33F0E29D1CC12003B8B2A /* PetsCommandoTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsCommandoTarget.swift; sourceTree = "<group>"; };
 		2FB33F1529D1D5B1003B8B2A /* EmailDuplicationQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailDuplicationQuery.swift; sourceTree = "<group>"; };
 		2FB33F1829D1D5F0003B8B2A /* EmailDuplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailDuplication.swift; sourceTree = "<group>"; };
 		2FB33F1B29D2874C003B8B2A /* DuplicationEmailResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicationEmailResponseDTO.swift; sourceTree = "<group>"; };
 		2FC246DD29D194C700349AEF /* ToastCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastCase.swift; sourceTree = "<group>"; };
-		2FC572D729B83C4600D21EBA /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		2FC572DB29B8402600D21EBA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FC572DD29B8403300D21EBA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2FC572E029B8404E00D21EBA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -456,23 +450,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		2FB2D7BD29B5E21800EA35F4 /* Initial */ = {
-			isa = PBXGroup;
-			children = (
-				2FB2D7BF29B5E23A00EA35F4 /* View */,
-			);
-			path = Initial;
-			sourceTree = "<group>";
-		};
-		2FB2D7BF29B5E23A00EA35F4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				2FB2D7C629B5E49400EA35F4 /* InitialViewController.swift */,
-				2FB2D7C829B5F7E900EA35F4 /* InitialView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		2FB33F1029D1D571003B8B2A /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -521,24 +498,8 @@
 				2FC94EDC29C08CD60097E696 /* TabMan */,
 				2FD3BFF529B99A0400096669 /* Test */,
 				2FD4105329B763570003C7C9 /* Home */,
-				2FC94EDB29C08CAF0097E696 /* TabBar */,
 			);
 			path = TabBar;
-			sourceTree = "<group>";
-		};
-		2FC572D429B83C1300D21EBA /* View */ = {
-			isa = PBXGroup;
-			children = (
-				2FC572D729B83C4600D21EBA /* TabBarViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		2FC572D529B83C2300D21EBA /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		2FC572D929B83CC300D21EBA /* View */ = {
@@ -567,15 +528,6 @@
 				2FC94ED429C083230097E696 /* HomeString.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		2FC94EDB29C08CAF0097E696 /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				2FC572D429B83C1300D21EBA /* View */,
-				2FC572D529B83C2300D21EBA /* ViewModel */,
-			);
-			path = TabBar;
 			sourceTree = "<group>";
 		};
 		2FC94EDC29C08CD60097E696 /* TabMan */ = {
@@ -840,7 +792,6 @@
 			isa = PBXGroup;
 			children = (
 				2FC572D329B83C0800D21EBA /* TabBar */,
-				2FB2D7BD29B5E21800EA35F4 /* Initial */,
 				2FAB65A529B30E090022B609 /* Auth */,
 			);
 			path = Presents;
@@ -1003,7 +954,6 @@
 				2FC246DE29D194C700349AEF /* ToastCase.swift in Sources */,
 				2FDE16092990DDCA00154A78 /* BaseViewController.swift in Sources */,
 				2F64A91029B33A2C00BC11B9 /* LineTextFieldView.swift in Sources */,
-				2FB2D7C729B5E49400EA35F4 /* InitialViewController.swift in Sources */,
 				2FD9067F29C94F0900CC4225 /* TabBarPageCases.swift in Sources */,
 				2F0677B129CEBE7500687848 /* NicknameViewModel.swift in Sources */,
 				2F0677A529CEA56900687848 /* EmailViewController.swift in Sources */,
@@ -1013,7 +963,6 @@
 				2F863F3529CAB82900755FFC /* CertificationUseCase.swift in Sources */,
 				2FB2D7BC29B5CA3500EA35F4 /* OnBoardingView.swift in Sources */,
 				2FD85FC529C825A200BE0BCC /* CoordinatorStyleCase.swift in Sources */,
-				2FB2D7C929B5F7E900EA35F4 /* InitialView.swift in Sources */,
 				2FD40B1D29C58EBE00BED327 /* Cummunity.swift in Sources */,
 				2FD3BFFB29B99C0E00096669 /* TabBarCoordinator.swift in Sources */,
 				2F0677B729CF0BDD00687848 /* PasswordViewController.swift in Sources */,
@@ -1047,7 +996,6 @@
 				2F64A8FC29B31AED00BC11B9 /* AppCoordinator.swift in Sources */,
 				2F863F2829CAB22900755FFC /* HTTPMethod.swift in Sources */,
 				2FD40B1929C58DDA00BED327 /* TopicView.swift in Sources */,
-				2FC572D829B83C4600D21EBA /* TabBarViewController.swift in Sources */,
 				2F64A91229B33A5F00BC11B9 /* UITextField+Extension.swift in Sources */,
 				2F0677B929CF0BE300687848 /* PasswordView.swift in Sources */,
 				2FDE16072990DDBF00154A78 /* BaseView.swift in Sources */,
