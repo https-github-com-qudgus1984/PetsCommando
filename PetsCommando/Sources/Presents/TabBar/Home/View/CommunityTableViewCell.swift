@@ -13,24 +13,31 @@ class CommunitryTableViewCell: BaseTableViewCell {
     let titleLabel: UILabel = {
         let view = UILabel()
         view.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        view.text = "제목임"
         return view
     }()
     
     let locationLabel: UILabel = {
         let view = UILabel()
         view.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        view.text = "위치임"
+
         return view
     }()
     
     let gratuityLabel: UILabel = {
         let view = UILabel()
         view.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        view.text = "텍스트임"
+
         return view
     }()
 
     let imgView: UIImageView = {
         let view = UIImageView()
         view.backgroundColor = .label
+        view.image = UIImage(systemName: "person")
+
         return view
     }()
     
@@ -54,27 +61,17 @@ class CommunitryTableViewCell: BaseTableViewCell {
         
         locationLabel.snp.makeConstraints { make in
             make.leading.equalTo(imgView.snp.trailing).offset(8)
-            make.top.equalTo(titleLabel.snp.bottom).offset(8)
+            make.top.equalTo(titleLabel.snp.bottom).offset(2)
             make.trailing.equalToSuperview()
             make.height.equalTo(15)
         }
         
         gratuityLabel.snp.makeConstraints { make in
             make.leading.equalTo(imgView.snp.trailing).offset(8)
-            make.bottom.equalToSuperview().offset(8)
+            make.bottom.equalToSuperview().offset(-8)
             make.trailing.equalToSuperview()
             make.height.equalTo(20)
 
         }
     }
-    
-    func configureCell(itemIdentifier: MockListData) {
-        
-        titleLabel.text = data.title
-        locationLabel.text = data.location
-        gratuityLabel.text = data.gratuity == nil ? "" : "\(String(describing: data.gratuity))원"
-        imgView.image = data.petImg == nil ? nil : UIImage(named: "")
-    }
 }
-
-let data = MockListData(title: "ㅎㅇㅎㅇ", location: "문래동", gratuity: 40000, petImg: nil)

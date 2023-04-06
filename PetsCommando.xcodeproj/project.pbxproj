@@ -67,9 +67,11 @@
 		2FC94ED729C085750097E696 /* Test3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC94ED629C085750097E696 /* Test3ViewController.swift */; };
 		2FC9CA1329B70307008C502F /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC9CA1229B70307008C502F /* SignUpViewModel.swift */; };
 		2FD188B029DE8A9900996EA9 /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD188AF29DE8A9900996EA9 /* CommunityView.swift */; };
-		2FD188B229DE8C3500996EA9 /* CommunityTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD188B129DE8C3500996EA9 /* CommunityTableCell.swift */; };
+		2FD188B229DE8C3500996EA9 /* CommunityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD188B129DE8C3500996EA9 /* CommunityTableViewCell.swift */; };
 		2FD188B429DE8C7500996EA9 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD188B329DE8C7500996EA9 /* BaseTableViewCell.swift */; };
 		2FD188B629DE8DC000996EA9 /* MockListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD188B529DE8DC000996EA9 /* MockListData.swift */; };
+		2FD188B829DEA57F00996EA9 /* PetsLostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD188B729DEA57F00996EA9 /* PetsLostView.swift */; };
+		2FD188BA29DEA58B00996EA9 /* PetsLostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD188B929DEA58B00996EA9 /* PetsLostTableViewCell.swift */; };
 		2FD3BFF729B99A1300096669 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD3BFF629B99A1300096669 /* TestViewController.swift */; };
 		2FD3BFF929B99A1E00096669 /* Test2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD3BFF829B99A1E00096669 /* Test2ViewController.swift */; };
 		2FD3BFFB29B99C0E00096669 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD3BFFA29B99C0E00096669 /* TabBarCoordinator.swift */; };
@@ -159,9 +161,11 @@
 		2FC94ED629C085750097E696 /* Test3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test3ViewController.swift; sourceTree = "<group>"; };
 		2FC9CA1229B70307008C502F /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		2FD188AF29DE8A9900996EA9 /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
-		2FD188B129DE8C3500996EA9 /* CommunityTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityTableCell.swift; sourceTree = "<group>"; };
+		2FD188B129DE8C3500996EA9 /* CommunityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityTableViewCell.swift; sourceTree = "<group>"; };
 		2FD188B329DE8C7500996EA9 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		2FD188B529DE8DC000996EA9 /* MockListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockListData.swift; sourceTree = "<group>"; };
+		2FD188B729DEA57F00996EA9 /* PetsLostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsLostView.swift; sourceTree = "<group>"; };
+		2FD188B929DEA58B00996EA9 /* PetsLostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsLostTableViewCell.swift; sourceTree = "<group>"; };
 		2FD3BFF629B99A1300096669 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		2FD3BFF829B99A1E00096669 /* Test2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test2ViewController.swift; sourceTree = "<group>"; };
 		2FD3BFFA29B99C0E00096669 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
@@ -529,7 +533,9 @@
 				2FD40B1829C58DDA00BED327 /* TopicView.swift */,
 				2FD40B1E29C593B200BED327 /* TopicCell.swift */,
 				2FD188AF29DE8A9900996EA9 /* CommunityView.swift */,
-				2FD188B129DE8C3500996EA9 /* CommunityTableCell.swift */,
+				2FD188B129DE8C3500996EA9 /* CommunityTableViewCell.swift */,
+				2FD188B729DEA57F00996EA9 /* PetsLostView.swift */,
+				2FD188B929DEA58B00996EA9 /* PetsLostTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -965,6 +971,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FFA534A29DACA8F0065F624 /* UIView+.swift in Sources */,
+				2FD188BA29DEA58B00996EA9 /* PetsLostTableViewCell.swift in Sources */,
 				2FD188B629DE8DC000996EA9 /* MockListData.swift in Sources */,
 				2F64A8F529B319F800BC11B9 /* Coordinator.swift in Sources */,
 				2FB33F1629D1D5B1003B8B2A /* EmailDuplicationQuery.swift in Sources */,
@@ -976,10 +983,11 @@
 				2FD188B429DE8C7500996EA9 /* BaseTableViewCell.swift in Sources */,
 				2F4B1CDE29C191A500B999AB /* TabCell.swift in Sources */,
 				2FD40B1729C58DAA00BED327 /* SectionHeaderView.swift in Sources */,
-				2FD188B229DE8C3500996EA9 /* CommunityTableCell.swift in Sources */,
+				2FD188B229DE8C3500996EA9 /* CommunityTableViewCell.swift in Sources */,
 				2FB33F0F29D1CC12003B8B2A /* PetsCommandoTarget.swift in Sources */,
 				2FB2D7A029B5AF1900EA35F4 /* AuthString.swift in Sources */,
 				2F5FA8CC29BDA89800123AAC /* Image + Enum.swift in Sources */,
+				2FD188B829DEA57F00996EA9 /* PetsLostView.swift in Sources */,
 				2FDE15D02990D13C00154A78 /* AppDelegate.swift in Sources */,
 				2FC5B28329CAD7990032B55C /* EndPoint.swift in Sources */,
 				2FD9067D29C94A0800CC4225 /* OnBoardingViewModel.swift in Sources */,

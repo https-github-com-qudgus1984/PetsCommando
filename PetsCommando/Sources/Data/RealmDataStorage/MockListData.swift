@@ -14,3 +14,16 @@ struct MockListData {
     let petImg: UIImage?
 }
 
+struct CommunityData {
+    let title: String
+    let location: String
+    let petImg: UIImage?
+}
+
+struct PetsListData {
+    let title: String
+    let location: String
+    let gratuity: Int
+    let petImg: UIImage?
+}
+
