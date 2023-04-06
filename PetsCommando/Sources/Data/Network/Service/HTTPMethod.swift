@@ -12,11 +12,6 @@ enum HTTPMethod: String {
     case post
 }
 
-
-// haha1haka testing git...
-
-
-
 protocol HTTP {
     var path: String { get set }
 }

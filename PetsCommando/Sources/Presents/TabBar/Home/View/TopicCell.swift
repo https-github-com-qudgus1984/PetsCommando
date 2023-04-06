@@ -51,6 +51,5 @@ class TopicCell: BaseCollectionViewCell {
     
     func configureCell(itemIdentifier: Community) {
         label.text = itemIdentifier.title
-        
     }
 }

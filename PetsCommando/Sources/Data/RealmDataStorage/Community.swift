@@ -8,12 +8,13 @@
 import UIKit
 
 enum Community:Int, CaseIterable {
-    case community = 1, list
+    case community = 1, list, myInfo
     
     var title: String {
         switch self {
         case .community: return "커뮤니티"
         case .list: return "유기 동물 리스트"
+        case .myInfo: return "내 정보"
         }
     }
     

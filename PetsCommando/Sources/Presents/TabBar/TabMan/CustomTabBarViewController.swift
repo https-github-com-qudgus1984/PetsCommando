@@ -8,18 +8,18 @@
 import UIKit
 import SnapKit
 
-class CustomTabBarViewController: BaseViewController {
-
-//    var collectionView: UICollectionView!
-    var homeView = HomeView()
-//    var tabs = ["Tab 1", "Tab 2"]
-
-    override func loadView() {
-        self.view = homeView
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+//class CustomTabBarViewController: BaseViewController {
+//
+////    var collectionView: UICollectionView!
+//    var homeView = HomeView()
+////    var tabs = ["Tab 1", "Tab 2"]
+//
+//    override func loadView() {
+//        self.view = homeView
+//    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//    }
         
 //        let layout = UICollectionViewFlowLayout()
 //        layout.scrollDirection = .horizontal
@@ -44,7 +44,7 @@ class CustomTabBarViewController: BaseViewController {
 //            make.leading.trailing.bottom.equalToSuperview()
 //        }
 //    }
-}
+//}
 
 //
 //extension CustomTabBarViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
