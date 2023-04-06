@@ -1,5 +1,5 @@
 //
-//  CummunityView.swift
+//  PetsLostView.swift
 //  PetsCommando
 //
 //  Created by 이병현 on 2023/04/06.
@@ -8,10 +8,10 @@
 import UIKit
 import SnapKit
 
-final class CommunitryView: BaseView {
+final class PetsLostView: BaseView {
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .insetGrouped)
-        tableView.register(CommunitryTableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(PetsLostTableViewCell.self, forCellReuseIdentifier: "cell")
         return tableView
     }()
     
