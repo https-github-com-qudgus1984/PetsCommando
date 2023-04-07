@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-final class CommunitryView: BaseView {
+final class CommunityView: BaseView {
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .insetGrouped)
         tableView.register(CommunitryTableViewCell.self, forCellReuseIdentifier: "cell")
