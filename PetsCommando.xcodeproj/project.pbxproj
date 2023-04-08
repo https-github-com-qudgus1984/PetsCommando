@@ -21,7 +21,6 @@
 		2F0677C029CF1E1600687848 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0677BF29CF1E1600687848 /* UIViewController+Extension.swift */; };
 		2F0677C229CF1FDE00687848 /* PetsCommandoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0677C129CF1FDE00687848 /* PetsCommandoRepository.swift */; };
 		2F4B1CDE29C191A500B999AB /* TabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4B1CDD29C191A500B999AB /* TabCell.swift */; };
-		2F4B1CE029C191BA00B999AB /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4B1CDF29C191BA00B999AB /* CustomTabBarViewController.swift */; };
 		2F5FA8CC29BDA89800123AAC /* Image + Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5FA8CB29BDA89800123AAC /* Image + Enum.swift */; };
 		2F64A8F129B3171800BC11B9 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A8F029B3171800BC11B9 /* Font.swift */; };
 		2F64A8F529B319F800BC11B9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64A8F429B319F800BC11B9 /* Coordinator.swift */; };
@@ -54,6 +53,14 @@
 		2FB33F1629D1D5B1003B8B2A /* EmailDuplicationQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB33F1529D1D5B1003B8B2A /* EmailDuplicationQuery.swift */; };
 		2FB33F1929D1D5F0003B8B2A /* EmailDuplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB33F1829D1D5F0003B8B2A /* EmailDuplication.swift */; };
 		2FB33F1C29D2874C003B8B2A /* DuplicationEmailResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB33F1B29D2874C003B8B2A /* DuplicationEmailResponseDTO.swift */; };
+		2FB5970429DFFF86006F641F /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5970329DFFF86006F641F /* CommunityViewController.swift */; };
+		2FB5970629E00265006F641F /* CommunityAndPetsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5970529E00265006F641F /* CommunityAndPetsListViewController.swift */; };
+		2FB5970929E0028A006F641F /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = 2FB5970829E0028A006F641F /* Tabman */; };
+		2FB5970B29E00346006F641F /* PetsLostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5970A29E00346006F641F /* PetsLostViewController.swift */; };
+		2FB5970E29E006C2006F641F /* CommunityAndPetsLostCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5970D29E006C2006F641F /* CommunityAndPetsLostCoordinator.swift */; };
+		2FB5971129E00709006F641F /* CommunityAndPetsLostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5971029E00709006F641F /* CommunityAndPetsLostViewModel.swift */; };
+		2FB5971529E01015006F641F /* CommunityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5971429E01015006F641F /* CommunityCollectionViewCell.swift */; };
+		2FB5971A29E01F5A006F641F /* PetsLostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5971929E01F5A006F641F /* PetsLostCollectionViewCell.swift */; };
 		2FC246DB29D1945100349AEF /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 2FC246DA29D1945100349AEF /* Moya */; };
 		2FC246DE29D194C700349AEF /* ToastCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC246DD29D194C700349AEF /* ToastCase.swift */; };
 		2FC572DC29B8402600D21EBA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC572DB29B8402600D21EBA /* HomeViewController.swift */; };
@@ -119,7 +126,6 @@
 		2F0677BF29CF1E1600687848 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		2F0677C129CF1FDE00687848 /* PetsCommandoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsCommandoRepository.swift; sourceTree = "<group>"; };
 		2F4B1CDD29C191A500B999AB /* TabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCell.swift; sourceTree = "<group>"; };
-		2F4B1CDF29C191BA00B999AB /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
 		2F5FA8CB29BDA89800123AAC /* Image + Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image + Enum.swift"; sourceTree = "<group>"; };
 		2F64A8F029B3171800BC11B9 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		2F64A8F429B319F800BC11B9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -149,6 +155,13 @@
 		2FB33F1529D1D5B1003B8B2A /* EmailDuplicationQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailDuplicationQuery.swift; sourceTree = "<group>"; };
 		2FB33F1829D1D5F0003B8B2A /* EmailDuplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailDuplication.swift; sourceTree = "<group>"; };
 		2FB33F1B29D2874C003B8B2A /* DuplicationEmailResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicationEmailResponseDTO.swift; sourceTree = "<group>"; };
+		2FB5970329DFFF86006F641F /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
+		2FB5970529E00265006F641F /* CommunityAndPetsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityAndPetsListViewController.swift; sourceTree = "<group>"; };
+		2FB5970A29E00346006F641F /* PetsLostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsLostViewController.swift; sourceTree = "<group>"; };
+		2FB5970D29E006C2006F641F /* CommunityAndPetsLostCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityAndPetsLostCoordinator.swift; sourceTree = "<group>"; };
+		2FB5971029E00709006F641F /* CommunityAndPetsLostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityAndPetsLostViewModel.swift; sourceTree = "<group>"; };
+		2FB5971429E01015006F641F /* CommunityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCollectionViewCell.swift; sourceTree = "<group>"; };
+		2FB5971929E01F5A006F641F /* PetsLostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsLostCollectionViewCell.swift; sourceTree = "<group>"; };
 		2FC246DD29D194C700349AEF /* ToastCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastCase.swift; sourceTree = "<group>"; };
 		2FC572DB29B8402600D21EBA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FC572DD29B8403300D21EBA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -211,6 +224,7 @@
 				2FAB65AF29B310570022B609 /* RxSwift in Frameworks */,
 				2FC246DB29D1945100349AEF /* Moya in Frameworks */,
 				2FAB65AD29B310570022B609 /* RxCocoa in Frameworks */,
+				2FB5970929E0028A006F641F /* Tabman in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +519,78 @@
 			path = ResponseDTO;
 			sourceTree = "<group>";
 		};
+		2FB5970229DFFF72006F641F /* CommunityAndPetsLost */ = {
+			isa = PBXGroup;
+			children = (
+				2FB5971629E01DF8006F641F /* PetsLost */,
+				2FB5971329E00C5B006F641F /* Community */,
+				2FB5971229E00B2A006F641F /* View */,
+				2FB5970F29E006FA006F641F /* ViewModel */,
+				2FB5970C29E006B0006F641F /* Coordinator */,
+			);
+			path = CommunityAndPetsLost;
+			sourceTree = "<group>";
+		};
+		2FB5970C29E006B0006F641F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2FB5970D29E006C2006F641F /* CommunityAndPetsLostCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2FB5970F29E006FA006F641F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2FB5971029E00709006F641F /* CommunityAndPetsLostViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2FB5971229E00B2A006F641F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2FB5970529E00265006F641F /* CommunityAndPetsListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2FB5971329E00C5B006F641F /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				2FB5971729E01E0D006F641F /* View */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		2FB5971629E01DF8006F641F /* PetsLost */ = {
+			isa = PBXGroup;
+			children = (
+				2FB5971829E01E1A006F641F /* View */,
+			);
+			path = PetsLost;
+			sourceTree = "<group>";
+		};
+		2FB5971729E01E0D006F641F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2FB5970329DFFF86006F641F /* CommunityViewController.swift */,
+				2FD188AF29DE8A9900996EA9 /* CommunityView.swift */,
+				2FB5971429E01015006F641F /* CommunityCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2FB5971829E01E1A006F641F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2FB5970A29E00346006F641F /* PetsLostViewController.swift */,
+				2FD188B729DEA57F00996EA9 /* PetsLostView.swift */,
+				2FB5971929E01F5A006F641F /* PetsLostCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2FC246DC29D194BC00349AEF /* Error */ = {
 			isa = PBXGroup;
 			children = (
@@ -532,9 +618,7 @@
 				2FD40B1429C58D0C00BED327 /* TopicViewController.swift */,
 				2FD40B1829C58DDA00BED327 /* TopicView.swift */,
 				2FD40B1E29C593B200BED327 /* TopicCell.swift */,
-				2FD188AF29DE8A9900996EA9 /* CommunityView.swift */,
 				2FD188B129DE8C3500996EA9 /* CommunityTableViewCell.swift */,
-				2FD188B729DEA57F00996EA9 /* PetsLostView.swift */,
 				2FD188B929DEA58B00996EA9 /* PetsLostTableViewCell.swift */,
 			);
 			path = View;
@@ -560,7 +644,6 @@
 			isa = PBXGroup;
 			children = (
 				2F4B1CDD29C191A500B999AB /* TabCell.swift */,
-				2F4B1CDF29C191BA00B999AB /* CustomTabBarViewController.swift */,
 			);
 			path = TabMan;
 			sourceTree = "<group>";
@@ -587,6 +670,7 @@
 			isa = PBXGroup;
 			children = (
 				2FD9068229C951FA00CC4225 /* Coordinator */,
+				2FB5970229DFFF72006F641F /* CommunityAndPetsLost */,
 				2FC572DA29B83CC500D21EBA /* ViewModel */,
 				2FC572D929B83CC300D21EBA /* View */,
 			);
@@ -906,6 +990,7 @@
 				2F64A90729B3281C00BC11B9 /* SnapKit */,
 				2F0677BD29CF1DE200687848 /* Toast */,
 				2FC246DA29D1945100349AEF /* Moya */,
+				2FB5970829E0028A006F641F /* Tabman */,
 			);
 			productName = PetsCommando;
 			productReference = 2FDE15CC2990D13C00154A78 /* PetsCommando.app */;
@@ -940,6 +1025,7 @@
 				2F64A90629B3281C00BC11B9 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				2F0677BC29CF1DE200687848 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 				2FC246D929D1945100349AEF /* XCRemoteSwiftPackageReference "Moya" */,
+				2FB5970729E0028A006F641F /* XCRemoteSwiftPackageReference "Tabman" */,
 			);
 			productRefGroup = 2FDE15CD2990D13C00154A78 /* Products */;
 			projectDirPath = "";
@@ -979,6 +1065,7 @@
 				2F0677C029CF1E1600687848 /* UIViewController+Extension.swift in Sources */,
 				2FDE15ED2990D32C00154A78 /* Router.swift in Sources */,
 				2F863F3729CAB97600755FFC /* UserRepositoryType.swift in Sources */,
+				2FB5970E29E006C2006F641F /* CommunityAndPetsLostCoordinator.swift in Sources */,
 				2F0677AF29CEBE6C00687848 /* NicknameViewController.swift in Sources */,
 				2FD188B429DE8C7500996EA9 /* BaseTableViewCell.swift in Sources */,
 				2F4B1CDE29C191A500B999AB /* TabCell.swift in Sources */,
@@ -989,6 +1076,7 @@
 				2F5FA8CC29BDA89800123AAC /* Image + Enum.swift in Sources */,
 				2FD188B829DEA57F00996EA9 /* PetsLostView.swift in Sources */,
 				2FDE15D02990D13C00154A78 /* AppDelegate.swift in Sources */,
+				2FB5970629E00265006F641F /* CommunityAndPetsListViewController.swift in Sources */,
 				2FC5B28329CAD7990032B55C /* EndPoint.swift in Sources */,
 				2FD9067D29C94A0800CC4225 /* OnBoardingViewModel.swift in Sources */,
 				2F64A8F129B3171800BC11B9 /* Font.swift in Sources */,
@@ -1016,6 +1104,7 @@
 				2FB2D7AC29B5C20200EA35F4 /* LoginView.swift in Sources */,
 				2F0677C229CF1FDE00687848 /* PetsCommandoRepository.swift in Sources */,
 				2FC572DE29B8403300D21EBA /* HomeViewModel.swift in Sources */,
+				2FB5971A29E01F5A006F641F /* PetsLostCollectionViewCell.swift in Sources */,
 				2FD3BFF729B99A1300096669 /* TestViewController.swift in Sources */,
 				2F0677A329CEA56000687848 /* EmailViewModel.swift in Sources */,
 				2FD9068429C9521900CC4225 /* HomeCoordinator.swift in Sources */,
@@ -1031,10 +1120,11 @@
 				2FB33F1929D1D5F0003B8B2A /* EmailDuplication.swift in Sources */,
 				2FC572E129B8404E00D21EBA /* HomeView.swift in Sources */,
 				2FFA534429DAC7750065F624 /* CircleButton.swift in Sources */,
-				2F4B1CE029C191BA00B999AB /* CustomTabBarViewController.swift in Sources */,
+				2FB5971529E01015006F641F /* CommunityCollectionViewCell.swift in Sources */,
 				2FC94ED729C085750097E696 /* Test3ViewController.swift in Sources */,
 				2F64A91829B34AE900BC11B9 /* SignUpView.swift in Sources */,
 				2F0677A829CEA57800687848 /* EmailView.swift in Sources */,
+				2FB5970429DFFF86006F641F /* CommunityViewController.swift in Sources */,
 				2F863F3329CAB77100755FFC /* PetsCommandoService.swift in Sources */,
 				2FAB65B229B3127D0022B609 /* Color.swift in Sources */,
 				2FFA534829DAC7F80065F624 /* ButtonStatus.swift in Sources */,
@@ -1044,6 +1134,7 @@
 				2F863F2829CAB22900755FFC /* HTTPMethod.swift in Sources */,
 				2FD40B1929C58DDA00BED327 /* TopicView.swift in Sources */,
 				2F64A91229B33A5F00BC11B9 /* UITextField+Extension.swift in Sources */,
+				2FB5971129E00709006F641F /* CommunityAndPetsLostViewModel.swift in Sources */,
 				2F0677B929CF0BE300687848 /* PasswordView.swift in Sources */,
 				2FFA534629DAC7890065F624 /* DefaultButton.swift in Sources */,
 				2FDE16072990DDBF00154A78 /* BaseView.swift in Sources */,
@@ -1055,6 +1146,7 @@
 				2FC94ED529C083230097E696 /* HomeString.swift in Sources */,
 				2FC9CA1329B70307008C502F /* SignUpViewModel.swift in Sources */,
 				2FDE15FA2990DB1B00154A78 /* Repository.swift in Sources */,
+				2FB5970B29E00346006F641F /* PetsLostViewController.swift in Sources */,
 				2FD9068129C9519800CC4225 /* UserDefaultKeyCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1293,6 +1385,14 @@
 				minimumVersion = 6.5.0;
 			};
 		};
+		2FB5970729E0028A006F641F /* XCRemoteSwiftPackageReference "Tabman" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uias/Tabman.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		2FC246D929D1945100349AEF /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -1323,6 +1423,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2FAB65AB29B310570022B609 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		2FB5970829E0028A006F641F /* Tabman */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FB5970729E0028A006F641F /* XCRemoteSwiftPackageReference "Tabman" */;
+			productName = Tabman;
 		};
 		2FC246DA29D1945100349AEF /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;

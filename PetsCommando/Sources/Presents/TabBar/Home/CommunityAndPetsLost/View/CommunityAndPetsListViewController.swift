@@ -29,10 +29,10 @@ final class CommunityAndPetsLostViewController: TabmanViewController {
         super.viewDidLoad()
         self.dataSource = self
         let bar = TMBar.ButtonBar()
-        bar.backgroundView.style = .blur(style: .dark)
+        bar.backgroundView.style = .blur(style: .light)
         bar.layout.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
         bar.buttons.customize { button in
-            button.tintColor = Color.BaseColor.gray3
+            button.tintColor = Color.BaseColor.black
             button.selectedTintColor = Color.BaseColor.hunt2
         }
         
@@ -49,9 +49,9 @@ final class CommunityAndPetsLostViewController: TabmanViewController {
     }
     
     private func navigationUI() {
-        // MARK: - titleView 사용해서 navigationBar Custom 하기
         
-        let rightBarButton = UIBarButtonItem(image: UIImage(systemName: "person"), style: .plain, target: nil, action: #selector(tappedMyPage))
+        let rightBarButton = UIBarButtonItem(image: UIImage(systemName: "person.fill"), style: .plain, target: nil, action: #selector(tappedMyPage))
+        self.navigationController?.navigationBar.backgroundColor = Color.BaseColor.white
         self.navigationItem.rightBarButtonItem = rightBarButton
     }
     

@@ -7,8 +7,6 @@
 
 import UIKit
 
-import UIKit
-
 final class TabBarCoordinator: Coordinator {
 
     weak var delegate: CoordinatorDelegate?
@@ -74,10 +72,11 @@ final class TabBarCoordinator: Coordinator {
     private func connectTabCoordinator(of page: TabBarPageCase, to tabNavigationController: UINavigationController) {
         switch page {
         case .home:
-            let homeCoordinator = HomeCoordinator(tabNavigationController)
-            homeCoordinator.delegate = self
-            self.childCoordinators.append(homeCoordinator)
-            homeCoordinator.start()
+            let communityAndPetsLostCoordinator = CommunityAndPetsLostCoordinator(tabNavigationController)
+            communityAndPetsLostCoordinator.delegate = self
+            self.childCoordinators.append(communityAndPetsLostCoordinator)
+            communityAndPetsLostCoordinator.start()
+
         case .search:
 //            let sesacShopCoordinator = SesacShopCoordinator(tabNavigationController)
 //            sesacShopCoordinator.delegate = self
