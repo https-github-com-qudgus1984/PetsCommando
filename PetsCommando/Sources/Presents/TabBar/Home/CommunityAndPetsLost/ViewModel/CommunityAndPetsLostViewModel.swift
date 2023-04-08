@@ -6,3 +6,12 @@
 //
 
 import Foundation
+import RxCocoa
+import RxSwift
+
+final class CommunityAndPetsLostViewModel {
+    private weak var coordinator: CommunityAndPetsLostCoordinator?
+    init(coordinator: CommunityAndPetsLostCoordinator?) {
+        self.coordinator = coordinator
+    }
+}

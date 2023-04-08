@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+/*
 final class HomeViewController: BaseViewController, TopicViewControllerEvent {
     
     lazy var topicViewController: TopicViewController = {
@@ -131,3 +131,4 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return 80
     }
 }
+*/

@@ -16,13 +16,12 @@ final class CommunityAndPetsLostCoordinator: Coordinator {
 
     init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
-        navigationController.setNavigationBarHidden(true, animated: false)
-//        UserDefaults.standard.set(MatchStatus.general.rawValue, forKey: UserDefaultKeyCase.matchStatus)
+        navigationController.setNavigationBarHidden(false, animated: false)
     }
 
     func start() {
-        let vc = HomeViewController(
-            viewModel: HomeViewModel(coordinator: self)
+        let vc = CommunityAndPetsLostViewController(
+            viewModel: CommunityAndPetsLostViewModel(coordinator: self)
         )
         navigationController.pushViewController(vc, animated: true)
     }

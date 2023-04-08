@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+/*
 final class HomeCoordinator: Coordinator {
 
     weak var delegate: CoordinatorDelegate?
@@ -41,3 +41,4 @@ final class HomeCoordinator: Coordinator {
         }
     }
 }
+*/
