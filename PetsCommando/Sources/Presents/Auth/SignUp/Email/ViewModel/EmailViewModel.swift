@@ -21,7 +21,7 @@ final class EmailViewModel: ViewModelType {
     
     struct Input {
         let emailText: ControlProperty<String?>
-//        let certificaionButtonTap: Signal<Void>
+        let certificaionButtonTap: Signal<Void>
         let didNextButtonTap: Signal<String>
     }
 
@@ -43,11 +43,13 @@ final class EmailViewModel: ViewModelType {
             .map { $0.count >= 8 && $0.count <= 20 && $0.range(of: "@") != nil && $0.range(of: ".") != nil }
             .share()
         
-//        let emailduplicationValid = input.certificaionButtonTap
-//            .emit { [weak self] certificationEmail in
-//                guard let self = self else { return }
-//                self.certificationUserCase.excuteEmail(email: self.userDefaults.string(forKey: UserDefaultKeyCase.email) ?? "")
-//            }.disposed(by: disposeBag)
+        input.certificaionButtonTap
+            .emit { [weak self] certificationEmail in
+                guard let self = self else { return }
+                print("이메일 중복확인 인증했다?")
+                self.certificationUserCase.excuteEmail(email: "qudgus1984@naver.com")
+            }.disposed(by: disposeBag)
+                
         input.didNextButtonTap
             .emit { [weak self] text in
                 guard let self = self else { return }
@@ -59,9 +61,9 @@ final class EmailViewModel: ViewModelType {
         return Output(emailValidation: emailValid, emailduplicationValidation: emailduplicationValid)
     }
     
-    func startDuplicationEmail(email: DuplicationEmailQuery) {
-        certificationUserCase.excuteEmail(email: email)
-    }
+//    func startDuplicationEmail(email: DuplicationEmailQuery) {
+//        certificationUserCase.excuteEmail(email: email)
+//    }
 }
 
 extension EmailViewModel {

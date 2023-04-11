@@ -13,19 +13,19 @@ typealias DictionaryType = [String: Any]
 
 enum PetsCommandoTarget {
     //MARK: Auth
-    case duplicationEmail(parameters: DictionaryType)
+    case duplicationEmail(parameters: DuplicationEmailQuery)
 }
 
 extension PetsCommandoTarget: TargetType {
     var task: Task {
         switch self {
         case .duplicationEmail(let parameters):
-            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
+            return .requestJSONEncodable(parameters)
         }
     }
     
     var baseURL: URL {
-        guard let url = URL(string: APIKey.baseURL.description) else {
+        guard let url = URL(string: APIKey.baseURL) else {
             fatalError("fatal error - invalid api url")
         }
         return url
@@ -48,8 +48,7 @@ extension PetsCommandoTarget: TargetType {
     var headers: [String: String]? {
 //        let token = UserDefaults.standard.string(forKey: UserDefaultKeyCase.accessToken)!
         return [
-            "Content-Type": "application/x-www-form-urlencoded"
+            "Content-Type": "application/json"
         ]
     }
-    
 }
