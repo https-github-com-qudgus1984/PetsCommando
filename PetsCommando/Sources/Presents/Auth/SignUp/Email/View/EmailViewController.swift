@@ -15,7 +15,7 @@ final class EmailViewController: BaseViewController {
     
     //MARK: Input
     private lazy var input = EmailViewModel.Input(
-        emailText: self.emailView.emailLineTextField.textField.rx.text, didNextButtonTap:  self.emailView.nextButton.rx.tap.withLatestFrom(self.emailView.emailLineTextField.textField.rx.text.orEmpty)
+        emailText: self.emailView.emailLineTextField.textField.rx.text, certificaionButtonTap: self.emailView.emailCertificationButton.rx.tap.asSignal(), didNextButtonTap:  self.emailView.nextButton.rx.tap.withLatestFrom(self.emailView.emailLineTextField.textField.rx.text.orEmpty)
             .asSignal(onErrorJustReturn: "")
 )
     
@@ -67,9 +67,14 @@ final class EmailViewController: BaseViewController {
         emailView.emailCertificationButton.rx.tap
             .withUnretained(self)
             .bind { vc, tapped in
-                self.viewModel.startDuplicationEmail(email: DuplicationEmailQuery(email: self.emailView.emailLineTextField.textField.text!))
+                testAPI.shared.postTest(email: "testEmail@naver.com") { data, status, error in
+                    print("data: \(data)","status: \(status)", "error:\(error)")
+                }
             }
             .disposed(by: disposeBag)
         
     }
+    
+    
 }
+

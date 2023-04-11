@@ -25,10 +25,11 @@ extension authDTO {
 
 struct DuplicationEmailRequestDTO: Codable {
     
-    var toDictionary: [String: Any] {
-        let dict: [String: Any] = [
-            "email": email
-        ]
+    var toDictionary: [String: Any]? {
+        guard let object = try? JSONEncoder().encode(self) else { return nil }
+
+        guard let dict = try? JSONSerialization.jsonObject(with: object, options: []) as? [String:Any] else { return nil }
+
         return dict
     }
     

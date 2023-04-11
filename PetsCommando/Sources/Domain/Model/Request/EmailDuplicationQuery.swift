@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct DuplicationEmailQuery {
+struct DuplicationEmailQuery: Encodable {
     let email: String
 }

@@ -24,12 +24,12 @@ final class CertificationUseCase {
         self.petCommandoRepository = petCommandoRepository
     }
     
-    func excuteEmail(email: DuplicationEmailQuery) {
-        self.petCommandoRepository.requestDuplicationEmail(email: email) { [weak self] response in
+    func excuteEmail(email: String) {
+        let emailQuery = DuplicationEmailQuery(email: email)
+        self.petCommandoRepository.requestDuplicationEmail(emailQuery: emailQuery) { [weak self] response in
             guard let self = self else { return }
             switch response {
             case .success(let duplicationEmail):
-                print(duplicationEmail)
                 self.successDuplicationEmail.onNext(duplicationEmail)
             case .failure(let error):
                 print(error.errorDescription)
@@ -48,7 +48,5 @@ final class CertificationUseCase {
             }
         }
     }
-    
-    
 }
 

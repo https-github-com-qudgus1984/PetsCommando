@@ -16,6 +16,7 @@ enum PetsCommandoNetworkServiceError: Int, Error {
     case inValidIDTokenError = 401
     case inValidURL = 404
     case unregisterUser = 406
+    case typeError = 415
     case internalServerError = 500
     case internalClientError = 501
     case unknown
@@ -40,9 +41,6 @@ extension PetsCommandoNetworkServiceError {
 }
 
 final class PetsCommandoRepository: PetsCommandoRepositoryType {
-
-    
-
     
     let provider: MoyaProvider<PetsCommandoTarget>
 
@@ -52,25 +50,28 @@ final class PetsCommandoRepository: PetsCommandoRepositoryType {
 
 //MARK: 이메일 중복 체크
 extension PetsCommandoRepository {
-    func requestDuplicationEmail(email: DuplicationEmailQuery, completion: @escaping (Result<DuplicationEmail, PetsCommandoNetworkServiceError>) -> Void ) {
-        let requestDTO = DuplicationEmailRequestDTO(duplicationEmail: email)
-        provider.request(.duplicationEmail(parameters: requestDTO.toDictionary)) { result in
+    func requestDuplicationEmail(emailQuery: DuplicationEmailQuery, completion: @escaping (Result<DuplicationEmail, PetsCommandoNetworkServiceError>) -> Void ) {
+        let requestDTO = DuplicationEmailRequestDTO(duplicationEmail: emailQuery)
+        provider.request(.duplicationEmail(parameters: DuplicationEmailQuery(email: emailQuery.email))) { result in
             switch result {
             case .success(let response):
+                print("성공했음")
                 let data = try? JSONDecoder().decode(DuplicationEmailResponseDTO.self, from: response.data)
-                print("@@@", requestDTO)
-                completion(.success(data!.toDomain()))
+                guard let data = data else {
+                    print("✅ ✅ ✅ ")
+                    return }
+                print("data@@@", data)
+                completion(.success(data.toDomain()))
             case .failure(let error):
-                completion(.failure(PetsCommandoNetworkServiceError(rawValue: error.response!.statusCode) ?? .unknown))
+                print("실패했음")
+               completion(.failure(PetsCommandoNetworkServiceError(rawValue: error.response!.statusCode) ?? .unknown))
             }
         }
-
     }
 }
 
 extension PetsCommandoRepository {
     func requestDuplicationNickname(nickname: String, completion: @escaping (Result<String, NetworkError>) -> Void) {
-        print("1")
     }
 }
 
