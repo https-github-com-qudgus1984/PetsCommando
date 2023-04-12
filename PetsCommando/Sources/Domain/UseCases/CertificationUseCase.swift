@@ -30,6 +30,7 @@ final class CertificationUseCase {
             guard let self = self else { return }
             switch response {
             case .success(let duplicationEmail):
+                self.userDefaults.string(forKey: UserDefaultKeyCase.email)
                 self.successDuplicationEmail.onNext(duplicationEmail)
             case .failure(let error):
                 print(error.errorDescription)

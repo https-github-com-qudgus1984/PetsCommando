@@ -51,19 +51,14 @@ final class PetsCommandoRepository: PetsCommandoRepositoryType {
 //MARK: 이메일 중복 체크
 extension PetsCommandoRepository {
     func requestDuplicationEmail(emailQuery: DuplicationEmailQuery, completion: @escaping (Result<DuplicationEmail, PetsCommandoNetworkServiceError>) -> Void ) {
-        let requestDTO = DuplicationEmailRequestDTO(duplicationEmail: emailQuery)
+//        let requestDTO = DuplicationEmailRequestDTO(duplicationEmail: emailQuery)
         provider.request(.duplicationEmail(parameters: DuplicationEmailQuery(email: emailQuery.email))) { result in
             switch result {
             case .success(let response):
-                print("성공했음")
                 let data = try? JSONDecoder().decode(DuplicationEmailResponseDTO.self, from: response.data)
-                guard let data = data else {
-                    print("✅ ✅ ✅ ")
-                    return }
-                print("data@@@", data)
+                guard let data = data else { return }
                 completion(.success(data.toDomain()))
             case .failure(let error):
-                print("실패했음")
                completion(.failure(PetsCommandoNetworkServiceError(rawValue: error.response!.statusCode) ?? .unknown))
             }
         }
