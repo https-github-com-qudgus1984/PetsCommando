@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct Login {
+    let id: Int
+    let accessToken: String
+    let email: String
+    let nickname: String
+    let message: String
+    let timestamp: String
+}

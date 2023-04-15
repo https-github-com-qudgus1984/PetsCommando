@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct Register {
+    let email: String
+    let message: String
+    let timestamp: String
+    let password: String
+}

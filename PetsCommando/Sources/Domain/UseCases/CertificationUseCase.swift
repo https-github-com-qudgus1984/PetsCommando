@@ -15,6 +15,10 @@ final class CertificationUseCase {
     private let userDefaults = UserDefaults.standard
     
     var successDuplicationEmail = PublishSubject<DuplicationEmail>()
+    var successDuplicationNickname = PublishSubject<DuplicationNickname>()
+    var successRegister = PublishSubject<Register>()
+    var successLogin = PublishSubject<Login>()
+
     
     init(
         userRepository: UserRepositoryType,
@@ -39,11 +43,41 @@ final class CertificationUseCase {
     }
     
     func excuteNickname(nickname: String) {
-        self.petCommandoRepository.requestDuplicationNickname(nickname: nickname) { [weak self] response in
+        let nicknameQuery = DuplicationNicknameQuery(nickname: nickname)
+        self.petCommandoRepository.requestDuplicationNickname(nicknameQuery: nicknameQuery) { [weak self] response in
             guard let self = self else { return }
             switch response {
-            case .success(let nickname):
+            case .success(let duplicationNickname):
                 self.userDefaults.set(nickname, forKey: UserDefaultKeyCase.nickname)
+                self.successDuplicationNickname.onNext(duplicationNickname)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    func excuteRegister(email: String, nickname: String, password: String) {
+        let registerQuery = RegisterQuery(email: email, nickname: nickname, password: password)
+        self.petCommandoRepository.requestRegister(registerQuery: registerQuery) { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(let register):
+                print(register)
+                self.successRegister.onNext(register)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    func excuteLogin(email: String, password: String) {
+        let loginQuery = LoginQuery(email: email, password: password)
+        self.petCommandoRepository.requestLogin(loginQuery: loginQuery) { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(let login):
+                print(login)
+                self.successLogin.onNext(login)
             case .failure(let error):
                 print(error)
             }

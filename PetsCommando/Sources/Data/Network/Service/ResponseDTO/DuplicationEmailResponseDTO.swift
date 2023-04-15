@@ -17,7 +17,7 @@ struct DuplicationEmailResponseDTO: Codable {
     }
 
     let email: String
-    let message: String
+    let message: String?
     let timestamp: String
 }
 
@@ -26,7 +26,7 @@ extension DuplicationEmailResponseDTO {
     func toDomain() -> DuplicationEmail {
         return .init(
             email: email,
-            message: message,
+            message: message ?? "",
             timestamp: timestamp
         )
     }

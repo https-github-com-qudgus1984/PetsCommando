@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct RegisterQuery: Encodable {
+    let email: String
+    let nickname: String
+    let password: String
+}

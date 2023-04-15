@@ -70,19 +70,6 @@ final class EmailViewController: BaseViewController {
                 
             }
             .disposed(by: disposeBag)
-        
-        
-//        emailView.emailCertificationButton.rx.tap
-//            .withUnretained(self)
-//            .bind { vc, tapped in
-//                testAPI.shared.postTest(email: "testEmail@naver.com") { data, status, error in
-//                    print("data: \(data)","status: \(status)", "error:\(error)")
-//                }
-//            }
-//            .disposed(by: disposeBag)
-        
     }
-    
-    
 }
 

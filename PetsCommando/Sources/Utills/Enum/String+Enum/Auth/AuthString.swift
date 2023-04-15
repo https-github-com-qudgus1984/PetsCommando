@@ -81,7 +81,7 @@ extension ValidationString {
         case .duplicateInspectionNickname:
             return "닉네임 중복 검사가 필요합니다."
         case .passwordFormat:
-            return "비밀번호 형식에 맞지 않습니다."
+            return "숫자, 문자, 특수문자 포함 총 8글자 이상"
         case .passwordFormatSuccess:
             return "사용할 수 있는 비밀번호입니다."
         }

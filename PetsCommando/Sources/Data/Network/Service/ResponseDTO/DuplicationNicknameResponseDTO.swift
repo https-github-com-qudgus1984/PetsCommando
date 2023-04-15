@@ -6,3 +6,28 @@
 //
 
 import Foundation
+
+struct DuplicationNicknameResponseDTO: Codable {
+
+    private enum CodingKeys: String, CodingKey {
+        case nickname = "nickname"
+        case message = "message"
+        case timestamp = "timestamp"
+
+    }
+
+    let nickname: String
+    let message: String?
+    let timestamp: String
+}
+
+extension DuplicationNicknameResponseDTO {
+
+    func toDomain() -> DuplicationNickname {
+        return .init(
+            nickname: nickname,
+            message: message ?? "",
+            timestamp: timestamp
+        )
+    }
+}

@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct GetUserInfoQuery: Encodable {
+    let accessToken: String
+}
+

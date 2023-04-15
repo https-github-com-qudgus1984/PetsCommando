@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct GetUserLoginInfo {
+    let email: String
+    let nickname: String
+    let register_date: String
+    let updated_date: String
+    let message: String
+    let timestamp: String
+}

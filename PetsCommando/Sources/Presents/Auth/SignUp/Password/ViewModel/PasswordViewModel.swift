@@ -12,9 +12,12 @@ import RxCocoa
 final class PasswordViewModel: ViewModelType {
     
     private weak var coordinator: AuthCoordinator?
+    private var certificationUseCase: CertificationUseCase
+    private let userDefaults = UserDefaults.standard
 
-    init(coordinator: AuthCoordinator?) {
+    init(coordinator: AuthCoordinator?, certificationUseCase: CertificationUseCase) {
         self.coordinator = coordinator
+        self.certificationUseCase = certificationUseCase
     }
     
     struct Input {
@@ -43,7 +46,9 @@ final class PasswordViewModel: ViewModelType {
         input.didNextButtonTap
             .emit { [weak self] text in
                 guard let self = self else { return }
+                guard let email = self.userDefaults.string(forKey: UserDefaultKeyCase.email) else { return }
                 print(text)
+                self.certificationUseCase.excuteLogin(email: email, password: text)
                 self.coordinator?.showLoginViewController()
             }
             .disposed(by: disposeBag)
