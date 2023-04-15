@@ -55,14 +55,14 @@ final class AuthCoordinator: Coordinator {
     }
     
     func showNicknameViewController() {
-        let viewModel = NicknameViewModel(coordinator: self)
+        let viewModel = NicknameViewModel(coordinator: self, certificationUseCase: CertificationUseCase(userRepository: UserRepository(), petCommandoRepository: PetsCommandoRepository()))
         let vc = NicknameViewController(viewModel: viewModel)
         navigationController.setNavigationBarHidden(false, animated: false)
         navigationController.pushViewController(vc, animated: true)
     }
     
     func showPasswordViewController() {
-        let viewModel = PasswordViewModel(coordinator: self)
+        let viewModel = PasswordViewModel(coordinator: self, certificationUseCase: CertificationUseCase(userRepository: UserRepository(), petCommandoRepository: PetsCommandoRepository()))
         let vc = PasswordViewController(viewModel: viewModel)
         navigationController.setNavigationBarHidden(false, animated: false)
         navigationController.pushViewController(vc, animated: true)

@@ -8,5 +8,5 @@
 import Foundation
 
 struct DuplicationNicknameQuery: Encodable {
-    let email: String
+    let nickname: String
 }

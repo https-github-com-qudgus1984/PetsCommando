@@ -15,6 +15,7 @@ final class NicknameViewController: BaseViewController {
     
     //MARK: Input
     private lazy var input = NicknameViewModel.Input(nicknameText: self.nicknameView.nicknameLineTextField.textField.rx.text, didNextButtonTap: self.nicknameView.nextButton.rx.tap.withLatestFrom(self.nicknameView.nicknameLineTextField.textField.rx.text.orEmpty)
+        .asSignal(onErrorJustReturn: ""), certificationButtonTap: self.nicknameView.nicknameCertificationButton.rx.tap.withLatestFrom(self.nicknameView.nicknameLineTextField.textField.rx.text.orEmpty)
         .asSignal(onErrorJustReturn: ""))
     //MARK: Output
 
