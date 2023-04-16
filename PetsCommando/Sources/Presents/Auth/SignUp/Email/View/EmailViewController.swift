@@ -58,7 +58,7 @@ final class EmailViewController: BaseViewController {
             }
             .disposed(by: disposeBag)
         
-        output.emailValidation
+        output.emailduplicationValidation
             .withUnretained(self)
             .bind { vc, valid in
                 let str: String = valid ?
@@ -67,9 +67,19 @@ final class EmailViewController: BaseViewController {
                 
                 let textColor: UIColor = valid ? .systemBlue : .systemRed
                 vc.emailView.emailValidLabel.textColor = textColor
+                vc.emailView.nextButton.isEnabled = valid
+
                 
             }
             .disposed(by: disposeBag)
+        
+        output.totalValidation.withUnretained(self)
+            .bind { vc, valid in
+                let buttonColor: UIColor = valid ? Color.BaseColor.hunt2 : Color.BaseColor.gray6
+                vc.emailView.nextButton.backgroundColor = buttonColor
+            }
+            .disposed(by: disposeBag)
+        
     }
 }
 

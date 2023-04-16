@@ -48,10 +48,12 @@ final class NicknameViewController: BaseViewController {
             .bind { vc, valid in
                 let buttonColor: UIColor = valid ? Color.BaseColor.hunt2 : Color.BaseColor.gray6
                 vc.nicknameView.nicknameCertificationButton.backgroundColor = buttonColor
+                vc.nicknameView.nicknameCertificationButton.isEnabled = valid
+
             }
             .disposed(by: disposeBag)
         
-        output.nicknameValidation
+        output.nicknameduplicationValidation
             .withUnretained(self)
             .bind { vc, valid in
                 let str: String = valid ?
@@ -59,7 +61,17 @@ final class NicknameViewController: BaseViewController {
                 vc.nicknameView.nicknameValidLabel.text = str
                 let textColor: UIColor = valid ? .systemBlue : .systemRed
                 vc.nicknameView.nicknameValidLabel.textColor = textColor
+                vc.nicknameView.nextButton.isEnabled = valid
 
+
+            }
+            .disposed(by: disposeBag)
+        
+        output.totalValidation.withUnretained(self)
+            .bind { vc, valid in
+                let buttonColor: UIColor = valid ? Color.BaseColor.hunt2 : Color.BaseColor.gray6
+                vc.nicknameView.nextButton.backgroundColor = buttonColor
+                vc.nicknameView.nextButton.isEnabled = valid
             }
             .disposed(by: disposeBag)
     }

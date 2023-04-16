@@ -27,10 +27,11 @@ final class EmailViewModel: ViewModelType {
 
     struct Output {
         let emailValidation: Observable<Bool>
-        let emailduplicationValidation: Observable<Bool>
+        let emailduplicationValidation: BehaviorRelay<Bool>
+        let totalValidation: Observable<Bool>
     }
     //MARK: UserCase에서 데이터가 잘 들어오면 True로 바꿔줄 변수
-    var isDuplicationEmailSuccess = BehaviorRelay(value: false)
+    var isDuplicationEmailSuccess = BehaviorRelay<Bool>(value: false)
     
     var disposeBag = DisposeBag()
     
@@ -40,15 +41,10 @@ final class EmailViewModel: ViewModelType {
             .map { $0.count >= 8 && $0.count <= 20 && $0.range(of: "@") != nil && $0.range(of: ".") != nil }
             .share()
         
-        let emailDuplicationValid = Observable.combineLatest(isDuplicationEmailSuccess.asObservable(), emailValid)
-            .flatMapLatest { isDuplicationSuccess, emailIsValid -> Observable<Bool> in
-                if isDuplicationSuccess {
-                    return Observable.just(true)
-                } else {
-                    return emailValid
-                }
+        let totalValid = Observable.combineLatest(isDuplicationEmailSuccess.asObservable(), emailValid)
+            .map { isDuplicationSuccess, emailValid in
+                return isDuplicationSuccess && emailValid
             }
-        
         
         input.certificaionButtonTap
             .emit { [weak self] certificationEmail in
@@ -57,15 +53,13 @@ final class EmailViewModel: ViewModelType {
                 self.startDuplicationEmail(email: certificationEmail)
             }.disposed(by: disposeBag)
         
-        //MARK: CertificationUseCase에서 데이터가 잘 날아오면 emailDuplication을 true로 변경해주려는 코드. 근데 제대로 안먹어서 해결필요
+        
         self.certificationUseCase.successDuplicationEmail
-            .subscribe { email in
-                print(email,"@@@@@@")
-                if email.isCompleted {
+            .subscribe { success in
+                if success {
                     self.isDuplicationEmailSuccess.accept(true)
                 }
-            }
-            .disposed(by: disposeBag)
+            }.disposed(by: disposeBag)
                 
         input.didNextButtonTap
             .emit { [weak self] text in
@@ -77,7 +71,8 @@ final class EmailViewModel: ViewModelType {
         
         
         
-        return Output(emailValidation: emailValid, emailduplicationValidation: emailDuplicationValid)
+        return Output(emailValidation: emailValid, emailduplicationValidation: self.isDuplicationEmailSuccess,
+        totalValidation: totalValid)
     }
     
     func startDuplicationEmail(email: String) {
