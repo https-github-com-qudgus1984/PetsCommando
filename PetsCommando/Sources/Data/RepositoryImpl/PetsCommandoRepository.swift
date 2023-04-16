@@ -50,15 +50,14 @@ final class PetsCommandoRepository: PetsCommandoRepositoryType {
 
 //MARK: 이메일 중복 체크
 extension PetsCommandoRepository {
-    func requestDuplicationEmail(emailQuery: DuplicationEmailQuery, completion: @escaping (Result<DuplicationEmail, PetsCommandoNetworkServiceError>) -> Void ) {
-//        let requestDTO = DuplicationEmailRequestDTO(duplicationEmail: emailQuery)
+    func requestDuplicationEmail(emailQuery: DuplicationEmailQuery, completion: @escaping (Result<Int, PetsCommandoNetworkServiceError>) -> Void ) {
         provider.request(.duplicationEmail(parameters: DuplicationEmailQuery(email: emailQuery.email))) { result in
             switch result {
             case .success(let response):
                 let data = try? JSONDecoder().decode(DuplicationEmailResponseDTO.self, from: response.data)
                 guard let data = data else { return }
-                print("✅✅✅",data)
-                completion(.success(data.toDomain()))
+                print("✅✅✅",data, response.statusCode)
+                completion(.success(response.statusCode))
             case .failure(let error):
                 print("에러에러", error)
                completion(.failure(PetsCommandoNetworkServiceError(rawValue: error.response!.statusCode) ?? .unknown))
@@ -69,14 +68,14 @@ extension PetsCommandoRepository {
 
 extension PetsCommandoRepository {
 
-    func requestDuplicationNickname(nicknameQuery: DuplicationNicknameQuery, completion: @escaping (Result<DuplicationNickname, PetsCommandoNetworkServiceError>) -> Void) {
+    func requestDuplicationNickname(nicknameQuery: DuplicationNicknameQuery, completion: @escaping (Result<Int, PetsCommandoNetworkServiceError>) -> Void) {
         provider.request(.duplicationNickname(parameters: DuplicationNicknameQuery(nickname: nicknameQuery.nickname))) { result in
             switch result {
             case .success(let response):
                 let data = try? JSONDecoder().decode(DuplicationNicknameResponseDTO.self, from: response.data)
                 guard let data = data else { return }
-                print("닉네임 중복검사 : ✅✅✅",data)
-                completion(.success(data.toDomain()))
+                print("닉네임 중복검사 : ✅✅✅",data, response.statusCode)
+                completion(.success(response.statusCode))
             case .failure(let error):
                 print("닉네임 중복검사 : 에러에러", error)
                completion(.failure(PetsCommandoNetworkServiceError(rawValue: error.response!.statusCode) ?? .unknown))
@@ -87,14 +86,15 @@ extension PetsCommandoRepository {
 
 extension PetsCommandoRepository {
     
-    func requestRegister(registerQuery: RegisterQuery, completion: @escaping (Result<Register, PetsCommandoNetworkServiceError>) -> Void) {
+    func requestRegister(registerQuery: RegisterQuery, completion: @escaping (Result<Int, PetsCommandoNetworkServiceError>) -> Void) {
         provider.request(.register(parameter: registerQuery.self)) { result in
             switch result {
             case .success(let response):
                 let data = try? JSONDecoder().decode(RegisterResponseDTO.self, from: response.data)
                 guard let data = data else { return }
-                print("Rigster 서버통신 : ✅✅✅",data)
-                completion(.success(data.toDomain()))
+                print("Rigster 서버통신 : ✅✅✅",data, response.statusCode)
+//                completion(.success(data.toDomain()))
+                completion(.success(response.statusCode))
             case .failure(let error):
                 print("Rigster 에러에러", error)
                completion(.failure(PetsCommandoNetworkServiceError(rawValue: error.response!.statusCode) ?? .unknown))
@@ -104,14 +104,15 @@ extension PetsCommandoRepository {
 }
 
 extension PetsCommandoRepository {
-    func requestLogin(loginQuery: LoginQuery, completion: @escaping (Result<Login, PetsCommandoNetworkServiceError>) -> Void) {
+    func requestLogin(loginQuery: LoginQuery, completion: @escaping (Result<Int, PetsCommandoNetworkServiceError>) -> Void) {
         provider.request(.login(parameter: loginQuery.self)) { result in
             switch result {
             case .success(let response):
                 let data = try? JSONDecoder().decode(LoginResponseDTO.self, from: response.data)
                 guard let data = data else { return }
-                print("login 서버통신 : ✅✅✅",data)
-                completion(.success(data.toDomain()))
+                print("login 서버통신 : ✅✅✅",data, response.statusCode)
+//                completion(.success(data.toDomain()))
+                completion(.success(response.statusCode))
             case .failure(let error):
                 print("login 에러에러", error)
                 completion(.failure(PetsCommandoNetworkServiceError(rawValue: error.response!.statusCode) ?? .unknown))

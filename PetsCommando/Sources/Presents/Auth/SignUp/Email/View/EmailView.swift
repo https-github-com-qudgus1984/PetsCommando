@@ -49,7 +49,7 @@ final class EmailView: BaseView {
     
     internal var nextIncludeView: UIView = {
         let view = UIView()
-        view.backgroundColor = Color.BaseColor.hunt2
+        view.backgroundColor = Color.BaseColor.gray6
         view.clipsToBounds = true
         view.layer.cornerRadius = 8
         view.layer.masksToBounds = true

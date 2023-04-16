@@ -14,10 +14,10 @@ final class CertificationUseCase {
     
     private let userDefaults = UserDefaults.standard
     
-    var successDuplicationEmail = PublishSubject<DuplicationEmail>()
-    var successDuplicationNickname = PublishSubject<DuplicationNickname>()
-    var successRegister = PublishSubject<Register>()
-    var successLogin = PublishSubject<Login>()
+    var successDuplicationEmail = PublishSubject<Bool>()
+    var successDuplicationNickname = PublishSubject<Bool>()
+    var successRegister = PublishSubject<Bool>()
+    var successLogin = PublishSubject<Bool>()
 
     
     init(
@@ -31,11 +31,19 @@ final class CertificationUseCase {
     func excuteEmail(email: String) {
         let emailQuery = DuplicationEmailQuery(email: email)
         self.petCommandoRepository.requestDuplicationEmail(emailQuery: emailQuery) { [weak self] response in
+            
             guard let self = self else { return }
             switch response {
-            case .success(let duplicationEmail):
-                self.userDefaults.string(forKey: UserDefaultKeyCase.email)
-                self.successDuplicationEmail.onNext(duplicationEmail)
+            case .success(let statusCode):
+                switch statusCode {
+                case 200:
+                    self.userDefaults.string(forKey: UserDefaultKeyCase.email)
+                    self.successDuplicationEmail.onNext(true)
+                case 400:
+                    print("Bad Request")
+                default:
+                    print("정해지지 않은 status")
+                }
             case .failure(let error):
                 print(error.errorDescription)
             }
@@ -47,9 +55,16 @@ final class CertificationUseCase {
         self.petCommandoRepository.requestDuplicationNickname(nicknameQuery: nicknameQuery) { [weak self] response in
             guard let self = self else { return }
             switch response {
-            case .success(let duplicationNickname):
-                self.userDefaults.set(nickname, forKey: UserDefaultKeyCase.nickname)
-                self.successDuplicationNickname.onNext(duplicationNickname)
+            case .success(let statusCode):
+                switch statusCode {
+                case 200:
+                    self.userDefaults.set(nickname, forKey: UserDefaultKeyCase.nickname)
+                    self.successDuplicationNickname.onNext(true)
+                case 400:
+                    print("Bad Request")
+                default:
+                    print("정해지지 않은 status")
+                }
             case .failure(let error):
                 print(error)
             }
@@ -61,9 +76,15 @@ final class CertificationUseCase {
         self.petCommandoRepository.requestRegister(registerQuery: registerQuery) { [weak self] response in
             guard let self = self else { return }
             switch response {
-            case .success(let register):
-                print(register)
-                self.successRegister.onNext(register)
+            case .success(let statusCode):
+                switch statusCode {
+                case 200:
+                    self.successRegister.onNext(true)
+                case 400:
+                    print("Bad Request")
+                default:
+                    print("정해지지 않은 status")
+                }
             case .failure(let error):
                 print(error)
             }
@@ -75,9 +96,15 @@ final class CertificationUseCase {
         self.petCommandoRepository.requestLogin(loginQuery: loginQuery) { [weak self] response in
             guard let self = self else { return }
             switch response {
-            case .success(let login):
-                print(login)
-                self.successLogin.onNext(login)
+            case .success(let statusCode):
+                switch statusCode {
+                case 200:
+                    self.successLogin.onNext(true)
+                case 400:
+                    print("Bad Request")
+                default:
+                    print("정해지지 않은 status")
+                }
             case .failure(let error):
                 print(error)
             }

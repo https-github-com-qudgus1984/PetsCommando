@@ -9,17 +9,17 @@ import Foundation
 
 protocol PetsCommandoRepositoryType: AnyObject {
     
-    func requestDuplicationEmail(emailQuery: DuplicationEmailQuery, completion: @escaping (Result<DuplicationEmail, PetsCommandoNetworkServiceError>) -> Void
+    func requestDuplicationEmail(emailQuery: DuplicationEmailQuery, completion: @escaping (Result<Int, PetsCommandoNetworkServiceError>) -> Void
     )
     
-    func requestDuplicationNickname(nicknameQuery: DuplicationNicknameQuery, completion: @escaping (Result<DuplicationNickname, PetsCommandoNetworkServiceError>) -> Void
+    func requestDuplicationNickname(nicknameQuery: DuplicationNicknameQuery, completion: @escaping (Result<Int, PetsCommandoNetworkServiceError>) -> Void
     )
     
-    func requestRegister(registerQuery: RegisterQuery, completion: @escaping (Result<Register, PetsCommandoNetworkServiceError>) -> Void
+    func requestRegister(registerQuery: RegisterQuery, completion: @escaping (Result<Int, PetsCommandoNetworkServiceError>) -> Void
     )
     
     func requestLogin(loginQuery: LoginQuery, completion: @escaping
-        (Result<Login, PetsCommandoNetworkServiceError>) -> Void
+        (Result<Int, PetsCommandoNetworkServiceError>) -> Void
     )
     
 //    func requestGetUserInfo(completion: @escaping

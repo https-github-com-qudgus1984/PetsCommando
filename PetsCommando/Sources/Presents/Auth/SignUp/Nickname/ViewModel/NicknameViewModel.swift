@@ -27,9 +27,12 @@ final class NicknameViewModel: ViewModelType {
 
     struct Output {
         let nicknameValidation: Observable<Bool>
-        let nicknameduplicationValidation: Observable<Bool>
+        let nicknameduplicationValidation: BehaviorRelay<Bool>
+        let totalValidation: Observable<Bool>
     }
     
+    var isDuplicationNicknameSuccess = BehaviorRelay<Bool>(value: false)
+
     var disposeBag = DisposeBag()
     
     func transform(_ input: Input) -> Output {
@@ -38,10 +41,10 @@ final class NicknameViewModel: ViewModelType {
             .map { $0.count >= 2 && $0.count <= 10 }
             .share()
         
-        let nicknameduplicationValid = input.nicknameText
-            .orEmpty
-            .map { $0.count >= 2 && $0.count <= 10 }
-            .share()
+        let totalValid = Observable.combineLatest(isDuplicationNicknameSuccess.asObservable(), nicknameValid)
+            .map { isDuplicationSuccess, nicknameValid in
+                return isDuplicationSuccess && nicknameValid
+            }
         
         input.didNextButtonTap
             .emit { [weak self] text in
@@ -59,7 +62,16 @@ final class NicknameViewModel: ViewModelType {
             }
             .disposed(by: disposeBag)
         
-        return Output(nicknameValidation: nicknameValid, nicknameduplicationValidation: nicknameduplicationValid)
+        self.certificationUseCase.successDuplicationNickname
+            .subscribe { success in
+                if success {
+                    self.isDuplicationNicknameSuccess.accept(true)
+                }
+            }
+            .disposed(by: disposeBag)
+        
+        return Output(nicknameValidation: nicknameValid, nicknameduplicationValidation: self.isDuplicationNicknameSuccess,
+        totalValidation: totalValid)
     }
 }
 

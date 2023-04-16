@@ -40,7 +40,7 @@ final class NicknameView: BaseView {
     
     internal var nicknameCertificationButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = Color.BaseColor.gray5
+        button.backgroundColor = Color.BaseColor.gray6
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
         button.setTitle(AuthString.auth.text, for: .normal)
@@ -49,7 +49,7 @@ final class NicknameView: BaseView {
     
     internal var nextIncludeView: UIView = {
         let view = UIView()
-        view.backgroundColor = Color.BaseColor.hunt2
+        view.backgroundColor = Color.BaseColor.gray6
         view.clipsToBounds = true
         view.layer.cornerRadius = 8
         view.layer.masksToBounds = true
