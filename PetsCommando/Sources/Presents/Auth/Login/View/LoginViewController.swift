@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Toast
 
 final class LoginViewController: BaseViewController {
     
@@ -34,7 +35,12 @@ final class LoginViewController: BaseViewController {
     
     override func setupBinding() {
         
-        let input = LoginViewModel.Input(idText: loginView.idLineTextField.textField.rx.text, pwText: loginView.pwLineTextField.textField.rx.text)
+        let input = LoginViewModel.Input(idText: loginView.idLineTextField.textField.rx.text, pwText: loginView.pwLineTextField.textField.rx.text,     loginButtonTap: loginView.loginButton.rx.controlEvent(.touchUpInside).map {
+            LoginQuery(
+                email: self.loginView.idLineTextField.textField.text!,
+                password: self.loginView.pwLineTextField.textField.text!
+            )}
+        )
         
         let output = viewModel.transform(input)
         
@@ -45,7 +51,7 @@ final class LoginViewController: BaseViewController {
             }
             .disposed(by: disposeBag)
         
-        output.signUpValidation
+        output.loginValidation
             .withUnretained(self)
             .bind { vc, valid in
                 let buttonColor: UIColor = valid ? Color.BaseColor.hunt2 : Color.BaseColor.gray6
@@ -53,11 +59,7 @@ final class LoginViewController: BaseViewController {
             }
             .disposed(by: disposeBag)
         
-        loginView.loginButton.rx.tap
-            .bind { [weak self] in
-                guard let self = self else { return }
-                self.viewModel.showTabBarController()
-            }
+        output.requestTextMessage.emit(onNext: {[unowned self] text in self.view.makeToast(text, position: .bottom)})
             .disposed(by: disposeBag)
     }
 }

@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Toast
 
 final class NicknameViewController: BaseViewController {
     private let nicknameView = NicknameView()
@@ -73,6 +74,9 @@ final class NicknameViewController: BaseViewController {
                 vc.nicknameView.nextButton.backgroundColor = buttonColor
                 vc.nicknameView.nextButton.isEnabled = valid
             }
+            .disposed(by: disposeBag)
+        
+        output.requestTextMessage.emit(onNext: {[unowned self] text in self.view.makeToast(text, position: .bottom)})
             .disposed(by: disposeBag)
     }
 }

@@ -30,7 +30,7 @@ final class AuthCoordinator: Coordinator {
     }
     
     func showLoginViewController() {
-        let viewModel = LoginViewModel(coordinator: self)
+        let viewModel = LoginViewModel(coordinator: self, certificationUseCase: CertificationUseCase(userRepository: UserRepository(), petCommandoRepository: PetsCommandoRepository()))
         let vc = LoginViewController(viewModel: viewModel)
         changeAnimation()
         navigationController.viewControllers = [vc]

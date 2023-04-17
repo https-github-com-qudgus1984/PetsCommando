@@ -14,10 +14,10 @@ final class CertificationUseCase {
     
     private let userDefaults = UserDefaults.standard
     
-    var successDuplicationEmail = PublishSubject<Bool>()
-    var successDuplicationNickname = PublishSubject<Bool>()
-    var successRegister = PublishSubject<Bool>()
-    var successLogin = PublishSubject<Bool>()
+    var successDuplicationEmail = PublishSubject<Int>()
+    var successDuplicationNickname = PublishSubject<Int>()
+    var successRegister = PublishSubject<Int>()
+    var successLogin = PublishSubject<Int>()
 
     
     init(
@@ -35,15 +35,7 @@ final class CertificationUseCase {
             guard let self = self else { return }
             switch response {
             case .success(let statusCode):
-                switch statusCode {
-                case 200:
-                    self.userDefaults.string(forKey: UserDefaultKeyCase.email)
-                    self.successDuplicationEmail.onNext(true)
-                case 400:
-                    print("Bad Request")
-                default:
-                    print("정해지지 않은 status")
-                }
+                self.successDuplicationEmail.onNext(statusCode)
             case .failure(let error):
                 print(error.errorDescription)
             }
@@ -56,15 +48,7 @@ final class CertificationUseCase {
             guard let self = self else { return }
             switch response {
             case .success(let statusCode):
-                switch statusCode {
-                case 200:
-                    self.userDefaults.set(nickname, forKey: UserDefaultKeyCase.nickname)
-                    self.successDuplicationNickname.onNext(true)
-                case 400:
-                    print("Bad Request")
-                default:
-                    print("정해지지 않은 status")
-                }
+                self.successDuplicationNickname.onNext(statusCode)
             case .failure(let error):
                 print(error)
             }
@@ -77,14 +61,7 @@ final class CertificationUseCase {
             guard let self = self else { return }
             switch response {
             case .success(let statusCode):
-                switch statusCode {
-                case 200:
-                    self.successRegister.onNext(true)
-                case 400:
-                    print("Bad Request")
-                default:
-                    print("정해지지 않은 status")
-                }
+                self.successRegister.onNext(statusCode)
             case .failure(let error):
                 print(error)
             }
@@ -97,14 +74,7 @@ final class CertificationUseCase {
             guard let self = self else { return }
             switch response {
             case .success(let statusCode):
-                switch statusCode {
-                case 200:
-                    self.successLogin.onNext(true)
-                case 400:
-                    print("Bad Request")
-                default:
-                    print("정해지지 않은 status")
-                }
+                self.successLogin.onNext(statusCode)
             case .failure(let error):
                 print(error)
             }

@@ -13,7 +13,7 @@ final class EmailViewModel: ViewModelType {
     
     private weak var coordinator: AuthCoordinator?
     private var certificationUseCase: CertificationUseCase
-
+    
     init(coordinator: AuthCoordinator?, certificationUseCase: CertificationUseCase) {
         self.coordinator = coordinator
         self.certificationUseCase = certificationUseCase
@@ -24,15 +24,18 @@ final class EmailViewModel: ViewModelType {
         let certificaionButtonTap: Signal<String>
         let didNextButtonTap: Signal<String>
     }
-
+    
     struct Output {
         let emailValidation: Observable<Bool>
         let emailduplicationValidation: BehaviorRelay<Bool>
+        let requestTextMessage: Signal<String>
         let totalValidation: Observable<Bool>
     }
     //MARK: UserCase에서 데이터가 잘 들어오면 True로 바꿔줄 변수
     var isDuplicationEmailSuccess = BehaviorRelay<Bool>(value: false)
+    var requestText = PublishRelay<String>()
     
+    private let userDefaults = UserDefaults.standard
     var disposeBag = DisposeBag()
     
     func transform(_ input: Input) -> Output {
@@ -49,18 +52,31 @@ final class EmailViewModel: ViewModelType {
         input.certificaionButtonTap
             .emit { [weak self] certificationEmail in
                 guard let self = self else { return }
-                print("이메일 중복확인 인증했다?")
                 self.startDuplicationEmail(email: certificationEmail)
             }.disposed(by: disposeBag)
         
-        
         self.certificationUseCase.successDuplicationEmail
-            .subscribe { success in
-                if success {
-                    self.isDuplicationEmailSuccess.accept(true)
+            .subscribe { event in
+                switch event {
+                case .next(let statusCode):
+                    switch statusCode {
+                    case 200:
+                        self.isDuplicationEmailSuccess.accept(true)
+                        self.userDefaults.string(forKey: UserDefaultKeyCase.email)
+                        self.requestText.accept("이메일 중복 확인 되었습니다.")
+                    case 400:
+                        self.requestText.accept("이메일 형식 오류입니다.")
+                    default:
+                        self.requestText.accept("정의되지 않은 오류입니다.\(statusCode)")
+                    }
+                case .error(let error):
+                    self.requestText.accept(error.localizedDescription)
+                case .completed:
+                    print("completed")
                 }
-            }.disposed(by: disposeBag)
-                
+            }
+            .disposed(by: disposeBag)
+        
         input.didNextButtonTap
             .emit { [weak self] text in
                 guard let self = self else { return }
@@ -72,7 +88,7 @@ final class EmailViewModel: ViewModelType {
         
         
         return Output(emailValidation: emailValid, emailduplicationValidation: self.isDuplicationEmailSuccess,
-        totalValidation: totalValid)
+                      requestTextMessage: requestText.asSignal(), totalValidation: totalValid)
     }
     
     func startDuplicationEmail(email: String) {
@@ -81,7 +97,7 @@ final class EmailViewModel: ViewModelType {
 }
 
 extension EmailViewModel {
-
+    
     private func saveEmailInfo(email: String) {
         UserDefaults.standard.set(email, forKey: UserDefaultKeyCase.email)
     }

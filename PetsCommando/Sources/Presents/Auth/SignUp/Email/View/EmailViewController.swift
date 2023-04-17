@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Toast
 
 final class EmailViewController: BaseViewController {
     private let emailView = EmailView()
@@ -78,6 +79,9 @@ final class EmailViewController: BaseViewController {
                 let buttonColor: UIColor = valid ? Color.BaseColor.hunt2 : Color.BaseColor.gray6
                 vc.emailView.nextButton.backgroundColor = buttonColor
             }
+            .disposed(by: disposeBag)
+        
+        output.requestTextMessage.emit(onNext: {[unowned self] text in self.view.makeToast(text, position: .bottom)})
             .disposed(by: disposeBag)
         
     }
