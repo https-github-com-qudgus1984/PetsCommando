@@ -58,7 +58,7 @@ final class NicknameViewController: BaseViewController {
             .withUnretained(self)
             .bind { vc, valid in
                 let str: String = valid ?
-                ValidationString.successAuth.text : ValidationString.duplicateInspectionEmail.text
+                ValidationString.successAuth.text : ValidationString.duplicateInspectionNickname.text
                 vc.nicknameView.nicknameValidLabel.text = str
                 let textColor: UIColor = valid ? .systemBlue : .systemRed
                 vc.nicknameView.nicknameValidLabel.textColor = textColor

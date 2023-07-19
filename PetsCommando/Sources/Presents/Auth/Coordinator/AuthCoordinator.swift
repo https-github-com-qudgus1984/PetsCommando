@@ -36,13 +36,6 @@ final class AuthCoordinator: Coordinator {
         navigationController.viewControllers = [vc]
     }
     
-    func showSignUpViewController() {
-        let viewModel = SignUpViewModel(coordinator: self)
-        let vc = SignUpViewController(viewModel: viewModel)
-        navigationController.setNavigationBarHidden(false, animated: false)
-        navigationController.pushViewController(vc, animated: true)
-    }
-    
     func showEmailViewController() {
         let viewModel = EmailViewModel(coordinator: self,
                                        certificationUseCase: CertificationUseCase(
