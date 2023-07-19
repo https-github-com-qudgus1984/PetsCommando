@@ -12,6 +12,15 @@ import RxCocoa
 final class CommunityViewController: BaseViewController, UICollectionViewDelegate {
     
     let communityView = CommunityView()
+    let viewModel: CommunityViewModel
+    
+    //MARK: Delegate
+    init(viewModel: CommunityViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    let cellSelected = PublishSubject<Void>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +34,11 @@ final class CommunityViewController: BaseViewController, UICollectionViewDelegat
     override func loadView() {
         self.view = communityView
     }
+    
+    override func setupBinding() {
+        let input = CommunityViewModel.Input(cellSelected: self.cellSelected)
+        let _ = viewModel.transform(input)
+    }
 }
 
 extension CommunityViewController: UICollectionViewDataSource {
@@ -37,6 +51,11 @@ extension CommunityViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CommunityCollectionViewCell.identifier, for: indexPath) as! CommunityCollectionViewCell
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("이건찍히지")
+        self.cellSelected.onNext(())
     }
 }
 

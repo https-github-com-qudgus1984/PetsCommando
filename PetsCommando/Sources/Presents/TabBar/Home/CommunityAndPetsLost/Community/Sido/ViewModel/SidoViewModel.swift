@@ -10,8 +10,8 @@ import RxCocoa
 import RxSwift
 
 final class SidoViewModel {
-    private weak var coordinator: CommunityAndPetsLostCoordinator?
-    init(coordinator: CommunityAndPetsLostCoordinator?) {
+    private weak var coordinator: TabmanCoordinator?
+    init(coordinator: TabmanCoordinator?) {
         self.coordinator = coordinator
     }
 }

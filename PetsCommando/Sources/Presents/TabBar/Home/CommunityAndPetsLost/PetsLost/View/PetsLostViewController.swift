@@ -12,7 +12,15 @@ import RxCocoa
 final class PetsLostViewController: BaseViewController, UICollectionViewDelegate {
     
     let petsLostView = PetsLostView()
+    let viewModel: PetsLostViewModel
 
+    init(viewModel: PetsLostViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    let cellSelected = PublishSubject<Void>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         petsLostView.collectionView.register(PetsLostCollectionViewCell.self, forCellWithReuseIdentifier: PetsLostCollectionViewCell.identifier)
@@ -24,6 +32,11 @@ final class PetsLostViewController: BaseViewController, UICollectionViewDelegate
     
     override func loadView() {
         self.view = petsLostView
+    }
+    
+    override func setupBinding() {
+        let input = PetsLostViewModel.Input(cellSelected: self.cellSelected)
+        let _ = viewModel.transform(input)
     }
 }
 
@@ -37,6 +50,11 @@ extension PetsLostViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PetsLostCollectionViewCell.identifier, for: indexPath) as! PetsLostCollectionViewCell
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("이건찍히지")
+        self.cellSelected.onNext(())
     }
 }
 

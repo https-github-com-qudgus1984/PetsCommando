@@ -30,10 +30,25 @@ final class SearchView: BaseView {
         return collectionView
     }()
     
+    private var locationButtonImageView: UIImageView = {
+        let view = UIImageView()
+        view.image = UIImage(systemName: "location.circle.fill")
+        view.tintColor = Color.BaseColor.hunt4
+        view.contentMode = .scaleToFill
+        return view
+    }()
+    
+    internal let locationButton: UIButton = {
+        let button = UIButton()
+        return button
+    }()
+    
     override func setupAttributes() {
         self.addSubview(mapView)
         self.addSubview(titleLabel)
         self.addSubview(hospitalcollectionView)
+        self.addSubview(locationButtonImageView)
+        self.addSubview(locationButton)
     }
     
     override func setupLayout() {
@@ -52,6 +67,16 @@ final class SearchView: BaseView {
             make.horizontalEdges.equalTo(safeAreaLayoutGuide).inset(16)
             make.top.equalTo(titleLabel.snp.bottom)
             make.bottom.equalTo(safeAreaLayoutGuide)
+        }
+        
+        locationButtonImageView.snp.makeConstraints { make in
+            make.trailing.equalTo(mapView.snp.trailing).offset(-16)
+            make.bottom.equalTo(mapView.snp.bottom).offset(-16)
+            make.height.width.equalTo(50)
+        }
+        
+        locationButton.snp.makeConstraints { make in
+            make.edges.equalTo(locationButtonImageView)
         }
     }
 }

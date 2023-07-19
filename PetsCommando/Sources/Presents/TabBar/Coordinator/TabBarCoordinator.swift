@@ -72,10 +72,10 @@ final class TabBarCoordinator: Coordinator {
     private func connectTabCoordinator(of page: TabBarPageCase, to tabNavigationController: UINavigationController) {
         switch page {
         case .home:
-            let communityAndPetsLostCoordinator = CommunityAndPetsLostCoordinator(tabNavigationController)
-            communityAndPetsLostCoordinator.delegate = self
-            self.childCoordinators.append(communityAndPetsLostCoordinator)
-            communityAndPetsLostCoordinator.start()
+            let tabmanCoordinator = TabmanCoordinator(tabNavigationController)
+            tabmanCoordinator.delegate = self
+            self.childCoordinators.append(tabmanCoordinator)
+            tabmanCoordinator.start()
 
         case .search:
             let searchCoordinator = SearchCoordinator(tabNavigationController)
