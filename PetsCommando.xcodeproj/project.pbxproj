@@ -20,6 +20,10 @@
 		2F0677BE29CF1DE200687848 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 2F0677BD29CF1DE200687848 /* Toast */; };
 		2F0677C029CF1E1600687848 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0677BF29CF1E1600687848 /* UIViewController+Extension.swift */; };
 		2F0677C229CF1FDE00687848 /* PetsCommandoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0677C129CF1FDE00687848 /* PetsCommandoRepository.swift */; };
+		2F1740182A67F23700EFE86C /* PetsLostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1740172A67F23700EFE86C /* PetsLostDetailViewModel.swift */; };
+		2F17401B2A67F3CC00EFE86C /* CommunityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F17401A2A67F3CC00EFE86C /* CommunityViewModel.swift */; };
+		2F17401D2A67F5D600EFE86C /* TabmanCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F17401C2A67F5D600EFE86C /* TabmanCoordinator.swift */; };
+		2F1740212A6804D900EFE86C /* PetsLostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1740202A6804D900EFE86C /* PetsLostViewModel.swift */; };
 		2F1C81192A677B1600210434 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C81182A677B1600210434 /* SearchCoordinator.swift */; };
 		2F1C811B2A677BAB00210434 /* SidoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C811A2A677BAB00210434 /* SidoViewModel.swift */; };
 		2F1C811D2A677BB200210434 /* SidoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C811C2A677BB200210434 /* SidoViewController.swift */; };
@@ -63,15 +67,13 @@
 		2FB5970629E00265006F641F /* CommunityAndPetsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5970529E00265006F641F /* CommunityAndPetsListViewController.swift */; };
 		2FB5970929E0028A006F641F /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = 2FB5970829E0028A006F641F /* Tabman */; };
 		2FB5970B29E00346006F641F /* PetsLostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5970A29E00346006F641F /* PetsLostViewController.swift */; };
-		2FB5970E29E006C2006F641F /* CommunityAndPetsLostCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5970D29E006C2006F641F /* CommunityAndPetsLostCoordinator.swift */; };
 		2FB5971129E00709006F641F /* CommunityAndPetsLostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5971029E00709006F641F /* CommunityAndPetsLostViewModel.swift */; };
 		2FB5971529E01015006F641F /* CommunityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5971429E01015006F641F /* CommunityCollectionViewCell.swift */; };
 		2FB5971A29E01F5A006F641F /* PetsLostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5971929E01F5A006F641F /* PetsLostCollectionViewCell.swift */; };
 		2FC246DB29D1945100349AEF /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 2FC246DA29D1945100349AEF /* Moya */; };
 		2FC246DE29D194C700349AEF /* ToastCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC246DD29D194C700349AEF /* ToastCase.swift */; };
-		2FC2EB5129E4034E00ECE2ED /* CommunityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC2EB5029E4034E00ECE2ED /* CommunityDetailViewController.swift */; };
-		2FC2EB5429E4036600ECE2ED /* CommunityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC2EB5329E4036600ECE2ED /* CommunityDetailView.swift */; };
-		2FC2EB5629E4104100ECE2ED /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC2EB5529E4104100ECE2ED /* IndicatorView.swift */; };
+		2FC2EB5129E4034E00ECE2ED /* PetsLostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC2EB5029E4034E00ECE2ED /* PetsLostDetailViewController.swift */; };
+		2FC2EB5429E4036600ECE2ED /* PetsLostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC2EB5329E4036600ECE2ED /* PetsLostDetailView.swift */; };
 		2FC2EB5929E4105900ECE2ED /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 2FC2EB5829E4105900ECE2ED /* Then */; };
 		2FC572DC29B8402600D21EBA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC572DB29B8402600D21EBA /* HomeViewController.swift */; };
 		2FC572DE29B8403300D21EBA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC572DD29B8403300D21EBA /* HomeViewModel.swift */; };
@@ -110,7 +112,6 @@
 		2FD9067D29C94A0800CC4225 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD9067C29C94A0800CC4225 /* OnBoardingViewModel.swift */; };
 		2FD9067F29C94F0900CC4225 /* TabBarPageCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD9067E29C94F0900CC4225 /* TabBarPageCases.swift */; };
 		2FD9068129C9519800CC4225 /* UserDefaultKeyCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD9068029C9519800CC4225 /* UserDefaultKeyCase.swift */; };
-		2FD9068429C9521900CC4225 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD9068329C9521900CC4225 /* HomeCoordinator.swift */; };
 		2FDE15D02990D13C00154A78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE15CF2990D13C00154A78 /* AppDelegate.swift */; };
 		2FDE15D22990D13C00154A78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE15D12990D13C00154A78 /* SceneDelegate.swift */; };
 		2FDE15D92990D13D00154A78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FDE15D82990D13D00154A78 /* Assets.xcassets */; };
@@ -140,6 +141,10 @@
 		2F0677BA29CF159500687848 /* PetsCommandoRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsCommandoRepositoryType.swift; sourceTree = "<group>"; };
 		2F0677BF29CF1E1600687848 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		2F0677C129CF1FDE00687848 /* PetsCommandoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsCommandoRepository.swift; sourceTree = "<group>"; };
+		2F1740172A67F23700EFE86C /* PetsLostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsLostDetailViewModel.swift; sourceTree = "<group>"; };
+		2F17401A2A67F3CC00EFE86C /* CommunityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewModel.swift; sourceTree = "<group>"; };
+		2F17401C2A67F5D600EFE86C /* TabmanCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabmanCoordinator.swift; sourceTree = "<group>"; };
+		2F1740202A6804D900EFE86C /* PetsLostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsLostViewModel.swift; sourceTree = "<group>"; };
 		2F1C81182A677B1600210434 /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
 		2F1C811A2A677BAB00210434 /* SidoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidoViewModel.swift; sourceTree = "<group>"; };
 		2F1C811C2A677BB200210434 /* SidoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidoViewController.swift; sourceTree = "<group>"; };
@@ -179,14 +184,12 @@
 		2FB5970329DFFF86006F641F /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
 		2FB5970529E00265006F641F /* CommunityAndPetsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityAndPetsListViewController.swift; sourceTree = "<group>"; };
 		2FB5970A29E00346006F641F /* PetsLostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsLostViewController.swift; sourceTree = "<group>"; };
-		2FB5970D29E006C2006F641F /* CommunityAndPetsLostCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityAndPetsLostCoordinator.swift; sourceTree = "<group>"; };
 		2FB5971029E00709006F641F /* CommunityAndPetsLostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityAndPetsLostViewModel.swift; sourceTree = "<group>"; };
 		2FB5971429E01015006F641F /* CommunityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCollectionViewCell.swift; sourceTree = "<group>"; };
 		2FB5971929E01F5A006F641F /* PetsLostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsLostCollectionViewCell.swift; sourceTree = "<group>"; };
 		2FC246DD29D194C700349AEF /* ToastCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastCase.swift; sourceTree = "<group>"; };
-		2FC2EB5029E4034E00ECE2ED /* CommunityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDetailViewController.swift; sourceTree = "<group>"; };
-		2FC2EB5329E4036600ECE2ED /* CommunityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDetailView.swift; sourceTree = "<group>"; };
-		2FC2EB5529E4104100ECE2ED /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		2FC2EB5029E4034E00ECE2ED /* PetsLostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsLostDetailViewController.swift; sourceTree = "<group>"; };
+		2FC2EB5329E4036600ECE2ED /* PetsLostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsLostDetailView.swift; sourceTree = "<group>"; };
 		2FC572DB29B8402600D21EBA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FC572DD29B8403300D21EBA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2FC572E029B8404E00D21EBA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -224,7 +227,6 @@
 		2FD9067C29C94A0800CC4225 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
 		2FD9067E29C94F0900CC4225 /* TabBarPageCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPageCases.swift; sourceTree = "<group>"; };
 		2FD9068029C9519800CC4225 /* UserDefaultKeyCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeyCase.swift; sourceTree = "<group>"; };
-		2FD9068329C9521900CC4225 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		2FDE15CC2990D13C00154A78 /* PetsCommando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetsCommando.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FDE15CF2990D13C00154A78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FDE15D12990D13C00154A78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -340,6 +342,63 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2F1740132A67EE8C00EFE86C /* Encyclopedia */ = {
+			isa = PBXGroup;
+			children = (
+				2F1740152A67EEB300EFE86C /* ViewModel */,
+				2F1740142A67EEB100EFE86C /* View */,
+			);
+			path = Encyclopedia;
+			sourceTree = "<group>";
+		};
+		2F1740142A67EEB100EFE86C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F1740152A67EEB300EFE86C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2F1740162A67F22700EFE86C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2F1740172A67F23700EFE86C /* PetsLostDetailViewModel.swift */,
+			);
+			name = ViewModel;
+			path = "퍋즈ㅐㅇ디";
+			sourceTree = "<group>";
+		};
+		2F1740192A67F3C200EFE86C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2F17401A2A67F3CC00EFE86C /* CommunityViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2F17401E2A68040800EFE86C /* PetsLostDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2FC2EB5229E4035100ECE2ED /* View */,
+				2F1740162A67F22700EFE86C /* ViewModel */,
+			);
+			path = PetsLostDetail;
+			sourceTree = "<group>";
+		};
+		2F17401F2A6804CB00EFE86C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2F1740202A6804D900EFE86C /* PetsLostViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		2F1C81142A677AEC00210434 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,7 +413,6 @@
 		2F1C81152A677AFF00210434 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				2F1C81182A677B1600210434 /* SearchCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -637,17 +695,8 @@
 				2FB5971329E00C5B006F641F /* Community */,
 				2FB5971229E00B2A006F641F /* View */,
 				2FB5970F29E006FA006F641F /* ViewModel */,
-				2FB5970C29E006B0006F641F /* Coordinator */,
 			);
 			path = CommunityAndPetsLost;
-			sourceTree = "<group>";
-		};
-		2FB5970C29E006B0006F641F /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				2FB5970D29E006C2006F641F /* CommunityAndPetsLostCoordinator.swift */,
-			);
-			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		2FB5970F29E006FA006F641F /* ViewModel */ = {
@@ -669,7 +718,9 @@
 		2FB5971329E00C5B006F641F /* Community */ = {
 			isa = PBXGroup;
 			children = (
+				2F1740192A67F3C200EFE86C /* ViewModel */,
 				2F1C81292A6789A500210434 /* Sido */,
+				2FC2EB4F29E4033200ECE2ED /* CommunityDetailViewController */,
 				2FB5971729E01E0D006F641F /* View */,
 			);
 			path = Community;
@@ -679,6 +730,8 @@
 			isa = PBXGroup;
 			children = (
 				2FB5971829E01E1A006F641F /* View */,
+				2F17401F2A6804CB00EFE86C /* ViewModel */,
+				2F17401E2A68040800EFE86C /* PetsLostDetail */,
 			);
 			path = PetsLost;
 			sourceTree = "<group>";
@@ -714,7 +767,6 @@
 		2FC2EB4F29E4033200ECE2ED /* CommunityDetailViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2FC2EB5229E4035100ECE2ED /* View */,
 			);
 			path = CommunityDetailViewController;
 			sourceTree = "<group>";
@@ -722,9 +774,8 @@
 		2FC2EB5229E4035100ECE2ED /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2FC2EB5029E4034E00ECE2ED /* CommunityDetailViewController.swift */,
-				2FC2EB5329E4036600ECE2ED /* CommunityDetailView.swift */,
-				2FC2EB5529E4104100ECE2ED /* IndicatorView.swift */,
+				2FC2EB5029E4034E00ECE2ED /* PetsLostDetailViewController.swift */,
+				2FC2EB5329E4036600ECE2ED /* PetsLostDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -736,6 +787,7 @@
 				2FC94EDC29C08CD60097E696 /* TabMan */,
 				2FD4105329B763570003C7C9 /* Home */,
 				2F1C81142A677AEC00210434 /* Search */,
+				2F1740132A67EE8C00EFE86C /* Encyclopedia */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -781,8 +833,6 @@
 		2FD4105329B763570003C7C9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				2FC2EB4F29E4033200ECE2ED /* CommunityDetailViewController */,
-				2FD9068229C951FA00CC4225 /* Coordinator */,
 				2FB5970229DFFF72006F641F /* CommunityAndPetsLost */,
 				2FC572DA29B83CC500D21EBA /* ViewModel */,
 				2FC572D929B83CC300D21EBA /* View */,
@@ -863,7 +913,9 @@
 		2FD9067A29C9495200CC4225 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				2F1C81182A677B1600210434 /* SearchCoordinator.swift */,
 				2FD3BFFA29B99C0E00096669 /* TabBarCoordinator.swift */,
+				2F17401C2A67F5D600EFE86C /* TabmanCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -874,14 +926,6 @@
 				2FD9067C29C94A0800CC4225 /* OnBoardingViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		2FD9068229C951FA00CC4225 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				2FD9068329C9521900CC4225 /* HomeCoordinator.swift */,
-			);
-			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		2FDE15C32990D13C00154A78 = {
@@ -1167,6 +1211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FFA534A29DACA8F0065F624 /* UIView+.swift in Sources */,
+				2F1740182A67F23700EFE86C /* PetsLostDetailViewModel.swift in Sources */,
 				2FD188BA29DEA58B00996EA9 /* PetsLostTableViewCell.swift in Sources */,
 				2FD188B629DE8DC000996EA9 /* MockListData.swift in Sources */,
 				2F64A8F529B319F800BC11B9 /* Coordinator.swift in Sources */,
@@ -1174,13 +1219,14 @@
 				2F863F2C29CAB3F800755FFC /* NetworkError.swift in Sources */,
 				2F0677C029CF1E1600687848 /* UIViewController+Extension.swift in Sources */,
 				2F863F3729CAB97600755FFC /* UserRepositoryType.swift in Sources */,
-				2FB5970E29E006C2006F641F /* CommunityAndPetsLostCoordinator.swift in Sources */,
 				2FCDD21F29EAAC12000B6CD7 /* GetUserInfo.swift in Sources */,
 				2F0677AF29CEBE6C00687848 /* NicknameViewController.swift in Sources */,
+				2F17401B2A67F3CC00EFE86C /* CommunityViewModel.swift in Sources */,
 				2FD188B429DE8C7500996EA9 /* BaseTableViewCell.swift in Sources */,
 				2F1C812F2A678A4600210434 /* SearchViewModel.swift in Sources */,
 				2F1C811D2A677BB200210434 /* SidoViewController.swift in Sources */,
 				2F4B1CDE29C191A500B999AB /* TabCell.swift in Sources */,
+				2F1740212A6804D900EFE86C /* PetsLostViewModel.swift in Sources */,
 				2F1C81332A678A5000210434 /* SearchViewController.swift in Sources */,
 				2FD40B1729C58DAA00BED327 /* SectionHeaderView.swift in Sources */,
 				2FD188B229DE8C3500996EA9 /* CommunityTableViewCell.swift in Sources */,
@@ -1191,7 +1237,7 @@
 				2FD188B829DEA57F00996EA9 /* PetsLostView.swift in Sources */,
 				2FDE15D02990D13C00154A78 /* AppDelegate.swift in Sources */,
 				2FB5970629E00265006F641F /* CommunityAndPetsListViewController.swift in Sources */,
-				2FC2EB5429E4036600ECE2ED /* CommunityDetailView.swift in Sources */,
+				2FC2EB5429E4036600ECE2ED /* PetsLostDetailView.swift in Sources */,
 				2FCDD22129EAAE31000B6CD7 /* LoginResponseDTO.swift in Sources */,
 				2FD9067D29C94A0800CC4225 /* OnBoardingViewModel.swift in Sources */,
 				2F64A8F129B3171800BC11B9 /* Font.swift in Sources */,
@@ -1201,7 +1247,6 @@
 				2FC246DE29D194C700349AEF /* ToastCase.swift in Sources */,
 				2FCDD21729EA9C05000B6CD7 /* RegisterResponseDTO.swift in Sources */,
 				2FDE16092990DDCA00154A78 /* BaseViewController.swift in Sources */,
-				2FC2EB5629E4104100ECE2ED /* IndicatorView.swift in Sources */,
 				2F64A91029B33A2C00BC11B9 /* LineTextFieldView.swift in Sources */,
 				2FD9067F29C94F0900CC4225 /* TabBarPageCases.swift in Sources */,
 				2F0677B129CEBE7500687848 /* NicknameViewModel.swift in Sources */,
@@ -1223,6 +1268,7 @@
 				2FCDD21B29EAABE6000B6CD7 /* Login.swift in Sources */,
 				2F1C81232A677E9D00210434 /* SidoCollectionViewCell.swift in Sources */,
 				2FD40B1B29C58E0F00BED327 /* BaseCollectionViewCell.swift in Sources */,
+				2F17401D2A67F5D600EFE86C /* TabmanCoordinator.swift in Sources */,
 				2FCDD21929EAABC8000B6CD7 /* LoginQuery.swift in Sources */,
 				2F1C81212A677DF700210434 /* Sido_List.swift in Sources */,
 				2FB2D7AC29B5C20200EA35F4 /* LoginView.swift in Sources */,
@@ -1231,7 +1277,6 @@
 				2FC572DE29B8403300D21EBA /* HomeViewModel.swift in Sources */,
 				2FB5971A29E01F5A006F641F /* PetsLostCollectionViewCell.swift in Sources */,
 				2F0677A329CEA56000687848 /* EmailViewModel.swift in Sources */,
-				2FD9068429C9521900CC4225 /* HomeCoordinator.swift in Sources */,
 				2F0677AD29CEBE6300687848 /* NicknameView.swift in Sources */,
 				2FC5B28129CAD4700032B55C /* APIKey.swift in Sources */,
 				2FD188B029DE8A9900996EA9 /* CommunityView.swift in Sources */,
@@ -1250,7 +1295,7 @@
 				2FB5970429DFFF86006F641F /* CommunityViewController.swift in Sources */,
 				2FAB65B229B3127D0022B609 /* Color.swift in Sources */,
 				2FFA534829DAC7F80065F624 /* ButtonStatus.swift in Sources */,
-				2FC2EB5129E4034E00ECE2ED /* CommunityDetailViewController.swift in Sources */,
+				2FC2EB5129E4034E00ECE2ED /* PetsLostDetailViewController.swift in Sources */,
 				2F863F3129CAB49700755FFC /* AuthDTO.swift in Sources */,
 				2FDE16002990DB6400154A78 /* ViewModelType.swift in Sources */,
 				2F64A8FC29B31AED00BC11B9 /* AppCoordinator.swift in Sources */,

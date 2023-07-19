@@ -10,14 +10,22 @@ import Tabman
 import Pageboy
 
 final class CommunityAndPetsLostViewController: TabmanViewController {
-    private var vcs: Array<BaseViewController> = [CommunityViewController(), PetsLostViewController()]
-    private var vc1 = CommunityViewController()
-    private var vc2 = PetsLostViewController()
+    
+    private var vc1: CommunityViewController
+    private var vc2: PetsLostViewController
+    private var vcs: Array<BaseViewController>
     
     private let viewModel: CommunityAndPetsLostViewModel
     
     init(viewModel: CommunityAndPetsLostViewModel) {
         self.viewModel = viewModel
+        
+        let communityViewModel = CommunityViewModel(coordinator: viewModel.coordinator)
+        let petsLoatViewModel = PetsLostViewModel(coordinator: viewModel.coordinator)
+        vc1 = .init(viewModel: communityViewModel)
+        vc2 = .init(viewModel: petsLoatViewModel)
+        
+        vcs = .init([vc1, vc2])
         super.init(nibName: nil, bundle: nil)
     }
     
