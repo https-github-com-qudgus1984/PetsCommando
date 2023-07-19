@@ -64,6 +64,7 @@ final class LoginViewModel: ViewModelType {
                     case 200:
                         self.isDuplicationLogin.accept(true)
                         self.requestText.accept("로그인 되었습니다.")
+                        self.coordinator?.connectTabBarCoordinator()
                     case 401:
                         self.requestText.accept("아이디와 비밀번호를 다시 한번 체크해 주세요.")
                     default:

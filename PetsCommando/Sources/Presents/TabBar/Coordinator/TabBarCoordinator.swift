@@ -78,11 +78,10 @@ final class TabBarCoordinator: Coordinator {
             communityAndPetsLostCoordinator.start()
 
         case .search:
-//            let sesacShopCoordinator = SesacShopCoordinator(tabNavigationController)
-//            sesacShopCoordinator.delegate = self
-//            self.childCoordinators.append(sesacShopCoordinator)
-//            sesacShopCoordinator.start()
-            print("추후")
+            let searchCoordinator = SearchCoordinator(tabNavigationController)
+            searchCoordinator.delegate = self
+            self.childCoordinators.append(searchCoordinator)
+            searchCoordinator.start()
 
         case .book:
 //            let myPageCoordinator = MyPageCoordinator(tabNavigationController)

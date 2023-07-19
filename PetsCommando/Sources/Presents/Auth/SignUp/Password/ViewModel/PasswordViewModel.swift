@@ -38,7 +38,7 @@ final class PasswordViewModel: ViewModelType {
     
     func transform(_ input: Input) -> Output {
         
-        let regex = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[!@#$])[A-Za-z\\d!@#$]{8,16}$"
+        let regex = "^(?=.*[A-Z])(?=.*\\d)(?=.*[a-z])(?=.*[!@#$])[A-Za-z\\d!@#$]{8,16}$"
 
         let pwValid = input.passwordText
             .orEmpty

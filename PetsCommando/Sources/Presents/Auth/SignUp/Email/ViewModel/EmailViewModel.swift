@@ -63,9 +63,11 @@ final class EmailViewModel: ViewModelType {
                     case 200:
                         self.isDuplicationEmailSuccess.accept(true)
                         self.userDefaults.string(forKey: UserDefaultKeyCase.email)
-                        self.requestText.accept("이메일 중복 확인 되었습니다.")
+                        self.requestText.accept("이메일 사용 가능합니다.")
                     case 400:
                         self.requestText.accept("이메일 형식 오류입니다.")
+                    case 409:
+                        self.requestText.accept("이 이메일은 이미 존재하여 사용할 수 없습니다.")
                     default:
                         self.requestText.accept("정의되지 않은 오류입니다.\(statusCode)")
                     }
