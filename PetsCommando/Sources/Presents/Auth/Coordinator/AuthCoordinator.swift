@@ -70,6 +70,21 @@ final class AuthCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
+    func showSigunguViewController() {
+        let dataTransferService = DataTransferService(networkService: NetworkService())
+        let regionRepositoryImpl = RegionRepositoryImpl(dataTransferService: dataTransferService)
+        let regionUseCaseImpl = RegionUseCaseImpl(regionRepository: regionRepositoryImpl)
+        let viewModel = SigunguViewModel(coordinator: self, regionUseCase: regionUseCaseImpl)
+        let vc = SigunguViewController(viewModel: viewModel)
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func showSignupFinishViewController() {
+        let viewModel = SignupFinishViewModel(coordinator: self)
+        let vc = SignupFinishViewController(viewModel: viewModel)
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
     func connectTabBarCoordinator() {
         let tabBarCoordinator = TabBarCoordinator(self.navigationController)
         tabBarCoordinator.start()

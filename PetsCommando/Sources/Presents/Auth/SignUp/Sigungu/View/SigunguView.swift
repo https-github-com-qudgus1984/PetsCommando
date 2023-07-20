@@ -1,14 +1,14 @@
 //
-//  SidoView.swift
+//  SigunguView.swift
 //  PetsCommando
 //
-//  Created by 이병현 on 2023/07/19.
+//  Created by 이병현 on 2023/07/20.
 //
 
 import UIKit
 import SnapKit
 
-final class SidoView: BaseView {
+final class SigunguView: BaseView {
     
     private var bgView: UIView = {
         let view = UIView()
@@ -17,7 +17,6 @@ final class SidoView: BaseView {
     }()
     
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: categoryLayout())
-    
 
     override func setupAttributes() {
         self.addSubview(bgView)
@@ -48,7 +47,7 @@ final class SidoView: BaseView {
     }
 }
 
-extension SidoView {
+extension SigunguView {
     private func dynamicCategoryLayout() -> NSCollectionLayoutSection {
             //item
             let itemSize = NSCollectionLayoutSize(

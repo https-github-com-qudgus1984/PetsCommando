@@ -59,13 +59,8 @@ extension RegionRouter: NewTargetType {
     
     var body: Data? {
         switch self {
-        case .sido:
+        case .sido, .sigungu:
             return nil
-        case .sigungu(let parameters):
-            let requestDTO = RequestSigunguListDTO(sidoName: parameters.sidoName)
-            let encoder = JSONEncoder()
-            encoder.keyEncodingStrategy = .convertToSnakeCase
-            return try? encoder.encode(requestDTO)
         }
     }
     

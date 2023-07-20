@@ -19,14 +19,15 @@ final class SidoViewModel: ViewModelType {
         self.regionUseCase = regionUseCase
     }
     
-    let sidoList = BehaviorRelay<[String]>(value: [])
+    let sidoList = PublishRelay<[String]>()
     
     struct Input {
         let viewDidLoad: Observable<Void>
+        let sidoCellSelected: PublishSubject<IndexPath>
     }
 
     struct Output {
-        let sidoList: BehaviorRelay<[String]>
+        let sidoList: PublishRelay<[String]>
     }
         
     var disposeBag = DisposeBag()
@@ -37,6 +38,13 @@ final class SidoViewModel: ViewModelType {
             self.getSidoList()
         }
         .disposed(by: disposeBag)
+        
+        input.sidoCellSelected
+            .bind { [weak self] _ in
+                guard let self else { return }
+                self.coordinator?.showSigunguViewController()
+            }
+            .disposed(by: disposeBag)
         return Output(sidoList: self.sidoList)
     }
 }
@@ -50,3 +58,4 @@ extension SidoViewModel {
         }
     }
 }
+

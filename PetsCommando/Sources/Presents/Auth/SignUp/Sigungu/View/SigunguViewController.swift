@@ -1,8 +1,8 @@
 //
-//  SidoViewController.swift
+//  SigunguViewController.swift
 //  PetsCommando
 //
-//  Created by 이병현 on 2023/07/19.
+//  Created by 이병현 on 2023/07/20.
 //
 
 import UIKit
@@ -10,17 +10,17 @@ import RxSwift
 import RxCocoa
 import Toast
 
-final class SidoViewController: BaseViewController {
-    private let selfView = SidoView()
-    private let viewModel: SidoViewModel
+final class SigunguViewController: BaseViewController {
+    private let selfView = SigunguView()
+    private let viewModel: SigunguViewModel
     
-    init(viewModel: SidoViewModel) {
+    init(viewModel: SigunguViewModel) {
         self.viewModel = viewModel
         super.init()
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("SidoViewController: fatal error")
+        fatalError("SigunguViewController: fatal error")
     }
     
     override func loadView() {
@@ -29,26 +29,27 @@ final class SidoViewController: BaseViewController {
     
     private var dataSource: UICollectionViewDiffableDataSource<Int, String>!
     
-    let sidoCellSelected = PublishSubject<IndexPath>()
+    let sigunguCellSelected = PublishSubject<IndexPath>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setDataSource()
         selfView.collectionView.delegate = self
+        
     }
     
     override func setupBinding() {
-        let input = SidoViewModel.Input(viewDidLoad: Observable.just(()), sidoCellSelected: self.sidoCellSelected)
+        let input = SigunguViewModel.Input(viewDidLoad: Observable.just(()), sigunguCellSelected: self.sigunguCellSelected)
         let output = self.viewModel.transform(input)
         
-        output.sidoList
+        output.sigunguList
             .observe(on: MainScheduler.instance)
-            .bind { [weak self] sidoList in
+            .bind { [weak self] sigunguList in
                 guard let self else { return }
                 var snapshot = NSDiffableDataSourceSnapshot<Int, String>()
                 snapshot.appendSections([0])
                 var section1Arr: [String] = []
-                for i in sidoList {
+                for i in sigunguList {
                     section1Arr.append(i)
                 }
                 snapshot.appendItems(section1Arr, toSection: 0)
@@ -59,14 +60,13 @@ final class SidoViewController: BaseViewController {
     }
 }
 
-extension SidoViewController {
+extension SigunguViewController {
     func setDataSource() {
         let cellRegistration = UICollectionView.CellRegistration<SidoCollectionViewCell, String> {  cell, indexPath, itemIdentifier in
             cell.categoryLabel.text = itemIdentifier
-            self.sidoCellSelected.bind { index in
+            self.sigunguCellSelected.bind { index in
                 if index == indexPath {
-                    print("선택한 셀의 string",itemIdentifier)
-                    UserDefaults.standard.set(itemIdentifier, forKey: "sido")
+                    UserDefaults.standard.set(itemIdentifier, forKey: "sigungu")
                 }
             }
             .disposed(by: self.disposeBag)
@@ -79,8 +79,9 @@ extension SidoViewController {
     }
 }
 
-extension SidoViewController: UICollectionViewDelegate {
+extension SigunguViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.sidoCellSelected.onNext(indexPath)
+        self.sigunguCellSelected.onNext(indexPath)
+
     }
 }
