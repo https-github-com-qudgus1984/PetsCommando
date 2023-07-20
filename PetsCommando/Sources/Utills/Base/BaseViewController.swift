@@ -54,7 +54,7 @@ class BaseViewController: UIViewController {
     // MARK: Life Cycle Views
     
     override func viewDidLoad() {
-//        setupAttributes()
+        setupAttributes()
         setupLayout()
         setupLocalization()
         setupBinding()
@@ -118,7 +118,7 @@ class BaseViewController: UIViewController {
         navigationBarAppearance.buttonAppearance.normal.titleTextAttributes = attributes
         navigationBarAppearance.doneButtonAppearance.normal.titleTextAttributes = attributes
 
-        let backImage = UIImage(named: "arrow")?.withAlignmentRectInsets(UIEdgeInsets(top: 0.0, left: -6.0, bottom: 0.0, right: 0.0))
+        let backImage = UIImage(systemName: "arrow")?.withAlignmentRectInsets(UIEdgeInsets(top: 0.0, left: -6.0, bottom: 0.0, right: 0.0))
 
         navigationBarAppearance.setBackIndicatorImage(backImage, transitionMaskImage: backImage)
         
