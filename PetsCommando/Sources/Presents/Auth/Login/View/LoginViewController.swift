@@ -48,7 +48,8 @@ final class LoginViewController: BaseViewController {
         loginView.signupButton.rx.tap
             .bind { [weak self] in
                 guard let self = self else { return }
-                self.viewModel.showSidoViewController()
+//                self.viewModel.showSidoViewController()
+                self.viewModel.showSignUpViewController()
             }
             .disposed(by: disposeBag)
         

@@ -87,6 +87,15 @@
 		2FC5B6F42A691BA9009FB0CE /* SignupFinishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B6F32A691BA9009FB0CE /* SignupFinishView.swift */; };
 		2FC5B6F62A691BB4009FB0CE /* SignupFinishViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B6F52A691BB4009FB0CE /* SignupFinishViewModel.swift */; };
 		2FC5B6F82A691BBD009FB0CE /* SignupFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B6F72A691BBD009FB0CE /* SignupFinishViewController.swift */; };
+		2FC5B6FB2A6920EA009FB0CE /* OrganicAnimalListQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B6FA2A6920EA009FB0CE /* OrganicAnimalListQuery.swift */; };
+		2FC5B6FE2A69213F009FB0CE /* OrganicAnimalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B6FD2A69213F009FB0CE /* OrganicAnimalList.swift */; };
+		2FC5B7022A692207009FB0CE /* ResponseOrganicAnimalListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B7012A692207009FB0CE /* ResponseOrganicAnimalListDTO.swift */; };
+		2FC5B7042A692231009FB0CE /* RequestOrganicAnimalListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B7032A692231009FB0CE /* RequestOrganicAnimalListDTO.swift */; };
+		2FC5B7062A6928FA009FB0CE /* OrganicAnimalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B7052A6928FA009FB0CE /* OrganicAnimalRepository.swift */; };
+		2FC5B7082A692981009FB0CE /* OrganicAnimalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B7072A692981009FB0CE /* OrganicAnimalRouter.swift */; };
+		2FC5B70A2A692A2A009FB0CE /* OrganicAPIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B7092A692A2A009FB0CE /* OrganicAPIEndpoints.swift */; };
+		2FC5B70C2A692AA6009FB0CE /* OrganicAnimalRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B70B2A692AA6009FB0CE /* OrganicAnimalRepositoryImpl.swift */; };
+		2FC5B70E2A692BD3009FB0CE /* OrganicAnimalUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B70D2A692BD3009FB0CE /* OrganicAnimalUseCase.swift */; };
 		2FC94ED529C083230097E696 /* HomeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC94ED429C083230097E696 /* HomeString.swift */; };
 		2FCDD20D29EA8C58000B6CD7 /* DuplicationNicknameResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCDD20C29EA8C58000B6CD7 /* DuplicationNicknameResponseDTO.swift */; };
 		2FCDD20F29EA8C79000B6CD7 /* DuplicationNickname.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCDD20E29EA8C79000B6CD7 /* DuplicationNickname.swift */; };
@@ -222,6 +231,15 @@
 		2FC5B6F32A691BA9009FB0CE /* SignupFinishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFinishView.swift; sourceTree = "<group>"; };
 		2FC5B6F52A691BB4009FB0CE /* SignupFinishViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFinishViewModel.swift; sourceTree = "<group>"; };
 		2FC5B6F72A691BBD009FB0CE /* SignupFinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFinishViewController.swift; sourceTree = "<group>"; };
+		2FC5B6FA2A6920EA009FB0CE /* OrganicAnimalListQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganicAnimalListQuery.swift; sourceTree = "<group>"; };
+		2FC5B6FD2A69213F009FB0CE /* OrganicAnimalList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganicAnimalList.swift; sourceTree = "<group>"; };
+		2FC5B7012A692207009FB0CE /* ResponseOrganicAnimalListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseOrganicAnimalListDTO.swift; sourceTree = "<group>"; };
+		2FC5B7032A692231009FB0CE /* RequestOrganicAnimalListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestOrganicAnimalListDTO.swift; sourceTree = "<group>"; };
+		2FC5B7052A6928FA009FB0CE /* OrganicAnimalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganicAnimalRepository.swift; sourceTree = "<group>"; };
+		2FC5B7072A692981009FB0CE /* OrganicAnimalRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganicAnimalRouter.swift; sourceTree = "<group>"; };
+		2FC5B7092A692A2A009FB0CE /* OrganicAPIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganicAPIEndpoints.swift; sourceTree = "<group>"; };
+		2FC5B70B2A692AA6009FB0CE /* OrganicAnimalRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganicAnimalRepositoryImpl.swift; sourceTree = "<group>"; };
+		2FC5B70D2A692BD3009FB0CE /* OrganicAnimalUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganicAnimalUseCase.swift; sourceTree = "<group>"; };
 		2FC94ED429C083230097E696 /* HomeString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeString.swift; sourceTree = "<group>"; };
 		2FCDD20C29EA8C58000B6CD7 /* DuplicationNicknameResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicationNicknameResponseDTO.swift; sourceTree = "<group>"; };
 		2FCDD20E29EA8C79000B6CD7 /* DuplicationNickname.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicationNickname.swift; sourceTree = "<group>"; };
@@ -690,6 +708,7 @@
 		2FB33F1329D1D585003B8B2A /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				2FC5B6FC2A69212F009FB0CE /* OrganicAnimal */,
 				2FDCC1842A68C6DF0000E7B9 /* Auth */,
 			);
 			path = Response;
@@ -698,6 +717,7 @@
 		2FB33F1429D1D58A003B8B2A /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				2FC5B6F92A69206E009FB0CE /* OrganicAnimal  */,
 				2FDCC1832A68C6D60000E7B9 /* Auth */,
 			);
 			path = Request;
@@ -892,6 +912,39 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		2FC5B6F92A69206E009FB0CE /* OrganicAnimal  */ = {
+			isa = PBXGroup;
+			children = (
+				2FC5B6FA2A6920EA009FB0CE /* OrganicAnimalListQuery.swift */,
+			);
+			path = "OrganicAnimal ";
+			sourceTree = "<group>";
+		};
+		2FC5B6FC2A69212F009FB0CE /* OrganicAnimal */ = {
+			isa = PBXGroup;
+			children = (
+				2FC5B6FD2A69213F009FB0CE /* OrganicAnimalList.swift */,
+			);
+			path = OrganicAnimal;
+			sourceTree = "<group>";
+		};
+		2FC5B6FF2A6921AC009FB0CE /* Region */ = {
+			isa = PBXGroup;
+			children = (
+				2FDCC17B2A68BE0B0000E7B9 /* ResponseSidoListDTO.swift */,
+				2FDCC17D2A68BF0E0000E7B9 /* ResponseSigunguListDTO.swift */,
+			);
+			path = Region;
+			sourceTree = "<group>";
+		};
+		2FC5B7002A6921B5009FB0CE /* Organic */ = {
+			isa = PBXGroup;
+			children = (
+				2FC5B7012A692207009FB0CE /* ResponseOrganicAnimalListDTO.swift */,
+			);
+			path = Organic;
+			sourceTree = "<group>";
+		};
 		2FC94ED329C082FC0097E696 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -962,6 +1015,7 @@
 				2F863F3629CAB97600755FFC /* UserRepositoryType.swift */,
 				2F0677BA29CF159500687848 /* PetsCommandoRepositoryType.swift */,
 				2FDCC19F2A68D7C40000E7B9 /* RegionRepository.swift */,
+				2FC5B7052A6928FA009FB0CE /* OrganicAnimalRepository.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -971,6 +1025,7 @@
 			children = (
 				2F863F3429CAB82900755FFC /* CertificationUseCase.swift */,
 				2FDCC1A12A68D9180000E7B9 /* RegionUseCase.swift */,
+				2FC5B70D2A692BD3009FB0CE /* OrganicAnimalUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -1087,6 +1142,7 @@
 			isa = PBXGroup;
 			children = (
 				2FDCC19D2A68D7510000E7B9 /* RegionRepositoryImpl.swift */,
+				2FC5B70B2A692AA6009FB0CE /* OrganicAnimalRepositoryImpl.swift */,
 			);
 			path = RepositoryImpl;
 			sourceTree = "<group>";
@@ -1095,6 +1151,7 @@
 			isa = PBXGroup;
 			children = (
 				2FDCC19B2A68D5050000E7B9 /* RequestSigunguListDTO.swift */,
+				2FC5B7032A692231009FB0CE /* RequestOrganicAnimalListDTO.swift */,
 			);
 			path = RequestDTO;
 			sourceTree = "<group>";
@@ -1102,8 +1159,8 @@
 		2FDCC18C2A68CECC0000E7B9 /* ResponseDTO */ = {
 			isa = PBXGroup;
 			children = (
-				2FDCC17B2A68BE0B0000E7B9 /* ResponseSidoListDTO.swift */,
-				2FDCC17D2A68BF0E0000E7B9 /* ResponseSigunguListDTO.swift */,
+				2FC5B7002A6921B5009FB0CE /* Organic */,
+				2FC5B6FF2A6921AC009FB0CE /* Region */,
 			);
 			path = ResponseDTO;
 			sourceTree = "<group>";
@@ -1112,6 +1169,7 @@
 			isa = PBXGroup;
 			children = (
 				2FDCC1972A68D0DE0000E7B9 /* RegionRouter.swift */,
+				2FC5B7072A692981009FB0CE /* OrganicAnimalRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -1120,6 +1178,7 @@
 			isa = PBXGroup;
 			children = (
 				2FDCC1952A68D0AB0000E7B9 /* RegionAPIEndpoints.swift */,
+				2FC5B7092A692A2A009FB0CE /* OrganicAPIEndpoints.swift */,
 			);
 			path = EndPoint;
 			sourceTree = "<group>";
@@ -1409,6 +1468,7 @@
 				2FC5B6F42A691BA9009FB0CE /* SignupFinishView.swift in Sources */,
 				2FFA534A29DACA8F0065F624 /* UIView+.swift in Sources */,
 				2F1740182A67F23700EFE86C /* PetsLostDetailViewModel.swift in Sources */,
+				2FC5B70A2A692A2A009FB0CE /* OrganicAPIEndpoints.swift in Sources */,
 				2FD188BA29DEA58B00996EA9 /* PetsLostTableViewCell.swift in Sources */,
 				2FD188B629DE8DC000996EA9 /* MockListData.swift in Sources */,
 				2F64A8F529B319F800BC11B9 /* Coordinator.swift in Sources */,
@@ -1442,8 +1502,10 @@
 				2FD9067D29C94A0800CC4225 /* OnBoardingViewModel.swift in Sources */,
 				2F64A8F129B3171800BC11B9 /* Font.swift in Sources */,
 				2FC572DC29B8402600D21EBA /* HomeViewController.swift in Sources */,
+				2FC5B7042A692231009FB0CE /* RequestOrganicAnimalListDTO.swift in Sources */,
 				2FDE15EA2990D2EC00154A78 /* NetworkMonitor.swift in Sources */,
 				2FDE15D22990D13C00154A78 /* SceneDelegate.swift in Sources */,
+				2FC5B7022A692207009FB0CE /* ResponseOrganicAnimalListDTO.swift in Sources */,
 				2FC246DE29D194C700349AEF /* ToastCase.swift in Sources */,
 				2FCDD21729EA9C05000B6CD7 /* RegisterResponseDTO.swift in Sources */,
 				2FDCC1962A68D0AB0000E7B9 /* RegionAPIEndpoints.swift in Sources */,
@@ -1468,12 +1530,14 @@
 				2FD3BFFB29B99C0E00096669 /* TabBarCoordinator.swift in Sources */,
 				2F0677B729CF0BDD00687848 /* PasswordViewController.swift in Sources */,
 				2FD85FC329C8252400BE0BCC /* CoordinatorDelegate.swift in Sources */,
+				2FC5B6FB2A6920EA009FB0CE /* OrganicAnimalListQuery.swift in Sources */,
 				2FCDD21529EA980A000B6CD7 /* Register.swift in Sources */,
 				2FCDD21B29EAABE6000B6CD7 /* Login.swift in Sources */,
 				2F1C81232A677E9D00210434 /* SidoCollectionViewCell.swift in Sources */,
 				2FD40B1B29C58E0F00BED327 /* BaseCollectionViewCell.swift in Sources */,
 				2F17401D2A67F5D600EFE86C /* TabmanCoordinator.swift in Sources */,
 				2FCDD21929EAABC8000B6CD7 /* LoginQuery.swift in Sources */,
+				2FC5B70C2A692AA6009FB0CE /* OrganicAnimalRepositoryImpl.swift in Sources */,
 				2FC5B6EB2A690F05009FB0CE /* SigunguView.swift in Sources */,
 				2F1C81212A677DF700210434 /* SidoList.swift in Sources */,
 				2FB2D7AC29B5C20200EA35F4 /* LoginView.swift in Sources */,
@@ -1484,6 +1548,7 @@
 				2FB5971A29E01F5A006F641F /* PetsLostCollectionViewCell.swift in Sources */,
 				2F0677A329CEA56000687848 /* EmailViewModel.swift in Sources */,
 				2F0677AD29CEBE6300687848 /* NicknameView.swift in Sources */,
+				2FC5B70E2A692BD3009FB0CE /* OrganicAnimalUseCase.swift in Sources */,
 				2FDCC1802A68BF3E0000E7B9 /* SigunguList.swift in Sources */,
 				2FC5B28129CAD4700032B55C /* APIKey.swift in Sources */,
 				2FD188B029DE8A9900996EA9 /* CommunityView.swift in Sources */,
@@ -1492,6 +1557,7 @@
 				2FDCC19C2A68D5050000E7B9 /* RequestSigunguListDTO.swift in Sources */,
 				2F0677B529CF0BD500687848 /* PasswordViewModel.swift in Sources */,
 				2FC5B6F82A691BBD009FB0CE /* SignupFinishViewController.swift in Sources */,
+				2FC5B7082A692981009FB0CE /* OrganicAnimalRouter.swift in Sources */,
 				2FB2D79B29B59FAB00EA35F4 /* Font+Enum.swift in Sources */,
 				2F0677BB29CF159500687848 /* PetsCommandoRepositoryType.swift in Sources */,
 				2FDCC1A22A68D9180000E7B9 /* RegionUseCase.swift in Sources */,
@@ -1505,9 +1571,11 @@
 				2FB5970429DFFF86006F641F /* CommunityViewController.swift in Sources */,
 				2FAB65B229B3127D0022B609 /* Color.swift in Sources */,
 				2FFA534829DAC7F80065F624 /* ButtonStatus.swift in Sources */,
+				2FC5B6FE2A69213F009FB0CE /* OrganicAnimalList.swift in Sources */,
 				2FC2EB5129E4034E00ECE2ED /* PetsLostDetailViewController.swift in Sources */,
 				2F863F3129CAB49700755FFC /* AuthDTO.swift in Sources */,
 				2FDE16002990DB6400154A78 /* ViewModelType.swift in Sources */,
+				2FC5B7062A6928FA009FB0CE /* OrganicAnimalRepository.swift in Sources */,
 				2FDCC19A2A68D1DF0000E7B9 /* NewHTTPMethod.swift in Sources */,
 				2F64A8FC29B31AED00BC11B9 /* AppCoordinator.swift in Sources */,
 				2FD40B1929C58DDA00BED327 /* TopicView.swift in Sources */,

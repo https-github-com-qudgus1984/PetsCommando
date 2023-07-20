@@ -21,7 +21,11 @@ final class CommunityAndPetsLostViewController: TabmanViewController {
         self.viewModel = viewModel
         
         let communityViewModel = CommunityViewModel(coordinator: viewModel.coordinator)
-        let petsLoatViewModel = PetsLostViewModel(coordinator: viewModel.coordinator)
+        let dataTransferService = DataTransferService(networkService: NetworkService())
+        let organicAnimalRepositoryImpl = OrganicAnimalRepositoryImpl(dataTransferService: dataTransferService)
+        let organicAnimalUseCaseImpl = OrganicAnimalUseCaseImpl(organicAnimalRepository: organicAnimalRepositoryImpl)
+
+        let petsLoatViewModel = PetsLostViewModel(coordinator: viewModel.coordinator, organicAnimalUseCase: organicAnimalUseCaseImpl)
         vc1 = .init(viewModel: communityViewModel)
         vc2 = .init(viewModel: petsLoatViewModel)
         
