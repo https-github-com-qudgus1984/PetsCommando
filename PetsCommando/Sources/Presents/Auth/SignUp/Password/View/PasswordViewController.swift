@@ -12,7 +12,6 @@ import Toast
 
 final class PasswordViewController: BaseViewController {
     
-    
     private let passwordView = PasswordView()
     private let viewModel: PasswordViewModel
     

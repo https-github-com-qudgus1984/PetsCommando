@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Sido_List {
+struct SidoList {
     let totalCount: Int
-    let kinds: [String]
+    let sidoList: [String]
 }

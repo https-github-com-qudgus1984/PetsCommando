@@ -64,7 +64,7 @@ final class PasswordViewModel: ViewModelType {
                     case 201:
                         self.isDuplicationSignupSuccess.accept(true)
                         self.requestText.accept("회원가입이 정상적으로 완료되었습니다.")
-                        self.coordinator?.showLoginViewController()
+                        self.coordinator?.showSidoViewController()
                     case 400:
                         self.requestText.accept("비밀번호는 8자리 이상 16자리 이하, 영어 대소문자 각각 최소 한 개 이상, 숫자 최소 한 개 이상, 특수기호 중 !, @, #, $ 최소 한 개 이상을 포함해야 합니다.(나머지 특수문자, 공백, 한글 불가)")
                     default:

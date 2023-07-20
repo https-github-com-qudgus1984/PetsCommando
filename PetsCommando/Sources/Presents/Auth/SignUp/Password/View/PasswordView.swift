@@ -73,7 +73,7 @@ final class PasswordView: BaseView {
     
     internal var nextButton: UIButton = {
         let button = UIButton()
-        button.setTitle(AuthString.signup.text, for: .normal)
+        button.setTitle(AuthString.next.text, for: .normal)
         button.setTitleColor(Color.BaseColor.white, for: .normal)
         button.clipsToBounds = true
         button.layer.cornerRadius = 8

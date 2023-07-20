@@ -44,10 +44,11 @@ final class LoginViewController: BaseViewController {
         
         let output = viewModel.transform(input)
         
+        //MARK: 여기서 화면전환 바꾸기
         loginView.signupButton.rx.tap
             .bind { [weak self] in
                 guard let self = self else { return }
-                self.viewModel.showSignUpViewController()
+                self.viewModel.showSidoViewController()
             }
             .disposed(by: disposeBag)
         
