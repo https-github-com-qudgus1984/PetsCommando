@@ -16,11 +16,11 @@ final class SidoViewController: BaseViewController {
     
     init(viewModel: SidoViewModel) {
         self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
+        super.init()
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("GenderViewController: fatal error")
+        fatalError("SidoViewController: fatal error")
     }
     
     override func loadView() {
@@ -34,6 +34,17 @@ final class SidoViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setDataSource()
+    }
+    
+    override func setupBinding() {
+        let input = SidoViewModel.Input(viewDidLoad: Observable.just(()))
+        let output = self.viewModel.transform(input)
+        
+        output.sidoList.bind { [weak self] sidoList in
+            print(sidoList)
+        }
+        .disposed(by: disposeBag)
+        
     }
 }
 

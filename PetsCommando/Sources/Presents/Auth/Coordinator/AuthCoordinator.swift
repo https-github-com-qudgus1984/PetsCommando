@@ -61,6 +61,15 @@ final class AuthCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
+    func showSidoViewController() {
+        let dataTransferService = DataTransferService(networkService: NetworkService())
+        let regionRepositoryImpl = RegionRepositoryImpl(dataTransferService: dataTransferService)
+        let regionUseCaseImpl = RegionUseCaseImpl(regionRepository: regionRepositoryImpl)
+        let viewModel = SidoViewModel(coordinator: self, regionUseCase: regionUseCaseImpl)
+        let vc = SidoViewController(viewModel: viewModel)
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
     func connectTabBarCoordinator() {
         let tabBarCoordinator = TabBarCoordinator(self.navigationController)
         tabBarCoordinator.start()

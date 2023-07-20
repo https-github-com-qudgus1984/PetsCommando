@@ -28,7 +28,7 @@
 		2F1C811B2A677BAB00210434 /* SidoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C811A2A677BAB00210434 /* SidoViewModel.swift */; };
 		2F1C811D2A677BB200210434 /* SidoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C811C2A677BB200210434 /* SidoViewController.swift */; };
 		2F1C811F2A677BF600210434 /* SidoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C811E2A677BF600210434 /* SidoView.swift */; };
-		2F1C81212A677DF700210434 /* Sido_List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C81202A677DF700210434 /* Sido_List.swift */; };
+		2F1C81212A677DF700210434 /* SidoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C81202A677DF700210434 /* SidoList.swift */; };
 		2F1C81232A677E9D00210434 /* SidoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C81222A677E9D00210434 /* SidoCollectionViewCell.swift */; };
 		2F1C81262A6781B700210434 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2F1C81252A6781B700210434 /* RxCocoa */; };
 		2F1C81282A6781B700210434 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2F1C81272A6781B700210434 /* RxSwift */; };
@@ -112,6 +112,20 @@
 		2FD9067D29C94A0800CC4225 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD9067C29C94A0800CC4225 /* OnBoardingViewModel.swift */; };
 		2FD9067F29C94F0900CC4225 /* TabBarPageCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD9067E29C94F0900CC4225 /* TabBarPageCases.swift */; };
 		2FD9068129C9519800CC4225 /* UserDefaultKeyCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD9068029C9519800CC4225 /* UserDefaultKeyCase.swift */; };
+		2FDCC17C2A68BE0B0000E7B9 /* ResponseSidoListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCC17B2A68BE0B0000E7B9 /* ResponseSidoListDTO.swift */; };
+		2FDCC17E2A68BF0E0000E7B9 /* ResponseSigunguListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCC17D2A68BF0E0000E7B9 /* ResponseSigunguListDTO.swift */; };
+		2FDCC1802A68BF3E0000E7B9 /* SigunguList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCC17F2A68BF3E0000E7B9 /* SigunguList.swift */; };
+		2FDCC1822A68BFDF0000E7B9 /* SigunguListQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCC1812A68BFDF0000E7B9 /* SigunguListQuery.swift */; };
+		2FDCC1902A68CFD90000E7B9 /* NewTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCC18F2A68CFD90000E7B9 /* NewTargetType.swift */; };
+		2FDCC1922A68D0010000E7B9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCC1912A68D0010000E7B9 /* NetworkService.swift */; };
+		2FDCC1942A68D0540000E7B9 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCC1932A68D0540000E7B9 /* DataTransferService.swift */; };
+		2FDCC1962A68D0AB0000E7B9 /* RegionAPIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCC1952A68D0AB0000E7B9 /* RegionAPIEndpoints.swift */; };
+		2FDCC1982A68D0DE0000E7B9 /* RegionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCC1972A68D0DE0000E7B9 /* RegionRouter.swift */; };
+		2FDCC19A2A68D1DF0000E7B9 /* NewHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCC1992A68D1DF0000E7B9 /* NewHTTPMethod.swift */; };
+		2FDCC19C2A68D5050000E7B9 /* RequestSigunguListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCC19B2A68D5050000E7B9 /* RequestSigunguListDTO.swift */; };
+		2FDCC19E2A68D7510000E7B9 /* RegionRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCC19D2A68D7510000E7B9 /* RegionRepositoryImpl.swift */; };
+		2FDCC1A02A68D7C40000E7B9 /* RegionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCC19F2A68D7C40000E7B9 /* RegionRepository.swift */; };
+		2FDCC1A22A68D9180000E7B9 /* RegionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCC1A12A68D9180000E7B9 /* RegionUseCase.swift */; };
 		2FDE15D02990D13C00154A78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE15CF2990D13C00154A78 /* AppDelegate.swift */; };
 		2FDE15D22990D13C00154A78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE15D12990D13C00154A78 /* SceneDelegate.swift */; };
 		2FDE15D92990D13D00154A78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FDE15D82990D13D00154A78 /* Assets.xcassets */; };
@@ -149,7 +163,7 @@
 		2F1C811A2A677BAB00210434 /* SidoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidoViewModel.swift; sourceTree = "<group>"; };
 		2F1C811C2A677BB200210434 /* SidoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidoViewController.swift; sourceTree = "<group>"; };
 		2F1C811E2A677BF600210434 /* SidoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidoView.swift; sourceTree = "<group>"; };
-		2F1C81202A677DF700210434 /* Sido_List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sido_List.swift; sourceTree = "<group>"; };
+		2F1C81202A677DF700210434 /* SidoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidoList.swift; sourceTree = "<group>"; };
 		2F1C81222A677E9D00210434 /* SidoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidoCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F1C812E2A678A4600210434 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		2F1C81302A678A4B00210434 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -227,6 +241,20 @@
 		2FD9067C29C94A0800CC4225 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
 		2FD9067E29C94F0900CC4225 /* TabBarPageCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPageCases.swift; sourceTree = "<group>"; };
 		2FD9068029C9519800CC4225 /* UserDefaultKeyCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeyCase.swift; sourceTree = "<group>"; };
+		2FDCC17B2A68BE0B0000E7B9 /* ResponseSidoListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseSidoListDTO.swift; sourceTree = "<group>"; };
+		2FDCC17D2A68BF0E0000E7B9 /* ResponseSigunguListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseSigunguListDTO.swift; sourceTree = "<group>"; };
+		2FDCC17F2A68BF3E0000E7B9 /* SigunguList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigunguList.swift; sourceTree = "<group>"; };
+		2FDCC1812A68BFDF0000E7B9 /* SigunguListQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigunguListQuery.swift; sourceTree = "<group>"; };
+		2FDCC18F2A68CFD90000E7B9 /* NewTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTargetType.swift; sourceTree = "<group>"; };
+		2FDCC1912A68D0010000E7B9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		2FDCC1932A68D0540000E7B9 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
+		2FDCC1952A68D0AB0000E7B9 /* RegionAPIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionAPIEndpoints.swift; sourceTree = "<group>"; };
+		2FDCC1972A68D0DE0000E7B9 /* RegionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionRouter.swift; sourceTree = "<group>"; };
+		2FDCC1992A68D1DF0000E7B9 /* NewHTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHTTPMethod.swift; sourceTree = "<group>"; };
+		2FDCC19B2A68D5050000E7B9 /* RequestSigunguListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSigunguListDTO.swift; sourceTree = "<group>"; };
+		2FDCC19D2A68D7510000E7B9 /* RegionRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionRepositoryImpl.swift; sourceTree = "<group>"; };
+		2FDCC19F2A68D7C40000E7B9 /* RegionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionRepository.swift; sourceTree = "<group>"; };
+		2FDCC1A12A68D9180000E7B9 /* RegionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionUseCase.swift; sourceTree = "<group>"; };
 		2FDE15CC2990D13C00154A78 /* PetsCommando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetsCommando.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FDE15CF2990D13C00154A78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FDE15D12990D13C00154A78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -530,14 +558,6 @@
 			path = Custom;
 			sourceTree = "<group>";
 		};
-		2F863F2D29CAB47D00755FFC /* DTO */ = {
-			isa = PBXGroup;
-			children = (
-				2F863F3029CAB49700755FFC /* AuthDTO.swift */,
-			);
-			path = DTO;
-			sourceTree = "<group>";
-		};
 		2FAB65A529B30E090022B609 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -556,6 +576,7 @@
 				2F06779929CEA51400687848 /* Email */,
 				2F06779A29CEA52000687848 /* Nickname */,
 				2F06779B29CEA52A00687848 /* Password */,
+				2F1C81292A6789A500210434 /* Sido */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -655,12 +676,7 @@
 		2FB33F1329D1D585003B8B2A /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				2FB33F1829D1D5F0003B8B2A /* DuplicationEmail.swift */,
-				2FCDD20E29EA8C79000B6CD7 /* DuplicationNickname.swift */,
-				2F1C81202A677DF700210434 /* Sido_List.swift */,
-				2FCDD21429EA980A000B6CD7 /* Register.swift */,
-				2FCDD21A29EAABE6000B6CD7 /* Login.swift */,
-				2FCDD21E29EAAC12000B6CD7 /* GetUserInfo.swift */,
+				2FDCC1842A68C6DF0000E7B9 /* Auth */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -668,11 +684,7 @@
 		2FB33F1429D1D58A003B8B2A /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				2FB33F1529D1D5B1003B8B2A /* DuplicationEmailQuery.swift */,
-				2FCDD21029EA8CC9000B6CD7 /* DuplicationNicknameQuery.swift */,
-				2FCDD21229EA93E7000B6CD7 /* RegisterQuery.swift */,
-				2FCDD21829EAABC8000B6CD7 /* LoginQuery.swift */,
-				2FCDD21C29EAAC04000B6CD7 /* GetUserInfoQuery.swift */,
+				2FDCC1832A68C6D60000E7B9 /* Auth */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -680,6 +692,7 @@
 		2FB33F1A29D2872D003B8B2A /* ResponseDTO */ = {
 			isa = PBXGroup;
 			children = (
+				2FDCC1872A68C7600000E7B9 /* Auth */,
 				2FB33F1B29D2874C003B8B2A /* DuplicationEmailResponseDTO.swift */,
 				2FCDD20C29EA8C58000B6CD7 /* DuplicationNicknameResponseDTO.swift */,
 				2FCDD21629EA9C05000B6CD7 /* RegisterResponseDTO.swift */,
@@ -719,7 +732,6 @@
 			isa = PBXGroup;
 			children = (
 				2F1740192A67F3C200EFE86C /* ViewModel */,
-				2F1C81292A6789A500210434 /* Sido */,
 				2FC2EB4F29E4033200ECE2ED /* CommunityDetailViewController */,
 				2FB5971729E01E0D006F641F /* View */,
 			);
@@ -851,7 +863,7 @@
 		2FD85FC629C82B5E00BE0BCC /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				2FDE15E72990D2B300154A78 /* Network */,
+				2FDCC1882A68CE670000E7B9 /* NewNetwork */,
 				2FDE15F52990DAFF00154A78 /* RealmDataStorage */,
 				2FD85FC729C8303600BE0BCC /* RepositoryImpl */,
 			);
@@ -883,6 +895,7 @@
 			children = (
 				2F863F3629CAB97600755FFC /* UserRepositoryType.swift */,
 				2F0677BA29CF159500687848 /* PetsCommandoRepositoryType.swift */,
+				2FDCC19F2A68D7C40000E7B9 /* RegionRepository.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -891,6 +904,7 @@
 			isa = PBXGroup;
 			children = (
 				2F863F3429CAB82900755FFC /* CertificationUseCase.swift */,
+				2FDCC1A12A68D9180000E7B9 /* RegionUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -926,6 +940,122 @@
 				2FD9067C29C94A0800CC4225 /* OnBoardingViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2FDCC1832A68C6D60000E7B9 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2FB33F1529D1D5B1003B8B2A /* DuplicationEmailQuery.swift */,
+				2FCDD21029EA8CC9000B6CD7 /* DuplicationNicknameQuery.swift */,
+				2FCDD21229EA93E7000B6CD7 /* RegisterQuery.swift */,
+				2FDCC1812A68BFDF0000E7B9 /* SigunguListQuery.swift */,
+				2FCDD21829EAABC8000B6CD7 /* LoginQuery.swift */,
+				2FCDD21C29EAAC04000B6CD7 /* GetUserInfoQuery.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		2FDCC1842A68C6DF0000E7B9 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2FB33F1829D1D5F0003B8B2A /* DuplicationEmail.swift */,
+				2FCDD20E29EA8C79000B6CD7 /* DuplicationNickname.swift */,
+				2F1C81202A677DF700210434 /* SidoList.swift */,
+				2FCDD21429EA980A000B6CD7 /* Register.swift */,
+				2FCDD21A29EAABE6000B6CD7 /* Login.swift */,
+				2FCDD21E29EAAC12000B6CD7 /* GetUserInfo.swift */,
+				2FDCC17F2A68BF3E0000E7B9 /* SigunguList.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		2FDCC1852A68C7480000E7B9 /* RequestDTO */ = {
+			isa = PBXGroup;
+			children = (
+				2FDCC1862A68C7520000E7B9 /* Auth */,
+			);
+			path = RequestDTO;
+			sourceTree = "<group>";
+		};
+		2FDCC1862A68C7520000E7B9 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2F863F3029CAB49700755FFC /* AuthDTO.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		2FDCC1872A68C7600000E7B9 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		2FDCC1882A68CE670000E7B9 /* NewNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				2FDCC1892A68CE960000E7B9 /* Service */,
+				2FDE15E72990D2B300154A78 /* Network */,
+			);
+			path = NewNetwork;
+			sourceTree = "<group>";
+		};
+		2FDCC1892A68CE960000E7B9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2FDCC18E2A68CED50000E7B9 /* EndPoint */,
+				2FDCC18D2A68CED10000E7B9 /* Router */,
+				2FDCC18C2A68CECC0000E7B9 /* ResponseDTO */,
+				2FDCC18B2A68CEC60000E7B9 /* RequestDTO */,
+				2FDCC18A2A68CEBD0000E7B9 /* RepositoryImpl */,
+				2FDCC18F2A68CFD90000E7B9 /* NewTargetType.swift */,
+				2FDCC1912A68D0010000E7B9 /* NetworkService.swift */,
+				2FDCC1932A68D0540000E7B9 /* DataTransferService.swift */,
+				2FDCC1992A68D1DF0000E7B9 /* NewHTTPMethod.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2FDCC18A2A68CEBD0000E7B9 /* RepositoryImpl */ = {
+			isa = PBXGroup;
+			children = (
+				2FDCC19D2A68D7510000E7B9 /* RegionRepositoryImpl.swift */,
+			);
+			path = RepositoryImpl;
+			sourceTree = "<group>";
+		};
+		2FDCC18B2A68CEC60000E7B9 /* RequestDTO */ = {
+			isa = PBXGroup;
+			children = (
+				2FDCC19B2A68D5050000E7B9 /* RequestSigunguListDTO.swift */,
+			);
+			path = RequestDTO;
+			sourceTree = "<group>";
+		};
+		2FDCC18C2A68CECC0000E7B9 /* ResponseDTO */ = {
+			isa = PBXGroup;
+			children = (
+				2FDCC17B2A68BE0B0000E7B9 /* ResponseSidoListDTO.swift */,
+				2FDCC17D2A68BF0E0000E7B9 /* ResponseSigunguListDTO.swift */,
+			);
+			path = ResponseDTO;
+			sourceTree = "<group>";
+		};
+		2FDCC18D2A68CED10000E7B9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2FDCC1972A68D0DE0000E7B9 /* RegionRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		2FDCC18E2A68CED50000E7B9 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				2FDCC1952A68D0AB0000E7B9 /* RegionAPIEndpoints.swift */,
+			);
+			path = EndPoint;
 			sourceTree = "<group>";
 		};
 		2FDE15C32990D13C00154A78 = {
@@ -1016,8 +1146,8 @@
 		2FDE15EB2990D31D00154A78 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				2FDCC1852A68C7480000E7B9 /* RequestDTO */,
 				2FB33F1A29D2872D003B8B2A /* ResponseDTO */,
-				2F863F2D29CAB47D00755FFC /* DTO */,
 				2F863F2B29CAB3F800755FFC /* NetworkError.swift */,
 				2FC5B28029CAD4700032B55C /* APIKey.swift */,
 				2FB33F0E29D1CC12003B8B2A /* PetsCommandoTarget.swift */,
@@ -1220,6 +1350,7 @@
 				2F0677C029CF1E1600687848 /* UIViewController+Extension.swift in Sources */,
 				2F863F3729CAB97600755FFC /* UserRepositoryType.swift in Sources */,
 				2FCDD21F29EAAC12000B6CD7 /* GetUserInfo.swift in Sources */,
+				2FDCC1982A68D0DE0000E7B9 /* RegionRouter.swift in Sources */,
 				2F0677AF29CEBE6C00687848 /* NicknameViewController.swift in Sources */,
 				2F17401B2A67F3CC00EFE86C /* CommunityViewModel.swift in Sources */,
 				2FD188B429DE8C7500996EA9 /* BaseTableViewCell.swift in Sources */,
@@ -1230,6 +1361,7 @@
 				2F1C81332A678A5000210434 /* SearchViewController.swift in Sources */,
 				2FD40B1729C58DAA00BED327 /* SectionHeaderView.swift in Sources */,
 				2FD188B229DE8C3500996EA9 /* CommunityTableViewCell.swift in Sources */,
+				2FDCC1902A68CFD90000E7B9 /* NewTargetType.swift in Sources */,
 				2FB33F0F29D1CC12003B8B2A /* PetsCommandoTarget.swift in Sources */,
 				2FB34DD229E520880069C71A /* NetworkTest.swift in Sources */,
 				2FB2D7A029B5AF1900EA35F4 /* AuthString.swift in Sources */,
@@ -1246,6 +1378,7 @@
 				2FDE15D22990D13C00154A78 /* SceneDelegate.swift in Sources */,
 				2FC246DE29D194C700349AEF /* ToastCase.swift in Sources */,
 				2FCDD21729EA9C05000B6CD7 /* RegisterResponseDTO.swift in Sources */,
+				2FDCC1962A68D0AB0000E7B9 /* RegionAPIEndpoints.swift in Sources */,
 				2FDE16092990DDCA00154A78 /* BaseViewController.swift in Sources */,
 				2F64A91029B33A2C00BC11B9 /* LineTextFieldView.swift in Sources */,
 				2FD9067F29C94F0900CC4225 /* TabBarPageCases.swift in Sources */,
@@ -1253,8 +1386,10 @@
 				2F1C811B2A677BAB00210434 /* SidoViewModel.swift in Sources */,
 				2FCDD20F29EA8C79000B6CD7 /* DuplicationNickname.swift in Sources */,
 				2F0677A529CEA56900687848 /* EmailViewController.swift in Sources */,
+				2FDCC19E2A68D7510000E7B9 /* RegionRepositoryImpl.swift in Sources */,
 				2F1C811F2A677BF600210434 /* SidoView.swift in Sources */,
 				2FDE15F82990DB0E00154A78 /* RealmModel.swift in Sources */,
+				2FDCC1822A68BFDF0000E7B9 /* SigunguListQuery.swift in Sources */,
 				2FD9067929C947A100CC4225 /* AuthCoordinator.swift in Sources */,
 				2F863F3529CAB82900755FFC /* CertificationUseCase.swift in Sources */,
 				2FB2D7BC29B5CA3500EA35F4 /* OnBoardingView.swift in Sources */,
@@ -1270,21 +1405,25 @@
 				2FD40B1B29C58E0F00BED327 /* BaseCollectionViewCell.swift in Sources */,
 				2F17401D2A67F5D600EFE86C /* TabmanCoordinator.swift in Sources */,
 				2FCDD21929EAABC8000B6CD7 /* LoginQuery.swift in Sources */,
-				2F1C81212A677DF700210434 /* Sido_List.swift in Sources */,
+				2F1C81212A677DF700210434 /* SidoList.swift in Sources */,
 				2FB2D7AC29B5C20200EA35F4 /* LoginView.swift in Sources */,
 				2F0677C229CF1FDE00687848 /* PetsCommandoRepository.swift in Sources */,
 				2F1C81312A678A4B00210434 /* SearchView.swift in Sources */,
 				2FC572DE29B8403300D21EBA /* HomeViewModel.swift in Sources */,
+				2FDCC1922A68D0010000E7B9 /* NetworkService.swift in Sources */,
 				2FB5971A29E01F5A006F641F /* PetsLostCollectionViewCell.swift in Sources */,
 				2F0677A329CEA56000687848 /* EmailViewModel.swift in Sources */,
 				2F0677AD29CEBE6300687848 /* NicknameView.swift in Sources */,
+				2FDCC1802A68BF3E0000E7B9 /* SigunguList.swift in Sources */,
 				2FC5B28129CAD4700032B55C /* APIKey.swift in Sources */,
 				2FD188B029DE8A9900996EA9 /* CommunityView.swift in Sources */,
 				2FD40B1529C58D0C00BED327 /* TopicViewController.swift in Sources */,
 				2F1C81192A677B1600210434 /* SearchCoordinator.swift in Sources */,
+				2FDCC19C2A68D5050000E7B9 /* RequestSigunguListDTO.swift in Sources */,
 				2F0677B529CF0BD500687848 /* PasswordViewModel.swift in Sources */,
 				2FB2D79B29B59FAB00EA35F4 /* Font+Enum.swift in Sources */,
 				2F0677BB29CF159500687848 /* PetsCommandoRepositoryType.swift in Sources */,
+				2FDCC1A22A68D9180000E7B9 /* RegionUseCase.swift in Sources */,
 				2F1C81362A678DD800210434 /* SearchCollectionViewCell.swift in Sources */,
 				2FB2D7B229B5C69200EA35F4 /* LoginViewModel.swift in Sources */,
 				2FB33F1929D1D5F0003B8B2A /* DuplicationEmail.swift in Sources */,
@@ -1298,6 +1437,7 @@
 				2FC2EB5129E4034E00ECE2ED /* PetsLostDetailViewController.swift in Sources */,
 				2F863F3129CAB49700755FFC /* AuthDTO.swift in Sources */,
 				2FDE16002990DB6400154A78 /* ViewModelType.swift in Sources */,
+				2FDCC19A2A68D1DF0000E7B9 /* NewHTTPMethod.swift in Sources */,
 				2F64A8FC29B31AED00BC11B9 /* AppCoordinator.swift in Sources */,
 				2FD40B1929C58DDA00BED327 /* TopicView.swift in Sources */,
 				2F64A91229B33A5F00BC11B9 /* UITextField+Extension.swift in Sources */,
@@ -1308,13 +1448,17 @@
 				2FDE16072990DDBF00154A78 /* BaseView.swift in Sources */,
 				2FAB65AA29B30E6C0022B609 /* LoginViewController.swift in Sources */,
 				2FCDD21129EA8CC9000B6CD7 /* DuplicationNicknameQuery.swift in Sources */,
+				2FDCC1942A68D0540000E7B9 /* DataTransferService.swift in Sources */,
 				2FB33F1C29D2874C003B8B2A /* DuplicationEmailResponseDTO.swift in Sources */,
+				2FDCC17E2A68BF0E0000E7B9 /* ResponseSigunguListDTO.swift in Sources */,
 				2FD40B1F29C593B200BED327 /* TopicCell.swift in Sources */,
 				2FC5B28629CAE16A0032B55C /* UserRepository.swift in Sources */,
+				2FDCC17C2A68BE0B0000E7B9 /* ResponseSidoListDTO.swift in Sources */,
 				2F64A90129B31CFE00BC11B9 /* OnBoardingViewController.swift in Sources */,
 				2FC94ED529C083230097E696 /* HomeString.swift in Sources */,
 				2FDE15FA2990DB1B00154A78 /* Repository.swift in Sources */,
 				2FCDD21329EA93E7000B6CD7 /* RegisterQuery.swift in Sources */,
+				2FDCC1A02A68D7C40000E7B9 /* RegionRepository.swift in Sources */,
 				2FB5970B29E00346006F641F /* PetsLostViewController.swift in Sources */,
 				2FD9068129C9519800CC4225 /* UserDefaultKeyCase.swift in Sources */,
 			);
