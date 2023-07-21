@@ -20,10 +20,11 @@ final class PetsLostViewModel: ViewModelType {
     }
     
     let organicAnimalList = PublishRelay<[List?]>()
+    let trigger = PublishRelay<Bool>()
     
     struct Input {
         let viewDidLoad: Observable<Void>
-        let cellSelected: PublishSubject<Void>
+        let organicAnimal: PublishSubject<List?>
     }
     
     struct Output {
@@ -42,10 +43,11 @@ final class PetsLostViewModel: ViewModelType {
         }
         .disposed(by: disposeBag)
         
-        input.cellSelected
-            .bind { [weak self] _ in
+        input.organicAnimal
+            .bind { [weak self] organicAnimal in
                 guard let self else { return }
-                self.coordinator?.showPetsLostDetailViewController()
+                guard let organicAnimal else { return }
+                self.coordinator?.showPetsLostDetailViewController(organicAnimal: organicAnimal)
             }
             .disposed(by: disposeBag)
         return Output(organicAnimalList: self.organicAnimalList)

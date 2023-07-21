@@ -30,8 +30,8 @@ final class TabmanCoordinator: Coordinator {
 //        navigationController.pushViewController(vc, animated: true)
 //    }
     
-    func showPetsLostDetailViewController() {
-        let viewModel = PetsLostDetailViewModel(coordinator: self)
+    func showPetsLostDetailViewController(organicAnimal: List) {
+        let viewModel = PetsLostDetailViewModel(coordinator: self, organicAnimal: organicAnimal)
         let vc = PetsLostDetailViewController(viewModel: viewModel)
         navigationController.pushViewController(vc, animated: true)
     }

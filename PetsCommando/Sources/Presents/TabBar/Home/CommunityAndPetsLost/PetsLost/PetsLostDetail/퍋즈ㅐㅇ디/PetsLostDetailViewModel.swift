@@ -12,9 +12,11 @@ import RxCocoa
 final class PetsLostDetailViewModel: ViewModelType {
     
     private weak var coordinator: TabmanCoordinator?
+    private let organicAnimal: BehaviorRelay<List>
     
-    init(coordinator: TabmanCoordinator?) {
+    init(coordinator: TabmanCoordinator?, organicAnimal: List) {
         self.coordinator = coordinator
+        self.organicAnimal = BehaviorRelay(value: organicAnimal)
     }
     
     struct Input {
@@ -22,12 +24,12 @@ final class PetsLostDetailViewModel: ViewModelType {
     }
     
     struct Output {
-
+        let organicAnimal: BehaviorRelay<List>
     }
 
     var disposeBag = DisposeBag()
     
     func transform(_ input: Input) -> Output {
-        return Output()
+        return Output(organicAnimal: self.organicAnimal)
     }
 }

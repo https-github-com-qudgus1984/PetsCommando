@@ -96,6 +96,7 @@
 		2FC5B70A2A692A2A009FB0CE /* OrganicAPIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B7092A692A2A009FB0CE /* OrganicAPIEndpoints.swift */; };
 		2FC5B70C2A692AA6009FB0CE /* OrganicAnimalRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B70B2A692AA6009FB0CE /* OrganicAnimalRepositoryImpl.swift */; };
 		2FC5B70E2A692BD3009FB0CE /* OrganicAnimalUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B70D2A692BD3009FB0CE /* OrganicAnimalUseCase.swift */; };
+		2FC5B7112A693B01009FB0CE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2FC5B7102A693B01009FB0CE /* Kingfisher */; };
 		2FC94ED529C083230097E696 /* HomeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC94ED429C083230097E696 /* HomeString.swift */; };
 		2FCDD20D29EA8C58000B6CD7 /* DuplicationNicknameResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCDD20C29EA8C58000B6CD7 /* DuplicationNicknameResponseDTO.swift */; };
 		2FCDD20F29EA8C79000B6CD7 /* DuplicationNickname.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCDD20E29EA8C79000B6CD7 /* DuplicationNickname.swift */; };
@@ -312,6 +313,7 @@
 				2F0677BE29CF1DE200687848 /* Toast in Frameworks */,
 				2F64A90829B3281C00BC11B9 /* SnapKit in Frameworks */,
 				2FC2EB5929E4105900ECE2ED /* Then in Frameworks */,
+				2FC5B7112A693B01009FB0CE /* Kingfisher in Frameworks */,
 				2FC246DB29D1945100349AEF /* Moya in Frameworks */,
 				2FB5970929E0028A006F641F /* Tabman in Frameworks */,
 				2F1C81282A6781B700210434 /* RxSwift in Frameworks */,
@@ -1399,6 +1401,7 @@
 				2FC2EB5829E4105900ECE2ED /* Then */,
 				2F1C81252A6781B700210434 /* RxCocoa */,
 				2F1C81272A6781B700210434 /* RxSwift */,
+				2FC5B7102A693B01009FB0CE /* Kingfisher */,
 			);
 			productName = PetsCommando;
 			productReference = 2FDE15CC2990D13C00154A78 /* PetsCommando.app */;
@@ -1435,6 +1438,7 @@
 				2FB5970729E0028A006F641F /* XCRemoteSwiftPackageReference "Tabman" */,
 				2FC2EB5729E4105900ECE2ED /* XCRemoteSwiftPackageReference "Then" */,
 				2F1C81242A6781B700210434 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				2FC5B70F2A693B01009FB0CE /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 2FDE15CD2990D13C00154A78 /* Products */;
 			projectDirPath = "";
@@ -1862,6 +1866,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		2FC5B70F2A693B01009FB0CE /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 7.8.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1899,6 +1911,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2FC2EB5729E4105900ECE2ED /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		2FC5B7102A693B01009FB0CE /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FC5B70F2A693B01009FB0CE /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -14,11 +14,13 @@ class PetsLostCollectionViewCell: BaseCollectionViewCell {
     let bgView: UIView = {
         let view = UIView()
         view.backgroundColor = .black
+        view.clipsToBounds = true
         return view
     }()
     
     let insetbgView: UIView = {
         let view = UIView()
+        view.clipsToBounds = true
         view.backgroundColor = .white
         return view
     }()
@@ -40,9 +42,9 @@ class PetsLostCollectionViewCell: BaseCollectionViewCell {
     
     let characteristicLabel: UILabel = {
         let view = UILabel()
+        view.numberOfLines = 0
         view.font = Font.Body2_L16
         view.text = "특징 : 장난많음"
-
         return view
     }()
     
@@ -66,13 +68,19 @@ class PetsLostCollectionViewCell: BaseCollectionViewCell {
         let view = UIImageView()
         view.backgroundColor = .label
         view.image = UIImage(systemName: "person.fill")
-
+        view.clipsToBounds = true
         return view
     }()
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        bgView.layer.cornerRadius = 8
+        insetbgView.layer.cornerRadius = 8
+        imgView.layer.cornerRadius = 8
+    }
         
     override func configure() {
-        [bgView, insetbgView, imgView, speciesLabel, genderLabel, characteristicLabel, shelterLabel, euthanasiaLabel].forEach { self.addSubview($0) }
+        [bgView, insetbgView, imgView, speciesLabel, genderLabel, shelterLabel, euthanasiaLabel, characteristicLabel].forEach { self.addSubview($0) }
     }
     
     override func setConstraints() {
@@ -105,13 +113,6 @@ class PetsLostCollectionViewCell: BaseCollectionViewCell {
             make.height.equalTo(15)
         }
         
-        characteristicLabel.snp.makeConstraints { make in
-            make.leading.equalTo(imgView.snp.trailing).offset(8)
-            make.top.equalTo(genderLabel.snp.bottom).offset(2)
-            make.trailing.equalTo(insetbgView)
-            make.height.equalTo(15)
-        }
-        
         euthanasiaLabel.snp.makeConstraints { make in
             make.leading.equalTo(imgView.snp.trailing).offset(8)
             make.bottom.equalTo(imgView.snp.bottom).offset(-8)
@@ -124,6 +125,13 @@ class PetsLostCollectionViewCell: BaseCollectionViewCell {
             make.bottom.equalTo(euthanasiaLabel.snp.top).offset(-2)
             make.trailing.equalTo(insetbgView)
             make.height.equalTo(20)
+        }
+        
+        characteristicLabel.snp.makeConstraints { make in
+            make.leading.equalTo(imgView.snp.trailing).offset(8)
+            make.top.equalTo(genderLabel.snp.bottom).offset(2)
+            make.trailing.equalTo(insetbgView)
+            make.bottom.equalTo(euthanasiaLabel.snp.top)
         }
     }
 }
