@@ -45,7 +45,6 @@ final class SearchViewController: BaseViewController {
         self.locationManager.startUpdatingLocation()
         selfView.mapView.showsUserLocation = true
         viewDidLoadObservable.accept(locationManager.location?.coordinate ?? CLLocationCoordinate2D(latitude: 37.498333, longitude: 126.86666))
-        self.addPin(coordinate: CLLocationCoordinate2D(latitude: 37.49, longitude: 126.86))
 
         setupMap()
         setDataSource()
@@ -71,7 +70,7 @@ final class SearchViewController: BaseViewController {
             .bind { [weak self] hospitalList in
                 guard let self else {return }
                 self.hospitalList.accept(hospitalList)
-                self.addPin(coordinate: CLLocationCoordinate2D(latitude: 38.498333, longitude: 128.86666))
+
                 var snapshot = NSDiffableDataSourceSnapshot<Int, Hospital>()
                 snapshot.appendSections([0])
                 var sectionArr: [Hospital] = []
@@ -80,10 +79,23 @@ final class SearchViewController: BaseViewController {
                 }
                 snapshot.appendItems(sectionArr, toSection: 0)
                 self.dataSource.apply(snapshot)
+                
                 print(hospitalList.count, "총 병원 개수")
+
             }
             .disposed(by: disposeBag)
         
+        output.hospitalList
+            .observe(on: MainScheduler.instance)
+            .bind { [weak self] hospitalList in
+                guard let self else { return }
+                for i in hospitalList {
+                    guard let lon = CLLocationDegrees(i.longtitude ?? "0") else { return }
+                    guard let lat = CLLocationDegrees(i.latitude ?? "0") else { return }
+                    self.addPin(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon))
+                }
+            }
+            .disposed(by: disposeBag)
     }
     
     func setupMap() {

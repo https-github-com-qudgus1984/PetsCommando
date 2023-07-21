@@ -41,6 +41,7 @@ final class TabBarCoordinator: Coordinator {
         guard let page = TabBarPageCase(index: index) else { return }
         self.tabBarController.selectedIndex = page.pageOrderNumber
     }
+    
 
     private func configureTabBarController(with tabViewControllers: [UIViewController]) {
         self.tabBarController.setViewControllers(tabViewControllers, animated: true)
@@ -90,7 +91,10 @@ final class TabBarCoordinator: Coordinator {
 //            myPageCoordinator.start()
             print("추후")
         case .community:
-            print("추후")
+            let myProfileCoordinator = MyProfileCoordinator(tabNavigationController)
+            myProfileCoordinator.delegate = self
+            self.childCoordinators.append(myProfileCoordinator)
+            myProfileCoordinator.start()
         }
     }
 }

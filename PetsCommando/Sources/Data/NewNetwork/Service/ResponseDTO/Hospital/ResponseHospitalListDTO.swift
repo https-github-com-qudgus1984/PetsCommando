@@ -14,16 +14,18 @@ struct ResponseHospitalListDTO: Codable {
     let address: String
     let postNum: String
     let name: String
-    let x: String
-    let y: String
+    let x: String?
+    let y: String?
+    let latitude: String?
+    let longitude: String?
     
     enum CodingKeys: String, CodingKey {
-        case loadId, isOpen, phoneNum, address, postNum, name, x, y
+        case loadId, isOpen, phoneNum, address, postNum, name, x, y, latitude, longitude
     }
 }
 
 extension ResponseHospitalListDTO {
     var toDomain: Hospital {
-        .init(loadId: loadId, isOpen: isOpen, phoneNum: phoneNum, address: address, postNum: postNum, name: name, x: x, y: y)
+        .init(loadId: loadId, isOpen: isOpen, phoneNum: phoneNum, address: address, postNum: postNum, name: name, x: x, y: y, latitude: latitude, longtitude: longitude)
     }
 }

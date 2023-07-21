@@ -115,6 +115,7 @@ extension PetsCommandoRepository {
                 completion(.success(response.statusCode))
             case .failure(let error):
                 print("login 에러에러", error)
+                
                 completion(.failure(PetsCommandoNetworkServiceError(rawValue: error.response!.statusCode) ?? .unknown))
             }
         }
