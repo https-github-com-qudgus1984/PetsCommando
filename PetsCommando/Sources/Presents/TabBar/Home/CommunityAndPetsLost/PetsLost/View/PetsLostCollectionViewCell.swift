@@ -115,7 +115,7 @@ class PetsLostCollectionViewCell: BaseCollectionViewCell {
         
         euthanasiaLabel.snp.makeConstraints { make in
             make.leading.equalTo(imgView.snp.trailing).offset(8)
-            make.bottom.equalTo(imgView.snp.bottom).offset(-8)
+            make.bottom.equalTo(imgView.snp.bottom)
             make.trailing.equalTo(insetbgView)
             make.height.equalTo(20)
         }

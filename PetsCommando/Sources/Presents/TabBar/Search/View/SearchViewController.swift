@@ -12,7 +12,7 @@ import MapKit
 import CoreLocation
 
 
-final class SearchViewController: BaseViewController, UICollectionViewDelegate {
+final class SearchViewController: BaseViewController {
     
     let selfView = SearchView()
     private let viewModel: SearchViewModel
@@ -29,12 +29,15 @@ final class SearchViewController: BaseViewController, UICollectionViewDelegate {
     
     let viewDidLoadObservable = BehaviorRelay<CLLocationCoordinate2D>(value: CLLocationCoordinate2D(latitude: 37.498333, longitude: 126.86666))
     
+    let hospitalList = PublishRelay<[Hospital]>()
+    
+    private var dataSource: UICollectionViewDiffableDataSource<Int, Hospital>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         selfView.hospitalcollectionView.register(SearchCollectionViewCell.self, forCellWithReuseIdentifier: SearchCollectionViewCell.identifier)
-
+        
         selfView.hospitalcollectionView.delegate = self
-        selfView.hospitalcollectionView.dataSource = self
         selfView.mapView.delegate = self
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -42,7 +45,10 @@ final class SearchViewController: BaseViewController, UICollectionViewDelegate {
         self.locationManager.startUpdatingLocation()
         selfView.mapView.showsUserLocation = true
         viewDidLoadObservable.accept(locationManager.location?.coordinate ?? CLLocationCoordinate2D(latitude: 37.498333, longitude: 126.86666))
+        self.addPin(coordinate: CLLocationCoordinate2D(latitude: 37.49, longitude: 126.86))
+
         setupMap()
+        setDataSource()
         
     }
     
@@ -59,6 +65,25 @@ final class SearchViewController: BaseViewController, UICollectionViewDelegate {
                 setupMap()
             }
             .disposed(by: self.disposeBag)
+        
+        output.hospitalList
+            .observe(on: MainScheduler.instance)
+            .bind { [weak self] hospitalList in
+                guard let self else {return }
+                self.hospitalList.accept(hospitalList)
+                self.addPin(coordinate: CLLocationCoordinate2D(latitude: 38.498333, longitude: 128.86666))
+                var snapshot = NSDiffableDataSourceSnapshot<Int, Hospital>()
+                snapshot.appendSections([0])
+                var sectionArr: [Hospital] = []
+                for i in hospitalList {
+                    sectionArr.append(i)
+                }
+                snapshot.appendItems(sectionArr, toSection: 0)
+                self.dataSource.apply(snapshot)
+                print(hospitalList.count, "총 병원 개수")
+            }
+            .disposed(by: disposeBag)
+        
     }
     
     func setupMap() {
@@ -66,18 +91,34 @@ final class SearchViewController: BaseViewController, UICollectionViewDelegate {
     }
 }
 
-extension SearchViewController: UICollectionViewDataSource {
+extension SearchViewController: UICollectionViewDelegate {
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SearchCollectionViewCell.identifier, for: indexPath) as! SearchCollectionViewCell
-        
-        return cell
-    }
 }
 
 extension SearchViewController: MKMapViewDelegate, CLLocationManagerDelegate {
+}
+
+//MARK: Pin 설정 관련
+extension SearchViewController {
+    private func addPin(coordinate: CLLocationCoordinate2D) {
+        let pin = MKPointAnnotation()
+        pin.coordinate = coordinate
+        selfView.mapView.addAnnotation(pin)
+    }
+}
+
+extension SearchViewController {
+    func setDataSource() {
+        let cellRegistration = UICollectionView.CellRegistration<SearchCollectionViewCell, Hospital> { cell, indexPath, itemIdentifier in
+            cell.hospitalLabel.text = itemIdentifier.name
+            cell.locationLabel.text = itemIdentifier.address
+        }
+        
+        dataSource = UICollectionViewDiffableDataSource(collectionView: selfView.hospitalcollectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
+            let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
+            
+            return cell
+        })
+        
+    }
 }

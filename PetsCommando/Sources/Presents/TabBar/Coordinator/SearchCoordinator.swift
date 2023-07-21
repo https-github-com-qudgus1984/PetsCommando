@@ -20,9 +20,11 @@ final class SearchCoordinator: Coordinator {
     }
 
     func start() {
-        let vc = SearchViewController(
-            viewModel: SearchViewModel(coordinator: self)
-        )
+        let dataTransferService = DataTransferService(networkService: NetworkService())
+        let hospitalRepositoryImpl = HospitalRepositoryImpl(dataTransferService: dataTransferService)
+        let hospitalUseCaseImpl = HospitalUseCaseImpl(hospitalRepository: hospitalRepositoryImpl)
+        let viewModel = SearchViewModel(coordinator: self, hospitalUseCase: hospitalUseCaseImpl)
+        let vc = SearchViewController(viewModel: viewModel)
         navigationController.pushViewController(vc, animated: true)
     }
 

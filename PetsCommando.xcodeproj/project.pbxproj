@@ -97,6 +97,16 @@
 		2FC5B70C2A692AA6009FB0CE /* OrganicAnimalRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B70B2A692AA6009FB0CE /* OrganicAnimalRepositoryImpl.swift */; };
 		2FC5B70E2A692BD3009FB0CE /* OrganicAnimalUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B70D2A692BD3009FB0CE /* OrganicAnimalUseCase.swift */; };
 		2FC5B7112A693B01009FB0CE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2FC5B7102A693B01009FB0CE /* Kingfisher */; };
+		2FC5B7162A6A1634009FB0CE /* MyProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B7152A6A1634009FB0CE /* MyProfileViewModel.swift */; };
+		2FC5B7182A6A163D009FB0CE /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B7172A6A163D009FB0CE /* MyProfileView.swift */; };
+		2FC5B71A2A6A1645009FB0CE /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B7192A6A1645009FB0CE /* MyProfileViewController.swift */; };
+		2FC5B71C2A6A1EE1009FB0CE /* HospitalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B71B2A6A1EE1009FB0CE /* HospitalRouter.swift */; };
+		2FC5B71E2A6A1F9C009FB0CE /* HospitalAPIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B71D2A6A1F9C009FB0CE /* HospitalAPIEndpoints.swift */; };
+		2FC5B7212A6A1FE5009FB0CE /* HospitalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B7202A6A1FE5009FB0CE /* HospitalList.swift */; };
+		2FC5B7242A6A2131009FB0CE /* ResponseHospitalListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B7232A6A2131009FB0CE /* ResponseHospitalListDTO.swift */; };
+		2FC5B7262A6A2285009FB0CE /* HospitalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B7252A6A2285009FB0CE /* HospitalRepository.swift */; };
+		2FC5B7282A6A22ED009FB0CE /* HospitalRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B7272A6A22ED009FB0CE /* HospitalRepositoryImpl.swift */; };
+		2FC5B72A2A6A2379009FB0CE /* HospitalUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B7292A6A2379009FB0CE /* HospitalUseCase.swift */; };
 		2FC94ED529C083230097E696 /* HomeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC94ED429C083230097E696 /* HomeString.swift */; };
 		2FCDD20D29EA8C58000B6CD7 /* DuplicationNicknameResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCDD20C29EA8C58000B6CD7 /* DuplicationNicknameResponseDTO.swift */; };
 		2FCDD20F29EA8C79000B6CD7 /* DuplicationNickname.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCDD20E29EA8C79000B6CD7 /* DuplicationNickname.swift */; };
@@ -241,6 +251,16 @@
 		2FC5B7092A692A2A009FB0CE /* OrganicAPIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganicAPIEndpoints.swift; sourceTree = "<group>"; };
 		2FC5B70B2A692AA6009FB0CE /* OrganicAnimalRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganicAnimalRepositoryImpl.swift; sourceTree = "<group>"; };
 		2FC5B70D2A692BD3009FB0CE /* OrganicAnimalUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganicAnimalUseCase.swift; sourceTree = "<group>"; };
+		2FC5B7152A6A1634009FB0CE /* MyProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewModel.swift; sourceTree = "<group>"; };
+		2FC5B7172A6A163D009FB0CE /* MyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
+		2FC5B7192A6A1645009FB0CE /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		2FC5B71B2A6A1EE1009FB0CE /* HospitalRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalRouter.swift; sourceTree = "<group>"; };
+		2FC5B71D2A6A1F9C009FB0CE /* HospitalAPIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalAPIEndpoints.swift; sourceTree = "<group>"; };
+		2FC5B7202A6A1FE5009FB0CE /* HospitalList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalList.swift; sourceTree = "<group>"; };
+		2FC5B7232A6A2131009FB0CE /* ResponseHospitalListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseHospitalListDTO.swift; sourceTree = "<group>"; };
+		2FC5B7252A6A2285009FB0CE /* HospitalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalRepository.swift; sourceTree = "<group>"; };
+		2FC5B7272A6A22ED009FB0CE /* HospitalRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalRepositoryImpl.swift; sourceTree = "<group>"; };
+		2FC5B7292A6A2379009FB0CE /* HospitalUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalUseCase.swift; sourceTree = "<group>"; };
 		2FC94ED429C083230097E696 /* HomeString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeString.swift; sourceTree = "<group>"; };
 		2FCDD20C29EA8C58000B6CD7 /* DuplicationNicknameResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicationNicknameResponseDTO.swift; sourceTree = "<group>"; };
 		2FCDD20E29EA8C79000B6CD7 /* DuplicationNickname.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicationNickname.swift; sourceTree = "<group>"; };
@@ -465,16 +485,8 @@
 				2F1C81342A678DCC00210434 /* Cell */,
 				2F1C81172A677B0C00210434 /* ViewModel */,
 				2F1C81162A677B0600210434 /* View */,
-				2F1C81152A677AFF00210434 /* Coordinator */,
 			);
 			path = Search;
-			sourceTree = "<group>";
-		};
-		2F1C81152A677AFF00210434 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		2F1C81162A677B0600210434 /* View */ = {
@@ -710,6 +722,7 @@
 		2FB33F1329D1D585003B8B2A /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				2FC5B71F2A6A1FC6009FB0CE /* Hospital */,
 				2FC5B6FC2A69212F009FB0CE /* OrganicAnimal */,
 				2FDCC1842A68C6DF0000E7B9 /* Auth */,
 			);
@@ -836,6 +849,7 @@
 				2FD4105329B763570003C7C9 /* Home */,
 				2F1C81142A677AEC00210434 /* Search */,
 				2F1740132A67EE8C00EFE86C /* Encyclopedia */,
+				2FC5B7122A6A1606009FB0CE /* MyProfile */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -947,6 +961,48 @@
 			path = Organic;
 			sourceTree = "<group>";
 		};
+		2FC5B7122A6A1606009FB0CE /* MyProfile */ = {
+			isa = PBXGroup;
+			children = (
+				2FC5B7142A6A1619009FB0CE /* ViewModel */,
+				2FC5B7132A6A1617009FB0CE /* View */,
+			);
+			path = MyProfile;
+			sourceTree = "<group>";
+		};
+		2FC5B7132A6A1617009FB0CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2FC5B7172A6A163D009FB0CE /* MyProfileView.swift */,
+				2FC5B7192A6A1645009FB0CE /* MyProfileViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2FC5B7142A6A1619009FB0CE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2FC5B7152A6A1634009FB0CE /* MyProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2FC5B71F2A6A1FC6009FB0CE /* Hospital */ = {
+			isa = PBXGroup;
+			children = (
+				2FC5B7202A6A1FE5009FB0CE /* HospitalList.swift */,
+			);
+			path = Hospital;
+			sourceTree = "<group>";
+		};
+		2FC5B7222A6A211B009FB0CE /* Hospital */ = {
+			isa = PBXGroup;
+			children = (
+				2FC5B7232A6A2131009FB0CE /* ResponseHospitalListDTO.swift */,
+			);
+			path = Hospital;
+			sourceTree = "<group>";
+		};
 		2FC94ED329C082FC0097E696 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -1018,6 +1074,7 @@
 				2F0677BA29CF159500687848 /* PetsCommandoRepositoryType.swift */,
 				2FDCC19F2A68D7C40000E7B9 /* RegionRepository.swift */,
 				2FC5B7052A6928FA009FB0CE /* OrganicAnimalRepository.swift */,
+				2FC5B7252A6A2285009FB0CE /* HospitalRepository.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -1028,6 +1085,7 @@
 				2F863F3429CAB82900755FFC /* CertificationUseCase.swift */,
 				2FDCC1A12A68D9180000E7B9 /* RegionUseCase.swift */,
 				2FC5B70D2A692BD3009FB0CE /* OrganicAnimalUseCase.swift */,
+				2FC5B7292A6A2379009FB0CE /* HospitalUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -1145,6 +1203,7 @@
 			children = (
 				2FDCC19D2A68D7510000E7B9 /* RegionRepositoryImpl.swift */,
 				2FC5B70B2A692AA6009FB0CE /* OrganicAnimalRepositoryImpl.swift */,
+				2FC5B7272A6A22ED009FB0CE /* HospitalRepositoryImpl.swift */,
 			);
 			path = RepositoryImpl;
 			sourceTree = "<group>";
@@ -1161,6 +1220,7 @@
 		2FDCC18C2A68CECC0000E7B9 /* ResponseDTO */ = {
 			isa = PBXGroup;
 			children = (
+				2FC5B7222A6A211B009FB0CE /* Hospital */,
 				2FC5B7002A6921B5009FB0CE /* Organic */,
 				2FC5B6FF2A6921AC009FB0CE /* Region */,
 			);
@@ -1172,6 +1232,7 @@
 			children = (
 				2FDCC1972A68D0DE0000E7B9 /* RegionRouter.swift */,
 				2FC5B7072A692981009FB0CE /* OrganicAnimalRouter.swift */,
+				2FC5B71B2A6A1EE1009FB0CE /* HospitalRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -1181,6 +1242,7 @@
 			children = (
 				2FDCC1952A68D0AB0000E7B9 /* RegionAPIEndpoints.swift */,
 				2FC5B7092A692A2A009FB0CE /* OrganicAPIEndpoints.swift */,
+				2FC5B71D2A6A1F9C009FB0CE /* HospitalAPIEndpoints.swift */,
 			);
 			path = EndPoint;
 			sourceTree = "<group>";
@@ -1475,6 +1537,7 @@
 				2FC5B70A2A692A2A009FB0CE /* OrganicAPIEndpoints.swift in Sources */,
 				2FD188BA29DEA58B00996EA9 /* PetsLostTableViewCell.swift in Sources */,
 				2FD188B629DE8DC000996EA9 /* MockListData.swift in Sources */,
+				2FC5B7162A6A1634009FB0CE /* MyProfileViewModel.swift in Sources */,
 				2F64A8F529B319F800BC11B9 /* Coordinator.swift in Sources */,
 				2FB33F1629D1D5B1003B8B2A /* DuplicationEmailQuery.swift in Sources */,
 				2F863F2C29CAB3F800755FFC /* NetworkError.swift in Sources */,
@@ -1494,8 +1557,11 @@
 				2FD188B229DE8C3500996EA9 /* CommunityTableViewCell.swift in Sources */,
 				2FDCC1902A68CFD90000E7B9 /* NewTargetType.swift in Sources */,
 				2FB33F0F29D1CC12003B8B2A /* PetsCommandoTarget.swift in Sources */,
+				2FC5B71A2A6A1645009FB0CE /* MyProfileViewController.swift in Sources */,
 				2FC5B6EF2A690F54009FB0CE /* SigunguViewModel.swift in Sources */,
+				2FC5B7242A6A2131009FB0CE /* ResponseHospitalListDTO.swift in Sources */,
 				2FB34DD229E520880069C71A /* NetworkTest.swift in Sources */,
+				2FC5B7182A6A163D009FB0CE /* MyProfileView.swift in Sources */,
 				2FB2D7A029B5AF1900EA35F4 /* AuthString.swift in Sources */,
 				2F5FA8CC29BDA89800123AAC /* Image + Enum.swift in Sources */,
 				2FD188B829DEA57F00996EA9 /* PetsLostView.swift in Sources */,
@@ -1520,6 +1586,7 @@
 				2F0677B129CEBE7500687848 /* NicknameViewModel.swift in Sources */,
 				2F1C811B2A677BAB00210434 /* SidoViewModel.swift in Sources */,
 				2FCDD20F29EA8C79000B6CD7 /* DuplicationNickname.swift in Sources */,
+				2FC5B71E2A6A1F9C009FB0CE /* HospitalAPIEndpoints.swift in Sources */,
 				2F0677A529CEA56900687848 /* EmailViewController.swift in Sources */,
 				2FDCC19E2A68D7510000E7B9 /* RegionRepositoryImpl.swift in Sources */,
 				2F1C811F2A677BF600210434 /* SidoView.swift in Sources */,
@@ -1555,6 +1622,7 @@
 				2FC5B70E2A692BD3009FB0CE /* OrganicAnimalUseCase.swift in Sources */,
 				2FDCC1802A68BF3E0000E7B9 /* SigunguList.swift in Sources */,
 				2FC5B28129CAD4700032B55C /* APIKey.swift in Sources */,
+				2FC5B72A2A6A2379009FB0CE /* HospitalUseCase.swift in Sources */,
 				2FD188B029DE8A9900996EA9 /* CommunityView.swift in Sources */,
 				2FD40B1529C58D0C00BED327 /* TopicViewController.swift in Sources */,
 				2F1C81192A677B1600210434 /* SearchCoordinator.swift in Sources */,
@@ -1583,10 +1651,13 @@
 				2FDCC19A2A68D1DF0000E7B9 /* NewHTTPMethod.swift in Sources */,
 				2F64A8FC29B31AED00BC11B9 /* AppCoordinator.swift in Sources */,
 				2FD40B1929C58DDA00BED327 /* TopicView.swift in Sources */,
+				2FC5B7262A6A2285009FB0CE /* HospitalRepository.swift in Sources */,
 				2F64A91229B33A5F00BC11B9 /* UITextField+Extension.swift in Sources */,
 				2FCDD20D29EA8C58000B6CD7 /* DuplicationNicknameResponseDTO.swift in Sources */,
 				2FB5971129E00709006F641F /* CommunityAndPetsLostViewModel.swift in Sources */,
+				2FC5B7212A6A1FE5009FB0CE /* HospitalList.swift in Sources */,
 				2F0677B929CF0BE300687848 /* PasswordView.swift in Sources */,
+				2FC5B7282A6A22ED009FB0CE /* HospitalRepositoryImpl.swift in Sources */,
 				2FFA534629DAC7890065F624 /* DefaultButton.swift in Sources */,
 				2FDE16072990DDBF00154A78 /* BaseView.swift in Sources */,
 				2FAB65AA29B30E6C0022B609 /* LoginViewController.swift in Sources */,
@@ -1594,6 +1665,7 @@
 				2FDCC1942A68D0540000E7B9 /* DataTransferService.swift in Sources */,
 				2FB33F1C29D2874C003B8B2A /* DuplicationEmailResponseDTO.swift in Sources */,
 				2FDCC17E2A68BF0E0000E7B9 /* ResponseSigunguListDTO.swift in Sources */,
+				2FC5B71C2A6A1EE1009FB0CE /* HospitalRouter.swift in Sources */,
 				2FD40B1F29C593B200BED327 /* TopicCell.swift in Sources */,
 				2FC5B28629CAE16A0032B55C /* UserRepository.swift in Sources */,
 				2FDCC17C2A68BE0B0000E7B9 /* ResponseSidoListDTO.swift in Sources */,
