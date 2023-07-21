@@ -38,7 +38,7 @@ class SearchCollectionViewCell: BaseCollectionViewCell {
         let label = UILabel()
         label.font = Font.Body3_L12
         label.textColor = Color.BaseColor.gray6
-        label.textAlignment = .right
+        label.textAlignment = .left
         label.text = "양천구 문래동"
         return label
     }()
@@ -70,14 +70,14 @@ class SearchCollectionViewCell: BaseCollectionViewCell {
         }
         
         hospitalLabel.snp.makeConstraints { make in
-            make.leading.equalTo(imageView.snp.trailing).offset(16)
+            make.leading.equalTo(imageView.snp.trailing).offset(8)
             make.centerY.equalTo(safeAreaLayoutGuide)
-            make.trailing.equalTo(safeAreaLayoutGuide)
+            make.width.equalTo(100)
         }
         
         locationLabel.snp.makeConstraints { make in
-            make.leading.equalTo(imageView.snp.trailing).offset(16)
-            make.trailing.equalTo(safeAreaLayoutGuide).offset(-20)
+            make.leading.equalTo(hospitalLabel.snp.trailing).offset(4)
+            make.trailing.equalTo(safeAreaLayoutGuide)
             make.centerY.equalTo(safeAreaLayoutGuide)
         }
         

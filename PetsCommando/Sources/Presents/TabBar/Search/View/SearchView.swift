@@ -17,7 +17,7 @@ final class SearchView: BaseView {
     
     private var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "반경 1km 내의 동물병원 및 보호소"
+        label.text = "동물병원 및 보호소"
         return label
     }()
     

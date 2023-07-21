@@ -32,7 +32,6 @@ final class PetsLostViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setDataSource()
-        petsLostView.collectionView.register(PetsLostCollectionViewCell.self, forCellWithReuseIdentifier: PetsLostCollectionViewCell.identifier)
 
         petsLostView.collectionView.delegate = self
 

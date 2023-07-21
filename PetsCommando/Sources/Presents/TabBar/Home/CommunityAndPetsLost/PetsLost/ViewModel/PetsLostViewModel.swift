@@ -20,7 +20,6 @@ final class PetsLostViewModel: ViewModelType {
     }
     
     let organicAnimalList = PublishRelay<[List?]>()
-    let trigger = PublishRelay<Bool>()
     
     struct Input {
         let viewDidLoad: Observable<Void>
