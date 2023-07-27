@@ -8,5 +8,5 @@
 import Foundation
 
 enum CoordinatorStyleCase {
-    case app, auth, tab, home, tabman
+    case app, auth, tab, home, tabman, myProfile
 }

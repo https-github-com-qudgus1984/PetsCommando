@@ -14,6 +14,8 @@ import CoreLocation
 
 final class SearchViewController: BaseViewController {
     
+    var cnt = 0
+    
     let selfView = SearchView()
     private let viewModel: SearchViewModel
     var locationManager = CLLocationManager()
@@ -45,7 +47,6 @@ final class SearchViewController: BaseViewController {
         self.locationManager.startUpdatingLocation()
         selfView.mapView.showsUserLocation = true
         viewDidLoadObservable.accept(locationManager.location?.coordinate ?? CLLocationCoordinate2D(latitude: 37.498333, longitude: 126.86666))
-        self.addPin(coordinate: CLLocationCoordinate2D(latitude: 37.49, longitude: 126.86))
 
         setupMap()
         setDataSource()
@@ -71,7 +72,7 @@ final class SearchViewController: BaseViewController {
             .bind { [weak self] hospitalList in
                 guard let self else {return }
                 self.hospitalList.accept(hospitalList)
-                self.addPin(coordinate: CLLocationCoordinate2D(latitude: 38.498333, longitude: 128.86666))
+
                 var snapshot = NSDiffableDataSourceSnapshot<Int, Hospital>()
                 snapshot.appendSections([0])
                 var sectionArr: [Hospital] = []
@@ -80,10 +81,23 @@ final class SearchViewController: BaseViewController {
                 }
                 snapshot.appendItems(sectionArr, toSection: 0)
                 self.dataSource.apply(snapshot)
+                
                 print(hospitalList.count, "총 병원 개수")
+
             }
             .disposed(by: disposeBag)
         
+        output.hospitalList
+            .observe(on: MainScheduler.instance)
+            .bind { [weak self] hospitalList in
+                guard let self else { return }
+                for i in hospitalList {
+                    guard let lon = CLLocationDegrees(i.longtitude ?? "0") else { return }
+                    guard let lat = CLLocationDegrees(i.latitude ?? "0") else { return }
+                    self.addPin(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon), title: i.name, subtitle: i.address)
+                }
+            }
+            .disposed(by: disposeBag)
     }
     
     func setupMap() {
@@ -96,14 +110,19 @@ extension SearchViewController: UICollectionViewDelegate {
 }
 
 extension SearchViewController: MKMapViewDelegate, CLLocationManagerDelegate {
+    
+//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+//        <#code#>
+//    }
 }
 
 //MARK: Pin 설정 관련
 extension SearchViewController {
-    private func addPin(coordinate: CLLocationCoordinate2D) {
-        let pin = MKPointAnnotation()
+    private func addPin(coordinate: CLLocationCoordinate2D, title: String, subtitle: String) {
+        let pin = CustomAnnotation(title: title, subtitle: subtitle, coordinate: coordinate)
         pin.coordinate = coordinate
         selfView.mapView.addAnnotation(pin)
+        self.cnt += 1
     }
 }
 

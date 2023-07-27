@@ -14,6 +14,8 @@ struct Hospital: Hashable {
     let address: String
     let postNum: String
     let name: String
-    let x: String
-    let y: String
+    let x: String?
+    let y: String?
+    let latitude: String?
+    let longtitude: String?
 }
