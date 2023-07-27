@@ -14,6 +14,8 @@ import CoreLocation
 
 final class SearchViewController: BaseViewController {
     
+    var cnt = 0
+    
     let selfView = SearchView()
     private let viewModel: SearchViewModel
     var locationManager = CLLocationManager()
@@ -92,7 +94,7 @@ final class SearchViewController: BaseViewController {
                 for i in hospitalList {
                     guard let lon = CLLocationDegrees(i.longtitude ?? "0") else { return }
                     guard let lat = CLLocationDegrees(i.latitude ?? "0") else { return }
-                    self.addPin(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon))
+                    self.addPin(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon), title: i.name, subtitle: i.address)
                 }
             }
             .disposed(by: disposeBag)
@@ -108,14 +110,19 @@ extension SearchViewController: UICollectionViewDelegate {
 }
 
 extension SearchViewController: MKMapViewDelegate, CLLocationManagerDelegate {
+    
+//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+//        <#code#>
+//    }
 }
 
 //MARK: Pin 설정 관련
 extension SearchViewController {
-    private func addPin(coordinate: CLLocationCoordinate2D) {
-        let pin = MKPointAnnotation()
+    private func addPin(coordinate: CLLocationCoordinate2D, title: String, subtitle: String) {
+        let pin = CustomAnnotation(title: title, subtitle: subtitle, coordinate: coordinate)
         pin.coordinate = coordinate
         selfView.mapView.addAnnotation(pin)
+        self.cnt += 1
     }
 }
 

@@ -83,13 +83,7 @@ final class TabBarCoordinator: Coordinator {
             searchCoordinator.delegate = self
             self.childCoordinators.append(searchCoordinator)
             searchCoordinator.start()
-
-        case .book:
-//            let myPageCoordinator = MyPageCoordinator(tabNavigationController)
-//            myPageCoordinator.delegate = self
-//            self.childCoordinators.append(myPageCoordinator)
-//            myPageCoordinator.start()
-            print("추후")
+            
         case .community:
             let myProfileCoordinator = MyProfileCoordinator(tabNavigationController)
             myProfileCoordinator.delegate = self
@@ -97,17 +91,20 @@ final class TabBarCoordinator: Coordinator {
             myProfileCoordinator.start()
         }
     }
+    
+    func connectAuthFlow() {
+        let authCoordinator = AuthCoordinator(self.navigationController)
+        authCoordinator.start()
+    }
 }
 
 extension TabBarCoordinator: CoordinatorDelegate {
     
     func didFinish(childCoordinator: Coordinator) {
         self.childCoordinators = childCoordinators.filter({ $0.type != childCoordinator.type })
-//        if childCoordinator.type == .myPage {
-//            self.navigationController.viewControllers.removeAll()
-//            self.delegate?.didFinish(childCoordinator: self)
-//        }
+        if childCoordinator.type == .tab {
+            self.navigationController.viewControllers.removeAll()
+            self.delegate?.didFinish(childCoordinator: self)
+        }
     }
 }
-
-

@@ -35,4 +35,8 @@ final class TabmanCoordinator: Coordinator {
         let vc = PetsLostDetailViewController(viewModel: viewModel)
         navigationController.pushViewController(vc, animated: true)
     }
+    
+    func deleteTabmanCoordinator() {
+        self.delegate?.didFinish(childCoordinator: self)
+    }
 }

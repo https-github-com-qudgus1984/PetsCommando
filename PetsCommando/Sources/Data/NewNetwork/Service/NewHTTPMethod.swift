@@ -8,5 +8,5 @@
 import Foundation
 
 enum NewHTTPMethod: String {
-    case get, post, delete, patch
+    case get, post, delete, patch, put
 }

@@ -70,6 +70,36 @@
 		2FB5971129E00709006F641F /* CommunityAndPetsLostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5971029E00709006F641F /* CommunityAndPetsLostViewModel.swift */; };
 		2FB5971529E01015006F641F /* CommunityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5971429E01015006F641F /* CommunityCollectionViewCell.swift */; };
 		2FB5971A29E01F5A006F641F /* PetsLostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5971929E01F5A006F641F /* PetsLostCollectionViewCell.swift */; };
+		2FBF64BC2A725CA50036401F /* DailyPostQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64BB2A725CA50036401F /* DailyPostQuery.swift */; };
+		2FBF64BE2A725CBD0036401F /* DailyPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64BD2A725CBD0036401F /* DailyPost.swift */; };
+		2FBF64C02A725D4E0036401F /* ThumbnailDailyPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64BF2A725D4E0036401F /* ThumbnailDailyPost.swift */; };
+		2FBF64C22A725D6D0036401F /* DetailDailyPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64C12A725D6D0036401F /* DetailDailyPost.swift */; };
+		2FBF64C42A725D8B0036401F /* DeleteDailyPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64C32A725D8B0036401F /* DeleteDailyPost.swift */; };
+		2FBF64C62A725DC30036401F /* DetailDailyPostQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64C52A725DC30036401F /* DetailDailyPostQuery.swift */; };
+		2FBF64C82A725DE10036401F /* DeleteDailyPostQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64C72A725DE10036401F /* DeleteDailyPostQuery.swift */; };
+		2FBF64CA2A725E960036401F /* UpdateDailyPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64C92A725E960036401F /* UpdateDailyPost.swift */; };
+		2FBF64CC2A727A2D0036401F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64CB2A727A2D0036401F /* Date+Extension.swift */; };
+		2FBF64CE2A727D450036401F /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64CD2A727D450036401F /* Comment.swift */; };
+		2FBF64D02A7282340036401F /* UpdateDailyPostQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64CF2A7282340036401F /* UpdateDailyPostQuery.swift */; };
+		2FBF64D22A7282D90036401F /* CommentPostQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64D12A7282D90036401F /* CommentPostQuery.swift */; };
+		2FBF64D42A7288500036401F /* CommentPutQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64D32A7288500036401F /* CommentPutQuery.swift */; };
+		2FBF64D62A7288950036401F /* CommentGetQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64D52A7288950036401F /* CommentGetQuery.swift */; };
+		2FBF64D82A7288AB0036401F /* CommentDeleteQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64D72A7288AB0036401F /* CommentDeleteQuery.swift */; };
+		2FBF64DA2A7289620036401F /* CommunityRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64D92A7289620036401F /* CommunityRepository.swift */; };
+		2FBF64DC2A728B520036401F /* CommunityRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64DB2A728B520036401F /* CommunityRouter.swift */; };
+		2FBF64E02A7290D90036401F /* RequestDailyPostDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64DF2A7290D90036401F /* RequestDailyPostDTO.swift */; };
+		2FBF64E22A7290E60036401F /* RequestUpdateDailyPostDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64E12A7290E60036401F /* RequestUpdateDailyPostDTO.swift */; };
+		2FBF64E42A7291020036401F /* RequestDetailDailyPostDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64E32A7291020036401F /* RequestDetailDailyPostDTO.swift */; };
+		2FBF64E62A7291150036401F /* RequestCommentPostDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64E52A7291150036401F /* RequestCommentPostDTO.swift */; };
+		2FBF64E82A7291230036401F /* RequestCommentPutDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64E72A7291230036401F /* RequestCommentPutDTO.swift */; };
+		2FBF64EA2A72912F0036401F /* RequestCommentGetDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64E92A72912F0036401F /* RequestCommentGetDTO.swift */; };
+		2FBF64EC2A7291420036401F /* RequestCommentDeleteDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64EB2A7291420036401F /* RequestCommentDeleteDTO.swift */; };
+		2FBF64EE2A72939F0036401F /* ResponseDailyPostDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64ED2A72939F0036401F /* ResponseDailyPostDTO.swift */; };
+		2FBF64F02A7293B40036401F /* ResponseUpdateDailyPostDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64EF2A7293B40036401F /* ResponseUpdateDailyPostDTO.swift */; };
+		2FBF64F22A7293D00036401F /* ResponseThumbnailDailyPostDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64F12A7293D00036401F /* ResponseThumbnailDailyPostDTO.swift */; };
+		2FBF64F42A7293DD0036401F /* ResponseDetailDailyPostDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64F32A7293DD0036401F /* ResponseDetailDailyPostDTO.swift */; };
+		2FBF64F62A7293E50036401F /* ResponseDeletePostDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64F52A7293E50036401F /* ResponseDeletePostDTO.swift */; };
+		2FBF64F82A7293ED0036401F /* ResponseCommentDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF64F72A7293ED0036401F /* ResponseCommentDTO.swift */; };
 		2FC246DB29D1945100349AEF /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 2FC246DA29D1945100349AEF /* Moya */; };
 		2FC246DE29D194C700349AEF /* ToastCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC246DD29D194C700349AEF /* ToastCase.swift */; };
 		2FC2EB5129E4034E00ECE2ED /* PetsLostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC2EB5029E4034E00ECE2ED /* PetsLostDetailViewController.swift */; };
@@ -114,6 +144,7 @@
 		2FC5B73C2A6A6D7B009FB0CE /* LocationModifySigunguViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B73B2A6A6D7B009FB0CE /* LocationModifySigunguViewModel.swift */; };
 		2FC5B73E2A6A6D86009FB0CE /* LocationModifySigunguView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B73D2A6A6D86009FB0CE /* LocationModifySigunguView.swift */; };
 		2FC5B7402A6A6D95009FB0CE /* LocationModifySigunguViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B73F2A6A6D95009FB0CE /* LocationModifySigunguViewController.swift */; };
+		2FC5B7422A6AAD6A009FB0CE /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5B7412A6AAD6A009FB0CE /* CustomAnnotation.swift */; };
 		2FC94ED529C083230097E696 /* HomeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC94ED429C083230097E696 /* HomeString.swift */; };
 		2FCDD20D29EA8C58000B6CD7 /* DuplicationNicknameResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCDD20C29EA8C58000B6CD7 /* DuplicationNicknameResponseDTO.swift */; };
 		2FCDD20F29EA8C79000B6CD7 /* DuplicationNickname.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCDD20E29EA8C79000B6CD7 /* DuplicationNickname.swift */; };
@@ -234,6 +265,36 @@
 		2FB5971029E00709006F641F /* CommunityAndPetsLostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityAndPetsLostViewModel.swift; sourceTree = "<group>"; };
 		2FB5971429E01015006F641F /* CommunityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCollectionViewCell.swift; sourceTree = "<group>"; };
 		2FB5971929E01F5A006F641F /* PetsLostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsLostCollectionViewCell.swift; sourceTree = "<group>"; };
+		2FBF64BB2A725CA50036401F /* DailyPostQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPostQuery.swift; sourceTree = "<group>"; };
+		2FBF64BD2A725CBD0036401F /* DailyPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPost.swift; sourceTree = "<group>"; };
+		2FBF64BF2A725D4E0036401F /* ThumbnailDailyPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailDailyPost.swift; sourceTree = "<group>"; };
+		2FBF64C12A725D6D0036401F /* DetailDailyPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDailyPost.swift; sourceTree = "<group>"; };
+		2FBF64C32A725D8B0036401F /* DeleteDailyPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteDailyPost.swift; sourceTree = "<group>"; };
+		2FBF64C52A725DC30036401F /* DetailDailyPostQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDailyPostQuery.swift; sourceTree = "<group>"; };
+		2FBF64C72A725DE10036401F /* DeleteDailyPostQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteDailyPostQuery.swift; sourceTree = "<group>"; };
+		2FBF64C92A725E960036401F /* UpdateDailyPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDailyPost.swift; sourceTree = "<group>"; };
+		2FBF64CB2A727A2D0036401F /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		2FBF64CD2A727D450036401F /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		2FBF64CF2A7282340036401F /* UpdateDailyPostQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDailyPostQuery.swift; sourceTree = "<group>"; };
+		2FBF64D12A7282D90036401F /* CommentPostQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPostQuery.swift; sourceTree = "<group>"; };
+		2FBF64D32A7288500036401F /* CommentPutQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPutQuery.swift; sourceTree = "<group>"; };
+		2FBF64D52A7288950036401F /* CommentGetQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentGetQuery.swift; sourceTree = "<group>"; };
+		2FBF64D72A7288AB0036401F /* CommentDeleteQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentDeleteQuery.swift; sourceTree = "<group>"; };
+		2FBF64D92A7289620036401F /* CommunityRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityRepository.swift; sourceTree = "<group>"; };
+		2FBF64DB2A728B520036401F /* CommunityRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityRouter.swift; sourceTree = "<group>"; };
+		2FBF64DF2A7290D90036401F /* RequestDailyPostDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDailyPostDTO.swift; sourceTree = "<group>"; };
+		2FBF64E12A7290E60036401F /* RequestUpdateDailyPostDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestUpdateDailyPostDTO.swift; sourceTree = "<group>"; };
+		2FBF64E32A7291020036401F /* RequestDetailDailyPostDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDetailDailyPostDTO.swift; sourceTree = "<group>"; };
+		2FBF64E52A7291150036401F /* RequestCommentPostDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCommentPostDTO.swift; sourceTree = "<group>"; };
+		2FBF64E72A7291230036401F /* RequestCommentPutDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCommentPutDTO.swift; sourceTree = "<group>"; };
+		2FBF64E92A72912F0036401F /* RequestCommentGetDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCommentGetDTO.swift; sourceTree = "<group>"; };
+		2FBF64EB2A7291420036401F /* RequestCommentDeleteDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCommentDeleteDTO.swift; sourceTree = "<group>"; };
+		2FBF64ED2A72939F0036401F /* ResponseDailyPostDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDailyPostDTO.swift; sourceTree = "<group>"; };
+		2FBF64EF2A7293B40036401F /* ResponseUpdateDailyPostDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseUpdateDailyPostDTO.swift; sourceTree = "<group>"; };
+		2FBF64F12A7293D00036401F /* ResponseThumbnailDailyPostDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseThumbnailDailyPostDTO.swift; sourceTree = "<group>"; };
+		2FBF64F32A7293DD0036401F /* ResponseDetailDailyPostDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDetailDailyPostDTO.swift; sourceTree = "<group>"; };
+		2FBF64F52A7293E50036401F /* ResponseDeletePostDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDeletePostDTO.swift; sourceTree = "<group>"; };
+		2FBF64F72A7293ED0036401F /* ResponseCommentDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCommentDTO.swift; sourceTree = "<group>"; };
 		2FC246DD29D194C700349AEF /* ToastCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastCase.swift; sourceTree = "<group>"; };
 		2FC2EB5029E4034E00ECE2ED /* PetsLostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsLostDetailViewController.swift; sourceTree = "<group>"; };
 		2FC2EB5329E4036600ECE2ED /* PetsLostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsLostDetailView.swift; sourceTree = "<group>"; };
@@ -275,6 +336,7 @@
 		2FC5B73B2A6A6D7B009FB0CE /* LocationModifySigunguViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModifySigunguViewModel.swift; sourceTree = "<group>"; };
 		2FC5B73D2A6A6D86009FB0CE /* LocationModifySigunguView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModifySigunguView.swift; sourceTree = "<group>"; };
 		2FC5B73F2A6A6D95009FB0CE /* LocationModifySigunguViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModifySigunguViewController.swift; sourceTree = "<group>"; };
+		2FC5B7412A6AAD6A009FB0CE /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		2FC94ED429C083230097E696 /* HomeString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeString.swift; sourceTree = "<group>"; };
 		2FCDD20C29EA8C58000B6CD7 /* DuplicationNicknameResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicationNicknameResponseDTO.swift; sourceTree = "<group>"; };
 		2FCDD20E29EA8C79000B6CD7 /* DuplicationNickname.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicationNickname.swift; sourceTree = "<group>"; };
@@ -508,6 +570,7 @@
 			children = (
 				2F1C81302A678A4B00210434 /* SearchView.swift */,
 				2F1C81322A678A5000210434 /* SearchViewController.swift */,
+				2FC5B7412A6AAD6A009FB0CE /* CustomAnnotation.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -736,6 +799,7 @@
 		2FB33F1329D1D585003B8B2A /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				2FBF64BA2A725C7E0036401F /* Community */,
 				2FC5B71F2A6A1FC6009FB0CE /* Hospital */,
 				2FC5B6FC2A69212F009FB0CE /* OrganicAnimal */,
 				2FDCC1842A68C6DF0000E7B9 /* Auth */,
@@ -746,6 +810,7 @@
 		2FB33F1429D1D58A003B8B2A /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				2FBF64B72A725C4E0036401F /* Community */,
 				2FC5B6F92A69206E009FB0CE /* OrganicAnimal  */,
 				2FDCC1832A68C6D60000E7B9 /* Auth */,
 			);
@@ -829,6 +894,61 @@
 				2FB5971929E01F5A006F641F /* PetsLostCollectionViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2FBF64B72A725C4E0036401F /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				2FBF64BB2A725CA50036401F /* DailyPostQuery.swift */,
+				2FBF64CF2A7282340036401F /* UpdateDailyPostQuery.swift */,
+				2FBF64C52A725DC30036401F /* DetailDailyPostQuery.swift */,
+				2FBF64C72A725DE10036401F /* DeleteDailyPostQuery.swift */,
+				2FBF64D12A7282D90036401F /* CommentPostQuery.swift */,
+				2FBF64D32A7288500036401F /* CommentPutQuery.swift */,
+				2FBF64D52A7288950036401F /* CommentGetQuery.swift */,
+				2FBF64D72A7288AB0036401F /* CommentDeleteQuery.swift */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		2FBF64BA2A725C7E0036401F /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				2FBF64BD2A725CBD0036401F /* DailyPost.swift */,
+				2FBF64C92A725E960036401F /* UpdateDailyPost.swift */,
+				2FBF64BF2A725D4E0036401F /* ThumbnailDailyPost.swift */,
+				2FBF64C12A725D6D0036401F /* DetailDailyPost.swift */,
+				2FBF64C32A725D8B0036401F /* DeleteDailyPost.swift */,
+				2FBF64CD2A727D450036401F /* Comment.swift */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		2FBF64DD2A7290870036401F /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				2FBF64DF2A7290D90036401F /* RequestDailyPostDTO.swift */,
+				2FBF64E12A7290E60036401F /* RequestUpdateDailyPostDTO.swift */,
+				2FBF64E32A7291020036401F /* RequestDetailDailyPostDTO.swift */,
+				2FBF64E52A7291150036401F /* RequestCommentPostDTO.swift */,
+				2FBF64E72A7291230036401F /* RequestCommentPutDTO.swift */,
+				2FBF64E92A72912F0036401F /* RequestCommentGetDTO.swift */,
+				2FBF64EB2A7291420036401F /* RequestCommentDeleteDTO.swift */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		2FBF64DE2A7290900036401F /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				2FBF64ED2A72939F0036401F /* ResponseDailyPostDTO.swift */,
+				2FBF64EF2A7293B40036401F /* ResponseUpdateDailyPostDTO.swift */,
+				2FBF64F12A7293D00036401F /* ResponseThumbnailDailyPostDTO.swift */,
+				2FBF64F32A7293DD0036401F /* ResponseDetailDailyPostDTO.swift */,
+				2FBF64F52A7293E50036401F /* ResponseDeletePostDTO.swift */,
+				2FBF64F72A7293ED0036401F /* ResponseCommentDTO.swift */,
+			);
+			path = Community;
 			sourceTree = "<group>";
 		};
 		2FC246DC29D194BC00349AEF /* Error */ = {
@@ -1143,6 +1263,7 @@
 				2FDCC19F2A68D7C40000E7B9 /* RegionRepository.swift */,
 				2FC5B7052A6928FA009FB0CE /* OrganicAnimalRepository.swift */,
 				2FC5B7252A6A2285009FB0CE /* HospitalRepository.swift */,
+				2FBF64D92A7289620036401F /* CommunityRepository.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -1280,6 +1401,7 @@
 		2FDCC18B2A68CEC60000E7B9 /* RequestDTO */ = {
 			isa = PBXGroup;
 			children = (
+				2FBF64DD2A7290870036401F /* Community */,
 				2FDCC19B2A68D5050000E7B9 /* RequestSigunguListDTO.swift */,
 				2FC5B7032A692231009FB0CE /* RequestOrganicAnimalListDTO.swift */,
 			);
@@ -1289,6 +1411,7 @@
 		2FDCC18C2A68CECC0000E7B9 /* ResponseDTO */ = {
 			isa = PBXGroup;
 			children = (
+				2FBF64DE2A7290900036401F /* Community */,
 				2FC5B7222A6A211B009FB0CE /* Hospital */,
 				2FC5B7002A6921B5009FB0CE /* Organic */,
 				2FC5B6FF2A6921AC009FB0CE /* Region */,
@@ -1302,6 +1425,7 @@
 				2FDCC1972A68D0DE0000E7B9 /* RegionRouter.swift */,
 				2FC5B7072A692981009FB0CE /* OrganicAnimalRouter.swift */,
 				2FC5B71B2A6A1EE1009FB0CE /* HospitalRouter.swift */,
+				2FBF64DB2A728B520036401F /* CommunityRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -1495,6 +1619,7 @@
 				2F64A91129B33A5F00BC11B9 /* UITextField+Extension.swift */,
 				2F0677BF29CF1E1600687848 /* UIViewController+Extension.swift */,
 				2FFA534929DACA8F0065F624 /* UIView+.swift */,
+				2FBF64CB2A727A2D0036401F /* Date+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1607,24 +1732,33 @@
 				2FC5B70A2A692A2A009FB0CE /* OrganicAPIEndpoints.swift in Sources */,
 				2FD188BA29DEA58B00996EA9 /* PetsLostTableViewCell.swift in Sources */,
 				2FD188B629DE8DC000996EA9 /* MockListData.swift in Sources */,
+				2FBF64D02A7282340036401F /* UpdateDailyPostQuery.swift in Sources */,
 				2FC5B7162A6A1634009FB0CE /* MyProfileViewModel.swift in Sources */,
 				2F64A8F529B319F800BC11B9 /* Coordinator.swift in Sources */,
 				2FB33F1629D1D5B1003B8B2A /* DuplicationEmailQuery.swift in Sources */,
 				2F863F2C29CAB3F800755FFC /* NetworkError.swift in Sources */,
 				2F0677C029CF1E1600687848 /* UIViewController+Extension.swift in Sources */,
+				2FBF64D42A7288500036401F /* CommentPutQuery.swift in Sources */,
+				2FBF64CC2A727A2D0036401F /* Date+Extension.swift in Sources */,
 				2FC5B7332A6A6CA8009FB0CE /* LocationModifySidoView.swift in Sources */,
+				2FBF64C02A725D4E0036401F /* ThumbnailDailyPost.swift in Sources */,
+				2FBF64C42A725D8B0036401F /* DeleteDailyPost.swift in Sources */,
+				2FBF64F02A7293B40036401F /* ResponseUpdateDailyPostDTO.swift in Sources */,
 				2F863F3729CAB97600755FFC /* UserRepositoryType.swift in Sources */,
+				2FBF64F82A7293ED0036401F /* ResponseCommentDTO.swift in Sources */,
 				2FCDD21F29EAAC12000B6CD7 /* GetUserInfo.swift in Sources */,
 				2FDCC1982A68D0DE0000E7B9 /* RegionRouter.swift in Sources */,
 				2F0677AF29CEBE6C00687848 /* NicknameViewController.swift in Sources */,
 				2F17401B2A67F3CC00EFE86C /* CommunityViewModel.swift in Sources */,
 				2FD188B429DE8C7500996EA9 /* BaseTableViewCell.swift in Sources */,
 				2F1C812F2A678A4600210434 /* SearchViewModel.swift in Sources */,
+				2FBF64E02A7290D90036401F /* RequestDailyPostDTO.swift in Sources */,
 				2F1C811D2A677BB200210434 /* SidoViewController.swift in Sources */,
 				2F4B1CDE29C191A500B999AB /* TabCell.swift in Sources */,
 				2F1740212A6804D900EFE86C /* PetsLostViewModel.swift in Sources */,
 				2F1C81332A678A5000210434 /* SearchViewController.swift in Sources */,
 				2FD40B1729C58DAA00BED327 /* SectionHeaderView.swift in Sources */,
+				2FBF64C22A725D6D0036401F /* DetailDailyPost.swift in Sources */,
 				2FD188B229DE8C3500996EA9 /* CommunityTableViewCell.swift in Sources */,
 				2FDCC1902A68CFD90000E7B9 /* NewTargetType.swift in Sources */,
 				2FB33F0F29D1CC12003B8B2A /* PetsCommandoTarget.swift in Sources */,
@@ -1637,6 +1771,7 @@
 				2F5FA8CC29BDA89800123AAC /* Image + Enum.swift in Sources */,
 				2FD188B829DEA57F00996EA9 /* PetsLostView.swift in Sources */,
 				2FDE15D02990D13C00154A78 /* AppDelegate.swift in Sources */,
+				2FBF64EA2A72912F0036401F /* RequestCommentGetDTO.swift in Sources */,
 				2FB5970629E00265006F641F /* CommunityAndPetsListViewController.swift in Sources */,
 				2FC5B7402A6A6D95009FB0CE /* LocationModifySigunguViewController.swift in Sources */,
 				2FC2EB5429E4036600ECE2ED /* PetsLostDetailView.swift in Sources */,
@@ -1655,8 +1790,11 @@
 				2F64A91029B33A2C00BC11B9 /* LineTextFieldView.swift in Sources */,
 				2FC5B6F62A691BB4009FB0CE /* SignupFinishViewModel.swift in Sources */,
 				2FD9067F29C94F0900CC4225 /* TabBarPageCases.swift in Sources */,
+				2FBF64BE2A725CBD0036401F /* DailyPost.swift in Sources */,
 				2F0677B129CEBE7500687848 /* NicknameViewModel.swift in Sources */,
+				2FBF64D22A7282D90036401F /* CommentPostQuery.swift in Sources */,
 				2F1C811B2A677BAB00210434 /* SidoViewModel.swift in Sources */,
+				2FBF64E42A7291020036401F /* RequestDetailDailyPostDTO.swift in Sources */,
 				2FCDD20F29EA8C79000B6CD7 /* DuplicationNickname.swift in Sources */,
 				2FC5B71E2A6A1F9C009FB0CE /* HospitalAPIEndpoints.swift in Sources */,
 				2F0677A529CEA56900687848 /* EmailViewController.swift in Sources */,
@@ -1671,10 +1809,13 @@
 				2FD85FC529C825A200BE0BCC /* CoordinatorStyleCase.swift in Sources */,
 				2FD40B1D29C58EBE00BED327 /* Community.swift in Sources */,
 				2FCDD21D29EAAC04000B6CD7 /* GetUserInfoQuery.swift in Sources */,
+				2FBF64CA2A725E960036401F /* UpdateDailyPost.swift in Sources */,
 				2FD3BFFB29B99C0E00096669 /* TabBarCoordinator.swift in Sources */,
+				2FBF64F62A7293E50036401F /* ResponseDeletePostDTO.swift in Sources */,
 				2F0677B729CF0BDD00687848 /* PasswordViewController.swift in Sources */,
 				2FD85FC329C8252400BE0BCC /* CoordinatorDelegate.swift in Sources */,
 				2FC5B7352A6A6CF3009FB0CE /* LocationModifySidoViewController.swift in Sources */,
+				2FBF64F22A7293D00036401F /* ResponseThumbnailDailyPostDTO.swift in Sources */,
 				2FC5B6FB2A6920EA009FB0CE /* OrganicAnimalListQuery.swift in Sources */,
 				2FCDD21529EA980A000B6CD7 /* Register.swift in Sources */,
 				2FCDD21B29EAABE6000B6CD7 /* Login.swift in Sources */,
@@ -1683,6 +1824,7 @@
 				2F17401D2A67F5D600EFE86C /* TabmanCoordinator.swift in Sources */,
 				2FCDD21929EAABC8000B6CD7 /* LoginQuery.swift in Sources */,
 				2FC5B70C2A692AA6009FB0CE /* OrganicAnimalRepositoryImpl.swift in Sources */,
+				2FC5B7422A6AAD6A009FB0CE /* CustomAnnotation.swift in Sources */,
 				2FC5B6EB2A690F05009FB0CE /* SigunguView.swift in Sources */,
 				2F1C81212A677DF700210434 /* SidoList.swift in Sources */,
 				2FB2D7AC29B5C20200EA35F4 /* LoginView.swift in Sources */,
@@ -1697,13 +1839,16 @@
 				2FDCC1802A68BF3E0000E7B9 /* SigunguList.swift in Sources */,
 				2FC5B28129CAD4700032B55C /* APIKey.swift in Sources */,
 				2FC5B72A2A6A2379009FB0CE /* HospitalUseCase.swift in Sources */,
+				2FBF64F42A7293DD0036401F /* ResponseDetailDailyPostDTO.swift in Sources */,
 				2FD188B029DE8A9900996EA9 /* CommunityView.swift in Sources */,
 				2FD40B1529C58D0C00BED327 /* TopicViewController.swift in Sources */,
 				2F1C81192A677B1600210434 /* SearchCoordinator.swift in Sources */,
 				2FDCC19C2A68D5050000E7B9 /* RequestSigunguListDTO.swift in Sources */,
+				2FBF64BC2A725CA50036401F /* DailyPostQuery.swift in Sources */,
 				2F0677B529CF0BD500687848 /* PasswordViewModel.swift in Sources */,
 				2FC5B6F82A691BBD009FB0CE /* SignupFinishViewController.swift in Sources */,
 				2FC5B7082A692981009FB0CE /* OrganicAnimalRouter.swift in Sources */,
+				2FBF64E62A7291150036401F /* RequestCommentPostDTO.swift in Sources */,
 				2FB2D79B29B59FAB00EA35F4 /* Font+Enum.swift in Sources */,
 				2F0677BB29CF159500687848 /* PetsCommandoRepositoryType.swift in Sources */,
 				2FDCC1A22A68D9180000E7B9 /* RegionUseCase.swift in Sources */,
@@ -1711,29 +1856,38 @@
 				2FB2D7B229B5C69200EA35F4 /* LoginViewModel.swift in Sources */,
 				2FB33F1929D1D5F0003B8B2A /* DuplicationEmail.swift in Sources */,
 				2FC572E129B8404E00D21EBA /* HomeView.swift in Sources */,
+				2FBF64EE2A72939F0036401F /* ResponseDailyPostDTO.swift in Sources */,
 				2FFA534429DAC7750065F624 /* CircleButton.swift in Sources */,
 				2FB5971529E01015006F641F /* CommunityCollectionViewCell.swift in Sources */,
 				2F0677A829CEA57800687848 /* EmailView.swift in Sources */,
 				2FB5970429DFFF86006F641F /* CommunityViewController.swift in Sources */,
+				2FBF64E82A7291230036401F /* RequestCommentPutDTO.swift in Sources */,
+				2FBF64D82A7288AB0036401F /* CommentDeleteQuery.swift in Sources */,
 				2FAB65B229B3127D0022B609 /* Color.swift in Sources */,
 				2FFA534829DAC7F80065F624 /* ButtonStatus.swift in Sources */,
 				2FC5B6FE2A69213F009FB0CE /* OrganicAnimalList.swift in Sources */,
+				2FBF64D62A7288950036401F /* CommentGetQuery.swift in Sources */,
 				2FC2EB5129E4034E00ECE2ED /* PetsLostDetailViewController.swift in Sources */,
 				2FC5B7372A6A6D26009FB0CE /* LocationModifySidoViewModel.swift in Sources */,
 				2F863F3129CAB49700755FFC /* AuthDTO.swift in Sources */,
 				2FDE16002990DB6400154A78 /* ViewModelType.swift in Sources */,
 				2FC5B7062A6928FA009FB0CE /* OrganicAnimalRepository.swift in Sources */,
+				2FBF64CE2A727D450036401F /* Comment.swift in Sources */,
 				2FDCC19A2A68D1DF0000E7B9 /* NewHTTPMethod.swift in Sources */,
 				2F64A8FC29B31AED00BC11B9 /* AppCoordinator.swift in Sources */,
 				2FD40B1929C58DDA00BED327 /* TopicView.swift in Sources */,
+				2FBF64DC2A728B520036401F /* CommunityRouter.swift in Sources */,
 				2FC5B7262A6A2285009FB0CE /* HospitalRepository.swift in Sources */,
 				2F64A91229B33A5F00BC11B9 /* UITextField+Extension.swift in Sources */,
 				2FCDD20D29EA8C58000B6CD7 /* DuplicationNicknameResponseDTO.swift in Sources */,
 				2FB5971129E00709006F641F /* CommunityAndPetsLostViewModel.swift in Sources */,
 				2FC5B7212A6A1FE5009FB0CE /* HospitalList.swift in Sources */,
 				2F0677B929CF0BE300687848 /* PasswordView.swift in Sources */,
+				2FBF64EC2A7291420036401F /* RequestCommentDeleteDTO.swift in Sources */,
 				2FC5B7282A6A22ED009FB0CE /* HospitalRepositoryImpl.swift in Sources */,
 				2FFA534629DAC7890065F624 /* DefaultButton.swift in Sources */,
+				2FBF64C82A725DE10036401F /* DeleteDailyPostQuery.swift in Sources */,
+				2FBF64E22A7290E60036401F /* RequestUpdateDailyPostDTO.swift in Sources */,
 				2FC5B72E2A6A62BA009FB0CE /* MyProfileCoordinator.swift in Sources */,
 				2FDE16072990DDBF00154A78 /* BaseView.swift in Sources */,
 				2FAB65AA29B30E6C0022B609 /* LoginViewController.swift in Sources */,
@@ -1745,10 +1899,12 @@
 				2FD40B1F29C593B200BED327 /* TopicCell.swift in Sources */,
 				2FC5B28629CAE16A0032B55C /* UserRepository.swift in Sources */,
 				2FDCC17C2A68BE0B0000E7B9 /* ResponseSidoListDTO.swift in Sources */,
+				2FBF64C62A725DC30036401F /* DetailDailyPostQuery.swift in Sources */,
 				2F64A90129B31CFE00BC11B9 /* OnBoardingViewController.swift in Sources */,
 				2FC94ED529C083230097E696 /* HomeString.swift in Sources */,
 				2FDE15FA2990DB1B00154A78 /* Repository.swift in Sources */,
 				2FCDD21329EA93E7000B6CD7 /* RegisterQuery.swift in Sources */,
+				2FBF64DA2A7289620036401F /* CommunityRepository.swift in Sources */,
 				2FDCC1A02A68D7C40000E7B9 /* RegionRepository.swift in Sources */,
 				2FB5970B29E00346006F641F /* PetsLostViewController.swift in Sources */,
 				2FC5B6ED2A690F0C009FB0CE /* SigunguViewController.swift in Sources */,

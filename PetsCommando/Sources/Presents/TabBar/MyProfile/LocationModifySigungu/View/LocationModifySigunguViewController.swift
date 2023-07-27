@@ -42,6 +42,7 @@ final class LocationModifySigunguViewController: BaseViewController {
     override func setupBinding() {
         let input = LocationModifySigunguViewModel.Input(viewDidLoad: Observable.just(()), sigunguCellSelected: self.sigunguCellSelected, dataSetFinish: self.dataSetFinish)
         let output = self.viewModel.transform(input)
+        //MARK: SenceDelegate에 AppCoordinator 재실행해줘야함
         
         output.sigunguList
             .observe(on: MainScheduler.instance)
@@ -68,6 +69,7 @@ extension LocationModifySigunguViewController {
             self.sigunguCellSelected.bind { index in
                 if index == indexPath {
                     UserDefaults.standard.set(itemIdentifier, forKey: "sigungu")
+                    UserDefaults.standard.set(true, forKey: "locationChanged")
                     self.dataSetFinish.accept(())
                 }
             }

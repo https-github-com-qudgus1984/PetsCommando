@@ -11,6 +11,7 @@ import RxCocoa
 
 final class MyProfileViewController: BaseViewController {
     let selfView = MyProfileView()
+    
     private let viewModel: MyProfileViewModel
     
     init(viewModel: MyProfileViewModel) {

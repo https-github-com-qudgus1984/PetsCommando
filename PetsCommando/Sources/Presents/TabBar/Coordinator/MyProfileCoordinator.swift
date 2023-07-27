@@ -13,7 +13,7 @@ final class MyProfileCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     var type: CoordinatorStyleCase = .myProfile
-
+    
     init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
         navigationController.setNavigationBarHidden(false, animated: false)
@@ -44,9 +44,6 @@ final class MyProfileCoordinator: Coordinator {
     }
     
     func restart() {
-        let navi = UINavigationController()
-        let tabmanCoordinator = TabmanCoordinator(navi)
-        tabmanCoordinator.start()
+        self.start()
     }
-    
 }

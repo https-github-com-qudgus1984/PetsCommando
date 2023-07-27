@@ -57,19 +57,6 @@ final class CommunityAndPetsLostViewController: TabmanViewController {
         
         addBar(bar, dataSource: self, at: .top)
         
-        navigationUI()
-    }
-    
-    private func navigationUI() {
-        
-        let rightBarButton = UIBarButtonItem(image: UIImage(systemName: "person.fill"), style: .plain, target: nil, action: #selector(tappedMyPage))
-        self.navigationController?.navigationBar.backgroundColor = Color.BaseColor.white
-        self.navigationItem.rightBarButtonItem = rightBarButton
-    }
-    
-    @objc
-    func tappedMyPage() {
-        print("mypageButtonClicked")
     }
 }
 

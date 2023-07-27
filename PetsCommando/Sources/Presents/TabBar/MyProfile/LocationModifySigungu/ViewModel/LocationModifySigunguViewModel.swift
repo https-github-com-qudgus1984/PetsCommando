@@ -29,6 +29,7 @@ final class LocationModifySigunguViewModel: ViewModelType {
 
     struct Output {
         let sigunguList: PublishRelay<[String]>
+        let dataSetFinish: PublishRelay<Void>
     }
         
     var disposeBag = DisposeBag()
@@ -44,11 +45,10 @@ final class LocationModifySigunguViewModel: ViewModelType {
         input.dataSetFinish.bind { [weak self] _ in
             guard let self else { return }
             self.coordinator?.restart()
-            self.coordinator?.start()
         }
         .disposed(by: disposeBag)
         
-        return Output(sigunguList: self.sigunguList)
+        return Output(sigunguList: self.sigunguList, dataSetFinish: input.dataSetFinish)
     }
 }
 
