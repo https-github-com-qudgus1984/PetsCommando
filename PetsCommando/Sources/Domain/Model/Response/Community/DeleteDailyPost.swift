@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct DeleteDailyPost: Hashable {
+    let message: String?
+    let dailyPostId: Int?
+}

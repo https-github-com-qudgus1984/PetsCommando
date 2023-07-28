@@ -17,9 +17,13 @@ protocol CommunityRepository: AnyObject {
     
     func getDetailDailyPost(query: DetailDailyPostQuery) async throws -> DetailDailyPost
     
+    func deleteDailyPost(query: DeleteDailyPostQuery) async throws -> DeleteDailyPost
+    
     func postComment(query: CommentPostQuery) async throws -> Comment
     
     func putComment(query: CommentPutQuery) async throws -> Comment
     
     func getComment(query: CommentGetQuery) async throws -> [Comment]
+    
+    func deleteComment(query: CommentDeleteQuery) async throws -> CommentDelete
 }

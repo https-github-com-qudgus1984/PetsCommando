@@ -12,9 +12,11 @@ enum CommunityRouter<R> {
     case postEditDailyPost(parameters: UpdateDailyPostQuery)
     case getThumnailDailyPost
     case getDetailDailyPost(parameters: DetailDailyPostQuery)
+    case deleteDailyPost(parameters: DeleteDailyPostQuery)
     case postComment(parameters: CommentPostQuery)
     case getComment(parameters: CommentGetQuery)
     case putComment(parameters: CommentPutQuery)
+    case deleteComment(parameters: CommentDeleteQuery)
 }
 
 extension CommunityRouter: NewTargetType {
@@ -50,6 +52,10 @@ extension CommunityRouter: NewTargetType {
             return "/noauth/comment/\(parameters.dailyPostId)"
         case .putComment(let parameters):
             return "/api/comment/\(parameters.dailyPostId)/edit/\(parameters.commentId)"
+        case .deleteDailyPost(let parameters):
+            return "/api/dailyPost/\(parameters.dailyPostId)"
+        case .deleteComment(let parameters):
+            return "/api/comment/\(parameters.commentId)"
         }
     }
     
@@ -64,7 +70,7 @@ extension CommunityRouter: NewTargetType {
     var header: [String : String] {
         switch self {
             
-        case .postDailyPost, .postEditDailyPost, .postComment, .putComment:
+        case .postDailyPost, .postEditDailyPost, .postComment, .putComment, .deleteComment, .deleteDailyPost:
             guard let token = UserDefaults.standard.string(forKey: UserDefaultKeyCase.accessToken) else { return ["accept" : "application/json" , "Content-Type": "application/json"] }
             return ["accept" : "application/json" , "Content-Type": "application/json", "Authorization": "Bearer \(token)"]
             
@@ -75,19 +81,36 @@ extension CommunityRouter: NewTargetType {
     var body: Data? {
         switch self {
         case .postDailyPost(let parameters):
-            <#code#>
+            let requestDTO = RequestDailyPostDTO(title: parameters.title, content: parameters.content)
+            let encoder = JSONEncoder()
+            return try? encoder.encode(requestDTO)
         case .postEditDailyPost(let parameters):
-            <#code#>
+            let requestDTO = RequestDailyPostDTO(title: parameters.title, content: parameters.content)
+            let encoder = JSONEncoder()
+            return try? encoder.encode(requestDTO)
+
         case .getThumnailDailyPost:
-            <#code#>
-        case .getDetailDailyPost(let parameters):
-            <#code#>
+            return nil
+
+        case .getDetailDailyPost:
+            return nil
+
         case .postComment(let parameters):
-            <#code#>
-        case .getComment(let parameters):
-            <#code#>
+            let requestDTO = RequestCommentPostDTO(dailyPostId: parameters.dailyPostId, content: parameters.content)
+            let encoder = JSONEncoder()
+            return try? encoder.encode(requestDTO)
+            
+        case .getComment:
+            return nil
+
         case .putComment(let parameters):
-            <#code#>
+            let requestDTO = RequestCommentPutContentDTO(content: parameters.content)
+            let encoder = JSONEncoder()
+            return try? encoder.encode(requestDTO)
+        case .deleteDailyPost:
+            return nil
+        case .deleteComment:
+            return nil
         }
     }
     
@@ -99,6 +122,8 @@ extension CommunityRouter: NewTargetType {
             return .get
         case .putComment:
             return .put
+        case .deleteDailyPost, .deleteComment:
+            return .delete
         }
     }
 }
