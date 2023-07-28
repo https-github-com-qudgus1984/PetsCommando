@@ -77,6 +77,7 @@ final class LoginViewModel: ViewModelType {
                 }            }
             .disposed(by: disposeBag)
         
+        
         return Output(idValidation: idValid, pwValidation: pwValid, loginValidation: loginValid, requestTextMessage: requestText.asSignal())
     }
     

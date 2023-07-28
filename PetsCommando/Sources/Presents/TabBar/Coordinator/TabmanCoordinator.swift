@@ -39,4 +39,13 @@ final class TabmanCoordinator: Coordinator {
     func deleteTabmanCoordinator() {
         self.delegate?.didFinish(childCoordinator: self)
     }
+    
+    func showCreateCommunityViewController() {
+        let dataTransferService = DataTransferService(networkService: NetworkService())
+        let communityRepositoryImpl = CommunityRepositoryImpl(dataTransferService: dataTransferService)
+        let communityUseCase = CommunityUseCaseImpl(communityRepository: communityRepositoryImpl)
+        let viewModel = CreateCommunityViewModel(coordinator: self, communityUseCase: communityUseCase)
+        let vc = CreateCommunityViewController(viewModel: viewModel)
+        navigationController.pushViewController(vc, animated: true)
+    }
 }

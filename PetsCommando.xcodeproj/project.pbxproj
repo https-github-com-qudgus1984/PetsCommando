@@ -207,6 +207,9 @@
 		2FE110CA2A7353150013A49E /* CommunityAPIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE110C92A7353150013A49E /* CommunityAPIEndpoints.swift */; };
 		2FE110CC2A735DE60013A49E /* ResponseDeleteCommentDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE110CB2A735DE60013A49E /* ResponseDeleteCommentDTO.swift */; };
 		2FE110CE2A7360A80013A49E /* CommunityUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE110CD2A7360A80013A49E /* CommunityUseCase.swift */; };
+		2FE110D42A73856F0013A49E /* CreateCommunityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE110D32A73856F0013A49E /* CreateCommunityViewModel.swift */; };
+		2FE110D62A7385760013A49E /* CreateCommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE110D52A7385760013A49E /* CreateCommunityView.swift */; };
+		2FE110D82A73857E0013A49E /* CreateCommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE110D72A73857E0013A49E /* CreateCommunityViewController.swift */; };
 		2FFA534429DAC7750065F624 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFA534329DAC7750065F624 /* CircleButton.swift */; };
 		2FFA534629DAC7890065F624 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFA534529DAC7890065F624 /* DefaultButton.swift */; };
 		2FFA534829DAC7F80065F624 /* ButtonStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFA534729DAC7F80065F624 /* ButtonStatus.swift */; };
@@ -408,6 +411,9 @@
 		2FE110C92A7353150013A49E /* CommunityAPIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityAPIEndpoints.swift; sourceTree = "<group>"; };
 		2FE110CB2A735DE60013A49E /* ResponseDeleteCommentDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDeleteCommentDTO.swift; sourceTree = "<group>"; };
 		2FE110CD2A7360A80013A49E /* CommunityUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityUseCase.swift; sourceTree = "<group>"; };
+		2FE110D32A73856F0013A49E /* CreateCommunityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommunityViewModel.swift; sourceTree = "<group>"; };
+		2FE110D52A7385760013A49E /* CreateCommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommunityView.swift; sourceTree = "<group>"; };
+		2FE110D72A73857E0013A49E /* CreateCommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommunityViewController.swift; sourceTree = "<group>"; };
 		2FFA534329DAC7750065F624 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		2FFA534529DAC7890065F624 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
 		2FFA534729DAC7F80065F624 /* ButtonStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStatus.swift; sourceTree = "<group>"; };
@@ -873,9 +879,9 @@
 		2FB5971329E00C5B006F641F /* Community */ = {
 			isa = PBXGroup;
 			children = (
-				2F1740192A67F3C200EFE86C /* ViewModel */,
+				2FE110D02A7384E70013A49E /* CreateCommunity */,
+				2FE110CF2A7384D80013A49E /* Community */,
 				2FC2EB4F29E4033200ECE2ED /* CommunityDetailViewController */,
-				2FB5971729E01E0D006F641F /* View */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -1645,6 +1651,41 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		2FE110CF2A7384D80013A49E /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				2FB5971729E01E0D006F641F /* View */,
+				2F1740192A67F3C200EFE86C /* ViewModel */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		2FE110D02A7384E70013A49E /* CreateCommunity */ = {
+			isa = PBXGroup;
+			children = (
+				2FE110D22A73855F0013A49E /* ViewModel */,
+				2FE110D12A73855B0013A49E /* View */,
+			);
+			path = CreateCommunity;
+			sourceTree = "<group>";
+		};
+		2FE110D12A73855B0013A49E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2FE110D52A7385760013A49E /* CreateCommunityView.swift */,
+				2FE110D72A73857E0013A49E /* CreateCommunityViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2FE110D22A73855F0013A49E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2FE110D32A73856F0013A49E /* CreateCommunityViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		2FFA534229DAC75B0065F624 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1748,6 +1789,7 @@
 			files = (
 				2FC5B73E2A6A6D86009FB0CE /* LocationModifySigunguView.swift in Sources */,
 				2FC5B6F42A691BA9009FB0CE /* SignupFinishView.swift in Sources */,
+				2FE110D62A7385760013A49E /* CreateCommunityView.swift in Sources */,
 				2FFA534A29DACA8F0065F624 /* UIView+.swift in Sources */,
 				2F1740182A67F23700EFE86C /* PetsLostDetailViewModel.swift in Sources */,
 				2FC5B70A2A692A2A009FB0CE /* OrganicAPIEndpoints.swift in Sources */,
@@ -1904,6 +1946,7 @@
 				2FD40B1929C58DDA00BED327 /* TopicView.swift in Sources */,
 				2FBF64DC2A728B520036401F /* CommunityRouter.swift in Sources */,
 				2FC5B7262A6A2285009FB0CE /* HospitalRepository.swift in Sources */,
+				2FE110D42A73856F0013A49E /* CreateCommunityViewModel.swift in Sources */,
 				2F64A91229B33A5F00BC11B9 /* UITextField+Extension.swift in Sources */,
 				2FCDD20D29EA8C58000B6CD7 /* DuplicationNicknameResponseDTO.swift in Sources */,
 				2FE110C42A734C3B0013A49E /* CommentDelete.swift in Sources */,
@@ -1926,6 +1969,7 @@
 				2FC5B71C2A6A1EE1009FB0CE /* HospitalRouter.swift in Sources */,
 				2FD40B1F29C593B200BED327 /* TopicCell.swift in Sources */,
 				2FC5B28629CAE16A0032B55C /* UserRepository.swift in Sources */,
+				2FE110D82A73857E0013A49E /* CreateCommunityViewController.swift in Sources */,
 				2FDCC17C2A68BE0B0000E7B9 /* ResponseSidoListDTO.swift in Sources */,
 				2FBF64C62A725DC30036401F /* DetailDailyPostQuery.swift in Sources */,
 				2F64A90129B31CFE00BC11B9 /* OnBoardingViewController.swift in Sources */,

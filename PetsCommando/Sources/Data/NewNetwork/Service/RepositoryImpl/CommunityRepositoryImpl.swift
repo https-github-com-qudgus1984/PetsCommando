@@ -41,7 +41,7 @@ final class CommunityRepositoryImpl: CommunityRepository {
         }
     }
     
-    func getDailyPost() async throws -> [ThumbnailDailyPost] {
+    func getDailyPost() async throws -> [ThumbnailDailyPost?] {
         let target = CommunityAPIEndpoints.getDailyPost()
         do {
             let data = try await dataTransferService.request(with: target)
@@ -95,7 +95,7 @@ final class CommunityRepositoryImpl: CommunityRepository {
         }
     }
     
-    func getComment(query: CommentGetQuery) async throws -> [Comment] {
+    func getComment(query: CommentGetQuery) async throws -> [Comment?] {
         let requestDTO = RequestCommentGetDTO(dailyPostId: query.dailyPostId)
         let target = CommunityAPIEndpoints.getComment(with: requestDTO)
         do {

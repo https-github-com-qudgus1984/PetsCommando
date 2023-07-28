@@ -13,7 +13,7 @@ protocol CommunityRepository: AnyObject {
     
     func postUpdateDailyPost(query: UpdateDailyPostQuery) async throws -> UpdateDailyPost
     
-    func getDailyPost() async throws -> [ThumbnailDailyPost]
+    func getDailyPost() async throws -> [ThumbnailDailyPost?]
     
     func getDetailDailyPost(query: DetailDailyPostQuery) async throws -> DetailDailyPost
     
@@ -23,7 +23,7 @@ protocol CommunityRepository: AnyObject {
     
     func putComment(query: CommentPutQuery) async throws -> Comment
     
-    func getComment(query: CommentGetQuery) async throws -> [Comment]
+    func getComment(query: CommentGetQuery) async throws -> [Comment?]
     
     func deleteComment(query: CommentDeleteQuery) async throws -> CommentDelete
 }

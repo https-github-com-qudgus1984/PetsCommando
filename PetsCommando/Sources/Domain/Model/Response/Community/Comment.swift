@@ -13,6 +13,6 @@ struct Comment: Hashable {
     let dailyPostId: Int?
     let content: String?
     let nickname: String?
-    let registerAt: Date?
-    let updatedAt: Date?
+    let registerAt: String?
+    let updatedAt: String?
 }

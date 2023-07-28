@@ -15,8 +15,8 @@ struct ResponseDetailDailyPostDTO: Decodable {
     let content: String?
     let likecount: Int?
     let commentcount: Int?
-    let registerAt: Date?
-    let updatedAt: Date?
+    let registerAt: String?
+    let updatedAt: String?
     
     enum CodingKeys: String, CodingKey {
         case dailyPostId, userId, nickName, title, content, likecount, commentcount, registerAt, updatedAt

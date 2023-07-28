@@ -93,6 +93,7 @@ extension PetsCommandoRepository {
                 let data = try? JSONDecoder().decode(RegisterResponseDTO.self, from: response.data)
                 guard let data = data else { return }
                 print("Rigster 서버통신 : ✅✅✅",data, response.statusCode)
+                
 //                completion(.success(data.toDomain()))
                 completion(.success(response.statusCode))
             case .failure(let error):
@@ -112,6 +113,7 @@ extension PetsCommandoRepository {
                 guard let data = data else { return }
                 print("login 서버통신 : ✅✅✅",data, response.statusCode)
 //                completion(.success(data.toDomain()))
+                UserDefaults.standard.set(data.accessToken, forKey: UserDefaultKeyCase.accessToken)
                 completion(.success(response.statusCode))
             case .failure(let error):
                 print("login 에러에러", error)

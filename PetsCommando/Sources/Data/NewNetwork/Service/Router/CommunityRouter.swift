@@ -72,6 +72,7 @@ extension CommunityRouter: NewTargetType {
             
         case .postDailyPost, .postEditDailyPost, .postComment, .putComment, .deleteComment, .deleteDailyPost:
             guard let token = UserDefaults.standard.string(forKey: UserDefaultKeyCase.accessToken) else { return ["accept" : "application/json" , "Content-Type": "application/json"] }
+            print(token, "token값")
             return ["accept" : "application/json" , "Content-Type": "application/json", "Authorization": "Bearer \(token)"]
             
         default: return ["accept" : "application/json" , "Content-Type": "application/json"]
