@@ -20,9 +20,10 @@ final class CommunityViewModel: ViewModelType {
     }
     
     struct Input {
-        let cellSelected: PublishSubject<Void>
+        let cellSelected: PublishSubject<IndexPath>
         let viewDidLoad: PublishRelay<Void>
         let createButtonTap: ControlEvent<Void>
+        let choicePost: PublishRelay<ThumbnailDailyPost>
     }
     
     struct Output {
@@ -37,7 +38,7 @@ final class CommunityViewModel: ViewModelType {
         input.cellSelected
             .bind { [weak self] _ in
                 guard let self else { return }
-                //showCommunityDetailViewController로 이동
+//                showCommunityDetailViewController로 이동
             }
             .disposed(by: disposeBag)
         
@@ -53,6 +54,15 @@ final class CommunityViewModel: ViewModelType {
             .bind { vc, _ in
                 self.coordinator?.showCreateCommunityViewController()
             }
+            .disposed(by: disposeBag)
+        
+        input.choicePost
+            .withUnretained(self)
+            .bind { vc, data in
+                guard let id = data.dailyPostId else { return }
+                print("아이디 조회", id)
+                vc.coordinator?.showCommunityDetailViewController(postId: id)
+        }
             .disposed(by: disposeBag)
         
         return Output(postList: self.postList)

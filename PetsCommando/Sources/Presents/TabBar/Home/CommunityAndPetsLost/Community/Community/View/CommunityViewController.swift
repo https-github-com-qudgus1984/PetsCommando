@@ -21,8 +21,9 @@ final class CommunityViewController: BaseViewController, UICollectionViewDelegat
     }
     
     let viewDidLoadTrigger = PublishRelay<Void>()
-    let cellSelected = PublishSubject<Void>()
+    let cellSelected = PublishSubject<IndexPath>()
     let postList = PublishSubject<ThumbnailDailyPost?>()
+    let choicePost = PublishRelay<ThumbnailDailyPost>()
     
     private var dataSource: UICollectionViewDiffableDataSource<Int, ThumbnailDailyPost?>!
     
@@ -40,7 +41,7 @@ final class CommunityViewController: BaseViewController, UICollectionViewDelegat
     }
     
     override func setupBinding() {
-        let input = CommunityViewModel.Input(cellSelected: self.cellSelected, viewDidLoad: self.viewDidLoadTrigger, createButtonTap: self.communityView.plusButton.rx.tap)
+        let input = CommunityViewModel.Input(cellSelected: self.cellSelected, viewDidLoad: self.viewDidLoadTrigger, createButtonTap: self.communityView.plusButton.rx.tap, choicePost: self.choicePost)
         let output = viewModel.transform(input)
         
         output.postList
@@ -57,6 +58,7 @@ final class CommunityViewController: BaseViewController, UICollectionViewDelegat
                 self.dataSource.apply(snapshot)
             }
             .disposed(by: disposeBag)
+        
     }
 }
 
@@ -64,7 +66,7 @@ extension CommunityViewController {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("이건찍히지")
-        self.cellSelected.onNext(())
+        self.cellSelected.onNext((indexPath))
     }
 }
 
@@ -75,6 +77,14 @@ extension CommunityViewController {
             cell.registerTimeLabel.text = itemIdentifier.registerAt
             cell.contentLabel.text = "게시물 댓글 수 : " + String(itemIdentifier.commentcount ?? 0)
             
+            self.cellSelected
+                .withUnretained(self)
+                .bind { vc, index in
+                if index == indexPath {
+                    self.choicePost.accept(itemIdentifier)
+                }
+            }
+                .disposed(by: self.disposeBag)
         }
         
         dataSource = UICollectionViewDiffableDataSource(collectionView: communityView.collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
