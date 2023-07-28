@@ -24,11 +24,14 @@ final class TabmanCoordinator: Coordinator {
         navigationController.pushViewController(tabmanviewController, animated: true)
     }
     
-//    func showCommunityDetailViewController() {
-//        let viewModel = CommunityDetailViewModel(coordinator: self)
-//        let vc = CommunityDetailViewController(viewModel: viewModel)
-//        navigationController.pushViewController(vc, animated: true)
-//    }
+    func showCommunityDetailViewController(postId: Int) {
+        let dataTransferService = DataTransferService(networkService: NetworkService())
+        let communityRepositoryImpl = CommunityRepositoryImpl(dataTransferService: dataTransferService)
+        let communityUseCase = CommunityUseCaseImpl(communityRepository: communityRepositoryImpl)
+        let viewModel = CommunityDetailViewModel(coordinator: self, communityUseCase: communityUseCase, dailyPostId: postId)
+        let vc = CommunityDetailViewController(viewModel: viewModel)
+        navigationController.pushViewController(vc, animated: true)
+    }
     
     func showPetsLostDetailViewController(organicAnimal: List) {
         let viewModel = PetsLostDetailViewModel(coordinator: self, organicAnimal: organicAnimal)
@@ -38,5 +41,23 @@ final class TabmanCoordinator: Coordinator {
     
     func deleteTabmanCoordinator() {
         self.delegate?.didFinish(childCoordinator: self)
+    }
+    
+    func showCreateCommunityViewController() {
+        let dataTransferService = DataTransferService(networkService: NetworkService())
+        let communityRepositoryImpl = CommunityRepositoryImpl(dataTransferService: dataTransferService)
+        let communityUseCase = CommunityUseCaseImpl(communityRepository: communityRepositoryImpl)
+        let viewModel = CreateCommunityViewModel(coordinator: self, communityUseCase: communityUseCase)
+        let vc = CreateCommunityViewController(viewModel: viewModel)
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func showCommentSheetPresentationViewController(postId: Int) {
+        let dataTransferService = DataTransferService(networkService: NetworkService())
+        let communityRepositoryImpl = CommunityRepositoryImpl(dataTransferService: dataTransferService)
+        let communityUseCase = CommunityUseCaseImpl(communityRepository: communityRepositoryImpl)
+        let viewModel = CommentSheetPresentationViewModel(coordinator: self, communityUseCase: communityUseCase, dailyPostId: postId)
+        let vc = CommentSheetPresentationViewController(viewModel: viewModel)
+        navigationController.present(vc, animated: true)
     }
 }

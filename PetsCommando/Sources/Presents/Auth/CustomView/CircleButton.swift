@@ -43,7 +43,7 @@ final class CircleButton: UIButton {
     }
 
     func setConfiguration() {
-        backgroundColor = Color.BaseColor.hunt2
+        backgroundColor = Color.BaseColor.hunt3
         tintColor = .black
         clipsToBounds = true
         layer.cornerRadius = bounds.width / 2

@@ -13,8 +13,8 @@ struct ResponseCommentDTO: Decodable {
     let dailyPostId: Int?
     let content: String?
     let nickname: String?
-    let registerAt: Date?
-    let updatedAt: Date?
+    let registerAt: String?
+    let updatedAt: String?
     
     enum CodingKeys: String, CodingKey {
         case id, userId, dailyPostId, content, nickname, registerAt, updatedAt

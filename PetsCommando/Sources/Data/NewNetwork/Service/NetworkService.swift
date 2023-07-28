@@ -15,7 +15,7 @@ final class NetworkService {
             print(urlRequest, "보내는 URL")
             let (data, response) = try await URLSession.shared.data(for: urlRequest)
              guard let response = response as? HTTPURLResponse else { throw NetworkError.httpURLResponse}
-            
+    
             switch response.statusCode {
             case 200..<300:
                 return data

@@ -12,7 +12,7 @@ protocol CommunityUseCase {
     
     func postUpdateDailyPost(query: UpdateDailyPostQuery) async throws -> UpdateDailyPost
     
-    func getDailyPost() async throws -> [ThumbnailDailyPost]
+    func getDailyPost() async throws -> [ThumbnailDailyPost?]
     
     func getDetailDailyPost(query: DetailDailyPostQuery) async throws -> DetailDailyPost
     
@@ -22,7 +22,7 @@ protocol CommunityUseCase {
     
     func putComment(query: CommentPutQuery) async throws -> Comment
     
-    func getComment(query: CommentGetQuery) async throws -> [Comment]
+    func getComment(query: CommentGetQuery) async throws -> [Comment?]
     
     func deleteComment(query: CommentDeleteQuery) async throws -> CommentDelete}
 
@@ -54,7 +54,7 @@ final class CommunityUseCaseImpl: CommunityUseCase {
         }
     }
     
-    func getDailyPost() async throws -> [ThumbnailDailyPost] {
+    func getDailyPost() async throws -> [ThumbnailDailyPost?] {
         do {
             return try await communityRepository.getDailyPost()
         } catch {
@@ -94,7 +94,7 @@ final class CommunityUseCaseImpl: CommunityUseCase {
         }
     }
     
-    func getComment(query: CommentGetQuery) async throws -> [Comment] {
+    func getComment(query: CommentGetQuery) async throws -> [Comment?] {
         do {
             return try await communityRepository.getComment(query: query)
         } catch {
