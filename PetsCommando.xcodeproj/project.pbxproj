@@ -200,6 +200,13 @@
 		2FDE16002990DB6400154A78 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE15FF2990DB6400154A78 /* ViewModelType.swift */; };
 		2FDE16072990DDBF00154A78 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE16062990DDBF00154A78 /* BaseView.swift */; };
 		2FDE16092990DDCA00154A78 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDE16082990DDCA00154A78 /* BaseViewController.swift */; };
+		2FE110C22A7348570013A49E /* UIApplication + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE110C12A7348570013A49E /* UIApplication + Extension.swift */; };
+		2FE110C42A734C3B0013A49E /* CommentDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE110C32A734C3B0013A49E /* CommentDelete.swift */; };
+		2FE110C62A734F5F0013A49E /* RequestCommentPutContentDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE110C52A734F5F0013A49E /* RequestCommentPutContentDTO.swift */; };
+		2FE110C82A7352B00013A49E /* CommunityRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE110C72A7352B00013A49E /* CommunityRepositoryImpl.swift */; };
+		2FE110CA2A7353150013A49E /* CommunityAPIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE110C92A7353150013A49E /* CommunityAPIEndpoints.swift */; };
+		2FE110CC2A735DE60013A49E /* ResponseDeleteCommentDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE110CB2A735DE60013A49E /* ResponseDeleteCommentDTO.swift */; };
+		2FE110CE2A7360A80013A49E /* CommunityUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE110CD2A7360A80013A49E /* CommunityUseCase.swift */; };
 		2FFA534429DAC7750065F624 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFA534329DAC7750065F624 /* CircleButton.swift */; };
 		2FFA534629DAC7890065F624 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFA534529DAC7890065F624 /* DefaultButton.swift */; };
 		2FFA534829DAC7F80065F624 /* ButtonStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFA534729DAC7F80065F624 /* ButtonStatus.swift */; };
@@ -394,6 +401,13 @@
 		2FDE15FF2990DB6400154A78 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		2FDE16062990DDBF00154A78 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		2FDE16082990DDCA00154A78 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2FE110C12A7348570013A49E /* UIApplication + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication + Extension.swift"; sourceTree = "<group>"; };
+		2FE110C32A734C3B0013A49E /* CommentDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentDelete.swift; sourceTree = "<group>"; };
+		2FE110C52A734F5F0013A49E /* RequestCommentPutContentDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCommentPutContentDTO.swift; sourceTree = "<group>"; };
+		2FE110C72A7352B00013A49E /* CommunityRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityRepositoryImpl.swift; sourceTree = "<group>"; };
+		2FE110C92A7353150013A49E /* CommunityAPIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityAPIEndpoints.swift; sourceTree = "<group>"; };
+		2FE110CB2A735DE60013A49E /* ResponseDeleteCommentDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDeleteCommentDTO.swift; sourceTree = "<group>"; };
+		2FE110CD2A7360A80013A49E /* CommunityUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityUseCase.swift; sourceTree = "<group>"; };
 		2FFA534329DAC7750065F624 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		2FFA534529DAC7890065F624 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
 		2FFA534729DAC7F80065F624 /* ButtonStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStatus.swift; sourceTree = "<group>"; };
@@ -920,6 +934,7 @@
 				2FBF64C12A725D6D0036401F /* DetailDailyPost.swift */,
 				2FBF64C32A725D8B0036401F /* DeleteDailyPost.swift */,
 				2FBF64CD2A727D450036401F /* Comment.swift */,
+				2FE110C32A734C3B0013A49E /* CommentDelete.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -933,6 +948,7 @@
 				2FBF64E52A7291150036401F /* RequestCommentPostDTO.swift */,
 				2FBF64E72A7291230036401F /* RequestCommentPutDTO.swift */,
 				2FBF64E92A72912F0036401F /* RequestCommentGetDTO.swift */,
+				2FE110C52A734F5F0013A49E /* RequestCommentPutContentDTO.swift */,
 				2FBF64EB2A7291420036401F /* RequestCommentDeleteDTO.swift */,
 			);
 			path = Community;
@@ -947,6 +963,7 @@
 				2FBF64F32A7293DD0036401F /* ResponseDetailDailyPostDTO.swift */,
 				2FBF64F52A7293E50036401F /* ResponseDeletePostDTO.swift */,
 				2FBF64F72A7293ED0036401F /* ResponseCommentDTO.swift */,
+				2FE110CB2A735DE60013A49E /* ResponseDeleteCommentDTO.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -1275,6 +1292,7 @@
 				2FDCC1A12A68D9180000E7B9 /* RegionUseCase.swift */,
 				2FC5B70D2A692BD3009FB0CE /* OrganicAnimalUseCase.swift */,
 				2FC5B7292A6A2379009FB0CE /* HospitalUseCase.swift */,
+				2FE110CD2A7360A80013A49E /* CommunityUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -1394,6 +1412,7 @@
 				2FDCC19D2A68D7510000E7B9 /* RegionRepositoryImpl.swift */,
 				2FC5B70B2A692AA6009FB0CE /* OrganicAnimalRepositoryImpl.swift */,
 				2FC5B7272A6A22ED009FB0CE /* HospitalRepositoryImpl.swift */,
+				2FE110C72A7352B00013A49E /* CommunityRepositoryImpl.swift */,
 			);
 			path = RepositoryImpl;
 			sourceTree = "<group>";
@@ -1436,6 +1455,7 @@
 				2FDCC1952A68D0AB0000E7B9 /* RegionAPIEndpoints.swift */,
 				2FC5B7092A692A2A009FB0CE /* OrganicAPIEndpoints.swift */,
 				2FC5B71D2A6A1F9C009FB0CE /* HospitalAPIEndpoints.swift */,
+				2FE110C92A7353150013A49E /* CommunityAPIEndpoints.swift */,
 			);
 			path = EndPoint;
 			sourceTree = "<group>";
@@ -1620,6 +1640,7 @@
 				2F0677BF29CF1E1600687848 /* UIViewController+Extension.swift */,
 				2FFA534929DACA8F0065F624 /* UIView+.swift */,
 				2FBF64CB2A727A2D0036401F /* Date+Extension.swift */,
+				2FE110C12A7348570013A49E /* UIApplication + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1744,6 +1765,7 @@
 				2FBF64C02A725D4E0036401F /* ThumbnailDailyPost.swift in Sources */,
 				2FBF64C42A725D8B0036401F /* DeleteDailyPost.swift in Sources */,
 				2FBF64F02A7293B40036401F /* ResponseUpdateDailyPostDTO.swift in Sources */,
+				2FE110C22A7348570013A49E /* UIApplication + Extension.swift in Sources */,
 				2F863F3729CAB97600755FFC /* UserRepositoryType.swift in Sources */,
 				2FBF64F82A7293ED0036401F /* ResponseCommentDTO.swift in Sources */,
 				2FCDD21F29EAAC12000B6CD7 /* GetUserInfo.swift in Sources */,
@@ -1770,7 +1792,9 @@
 				2FB2D7A029B5AF1900EA35F4 /* AuthString.swift in Sources */,
 				2F5FA8CC29BDA89800123AAC /* Image + Enum.swift in Sources */,
 				2FD188B829DEA57F00996EA9 /* PetsLostView.swift in Sources */,
+				2FE110CA2A7353150013A49E /* CommunityAPIEndpoints.swift in Sources */,
 				2FDE15D02990D13C00154A78 /* AppDelegate.swift in Sources */,
+				2FE110C62A734F5F0013A49E /* RequestCommentPutContentDTO.swift in Sources */,
 				2FBF64EA2A72912F0036401F /* RequestCommentGetDTO.swift in Sources */,
 				2FB5970629E00265006F641F /* CommunityAndPetsListViewController.swift in Sources */,
 				2FC5B7402A6A6D95009FB0CE /* LocationModifySigunguViewController.swift in Sources */,
@@ -1782,6 +1806,8 @@
 				2FC5B7042A692231009FB0CE /* RequestOrganicAnimalListDTO.swift in Sources */,
 				2FDE15EA2990D2EC00154A78 /* NetworkMonitor.swift in Sources */,
 				2FDE15D22990D13C00154A78 /* SceneDelegate.swift in Sources */,
+				2FE110C82A7352B00013A49E /* CommunityRepositoryImpl.swift in Sources */,
+				2FE110CC2A735DE60013A49E /* ResponseDeleteCommentDTO.swift in Sources */,
 				2FC5B7022A692207009FB0CE /* ResponseOrganicAnimalListDTO.swift in Sources */,
 				2FC246DE29D194C700349AEF /* ToastCase.swift in Sources */,
 				2FCDD21729EA9C05000B6CD7 /* RegisterResponseDTO.swift in Sources */,
@@ -1880,6 +1906,8 @@
 				2FC5B7262A6A2285009FB0CE /* HospitalRepository.swift in Sources */,
 				2F64A91229B33A5F00BC11B9 /* UITextField+Extension.swift in Sources */,
 				2FCDD20D29EA8C58000B6CD7 /* DuplicationNicknameResponseDTO.swift in Sources */,
+				2FE110C42A734C3B0013A49E /* CommentDelete.swift in Sources */,
+				2FE110CE2A7360A80013A49E /* CommunityUseCase.swift in Sources */,
 				2FB5971129E00709006F641F /* CommunityAndPetsLostViewModel.swift in Sources */,
 				2FC5B7212A6A1FE5009FB0CE /* HospitalList.swift in Sources */,
 				2F0677B929CF0BE300687848 /* PasswordView.swift in Sources */,

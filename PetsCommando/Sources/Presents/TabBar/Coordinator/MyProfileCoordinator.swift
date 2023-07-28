@@ -44,6 +44,16 @@ final class MyProfileCoordinator: Coordinator {
     }
     
     func restart() {
-        self.start()
+        self.navigationController.popToRootViewController(animated: true)
+//        let navi = UINavigationController()
+//        let viewModel = OnBoardingViewModel(coordinator: AuthCoordinator(navi))
+//        let loginViewController = OnBoardingViewController(viewModel: viewModel)
+//        let navigationController = UINavigationController(rootViewController: loginViewController)
+//        let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
+//        guard let delegate = sceneDelegate else {
+//            // 에러 알림
+//            return
+//        }
+//        delegate.window?.rootViewController = navigationController
     }
 }
