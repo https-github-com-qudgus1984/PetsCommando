@@ -20,6 +20,7 @@ final class PetsLostViewModel: ViewModelType {
     }
     
     let organicAnimalList = PublishRelay<[List?]>()
+    let locationUpdate = PublishRelay<Void>()
     
     struct Input {
         let viewDidLoad: Observable<Void>
@@ -42,6 +43,14 @@ final class PetsLostViewModel: ViewModelType {
         }
         .disposed(by: disposeBag)
         
+        locationUpdate.bind { [weak self] _ in
+            guard let self else { return }
+            guard let sido = UserDefaults.standard.string(forKey: "sido") else { return }
+            guard let sigungu = UserDefaults.standard.string(forKey: "sigungu") else { return }
+            self.getOrganicAnimalList(sido: sido, sigungu: sigungu)
+        }
+        .disposed(by: disposeBag)
+        
         input.organicAnimal
             .bind { [weak self] organicAnimal in
                 guard let self else { return }
@@ -49,6 +58,10 @@ final class PetsLostViewModel: ViewModelType {
                 self.coordinator?.showPetsLostDetailViewController(organicAnimal: organicAnimal)
             }
             .disposed(by: disposeBag)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(sendLocationUpdate(_:)), name: NSNotification.Name("location"), object: nil)
+
+        
         return Output(organicAnimalList: self.organicAnimalList)
     }
 }
@@ -60,5 +73,12 @@ extension PetsLostViewModel {
             print(organicAnimalList, "유기동물 리스트 조회")
             self.organicAnimalList.accept(organicAnimalList.list)
         }
+    }
+}
+
+extension PetsLostViewModel {
+    @objc
+    func sendLocationUpdate(_ notification: Notification) {
+        self.locationUpdate.accept(())
     }
 }
