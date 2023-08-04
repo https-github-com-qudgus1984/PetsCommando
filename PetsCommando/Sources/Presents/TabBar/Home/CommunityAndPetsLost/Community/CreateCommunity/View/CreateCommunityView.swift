@@ -114,3 +114,10 @@ final class CreateCommunityView: BaseView {
         }
     }
 }
+
+extension CreateCommunityView {
+    func updateFinishDailyPost() {
+        textView.text = nil
+        titleTextField.text = nil
+    }
+}

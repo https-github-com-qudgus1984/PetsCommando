@@ -9,10 +9,15 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+protocol finishDailyPostDelegate {
+    func sendFinishPost(dailyPost: DailyPost)
+}
+
 final class CreateCommunityViewModel: ViewModelType {
     
     weak var coordinator: TabmanCoordinator?
     private var communityUseCase: CommunityUseCase
+    var finishDailyPostDelegate: finishDailyPostDelegate?
     
     init(coordinator: TabmanCoordinator?, communityUseCase: CommunityUseCase) {
         self.coordinator = coordinator
@@ -27,8 +32,11 @@ final class CreateCommunityViewModel: ViewModelType {
     
     struct Output {
         let postValid: Observable<Bool>
+        let dailyPostModel: PublishRelay<DailyPost>
     }
         
+    let dailyPostModel = PublishRelay<DailyPost>()
+    
     var disposeBag = DisposeBag()
     
     func transform(_ input: Input) -> Output {
@@ -61,7 +69,7 @@ final class CreateCommunityViewModel: ViewModelType {
             }
             .disposed(by: disposeBag)
         
-        return Output(postValid: postValid)
+        return Output(postValid: postValid, dailyPostModel: self.dailyPostModel)
     }
 }
 
@@ -70,6 +78,8 @@ extension CreateCommunityViewModel {
         Task {
             let post = try await communityUseCase.postDailyPost(query: query)
             print(post, "커뮤니티 글 포스트 성공")
+            self.dailyPostModel.accept(post)
+            self.finishDailyPostDelegate?.sendFinishPost(dailyPost: post)
         }
     }
 }

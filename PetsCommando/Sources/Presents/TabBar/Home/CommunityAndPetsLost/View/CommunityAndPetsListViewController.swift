@@ -18,16 +18,18 @@ final class CommunityAndPetsLostViewController: TabmanViewController {
     
     private let viewModel: CommunityAndPetsLostViewModel
     private var postCommentEvent: PublishRelay<Int>
+    private var finishDailyPost: PublishRelay<DailyPost>
     
-    init(viewModel: CommunityAndPetsLostViewModel, postCommentEvent: PublishRelay<Int>) {
+    init(viewModel: CommunityAndPetsLostViewModel, postCommentEvent: PublishRelay<Int>, finishDailyPost: PublishRelay<DailyPost>) {
         self.viewModel = viewModel
         self.postCommentEvent = postCommentEvent
+        self.finishDailyPost = finishDailyPost
         let dataTransferService = DataTransferService(networkService: NetworkService())
         let organicAnimalRepositoryImpl = OrganicAnimalRepositoryImpl(dataTransferService: dataTransferService)
         let organicAnimalUseCaseImpl = OrganicAnimalUseCaseImpl(organicAnimalRepository: organicAnimalRepositoryImpl)
         let communityRepositoryImpl = CommunityRepositoryImpl(dataTransferService: dataTransferService)
         let communityUseCaseImpl = CommunityUseCaseImpl(communityRepository: communityRepositoryImpl)
-        let communityViewModel = CommunityViewModel(coordinator: viewModel.coordinator, communityUseCase: communityUseCaseImpl, postCommentEvent: postCommentEvent)
+        let communityViewModel = CommunityViewModel(coordinator: viewModel.coordinator, communityUseCase: communityUseCaseImpl, postCommentEvent: postCommentEvent, finishDailyPostEvent: finishDailyPost)
 
         let petsLoatViewModel = PetsLostViewModel(coordinator: viewModel.coordinator, organicAnimalUseCase: organicAnimalUseCaseImpl)
         vc1 = .init(viewModel: communityViewModel)

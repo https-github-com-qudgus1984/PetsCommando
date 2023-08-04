@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Toast
 
 final class CreateCommunityViewController: BaseViewController {
     
@@ -49,6 +50,16 @@ final class CreateCommunityViewController: BaseViewController {
                 vc.createCommunityView.registerContainView.backgroundColor = buttonColor
                 vc.createCommunityView.registerButton
                     .isEnabled = valid
+            }
+            .disposed(by: disposeBag)
+        
+        output.dailyPostModel
+            .withUnretained(self)
+            .observe(on: MainScheduler.instance)
+            .bind { vc, dailyPost in
+                vc.view.makeToast("글이 작성되었습니다.", position: .top)
+                vc.createCommunityView.updateFinishDailyPost()
+                
             }
             .disposed(by: disposeBag)
     }

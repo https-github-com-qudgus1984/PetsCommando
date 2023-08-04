@@ -63,7 +63,7 @@ final class LocationModifySigunguViewController: BaseViewController {
             .withUnretained(self)
             .observe(on: MainScheduler.instance)
             .bind { vc, _ in
-                vc.view.makeToast("변경되었습니다.")
+                vc.view.makeToast("변경되었습니다.", position: .top)
             }
             .disposed(by: disposeBag)
     }
