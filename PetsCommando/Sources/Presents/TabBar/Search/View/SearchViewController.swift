@@ -92,9 +92,9 @@ final class SearchViewController: BaseViewController {
             .bind { [weak self] hospitalList in
                 guard let self else { return }
                 for i in hospitalList {
-                    guard let lon = CLLocationDegrees(i.longtitude ?? "0") else { return }
-                    guard let lat = CLLocationDegrees(i.latitude ?? "0") else { return }
-                    self.addPin(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon), title: i.name, subtitle: i.address)
+                    let lon = CLLocationDegrees(i.longtitude ?? "0")
+                    let lat = CLLocationDegrees(i.latitude ?? "0")
+                    self.addPin(coordinate: CLLocationCoordinate2D(latitude: lat ?? 37.498333, longitude: lon ?? 126.86666), title: i.name, subtitle: i.address)
                 }
             }
             .disposed(by: disposeBag)
