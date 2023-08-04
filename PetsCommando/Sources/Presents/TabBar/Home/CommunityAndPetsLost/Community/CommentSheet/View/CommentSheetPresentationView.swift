@@ -71,3 +71,9 @@ final class CommentSheetPresentationView: BaseView {
         }
     }
 }
+
+extension CommentSheetPresentationView {
+    func updatePostCommentAfter() {
+        reviewTextField.text = nil
+    }
+}

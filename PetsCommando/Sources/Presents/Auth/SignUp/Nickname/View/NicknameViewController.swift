@@ -37,7 +37,7 @@ final class NicknameViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboard()
     }
     
     override func setupBinding() {

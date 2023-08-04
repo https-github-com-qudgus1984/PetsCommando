@@ -24,7 +24,7 @@ final class PetsLostViewModel: ViewModelType {
     
     struct Input {
         let viewDidLoad: Observable<Void>
-        let organicAnimal: PublishSubject<List?>
+        let organicAnimal: PublishRelay<List?>
     }
     
     struct Output {

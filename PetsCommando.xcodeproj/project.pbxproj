@@ -216,6 +216,7 @@
 		2FE110E52A73D8E80013A49E /* CommentSheetPresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE110E42A73D8E80013A49E /* CommentSheetPresentationViewController.swift */; };
 		2FE110E72A73D9040013A49E /* CommentSheetPresentationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE110E62A73D9040013A49E /* CommentSheetPresentationViewModel.swift */; };
 		2FE110E92A73DB440013A49E /* CommentSheetPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE110E82A73DB440013A49E /* CommentSheetPresentationView.swift */; };
+		2FE110EB2A74ADED0013A49E /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE110EA2A74ADED0013A49E /* UIViewController + Extension.swift */; };
 		2FFA534429DAC7750065F624 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFA534329DAC7750065F624 /* CircleButton.swift */; };
 		2FFA534629DAC7890065F624 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFA534529DAC7890065F624 /* DefaultButton.swift */; };
 		2FFA534829DAC7F80065F624 /* ButtonStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFA534729DAC7F80065F624 /* ButtonStatus.swift */; };
@@ -426,6 +427,7 @@
 		2FE110E42A73D8E80013A49E /* CommentSheetPresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentSheetPresentationViewController.swift; sourceTree = "<group>"; };
 		2FE110E62A73D9040013A49E /* CommentSheetPresentationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentSheetPresentationViewModel.swift; sourceTree = "<group>"; };
 		2FE110E82A73DB440013A49E /* CommentSheetPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentSheetPresentationView.swift; sourceTree = "<group>"; };
+		2FE110EA2A74ADED0013A49E /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		2FFA534329DAC7750065F624 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		2FFA534529DAC7890065F624 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
 		2FFA534729DAC7F80065F624 /* ButtonStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStatus.swift; sourceTree = "<group>"; };
@@ -1662,6 +1664,7 @@
 				2FFA534929DACA8F0065F624 /* UIView+.swift */,
 				2FBF64CB2A727A2D0036401F /* Date+Extension.swift */,
 				2FE110C12A7348570013A49E /* UIApplication + Extension.swift */,
+				2FE110EA2A74ADED0013A49E /* UIViewController + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1936,6 +1939,7 @@
 				2FB2D7BC29B5CA3500EA35F4 /* OnBoardingView.swift in Sources */,
 				2FD85FC529C825A200BE0BCC /* CoordinatorStyleCase.swift in Sources */,
 				2FD40B1D29C58EBE00BED327 /* Community.swift in Sources */,
+				2FE110EB2A74ADED0013A49E /* UIViewController + Extension.swift in Sources */,
 				2FCDD21D29EAAC04000B6CD7 /* GetUserInfoQuery.swift in Sources */,
 				2FBF64CA2A725E960036401F /* UpdateDailyPost.swift in Sources */,
 				2FD3BFFB29B99C0E00096669 /* TabBarCoordinator.swift in Sources */,
@@ -2186,11 +2190,12 @@
 				DEVELOPMENT_TEAM = LL4R66V6Y3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PetsCommando/Supportings/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자의 위치 정보를 받아오려고 합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2215,11 +2220,12 @@
 				DEVELOPMENT_TEAM = LL4R66V6Y3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PetsCommando/Supportings/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자의 위치 정보를 받아오려고 합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

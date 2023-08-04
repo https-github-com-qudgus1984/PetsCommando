@@ -14,11 +14,14 @@ final class CommunityDetailViewModel: ViewModelType {
     weak var coordinator: TabmanCoordinator?
     private var communityUseCase: CommunityUseCase
     private var dailyPostId: Int
+    var postCommentEvent: PublishRelay<Int>
+
     
-    init(coordinator: TabmanCoordinator?, communityUseCase: CommunityUseCase, dailyPostId: Int) {
+    init(coordinator: TabmanCoordinator?, communityUseCase: CommunityUseCase, dailyPostId: Int, postCommentEvent: PublishRelay<Int>) {
         self.coordinator = coordinator
         self.communityUseCase = communityUseCase
         self.dailyPostId = dailyPostId
+        self.postCommentEvent = postCommentEvent
     }
     
     var disposeBag = DisposeBag()
@@ -50,6 +53,14 @@ final class CommunityDetailViewModel: ViewModelType {
             .withUnretained(self)
             .bind { vc, _ in
                 vc.coordinator?.showCommentSheetPresentationViewController(postId: vc.dailyPostId)
+            }
+            .disposed(by: disposeBag)
+        
+        self.postCommentEvent
+            .withUnretained(self)
+            .bind { vm, postId in
+                vm.getDetailPost(postId: postId)
+                vm.getReviewList(postId: postId)
             }
             .disposed(by: disposeBag)
         

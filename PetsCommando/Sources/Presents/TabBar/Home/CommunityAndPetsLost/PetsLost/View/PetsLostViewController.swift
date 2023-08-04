@@ -25,7 +25,7 @@ final class PetsLostViewController: BaseViewController {
     }
     
     let cellSelected = PublishSubject<IndexPath>()
-    let organicAnimal = PublishSubject<List?>()
+    let organicAnimal = PublishRelay<List?>()
     
     private var dataSource: UICollectionViewDiffableDataSource<Int, List?>!
     
@@ -61,7 +61,7 @@ extension PetsLostViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("이건찍히지")
-        self.cellSelected.onNext((indexPath))
+        self.dataFetching(indexPath: indexPath)
     }
 }
 
@@ -86,15 +86,18 @@ extension PetsLostViewController {
         dataSource = UICollectionViewDiffableDataSource(collectionView: petsLostView.collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
             let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
             
-            self.cellSelected.bind { [weak self] index in
-                guard let self else { return }
-                if index == indexPath {
-                    self.organicAnimal.onNext(itemIdentifier)
-                }
-            }
-            .disposed(by: self.disposeBag)
-            
             return cell
         })
+    }
+}
+
+extension PetsLostViewController {
+    func dataFetching(indexPath: IndexPath) {
+        var fetchSnapShot = dataSource.snapshot()
+        for i in 0...fetchSnapShot.numberOfItems - 1 {
+            if indexPath.item == i {
+                self.organicAnimal.accept(fetchSnapShot.itemIdentifiers[i] ?? nil)
+            }
+        }
     }
 }

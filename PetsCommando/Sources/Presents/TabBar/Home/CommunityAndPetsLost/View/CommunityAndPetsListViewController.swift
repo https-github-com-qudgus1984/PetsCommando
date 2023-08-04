@@ -8,6 +8,7 @@
 import UIKit
 import Tabman
 import Pageboy
+import RxCocoa
 
 final class CommunityAndPetsLostViewController: TabmanViewController {
     
@@ -16,16 +17,17 @@ final class CommunityAndPetsLostViewController: TabmanViewController {
     private var vcs: Array<BaseViewController>
     
     private let viewModel: CommunityAndPetsLostViewModel
+    private var postCommentEvent: PublishRelay<Int>
     
-    init(viewModel: CommunityAndPetsLostViewModel) {
+    init(viewModel: CommunityAndPetsLostViewModel, postCommentEvent: PublishRelay<Int>) {
         self.viewModel = viewModel
-        
+        self.postCommentEvent = postCommentEvent
         let dataTransferService = DataTransferService(networkService: NetworkService())
         let organicAnimalRepositoryImpl = OrganicAnimalRepositoryImpl(dataTransferService: dataTransferService)
         let organicAnimalUseCaseImpl = OrganicAnimalUseCaseImpl(organicAnimalRepository: organicAnimalRepositoryImpl)
         let communityRepositoryImpl = CommunityRepositoryImpl(dataTransferService: dataTransferService)
         let communityUseCaseImpl = CommunityUseCaseImpl(communityRepository: communityRepositoryImpl)
-        let communityViewModel = CommunityViewModel(coordinator: viewModel.coordinator, communityUseCase: communityUseCaseImpl)
+        let communityViewModel = CommunityViewModel(coordinator: viewModel.coordinator, communityUseCase: communityUseCaseImpl, postCommentEvent: postCommentEvent)
 
         let petsLoatViewModel = PetsLostViewModel(coordinator: viewModel.coordinator, organicAnimalUseCase: organicAnimalUseCaseImpl)
         vc1 = .init(viewModel: communityViewModel)
