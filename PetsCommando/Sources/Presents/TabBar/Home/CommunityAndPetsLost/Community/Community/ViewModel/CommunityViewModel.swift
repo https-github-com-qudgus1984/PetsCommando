@@ -14,11 +14,13 @@ final class CommunityViewModel: ViewModelType {
     weak var coordinator: TabmanCoordinator?
     private var communityUseCase: CommunityUseCase
     private var postCommentEvent: PublishRelay<Int>
+    private var finishDailyPostEvent: PublishRelay<DailyPost>
     
-    init(coordinator: TabmanCoordinator?, communityUseCase: CommunityUseCase, postCommentEvent: PublishRelay<Int>) {
+    init(coordinator: TabmanCoordinator?, communityUseCase: CommunityUseCase, postCommentEvent: PublishRelay<Int>, finishDailyPostEvent: PublishRelay<DailyPost>) {
         self.coordinator = coordinator
         self.communityUseCase = communityUseCase
         self.postCommentEvent = postCommentEvent
+        self.finishDailyPostEvent = finishDailyPostEvent
     }
     
     struct Input {
@@ -61,6 +63,13 @@ final class CommunityViewModel: ViewModelType {
             .disposed(by: disposeBag)
         
         self.postCommentEvent
+            .withUnretained(self)
+            .bind { vm, _ in
+                vm.getThumnailDailyPost()
+            }
+            .disposed(by: disposeBag)
+        
+        self.finishDailyPostEvent
             .withUnretained(self)
             .bind { vm, _ in
                 vm.getThumnailDailyPost()

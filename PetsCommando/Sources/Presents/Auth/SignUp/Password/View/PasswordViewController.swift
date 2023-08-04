@@ -72,7 +72,7 @@ final class PasswordViewController: BaseViewController {
             }
             .disposed(by: disposeBag)
         
-        output.requestTextMessage.emit(onNext: {[unowned self] text in self.view.makeToast(text, position: .bottom)})
+        output.requestTextMessage.emit(onNext: {[unowned self] text in self.view.makeToast(text, position: .top)})
             .disposed(by: disposeBag)
     }
 }

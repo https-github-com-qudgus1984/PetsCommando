@@ -16,6 +16,7 @@ final class TabmanCoordinator: Coordinator {
     var type: CoordinatorStyleCase = .tabman
     
     let postCommentEvent = PublishRelay<Int>()
+    let finishDailyPost = PublishRelay<DailyPost>()
     
     init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -23,7 +24,7 @@ final class TabmanCoordinator: Coordinator {
     
     func start() {
         let tabmanViewModel = CommunityAndPetsLostViewModel(coordinator: self)
-        let tabmanviewController = CommunityAndPetsLostViewController(viewModel: tabmanViewModel, postCommentEvent: self.postCommentEvent)
+        let tabmanviewController = CommunityAndPetsLostViewController(viewModel: tabmanViewModel, postCommentEvent: self.postCommentEvent, finishDailyPost: self.finishDailyPost)
         navigationController.pushViewController(tabmanviewController, animated: true)
     }
     
@@ -51,6 +52,7 @@ final class TabmanCoordinator: Coordinator {
         let communityRepositoryImpl = CommunityRepositoryImpl(dataTransferService: dataTransferService)
         let communityUseCase = CommunityUseCaseImpl(communityRepository: communityRepositoryImpl)
         let viewModel = CreateCommunityViewModel(coordinator: self, communityUseCase: communityUseCase)
+        viewModel.finishDailyPostDelegate = self
         let vc = CreateCommunityViewController(viewModel: viewModel)
         navigationController.pushViewController(vc, animated: true)
     }
@@ -70,5 +72,11 @@ extension TabmanCoordinator: postCommentDelegate {
     func sendPostComment(postId: Int) {
         self.postCommentEvent.accept(postId)
 
+    }
+}
+
+extension TabmanCoordinator: finishDailyPostDelegate {
+    func sendFinishPost(dailyPost: DailyPost) {
+        self.finishDailyPost.accept(dailyPost)
     }
 }

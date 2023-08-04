@@ -58,6 +58,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let vc = LoginViewController(viewModel: viewModel)
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = vc
+        window?.overrideUserInterfaceStyle = .light
         self.window?.makeKeyAndVisible()
         coordinator.start()
     }
