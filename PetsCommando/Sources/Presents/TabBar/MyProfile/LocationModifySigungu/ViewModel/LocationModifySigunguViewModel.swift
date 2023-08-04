@@ -13,7 +13,7 @@ final class LocationModifySigunguViewModel: ViewModelType {
     private weak var coordinator: MyProfileCoordinator?
     private var regionUseCase: RegionUseCase
     private let userDefaults = UserDefaults.standard
-    
+        
     init(coordinator: MyProfileCoordinator?, regionUseCase: RegionUseCase) {
         self.coordinator = coordinator
         self.regionUseCase = regionUseCase
@@ -44,10 +44,11 @@ final class LocationModifySigunguViewModel: ViewModelType {
         //MARK: 여기서 tabBarCoordinator 초기화시켜주어야함
         input.dataSetFinish.bind { [weak self] _ in
             guard let self else { return }
-            self.coordinator?.restart()
+            NotificationCenter.default.post(name: NSNotification.Name("location"), object: ())
         }
         .disposed(by: disposeBag)
         
+
         return Output(sigunguList: self.sigunguList, dataSetFinish: input.dataSetFinish)
     }
 }

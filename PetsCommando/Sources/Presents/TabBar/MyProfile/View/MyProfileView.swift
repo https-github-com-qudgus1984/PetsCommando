@@ -22,18 +22,13 @@ final class MyProfileView: BaseView {
         let label = UILabel()
         label.font = Font.Title1_B20
         label.textAlignment = .center
-        label.text = "익명"
+        label.text = UserDefaults.standard.string(forKey: UserDefaultKeyCase.nickname)
+
         return label
     }()
     
     let nicknameModifyButton: UIButton = {
         let button = UIButton()
-        button.setTitle("수정", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.clipsToBounds = true
-        button.layer.cornerRadius = 4
-        button.layer.borderWidth = 1
-        button.layer.borderColor = Color.BaseColor.hunt3.cgColor
         return button
     }()
      

@@ -51,7 +51,9 @@ final class NicknameViewModel: ViewModelType {
         input.didNextButtonTap
             .emit { [weak self] text in
                 guard let self = self else { return }
+                print(text, "닉네임 저장")
                 self.saveNicknameInfo(nickname: text)
+                print(userDefaults.string(forKey: UserDefaultKeyCase.nickname))
                 self.coordinator?.showPasswordViewController()
             }
             .disposed(by: disposeBag)

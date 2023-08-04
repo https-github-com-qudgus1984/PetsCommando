@@ -35,7 +35,7 @@ final class PasswordViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboard()
     }
     
     override func setupBinding() {

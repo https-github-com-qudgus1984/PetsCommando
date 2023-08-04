@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxCocoa
 
 final class TabmanCoordinator: Coordinator {
     
@@ -14,13 +15,15 @@ final class TabmanCoordinator: Coordinator {
     var navigationController: UINavigationController
     var type: CoordinatorStyleCase = .tabman
     
+    let postCommentEvent = PublishRelay<Int>()
+    
     init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
     func start() {
         let tabmanViewModel = CommunityAndPetsLostViewModel(coordinator: self)
-        let tabmanviewController = CommunityAndPetsLostViewController(viewModel: tabmanViewModel)
+        let tabmanviewController = CommunityAndPetsLostViewController(viewModel: tabmanViewModel, postCommentEvent: self.postCommentEvent)
         navigationController.pushViewController(tabmanviewController, animated: true)
     }
     
@@ -28,7 +31,7 @@ final class TabmanCoordinator: Coordinator {
         let dataTransferService = DataTransferService(networkService: NetworkService())
         let communityRepositoryImpl = CommunityRepositoryImpl(dataTransferService: dataTransferService)
         let communityUseCase = CommunityUseCaseImpl(communityRepository: communityRepositoryImpl)
-        let viewModel = CommunityDetailViewModel(coordinator: self, communityUseCase: communityUseCase, dailyPostId: postId)
+        let viewModel = CommunityDetailViewModel(coordinator: self, communityUseCase: communityUseCase, dailyPostId: postId, postCommentEvent: self.postCommentEvent)
         let vc = CommunityDetailViewController(viewModel: viewModel)
         navigationController.pushViewController(vc, animated: true)
     }
@@ -57,7 +60,15 @@ final class TabmanCoordinator: Coordinator {
         let communityRepositoryImpl = CommunityRepositoryImpl(dataTransferService: dataTransferService)
         let communityUseCase = CommunityUseCaseImpl(communityRepository: communityRepositoryImpl)
         let viewModel = CommentSheetPresentationViewModel(coordinator: self, communityUseCase: communityUseCase, dailyPostId: postId)
+        viewModel.postCommentDelegate = self
         let vc = CommentSheetPresentationViewController(viewModel: viewModel)
         navigationController.present(vc, animated: true)
+    }
+}
+
+extension TabmanCoordinator: postCommentDelegate {
+    func sendPostComment(postId: Int) {
+        self.postCommentEvent.accept(postId)
+
     }
 }

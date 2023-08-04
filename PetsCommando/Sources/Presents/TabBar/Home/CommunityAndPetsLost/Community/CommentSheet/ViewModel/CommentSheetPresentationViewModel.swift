@@ -9,11 +9,16 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+protocol postCommentDelegate {
+    func sendPostComment(postId: Int)
+}
+
 final class CommentSheetPresentationViewModel: ViewModelType {
     
     weak var coordinator: TabmanCoordinator?
     private var communityUseCase: CommunityUseCase
     private var dailyPostId: Int
+    var postCommentDelegate: postCommentDelegate?
     
     init(coordinator: TabmanCoordinator?, communityUseCase: CommunityUseCase, dailyPostId: Int) {
         self.coordinator = coordinator
@@ -48,23 +53,15 @@ final class CommentSheetPresentationViewModel: ViewModelType {
             .withUnretained(self)
             .emit { vc, text in
                 vc.postReview(postId: vc.dailyPostId, content: text)
-                vc.getReviewList(postId: vc.dailyPostId)
-                
             }
             .disposed(by: disposeBag)
         
-        //        input.registerButtonTap
-        //            .withUnretained(self)
-        //            .flatMap { void -> ControlProperty<String?> in
-        //                return input.reviewText
-        //            }
-        //            .withUnretained(self)
-        //            .bind { vc, text in
-        //                guard let text else { return }
-        //                vc.postReview(postId: vc.dailyPostId, content: text)
-        //                vc.getReviewList(postId: vc.dailyPostId)
-        //            }
-        //            .disposed(by: disposeBag)
+        self.postComment
+            .withUnretained(self)
+            .bind { vc, _ in
+                vc.getReviewList(postId: vc.dailyPostId)
+            }
+            .disposed(by: disposeBag)
         
         return Output(commentList: self.commentList)
     }
@@ -86,6 +83,7 @@ extension CommentSheetPresentationViewModel {
             let comment = try await communityUseCase.postComment(query: CommentPostQuery(dailyPostId: postId, content: content))
             print("댓글 작성 완료")
             self.postComment.accept(comment)
+            self.postCommentDelegate?.sendPostComment(postId: comment.dailyPostId ?? 0)
         }
     }
 }

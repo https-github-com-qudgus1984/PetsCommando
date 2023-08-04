@@ -7,8 +7,6 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>사용자의 위치 정보를 받아오려고 합니다.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>강원교육모두 Bold.otf</string>

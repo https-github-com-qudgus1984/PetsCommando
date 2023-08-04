@@ -24,6 +24,7 @@ final class CreateCommunityViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboard()
         self.navigationController?.navigationBar.scrollEdgeAppearance?.backgroundColor = Color.BaseColor.hunt4
     }
     

@@ -13,17 +13,18 @@ final class CommunityViewModel: ViewModelType {
     
     weak var coordinator: TabmanCoordinator?
     private var communityUseCase: CommunityUseCase
+    private var postCommentEvent: PublishRelay<Int>
     
-    init(coordinator: TabmanCoordinator?, communityUseCase: CommunityUseCase) {
+    init(coordinator: TabmanCoordinator?, communityUseCase: CommunityUseCase, postCommentEvent: PublishRelay<Int>) {
         self.coordinator = coordinator
         self.communityUseCase = communityUseCase
+        self.postCommentEvent = postCommentEvent
     }
     
     struct Input {
-        let cellSelected: PublishSubject<IndexPath>
         let viewDidLoad: PublishRelay<Void>
         let createButtonTap: ControlEvent<Void>
-        let choicePost: PublishRelay<ThumbnailDailyPost>
+        let choicePost: PublishRelay<ThumbnailDailyPost?>
     }
     
     struct Output {
@@ -35,12 +36,6 @@ final class CommunityViewModel: ViewModelType {
     var disposeBag = DisposeBag()
     
     func transform(_ input: Input) -> Output {
-        input.cellSelected
-            .bind { [weak self] _ in
-                guard let self else { return }
-//                showCommunityDetailViewController로 이동
-            }
-            .disposed(by: disposeBag)
         
         input.viewDidLoad
             .withUnretained(self)
@@ -59,10 +54,17 @@ final class CommunityViewModel: ViewModelType {
         input.choicePost
             .withUnretained(self)
             .bind { vc, data in
-                guard let id = data.dailyPostId else { return }
+                guard let id = data?.dailyPostId else { return }
                 print("아이디 조회", id)
                 vc.coordinator?.showCommunityDetailViewController(postId: id)
         }
+            .disposed(by: disposeBag)
+        
+        self.postCommentEvent
+            .withUnretained(self)
+            .bind { vm, _ in
+                vm.getThumnailDailyPost()
+            }
             .disposed(by: disposeBag)
         
         return Output(postList: self.postList)
