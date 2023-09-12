@@ -37,7 +37,7 @@ final class CreateCommunityViewController: BaseViewController {
 
         let input = CreateCommunityViewModel.Input(titleText: self.createCommunityView.titleTextField.rx.text, contentText: self.createCommunityView.textView.rx.text, registerButtonTap: self.createCommunityView.registerButton.rx.controlEvent(.touchUpInside)
             .map {
-                DailyPostQuery(title: self.createCommunityView.titleTextField.text!, content: self.createCommunityView.textView.text!, photo: self.createCommunityView.imageAppealView.image!.jpegData(compressionQuality: 0.8) ?? Data())
+                DailyPostQuery(title: self.createCommunityView.titleTextField.text!, content: self.createCommunityView.textView.text!, photo: self.createCommunityView.imageAppealView.image?.jpegData(compressionQuality: 0.8) ?? Data())
             }
         )
         
