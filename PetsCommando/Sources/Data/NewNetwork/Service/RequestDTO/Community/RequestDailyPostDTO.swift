@@ -10,8 +10,9 @@ import Foundation
 struct RequestDailyPostDTO: Encodable {
     let title: String
     let content: String
+    let photo: String
     
     enum CodingKeys: String, CodingKey {
-        case title, content
+        case title, content,  photo
     }
 }

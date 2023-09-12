@@ -12,6 +12,7 @@ struct ThumbnailDailyPost: Hashable {
     let userId: Int?
     let nickName: String?
     let title: String?
+    let photourl: String?
     let registerAt: String?
     let updatedAt: String?
     let likecount: Int?

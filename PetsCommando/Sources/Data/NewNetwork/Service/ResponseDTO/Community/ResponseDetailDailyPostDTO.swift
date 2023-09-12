@@ -12,6 +12,7 @@ struct ResponseDetailDailyPostDTO: Decodable {
     let userId: Int?
     let nickName: String?
     let title: String?
+    let photourl: String?
     let content: String?
     let likecount: Int?
     let commentcount: Int?
@@ -19,12 +20,12 @@ struct ResponseDetailDailyPostDTO: Decodable {
     let updatedAt: String?
     
     enum CodingKeys: String, CodingKey {
-        case dailyPostId, userId, nickName, title, content, likecount, commentcount, registerAt, updatedAt
+        case dailyPostId, userId, nickName, title, photourl, content, likecount, commentcount, registerAt, updatedAt
     }
 }
 
 extension ResponseDetailDailyPostDTO {
     var toDomain: DetailDailyPost {
-        .init(dailyPostId: dailyPostId, userId: userId, nickName: nickName, title: title, content: content, likecount: likecount, commentcount: commentcount, registerAt: registerAt, updatedAt: updatedAt)
+        .init(dailyPostId: dailyPostId, userId: userId, nickName: nickName, title: title, photourl: photourl, content: content, likecount: likecount, commentcount: commentcount, registerAt: registerAt, updatedAt: updatedAt)
     }
 }

@@ -8,6 +8,8 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import Alamofire
+import UIKit
 
 protocol finishDailyPostDelegate {
     func sendFinishPost(dailyPost: DailyPost)
@@ -65,7 +67,10 @@ final class CreateCommunityViewModel: ViewModelType {
             .withUnretained(self)
             .bind { vc, query in
                 print(query, "딸깍딸깍")
-                self.postCommunityPost(query: query)
+//                self.postCommunityPost(query: query)
+                vc.uploadPost(with: query) { bool in
+                    print(bool)
+                }
             }
             .disposed(by: disposeBag)
         
@@ -83,3 +88,39 @@ extension CreateCommunityViewModel {
         }
     }
 }
+
+extension CreateCommunityViewModel {
+    func uploadPost(with model: DailyPostQuery, completion: @escaping ((Bool) -> Void)) {
+        let url = URL(string: "http://3.36.125.115:9090/api/dailyPost")!
+        let token = UserDefaults.standard.string(forKey: UserDefaultKeyCase.accessToken) ?? ""
+        
+        AF.upload(multipartFormData: { (multipartFormData) in
+            // Add text data
+            multipartFormData.append(model.title.data(using: .utf8)!, withName: "title")
+            multipartFormData.append(model.content.data(using: .utf8)!, withName: "content")
+            
+            if let photoData = UIImage(named: model.photo)?.jpegData(compressionQuality: 0.8) {
+                // Add image data if available
+                multipartFormData.append(photoData, withName: "photo", fileName: "photo.jpg", mimeType: "image/jpeg")
+            }
+        }, to: url,
+           headers: ["Authorization": "Bearer \(token)"])
+        .response { response in
+            print(response.response?.statusCode)
+            print(response.description)
+            print(response.error)
+            
+            guard let statusCode = response.response?.statusCode else { return }
+            switch statusCode {
+            case 200:
+                print("통신 성공")
+                completion(true)
+            default:
+                print(statusCode, "통신 실패")
+                debugPrint(response)
+                completion(false)
+            }
+        }
+    }
+}
+

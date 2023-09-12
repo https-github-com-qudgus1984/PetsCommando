@@ -39,7 +39,7 @@ extension CommunityRouter: NewTargetType {
         switch self {
             
         case .postDailyPost:
-            return "/api/dailyPost"
+            return "/api/dailyPost/"
         case .postEditDailyPost(let parameters):
             return "/api/dailyPost/\(parameters.dailyPostId)/edit"
         case .getThumnailDailyPost:
@@ -70,11 +70,14 @@ extension CommunityRouter: NewTargetType {
     var header: [String : String] {
         switch self {
             
-        case .postDailyPost, .postEditDailyPost, .postComment, .putComment, .deleteComment, .deleteDailyPost:
+        case .postEditDailyPost, .postComment, .putComment, .deleteComment, .deleteDailyPost:
             guard let token = UserDefaults.standard.string(forKey: UserDefaultKeyCase.accessToken) else { return ["accept" : "application/json" , "Content-Type": "application/json"] }
             print(token, "token값")
             return ["accept" : "application/json" , "Content-Type": "application/json", "Authorization": "Bearer \(token)"]
-            
+        case .postDailyPost:
+            guard let token = UserDefaults.standard.string(forKey: UserDefaultKeyCase.accessToken) else { return ["accept" : "application/json" , "Content-Type": "application/json"] }
+            print(token, "token값")
+            return ["Content-Type": "multipart/form-data", "Authorization": "Bearer \(token)"]
         default: return ["accept" : "application/json" , "Content-Type": "application/json"]
         }
     }
@@ -82,11 +85,10 @@ extension CommunityRouter: NewTargetType {
     var body: Data? {
         switch self {
         case .postDailyPost(let parameters):
-            let requestDTO = RequestDailyPostDTO(title: parameters.title, content: parameters.content)
-            let encoder = JSONEncoder()
-            return try? encoder.encode(requestDTO)
+
+            return nil
         case .postEditDailyPost(let parameters):
-            let requestDTO = RequestDailyPostDTO(title: parameters.title, content: parameters.content)
+            let requestDTO = RequestDailyPostDTO(title: parameters.title, content: parameters.content, photo: "asdf")
             let encoder = JSONEncoder()
             return try? encoder.encode(requestDTO)
 
