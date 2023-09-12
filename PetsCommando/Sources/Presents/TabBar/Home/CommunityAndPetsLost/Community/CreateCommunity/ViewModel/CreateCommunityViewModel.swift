@@ -35,8 +35,10 @@ final class CreateCommunityViewModel: ViewModelType {
     struct Output {
         let postValid: Observable<Bool>
         let dailyPostModel: PublishRelay<DailyPost>
+        let requestTextMessage: Signal<String>
     }
-        
+    
+    var requestText = PublishRelay<String>()
     let dailyPostModel = PublishRelay<DailyPost>()
     
     var disposeBag = DisposeBag()
@@ -67,14 +69,25 @@ final class CreateCommunityViewModel: ViewModelType {
             .withUnretained(self)
             .bind { vc, query in
                 print(query, "딸깍딸깍")
-//                self.postCommunityPost(query: query)
                 vc.uploadPost(with: query) { bool in
-                    print(bool)
+                    switch bool {
+                        
+                    case true:
+                        NotificationCenter.default.post(name: NSNotification.Name("postCreate"), object: ())
+
+                        vc.requestText.accept("글을 작성하였습니다.")
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                            vc.coordinator?.pop()
+                        }
+                    case false:
+                        vc.requestText.accept("글 작성에 실패하셨습니다.")
+
+                    }
                 }
             }
             .disposed(by: disposeBag)
         
-        return Output(postValid: postValid, dailyPostModel: self.dailyPostModel)
+        return Output(postValid: postValid, dailyPostModel: self.dailyPostModel, requestTextMessage: requestText.asSignal())
     }
 }
 
@@ -99,10 +112,9 @@ extension CreateCommunityViewModel {
             multipartFormData.append(model.title.data(using: .utf8)!, withName: "title")
             multipartFormData.append(model.content.data(using: .utf8)!, withName: "content")
             
-            if let photoData = UIImage(named: model.photo)?.jpegData(compressionQuality: 0.8) {
                 // Add image data if available
-                multipartFormData.append(photoData, withName: "photo", fileName: "photo.jpg", mimeType: "image/jpeg")
-            }
+            multipartFormData.append(model.photo, withName: "photo", fileName: "photo.jpg", mimeType: "image/jpeg")
+            
         }, to: url,
            headers: ["Authorization": "Bearer \(token)"])
         .response { response in

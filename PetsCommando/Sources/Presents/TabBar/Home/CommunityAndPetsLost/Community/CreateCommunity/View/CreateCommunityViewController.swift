@@ -34,11 +34,10 @@ final class CreateCommunityViewController: BaseViewController {
     }
     
     override func setupBinding() {
-        print(UIImage(named: "AppIcon")?.jpegData(compressionQuality: 0.8)! ?? Data(), "♥️")
 
         let input = CreateCommunityViewModel.Input(titleText: self.createCommunityView.titleTextField.rx.text, contentText: self.createCommunityView.textView.rx.text, registerButtonTap: self.createCommunityView.registerButton.rx.controlEvent(.touchUpInside)
             .map {
-                DailyPostQuery(title: self.createCommunityView.titleTextField.text!, content: self.createCommunityView.textView.text!, photo: "sherry-christian-8Myh76_3M2U-unsplash")
+                DailyPostQuery(title: self.createCommunityView.titleTextField.text!, content: self.createCommunityView.textView.text!, photo: self.createCommunityView.imageAppealView.image!.jpegData(compressionQuality: 0.8) ?? Data())
             }
         )
         
@@ -64,5 +63,32 @@ final class CreateCommunityViewController: BaseViewController {
                 
             }
             .disposed(by: disposeBag)
+        
+        self.createCommunityView.imagePlusButton
+            .rx.tap
+            .withUnretained(self)
+            .bind { vc, _ in
+                let imagePicker = UIImagePickerController()
+                imagePicker.delegate = self
+                vc.present(imagePicker, animated: true)
+            }
+            .disposed(by: disposeBag)
+        
+        output.requestTextMessage.emit(onNext: {[unowned self] text in self.view.makeToast(text, position: .top)})
+            .disposed(by: disposeBag)
+    }
+}
+
+extension CreateCommunityViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            self.createCommunityView.updateProfileImage(image: pickedImage)
+        }
+        self.dismiss(animated: true)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true)
     }
 }

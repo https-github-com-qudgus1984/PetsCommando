@@ -10,7 +10,7 @@ import Foundation
 struct DailyPostQuery: Encodable {
     let title: String
     let content: String
-    let photo: String
+    let photo: Data
 }
 
 struct DTO: Encodable {

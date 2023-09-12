@@ -88,7 +88,7 @@ extension CommunityRouter: NewTargetType {
 
             return nil
         case .postEditDailyPost(let parameters):
-            let requestDTO = RequestDailyPostDTO(title: parameters.title, content: parameters.content, photo: "asdf")
+            let requestDTO = RequestDailyPostDTO(title: parameters.title, content: parameters.content, photo: Data())
             let encoder = JSONEncoder()
             return try? encoder.encode(requestDTO)
 

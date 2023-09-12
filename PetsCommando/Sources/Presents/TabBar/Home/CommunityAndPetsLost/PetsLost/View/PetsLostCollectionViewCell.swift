@@ -13,7 +13,7 @@ class PetsLostCollectionViewCell: BaseCollectionViewCell {
 
     let bgView: UIView = {
         let view = UIView()
-        view.backgroundColor = .black
+        view.backgroundColor = .darkGray
         view.clipsToBounds = true
         return view
     }()
@@ -45,6 +45,7 @@ class PetsLostCollectionViewCell: BaseCollectionViewCell {
         view.numberOfLines = 0
         view.font = Font.Body2_L16
         view.text = "특징 : 장난많음"
+        view.numberOfLines = 2
         return view
     }()
     
@@ -86,7 +87,7 @@ class PetsLostCollectionViewCell: BaseCollectionViewCell {
     override func setConstraints() {
         
         bgView.snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(8)
+            make.edges.equalToSuperview()
         }
         
         insetbgView.snp.makeConstraints { make in
@@ -94,8 +95,8 @@ class PetsLostCollectionViewCell: BaseCollectionViewCell {
         }
         
         imgView.snp.makeConstraints { make in
-            make.top.bottom.equalTo(insetbgView).inset(40)
-            make.leading.equalToSuperview().inset(20)
+            make.top.bottom.equalTo(insetbgView).inset(16)
+            make.leading.equalToSuperview().inset(16)
             make.width.equalTo(imgView.snp.height)
         }
         

@@ -218,6 +218,7 @@
 		2FE110E92A73DB440013A49E /* CommentSheetPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE110E82A73DB440013A49E /* CommentSheetPresentationView.swift */; };
 		2FE110EB2A74ADED0013A49E /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE110EA2A74ADED0013A49E /* UIViewController + Extension.swift */; };
 		2FE1C6852AB0375D0025C801 /* VerticalAlignLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE1C6842AB0375D0025C801 /* VerticalAlignLabel.swift */; };
+		2FE1C6872AB08BA00025C801 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE1C6862AB08BA00025C801 /* UIImage+Extension.swift */; };
 		2FFA534429DAC7750065F624 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFA534329DAC7750065F624 /* CircleButton.swift */; };
 		2FFA534629DAC7890065F624 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFA534529DAC7890065F624 /* DefaultButton.swift */; };
 		2FFA534829DAC7F80065F624 /* ButtonStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFA534729DAC7F80065F624 /* ButtonStatus.swift */; };
@@ -430,6 +431,7 @@
 		2FE110E82A73DB440013A49E /* CommentSheetPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentSheetPresentationView.swift; sourceTree = "<group>"; };
 		2FE110EA2A74ADED0013A49E /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		2FE1C6842AB0375D0025C801 /* VerticalAlignLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalAlignLabel.swift; sourceTree = "<group>"; };
+		2FE1C6862AB08BA00025C801 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		2FFA534329DAC7750065F624 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		2FFA534529DAC7890065F624 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
 		2FFA534729DAC7F80065F624 /* ButtonStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStatus.swift; sourceTree = "<group>"; };
@@ -1668,6 +1670,7 @@
 				2FBF64CB2A727A2D0036401F /* Date+Extension.swift */,
 				2FE110C12A7348570013A49E /* UIApplication + Extension.swift */,
 				2FE110EA2A74ADED0013A49E /* UIViewController + Extension.swift */,
+				2FE1C6862AB08BA00025C801 /* UIImage+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1873,6 +1876,7 @@
 				2FBF64C02A725D4E0036401F /* ThumbnailDailyPost.swift in Sources */,
 				2FBF64C42A725D8B0036401F /* DeleteDailyPost.swift in Sources */,
 				2FBF64F02A7293B40036401F /* ResponseUpdateDailyPostDTO.swift in Sources */,
+				2FE1C6872AB08BA00025C801 /* UIImage+Extension.swift in Sources */,
 				2FE110C22A7348570013A49E /* UIApplication + Extension.swift in Sources */,
 				2F863F3729CAB97600755FFC /* UserRepositoryType.swift in Sources */,
 				2FBF64F82A7293ED0036401F /* ResponseCommentDTO.swift in Sources */,

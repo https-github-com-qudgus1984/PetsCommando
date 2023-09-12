@@ -34,6 +34,7 @@ final class CommunityViewModel: ViewModelType {
     }
     
     let postList = PublishRelay<[ThumbnailDailyPost?]>()
+    let postCreate = PublishRelay<Void>()
 
     var disposeBag = DisposeBag()
     
@@ -41,15 +42,15 @@ final class CommunityViewModel: ViewModelType {
         
         input.viewDidLoad
             .withUnretained(self)
-            .bind { _ in
-                self.getThumnailDailyPost()
+            .bind { vm, _ in
+                vm.getThumnailDailyPost()
             }
             .disposed(by: disposeBag)
         
         input.createButtonTap
             .withUnretained(self)
             .bind { vc, _ in
-                self.coordinator?.showCreateCommunityViewController()
+                vc.coordinator?.showCreateCommunityViewController()
             }
             .disposed(by: disposeBag)
         
@@ -76,6 +77,15 @@ final class CommunityViewModel: ViewModelType {
             }
             .disposed(by: disposeBag)
         
+        self.postCreate
+            .withUnretained(self)
+            .bind { vm, _ in
+                vm.getThumnailDailyPost()
+            }
+            .disposed(by: disposeBag)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(postCreate(_:)), name: NSNotification.Name("postCreate"), object: nil)
+        
         return Output(postList: self.postList)
     }
 }
@@ -87,5 +97,12 @@ extension CommunityViewModel {
             print(post, "커뮤니티글 조회")
             self.postList.accept(post)
         }
+    }
+}
+
+extension CommunityViewModel {
+    @objc
+    func postCreate(_ notification: Notification) {
+        self.postCreate.accept(())
     }
 }
