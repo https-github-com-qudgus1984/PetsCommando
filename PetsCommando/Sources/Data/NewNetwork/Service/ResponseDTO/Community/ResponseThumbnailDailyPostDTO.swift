@@ -12,18 +12,19 @@ struct ResponseThumbnailDailyPostDTO: Decodable {
     let userId: Int?
     let nickName: String?
     let title: String?
+    let photourl: String?
     let registerAt: String?
     let updatedAt: String?
     let likecount: Int?
     let commentcount: Int?
     
     enum CodingKeys: String, CodingKey {
-        case dailyPostId, userId, nickName, title, registerAt, updatedAt, likecount, commentcount
+        case dailyPostId, userId, nickName, title, photourl, registerAt, updatedAt, likecount, commentcount
     }
 }
 
 extension ResponseThumbnailDailyPostDTO {
     var toDomain: ThumbnailDailyPost {
-        .init(dailyPostId: dailyPostId, userId: userId, nickName: nickName, title: title, registerAt: registerAt, updatedAt: updatedAt, likecount: likecount, commentcount: commentcount)
+        .init(dailyPostId: dailyPostId, userId: userId, nickName: nickName, title: title, photourl: photourl, registerAt: registerAt, updatedAt: updatedAt, likecount: likecount, commentcount: commentcount)
     }
 }

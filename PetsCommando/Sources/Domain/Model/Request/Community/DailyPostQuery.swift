@@ -7,7 +7,13 @@
 
 import Foundation
 
-struct DailyPostQuery: Hashable {
+struct DailyPostQuery: Encodable {
+    let title: String
+    let content: String
+    let photo: String
+}
+
+struct DTO: Encodable {
     let title: String
     let content: String
 }

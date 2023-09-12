@@ -10,7 +10,7 @@ import Foundation
 struct CommunityAPIEndpoints {
     
     static func postDailyPost(with requestDTO: RequestDailyPostDTO) -> CommunityRouter<ResponseDailyPostDTO> {
-        return CommunityRouter<ResponseDailyPostDTO>.postDailyPost(parameters: DailyPostQuery(title: requestDTO.content, content: requestDTO.content))
+        return CommunityRouter<ResponseDailyPostDTO>.postDailyPost(parameters: DailyPostQuery(title: requestDTO.content, content: requestDTO.content, photo: requestDTO.photo))
     }
     
     static func postEditDailyPost(with requestDTO: RequestUpdateDailyPostDTO) -> CommunityRouter<ResponseUpdateDailyPostDTO> {

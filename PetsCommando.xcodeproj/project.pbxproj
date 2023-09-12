@@ -217,6 +217,7 @@
 		2FE110E72A73D9040013A49E /* CommentSheetPresentationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE110E62A73D9040013A49E /* CommentSheetPresentationViewModel.swift */; };
 		2FE110E92A73DB440013A49E /* CommentSheetPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE110E82A73DB440013A49E /* CommentSheetPresentationView.swift */; };
 		2FE110EB2A74ADED0013A49E /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE110EA2A74ADED0013A49E /* UIViewController + Extension.swift */; };
+		2FE1C6852AB0375D0025C801 /* VerticalAlignLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE1C6842AB0375D0025C801 /* VerticalAlignLabel.swift */; };
 		2FFA534429DAC7750065F624 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFA534329DAC7750065F624 /* CircleButton.swift */; };
 		2FFA534629DAC7890065F624 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFA534529DAC7890065F624 /* DefaultButton.swift */; };
 		2FFA534829DAC7F80065F624 /* ButtonStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFA534729DAC7F80065F624 /* ButtonStatus.swift */; };
@@ -428,6 +429,7 @@
 		2FE110E62A73D9040013A49E /* CommentSheetPresentationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentSheetPresentationViewModel.swift; sourceTree = "<group>"; };
 		2FE110E82A73DB440013A49E /* CommentSheetPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentSheetPresentationView.swift; sourceTree = "<group>"; };
 		2FE110EA2A74ADED0013A49E /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		2FE1C6842AB0375D0025C801 /* VerticalAlignLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalAlignLabel.swift; sourceTree = "<group>"; };
 		2FFA534329DAC7750065F624 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		2FFA534529DAC7890065F624 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
 		2FFA534729DAC7F80065F624 /* ButtonStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStatus.swift; sourceTree = "<group>"; };
@@ -709,6 +711,7 @@
 			children = (
 				2F64A90F29B33A2C00BC11B9 /* LineTextFieldView.swift */,
 				2FD40B1629C58DAA00BED327 /* SectionHeaderView.swift */,
+				2FE1C6842AB0375D0025C801 /* VerticalAlignLabel.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -1884,6 +1887,7 @@
 				2F4B1CDE29C191A500B999AB /* TabCell.swift in Sources */,
 				2F1740212A6804D900EFE86C /* PetsLostViewModel.swift in Sources */,
 				2F1C81332A678A5000210434 /* SearchViewController.swift in Sources */,
+				2FE1C6852AB0375D0025C801 /* VerticalAlignLabel.swift in Sources */,
 				2FD40B1729C58DAA00BED327 /* SectionHeaderView.swift in Sources */,
 				2FBF64C22A725D6D0036401F /* DetailDailyPost.swift in Sources */,
 				2FD188B229DE8C3500996EA9 /* CommunityTableViewCell.swift in Sources */,

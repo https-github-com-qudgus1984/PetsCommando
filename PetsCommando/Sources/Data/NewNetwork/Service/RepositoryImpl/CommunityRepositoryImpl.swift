@@ -20,7 +20,7 @@ final class CommunityRepositoryImpl: CommunityRepository {
     }
     
     func postDailyPost(query: DailyPostQuery) async throws -> DailyPost {
-        let requestDTO = RequestDailyPostDTO(title: query.title, content: query.content)
+        let requestDTO = RequestDailyPostDTO(title: query.title, content: query.content, photo: query.photo)
         let target = CommunityAPIEndpoints.postDailyPost(with: requestDTO)
         do {
             let data = try await dataTransferService.request(with: target)

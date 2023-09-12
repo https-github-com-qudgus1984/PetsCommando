@@ -12,17 +12,18 @@ struct ResponseDailyPostDTO: Decodable {
     let userId: Int?
     let title: String?
     let content: String?
+    let photourl: String?
     let likeNum: Int?
     let registerAt: String?
     let updatedAt: String?
     
     enum CodingKeys: String, CodingKey {
-        case id, userId, title, content, likeNum, registerAt, updatedAt
+        case id, userId, title, content, photourl, likeNum, registerAt, updatedAt
     }
 }
 
 extension ResponseDailyPostDTO {
     var toDomain: DailyPost {
-        .init(id: id, userId: userId, title: title, content: content, likeNum: likeNum, registerAt: registerAt, updatedAt: updatedAt)
+        .init(id: id, userId: userId, title: title, content: content, photourl: photourl, likeNum: likeNum, registerAt: registerAt, updatedAt: updatedAt)
     }
 }

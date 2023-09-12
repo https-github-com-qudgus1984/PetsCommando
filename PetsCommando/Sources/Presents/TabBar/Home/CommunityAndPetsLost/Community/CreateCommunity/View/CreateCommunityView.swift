@@ -29,12 +29,29 @@ final class CreateCommunityView: BaseView {
         view.backgroundColor = .white
         return view
     }()
+    
+    let imagePlusButton: UIButton = {
+        let button = UIButton()
+        button.contentVerticalAlignment = .fill
+        button.contentHorizontalAlignment = .fill
+        button.setImage(UIImage(systemName: "photo.circle.fill"), for: .normal)
+        button.tintColor = Color.BaseColor.hunt2
+        return button
+    }()
 
     let titleTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .white
         textField.placeholder = "제목을 입력해주세요."
         return textField
+    }()
+    
+    let imageAppealView: UIImageView = {
+        let view = UIImageView()
+        view.backgroundColor = .white
+        view.clipsToBounds = true
+        view.layer.cornerRadius = 8
+        return view
     }()
     
     let textView: UITextView = {
@@ -66,9 +83,11 @@ final class CreateCommunityView: BaseView {
         self.addSubview(titleLabel)
         self.addSubview(containTitleView)
         self.addSubview(titleTextField)
+        self.addSubview(imageAppealView)
         self.addSubview(textView)
         self.addSubview(registerContainView)
         self.addSubview(registerButton)
+        self.addSubview(imagePlusButton)
     }
     
     override func layoutSubviews() {
@@ -107,10 +126,21 @@ final class CreateCommunityView: BaseView {
             make.edges.equalTo(registerContainView)
         }
         
-        textView.snp.makeConstraints { make in
+        imageAppealView.snp.makeConstraints { make in
             make.top.equalTo(titleTextField.snp.bottom).offset(20)
+            make.horizontalEdges.equalTo(safeAreaLayoutGuide).inset(20)
+            make.height.equalTo(200)
+        }
+        
+        textView.snp.makeConstraints { make in
+            make.top.equalTo(imageAppealView.snp.bottom).offset(20)
             make.bottom.equalTo(registerContainView.snp.top).offset(-20)
             make.horizontalEdges.equalTo(safeAreaLayoutGuide).inset(20)
+        }
+        
+        imagePlusButton.snp.makeConstraints { make in
+            make.leading.bottom.equalTo(textView).inset(16)
+            make.width.height.equalTo(48)
         }
     }
 }

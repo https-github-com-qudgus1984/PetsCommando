@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Kingfisher
 
 final class CommunityDetailViewController: BaseViewController, UICollectionViewDelegate {
     
@@ -41,6 +42,7 @@ final class CommunityDetailViewController: BaseViewController, UICollectionViewD
             .bind { vc, post in
                 vc.communityDetailView.titleLabel.text = post.title
                 vc.communityDetailView.contentLabel.text = post.content
+                vc.communityDetailView.configureItem(item: post)
             }
             .disposed(by: disposeBag)
     }

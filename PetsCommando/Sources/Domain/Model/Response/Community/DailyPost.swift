@@ -12,6 +12,7 @@ struct DailyPost: Hashable {
     let userId: Int?
     let title: String?
     let content: String?
+    let photourl: String?
     let likeNum: Int?
     let registerAt: String?
     let updatedAt: String?
