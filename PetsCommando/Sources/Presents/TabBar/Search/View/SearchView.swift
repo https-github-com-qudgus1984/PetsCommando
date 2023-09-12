@@ -54,7 +54,7 @@ final class SearchView: BaseView {
     override func setupLayout() {
         mapView.snp.makeConstraints { make in
             make.top.horizontalEdges.equalTo(safeAreaLayoutGuide)
-            make.height.equalTo(475)
+            make.height.equalTo(400)
         }
         
         titleLabel.snp.makeConstraints { make in
