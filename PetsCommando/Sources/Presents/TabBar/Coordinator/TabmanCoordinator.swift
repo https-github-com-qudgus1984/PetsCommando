@@ -66,6 +66,14 @@ final class TabmanCoordinator: Coordinator {
         let vc = CommentSheetPresentationViewController(viewModel: viewModel)
         navigationController.present(vc, animated: true)
     }
+    
+    func dissmiss() {
+        navigationController.dismiss(animated: true)
+    }
+    
+    func pop() {
+        navigationController.popViewController(animated: true)
+    }
 }
 
 extension TabmanCoordinator: postCommentDelegate {

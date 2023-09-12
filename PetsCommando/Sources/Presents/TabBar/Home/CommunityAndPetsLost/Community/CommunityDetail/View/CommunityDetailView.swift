@@ -21,6 +21,8 @@ final class CommunityDetailView: BaseView {
     
     let imageView: UIImageView = {
         let view = UIImageView()
+        view.clipsToBounds = true
+        view.layer.cornerRadius = 8
         return view
     }()
     
@@ -80,8 +82,8 @@ final class CommunityDetailView: BaseView {
         imageView.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).offset(8)
             make.centerX.equalTo(safeAreaLayoutGuide)
-            make.width.equalTo(safeAreaLayoutGuide).inset(44)
-            make.height.equalTo(imageView.snp.width)
+            make.width.equalTo(safeAreaLayoutGuide).inset(12)
+            make.height.equalTo(240)
         }
         
         contentLabel.snp.makeConstraints { make in

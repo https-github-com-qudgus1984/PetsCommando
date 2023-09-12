@@ -151,3 +151,11 @@ extension CreateCommunityView {
         titleTextField.text = nil
     }
 }
+
+extension CreateCommunityView {
+    func updateProfileImage(image: UIImage) {
+        self.imageAppealView.contentMode = .scaleToFill
+        let resizeImage = image.resizeImageTo(size: CGSize(width: self.imageAppealView.frame.width, height: self.imageAppealView.frame.height))
+        self.imageAppealView.image = resizeImage
+    }
+}
