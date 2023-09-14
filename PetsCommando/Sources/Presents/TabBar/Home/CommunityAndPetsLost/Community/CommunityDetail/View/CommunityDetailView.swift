@@ -82,8 +82,8 @@ final class CommunityDetailView: BaseView {
         imageView.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).offset(8)
             make.centerX.equalTo(safeAreaLayoutGuide)
-            make.width.equalTo(safeAreaLayoutGuide).inset(12)
-            make.height.equalTo(240)
+            make.width.equalTo(safeAreaLayoutGuide).inset(60)
+            make.height.equalTo(imageView.snp.width)
         }
         
         contentLabel.snp.makeConstraints { make in

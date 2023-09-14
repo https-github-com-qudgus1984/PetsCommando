@@ -85,6 +85,7 @@ extension CreateCommunityViewController: UIImagePickerControllerDelegate, UINavi
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             self.createCommunityView.updateProfileImage(image: pickedImage)
         }
+        self.createCommunityView.explainImageLabel.isHidden = true
         self.dismiss(animated: true)
     }
     

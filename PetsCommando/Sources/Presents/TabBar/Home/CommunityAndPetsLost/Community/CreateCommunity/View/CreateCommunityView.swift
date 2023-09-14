@@ -54,6 +54,15 @@ final class CreateCommunityView: BaseView {
         return view
     }()
     
+    let explainImageLabel: UILabel = {
+        let label = UILabel()
+        label.font = Font.Title2_B16
+        label.text = "사진을 등록해 주세요."
+        label.textAlignment = .center
+        label.textColor = .gray
+        return label
+    }()
+    
     let textView: UITextView = {
         let textView = UITextView()
         textView.clipsToBounds = true
@@ -84,6 +93,7 @@ final class CreateCommunityView: BaseView {
         self.addSubview(containTitleView)
         self.addSubview(titleTextField)
         self.addSubview(imageAppealView)
+        self.addSubview(explainImageLabel)
         self.addSubview(textView)
         self.addSubview(registerContainView)
         self.addSubview(registerButton)
@@ -128,8 +138,13 @@ final class CreateCommunityView: BaseView {
         
         imageAppealView.snp.makeConstraints { make in
             make.top.equalTo(titleTextField.snp.bottom).offset(20)
-            make.horizontalEdges.equalTo(safeAreaLayoutGuide).inset(20)
-            make.height.equalTo(200)
+//            make.horizontalEdges.equalTo(safeAreaLayoutGuide).inset(20)
+            make.centerX.equalTo(safeAreaLayoutGuide)
+            make.height.width.equalTo(200)
+        }
+        
+        explainImageLabel.snp.makeConstraints { make in
+            make.edges.equalTo(imageAppealView)
         }
         
         textView.snp.makeConstraints { make in
